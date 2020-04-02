@@ -139,11 +139,8 @@
 		775B1FE924365FBD00E6F221 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				775B1FF62436622000E6F221 /* checkNetwork.swift */,
-				775B1FF82436622D00E6F221 /* haptic+Feedback.swift */,
-				775B1FFA2436624100E6F221 /* alert+Function.swift */,
-				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
-				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
+				775B20032436646800E6F221 /* alertNhaptic+Extensions */,
+				775B2005243664A100E6F221 /* utils+Extensions */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +169,25 @@
 				775B2001243663DA00E6F221 /* dataManager.swift */,
 			);
 			path = "Firebase Data Manager";
+			sourceTree = "<group>";
+		};
+		775B20032436646800E6F221 /* alertNhaptic+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				775B1FF82436622D00E6F221 /* haptic+Feedback.swift */,
+				775B1FFA2436624100E6F221 /* alert+Function.swift */,
+			);
+			path = "alertNhaptic+Extensions";
+			sourceTree = "<group>";
+		};
+		775B2005243664A100E6F221 /* utils+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				775B1FF62436622000E6F221 /* checkNetwork.swift */,
+				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
+				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
+			);
+			path = "utils+Extensions";
 			sourceTree = "<group>";
 		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {

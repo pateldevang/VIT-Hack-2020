@@ -13,6 +13,7 @@
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
 		7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0624365A3300030DF5 /* Assets.xcassets */; };
 		7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */; };
+		775B1FE524365F4200E6F221 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FE424365F4200E6F221 /* userData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7742BA0624365A3300030DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7742BA0924365A3300030DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7742BA0B24365A3300030DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		775B1FE424365F4200E6F221 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,14 +63,47 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
-				7742B9FF24365A3200030DF5 /* AppDelegate.swift */,
-				7742BA0124365A3200030DF5 /* ViewController.swift */,
-				7742BA0324365A3200030DF5 /* Main.storyboard */,
-				7742BA0624365A3300030DF5 /* Assets.xcassets */,
-				7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */,
+				775B1FE624365F4800E6F221 /* Model */,
+				775B1FE124365EE900E6F221 /* View */,
+				775B1FE224365EEF00E6F221 /* Controller */,
+				775B1FE324365F0800E6F221 /* Helpers */,
 				7742BA0B24365A3300030DF5 /* Info.plist */,
 			);
 			path = "VIT Hack";
+			sourceTree = "<group>";
+		};
+		775B1FE124365EE900E6F221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7742BA0324365A3200030DF5 /* Main.storyboard */,
+				7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		775B1FE224365EEF00E6F221 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7742BA0124365A3200030DF5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		775B1FE324365F0800E6F221 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7742B9FF24365A3200030DF5 /* AppDelegate.swift */,
+				7742BA0624365A3300030DF5 /* Assets.xcassets */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		775B1FE624365F4800E6F221 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				775B1FE424365F4200E6F221 /* userData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {
@@ -77,7 +112,6 @@
 				1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */,
 				F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,6 +276,7 @@
 			files = (
 				7742BA0224365A3200030DF5 /* ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
+				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

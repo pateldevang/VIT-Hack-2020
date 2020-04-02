@@ -20,6 +20,11 @@
 		775B1FF02436607300E6F221 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEF2436607300E6F221 /* constants.swift */; };
 		775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF22436615D00E6F221 /* FirebaseAuth.swift */; };
 		775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF42436618200E6F221 /* firebaseSignOut.swift */; };
+		775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF62436622000E6F221 /* checkNetwork.swift */; };
+		775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF82436622D00E6F221 /* haptic+Feedback.swift */; };
+		775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFA2436624100E6F221 /* alert+Function.swift */; };
+		775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */; };
+		775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFE2436634900E6F221 /* keyboard+Hide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		775B1FEF2436607300E6F221 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		775B1FF22436615D00E6F221 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		775B1FF42436618200E6F221 /* firebaseSignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseSignOut.swift; sourceTree = "<group>"; };
+		775B1FF62436622000E6F221 /* checkNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkNetwork.swift; sourceTree = "<group>"; };
+		775B1FF82436622D00E6F221 /* haptic+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "haptic+Feedback.swift"; sourceTree = "<group>"; };
+		775B1FFA2436624100E6F221 /* alert+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "alert+Function.swift"; sourceTree = "<group>"; };
+		775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "instantiate+ViewController.swift"; sourceTree = "<group>"; };
+		775B1FFE2436634900E6F221 /* keyboard+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "keyboard+Hide.swift"; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,12 +85,12 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
-				775B1FF12436613C00E6F221 /* Firebase Auth */,
-				775B1FEA24365FDA00E6F221 /* Services */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
+				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B1FE624365F4800E6F221 /* Model */,
 				775B1FE124365EE900E6F221 /* View */,
 				775B1FE224365EEF00E6F221 /* Controller */,
+				775B1FEA24365FDA00E6F221 /* Services */,
 				775B1FE324365F0800E6F221 /* Helpers */,
 				7742BA0B24365A3300030DF5 /* Info.plist */,
 				775B1FE724365F8000E6F221 /* GoogleService-Info.plist */,
@@ -126,6 +136,11 @@
 		775B1FE924365FBD00E6F221 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				775B1FF62436622000E6F221 /* checkNetwork.swift */,
+				775B1FF82436622D00E6F221 /* haptic+Feedback.swift */,
+				775B1FFA2436624100E6F221 /* alert+Function.swift */,
+				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
+				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,13 +333,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7742BA0224365A3200030DF5 /* ViewController.swift in Sources */,
+				775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */,
+				775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
 				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
+				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
+				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
+				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

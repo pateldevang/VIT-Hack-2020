@@ -17,6 +17,7 @@
 		775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775B1FE724365F8000E6F221 /* GoogleService-Info.plist */; };
 		775B1FEC2436601500E6F221 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEB2436601500E6F221 /* Reachability.swift */; };
 		775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FED2436604300E6F221 /* statusBarView.swift */; };
+		775B1FF02436607300E6F221 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEF2436607300E6F221 /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		775B1FE724365F8000E6F221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		775B1FEB2436601500E6F221 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		775B1FED2436604300E6F221 /* statusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusBarView.swift; sourceTree = "<group>"; };
+		775B1FEF2436607300E6F221 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7742B9FF24365A3200030DF5 /* AppDelegate.swift */,
+				775B1FEF2436607300E6F221 /* constants.swift */,
 				7742BA0624365A3300030DF5 /* Assets.xcassets */,
 			);
 			path = Helpers;
@@ -305,6 +308,7 @@
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
 				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
+				775B1FF02436607300E6F221 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

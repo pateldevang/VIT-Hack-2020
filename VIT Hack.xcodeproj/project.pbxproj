@@ -14,6 +14,7 @@
 		7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0624365A3300030DF5 /* Assets.xcassets */; };
 		7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */; };
 		775B1FE524365F4200E6F221 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FE424365F4200E6F221 /* userData.swift */; };
+		775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775B1FE724365F8000E6F221 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7742BA0924365A3300030DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7742BA0B24365A3300030DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775B1FE424365F4200E6F221 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		775B1FE724365F8000E6F221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				775B1FE224365EEF00E6F221 /* Controller */,
 				775B1FE324365F0800E6F221 /* Helpers */,
 				7742BA0B24365A3300030DF5 /* Info.plist */,
+				775B1FE724365F8000E6F221 /* GoogleService-Info.plist */,
 			);
 			path = "VIT Hack";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */,
+				775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */,
 				7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */,
 				7742BA0524365A3200030DF5 /* Main.storyboard in Resources */,
 			);

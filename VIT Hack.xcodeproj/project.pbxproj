@@ -15,6 +15,8 @@
 		7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */; };
 		775B1FE524365F4200E6F221 /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FE424365F4200E6F221 /* userData.swift */; };
 		775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775B1FE724365F8000E6F221 /* GoogleService-Info.plist */; };
+		775B1FEC2436601500E6F221 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEB2436601500E6F221 /* Reachability.swift */; };
+		775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FED2436604300E6F221 /* statusBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7742BA0B24365A3300030DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775B1FE424365F4200E6F221 /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
 		775B1FE724365F8000E6F221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		775B1FEB2436601500E6F221 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		775B1FED2436604300E6F221 /* statusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusBarView.swift; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,8 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
+				775B1FEA24365FDA00E6F221 /* Services */,
+				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FE624365F4800E6F221 /* Model */,
 				775B1FE124365EE900E6F221 /* View */,
 				775B1FE224365EEF00E6F221 /* Controller */,
@@ -107,6 +113,22 @@
 				775B1FE424365F4200E6F221 /* userData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		775B1FE924365FBD00E6F221 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		775B1FEA24365FDA00E6F221 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				775B1FEB2436601500E6F221 /* Reachability.swift */,
+				775B1FED2436604300E6F221 /* statusBarView.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {
@@ -280,6 +302,8 @@
 			files = (
 				7742BA0224365A3200030DF5 /* ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
+				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
+				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
 				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

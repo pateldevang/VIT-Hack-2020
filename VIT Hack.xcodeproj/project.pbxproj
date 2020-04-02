@@ -18,6 +18,8 @@
 		775B1FEC2436601500E6F221 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEB2436601500E6F221 /* Reachability.swift */; };
 		775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FED2436604300E6F221 /* statusBarView.swift */; };
 		775B1FF02436607300E6F221 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEF2436607300E6F221 /* constants.swift */; };
+		775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF22436615D00E6F221 /* FirebaseAuth.swift */; };
+		775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF42436618200E6F221 /* firebaseSignOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		775B1FEB2436601500E6F221 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		775B1FED2436604300E6F221 /* statusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusBarView.swift; sourceTree = "<group>"; };
 		775B1FEF2436607300E6F221 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		775B1FF22436615D00E6F221 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		775B1FF42436618200E6F221 /* firebaseSignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseSignOut.swift; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
+				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B1FEA24365FDA00E6F221 /* Services */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FE624365F4800E6F221 /* Model */,
@@ -132,6 +137,15 @@
 				775B1FED2436604300E6F221 /* statusBarView.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		775B1FF12436613C00E6F221 /* Firebase Auth */ = {
+			isa = PBXGroup;
+			children = (
+				775B1FF22436615D00E6F221 /* FirebaseAuth.swift */,
+				775B1FF42436618200E6F221 /* firebaseSignOut.swift */,
+			);
+			path = "Firebase Auth";
 			sourceTree = "<group>";
 		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {
@@ -305,9 +319,11 @@
 			files = (
 				7742BA0224365A3200030DF5 /* ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
+				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
 				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
+				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

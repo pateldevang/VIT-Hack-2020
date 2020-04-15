@@ -47,7 +47,28 @@ class firebaseNetworking {
     }
     
     
+    //MARK: - Function to fetch Sponsors data
     
-    
+    public func getSponsor(completion: @escaping (Array<String>,Array<String>,Array<String>) -> ()) {
+        
+        var logoURL:[String] = []
+        var name:[String] = []
+        var pageURL:[String] = []
+        database.child("sponsors").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? [String : AnyObject] ?? [:]
+            let key = Array(value.keys)
+            for i in Range (0 ... key.count-1) {
+                let key1 = Array(value)[i].key
+                let t = value[key1] as? [String : String] ?? [:]
+                name.append(t["name"]!)
+                logoURL.append(t["logoUrl"]!)
+                pageURL.append(t["pageUrl"]!)
+            }
+            completion(logoURL, name, pageURL)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
     
 }

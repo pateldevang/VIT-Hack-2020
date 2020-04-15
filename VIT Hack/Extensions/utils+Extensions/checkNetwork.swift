@@ -14,12 +14,12 @@ extension UIViewController
     internal func checkNewtork(ifError: String) {
         checkConnection { (status, statusCode) in
             if statusCode == 404{
-                print("No connection!!")
+                debugLog(message: "No connection!!")
                 // Vibrates on errors
                 UIDevice.invalidVibrate()
                 self.networkErrorAlert(titlepass: ifError)
             }else{
-                print("connection existing")
+                debugLog(message: "connection existing!!")
             }
         }
     }

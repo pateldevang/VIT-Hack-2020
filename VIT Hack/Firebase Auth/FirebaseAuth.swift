@@ -21,7 +21,7 @@ class FirebaseAuth: UIViewController {
             if error != nil {
                 // Haptic on errors
                 UIDevice.invalidVibrate()
-                print(error?.localizedDescription ?? "Error")
+                debugLog(message: error?.localizedDescription ?? "Error")
                 switch error?.localizedDescription ?? "Error" {
                 case "The email address is badly formatted.":
                     completion(error?.localizedDescription ?? "Error")
@@ -50,7 +50,7 @@ class FirebaseAuth: UIViewController {
             if error != nil {
                 // Vibrates on errors
                 UIDevice.invalidVibrate()
-                print(error?.localizedDescription ?? "Error")
+                debugLog(message: error?.localizedDescription ?? "Error")
                 switch error?.localizedDescription ?? "Error" {
                 case "The password must be 6 characters long or more.":
                     completion(error?.localizedDescription ?? "Error")
@@ -74,7 +74,7 @@ class FirebaseAuth: UIViewController {
             if error != nil {
                 // Vibrates on errors
                 UIDevice.invalidVibrate()
-                print(error?.localizedDescription ?? "Error")
+                debugLog(message: error?.localizedDescription ?? "Error")
                 switch error?.localizedDescription ?? "Error" {
                 case "The email address is badly formatted.":
                     completion(error?.localizedDescription ?? "Error")

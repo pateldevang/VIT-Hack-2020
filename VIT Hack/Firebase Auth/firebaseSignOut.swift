@@ -21,7 +21,7 @@ extension UIViewController {
             UserDefaults.standard.set(false, forKey: "login")
             try firebaseAuth.signOut()
             GIDSignIn.sharedInstance().signOut()
-            print("SignOut sucessful")
+            debugLog(message: "SignOut sucessful")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             self.present(controller, animated: true, completion: nil)

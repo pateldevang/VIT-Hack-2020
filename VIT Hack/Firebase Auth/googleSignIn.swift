@@ -27,21 +27,21 @@ extension AppDelegate: GIDSignInDelegate{
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         if let error = error {
-            print(error)
+            debugLog(message: error as! String)
             return
         }
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
-        print(credential as Any)
+        debugLog(message: "\(credential)")
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if let error = error {
                 print(error)
                 return
             }
             guard let uid = user.userID else { return }
-            print("Sucessfully logged into firebase with Google!",uid)
-            
+            debugLog(message: "Sucessfully logged into firebase with Google!")
+            debugLog(message: "UID=\(uid)")
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let viewController: UserFormVC = storyboard.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormVC

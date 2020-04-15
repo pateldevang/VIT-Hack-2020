@@ -32,7 +32,7 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
         FirebaseAuth.emailLoginIn(email: "MOFO@g.com", pass: "MOFO!!!") { (result) in
             switch result {
             case "Sucess":
-                print("Go to Next VC")
+                debugLog(message: "Go to NExt VC")
             default:
                 self.authAlert(titlepass: "Error", message: result)
             }

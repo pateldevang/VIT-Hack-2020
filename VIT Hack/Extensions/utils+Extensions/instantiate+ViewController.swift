@@ -25,13 +25,13 @@ extension AppDelegate {
         print(getUID())
         
         let loginstatus = UserDefaults.standard.bool(forKey: "login")
-        print("Login status=\(loginstatus)")
+        debugLog(message: "Login status=\(loginstatus)")
         if loginstatus == false {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
                 GIDSignIn.sharedInstance().signOut()
-                print("SignOut sucessful")
+                debugLog(message: "SignOut sucessful")
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }

@@ -20,3 +20,13 @@ internal func getEmail() -> String {
     let userEmail = Auth.auth().currentUser?.email
     return userEmail ?? "notFound"
 }
+
+
+public func debugLog(message: String) {
+    #if DEBUG
+    debugPrint("=======================================")
+    debugPrint(message)
+    debugPrint("=======================================")
+    #endif
+}
+

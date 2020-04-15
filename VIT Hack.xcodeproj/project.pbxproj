@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */; };
+		5BCAC2D22446F23600C19FEE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D12446F23600C19FEE /* LoginVC.swift */; };
+		5BCAC2D42446F24100C19FEE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D32446F24100C19FEE /* SignUpVC.swift */; };
+		5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */; };
+		5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D72446F26900C19FEE /* UserFormVC.swift */; };
+		5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */; };
+		5BCAC2DC2446F2AD00C19FEE /* TimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2DB2446F2AD00C19FEE /* TimelineVC.swift */; };
+		5BCAC2DE2446F2D700C19FEE /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2DD2446F2D700C19FEE /* AboutUsVC.swift */; };
+		5BCAC2E02446F2F700C19FEE /* Speaker+SponsorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2DF2446F2F700C19FEE /* Speaker+SponsorVC.swift */; };
+		5BCAC2E22446F30700C19FEE /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E12446F30700C19FEE /* FAQVC.swift */; };
+		5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E32446F31F00C19FEE /* TracksVC.swift */; };
+		5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */; };
+		5BCAC2E82446F35000C19FEE /* AskFAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */; };
 		7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742B9FF24365A3200030DF5 /* AppDelegate.swift */; };
 		7742BA0224365A3200030DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742BA0124365A3200030DF5 /* ViewController.swift */; };
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
@@ -30,6 +42,18 @@
 
 /* Begin PBXFileReference section */
 		1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
+		5BCAC2D12446F23600C19FEE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5BCAC2D32446F24100C19FEE /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		5BCAC2D72446F26900C19FEE /* UserFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormVC.swift; sourceTree = "<group>"; };
+		5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
+		5BCAC2DB2446F2AD00C19FEE /* TimelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineVC.swift; sourceTree = "<group>"; };
+		5BCAC2DD2446F2D700C19FEE /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		5BCAC2DF2446F2F700C19FEE /* Speaker+SponsorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Speaker+SponsorVC.swift"; sourceTree = "<group>"; };
+		5BCAC2E12446F30700C19FEE /* FAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
+		5BCAC2E32446F31F00C19FEE /* TracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksVC.swift; sourceTree = "<group>"; };
+		5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskFAQVC.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7742B9FF24365A3200030DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7742BA0124365A3200030DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +90,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BCAC2E92446F35E00C19FEE /* TabBar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BCAC2DB2446F2AD00C19FEE /* TimelineVC.swift */,
+				5BCAC2DD2446F2D700C19FEE /* AboutUsVC.swift */,
+				5BCAC2DF2446F2F700C19FEE /* Speaker+SponsorVC.swift */,
+				5BCAC2E12446F30700C19FEE /* FAQVC.swift */,
+				5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */,
+				5BCAC2E32446F31F00C19FEE /* TracksVC.swift */,
+				5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */,
+			);
+			path = "TabBar Controller";
+			sourceTree = "<group>";
+		};
 		7742B9F324365A3200030DF5 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				7742BA0124365A3200030DF5 /* ViewController.swift */,
+				5BCAC2D12446F23600C19FEE /* LoginVC.swift */,
+				5BCAC2D32446F24100C19FEE /* SignUpVC.swift */,
+				5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */,
+				5BCAC2D72446F26900C19FEE /* UserFormVC.swift */,
+				5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */,
+				5BCAC2E92446F35E00C19FEE /* TabBar Controller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -362,17 +406,29 @@
 				7742BA0224365A3200030DF5 /* ViewController.swift in Sources */,
 				775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */,
 				775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */,
+				5BCAC2DC2446F2AD00C19FEE /* TimelineVC.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
+				5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */,
+				5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				775B2002243663DA00E6F221 /* dataManager.swift in Sources */,
+				5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */,
+				5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */,
+				5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */,
+				5BCAC2DE2446F2D700C19FEE /* AboutUsVC.swift in Sources */,
+				5BCAC2E02446F2F700C19FEE /* Speaker+SponsorVC.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
+				5BCAC2D42446F24100C19FEE /* SignUpVC.swift in Sources */,
+				5BCAC2E82446F35000C19FEE /* AskFAQVC.swift in Sources */,
 				775B1FE524365F4200E6F221 /* userData.swift in Sources */,
 				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
 				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
+				5BCAC2E22446F30700C19FEE /* FAQVC.swift in Sources */,
 				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
+				5BCAC2D22446F23600C19FEE /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

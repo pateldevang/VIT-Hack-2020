@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,9 +11,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -19,6 +21,257 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1307" y="321"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="YuQ-ge-PL0">
+            <objects>
+                <viewController id="kwa-QU-6cV" customClass="SignUpVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WlF-VW-tgD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kQb-Gg-ejl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo1-jY-zYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="321"/>
+        </scene>
+        <!--Forgot PasswordVC-->
+        <scene sceneID="bsu-ZC-ucd">
+            <objects>
+                <viewController id="LLO-tM-PWb" customClass="ForgotPasswordVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IOq-5e-0Rs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="08Y-sY-jIe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN1-FG-rDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="321"/>
+        </scene>
+        <!--CompanyVC-->
+        <scene sceneID="CGx-nM-UjZ">
+            <objects>
+                <viewController id="PjK-Ht-ve1" customClass="CompanyVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wE4-SF-ADO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jhh-dW-zF0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWo-ZX-XbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3684" y="321"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="h3O-yM-hgh">
+            <objects>
+                <viewController id="fdo-iq-k3J" customClass="LoginVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9aR-G4-8h2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="15c-La-sBL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvZ-Ke-BSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="321"/>
+        </scene>
+        <!--User FormVC-->
+        <scene sceneID="Xu0-L4-G5R">
+            <objects>
+                <viewController id="e9i-j9-TTZ" customClass="UserFormVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g0d-bn-C4w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Mmi-YM-MiG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGp-e8-bxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2893" y="321"/>
+        </scene>
+        <!--Tracks-->
+        <scene sceneID="a6x-va-0sX">
+            <objects>
+                <viewController id="Jf6-I8-e17" customClass="TracksVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyY-wf-euh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JLs-xV-dUV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tracks" image="line.horizontal.3.decrease.circle.fill" catalog="system" id="6d7-Gs-QJb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdT-Co-mdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8687" y="858"/>
+        </scene>
+        <!--Timeline-->
+        <scene sceneID="nrA-1Y-Zha">
+            <objects>
+                <viewController id="e6d-Mc-v4B" customClass="TimelineVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfF-EW-sVm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="QpB-Xw-u6N"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timeline" image="timer" catalog="system" id="4C2-7F-B19"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yOF-cy-MCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6751" y="-710"/>
+        </scene>
+        <!--Sponsors-->
+        <scene sceneID="IzM-Iu-eXr">
+            <objects>
+                <viewController id="bgg-1M-whC" customClass="Speaker_SponsorVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GSK-7c-AIv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47S-mS-ozG">
+                                <rect key="frame" x="133" y="748" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ABOUT US Button"/>
+                                <connections>
+                                    <segue destination="xeT-Qq-RQP" kind="show" id="X9H-Ua-7hU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Mxp-cp-baU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sponsors" image="personalhotspot" catalog="system" id="Rxc-8l-SnI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G37-83-Uew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8687" y="-382"/>
+        </scene>
+        <!--About UsVC-->
+        <scene sceneID="Ezw-l4-wSU">
+            <objects>
+                <viewController id="xeT-Qq-RQP" customClass="AboutUsVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zXj-Zv-bf5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zFz-GO-8JV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bCm-85-wSL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNB-wQ-RVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9421" y="-389"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="PfY-Oe-fMJ">
+            <objects>
+                <viewController id="obZ-Wp-wyR" customClass="ProfileVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QUD-XJ-Kwa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="reh-WL-jXc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="pRq-XO-zh4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9DQ-vH-gd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6752" y="1229"/>
+        </scene>
+        <!--Queries-->
+        <scene sceneID="se6-Pc-Mm0">
+            <objects>
+                <viewController id="ZEo-1q-VjF" customClass="FAQVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXT-BO-ahN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-ko-rBq">
+                                <rect key="frame" x="225" y="84" width="169" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEW FAQ BUTTON"/>
+                                <connections>
+                                    <segue destination="Atd-hv-2Cf" kind="popoverPresentation" popoverAnchorView="2Vf-ko-rBq" id="Brx-UO-kNp">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ksw-QA-1uw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Queries" image="questionmark.circle" catalog="system" id="zII-13-imM"/>
+                    <navigationItem key="navigationItem" id="7an-ze-2aW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oll-Bm-GQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10222" y="319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MhX-uh-0Q1">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Atd-hv-2Cf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tvr-qC-r3U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FAQ-sample" translatesAutoresizingMaskIntoConstraints="NO" id="Cnq-ln-p1e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="942"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cnq-ln-p1e" firstAttribute="top" secondItem="b9o-hf-lOF" secondAttribute="top" id="N97-CK-0QT"/>
+                            <constraint firstItem="Cnq-ln-p1e" firstAttribute="leading" secondItem="b9o-hf-lOF" secondAttribute="leading" id="QyA-HT-tNI"/>
+                            <constraint firstItem="b9o-hf-lOF" firstAttribute="trailing" secondItem="Cnq-ln-p1e" secondAttribute="trailing" id="VJx-BH-Suf"/>
+                            <constraint firstAttribute="bottom" secondItem="Cnq-ln-p1e" secondAttribute="bottom" constant="-100" id="VbI-we-YEw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b9o-hf-lOF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UYU-gO-Y2c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WB-X0-pMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11831.884057971016" y="318.75"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y3v-9m-KeC">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5E3-GJ-fFP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bi7-2k-v6v">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e6d-Mc-v4B" kind="relationship" relationship="viewControllers" id="JgJ-X9-8Az"/>
+                        <segue destination="bgg-1M-whC" kind="relationship" relationship="viewControllers" id="Drb-EY-oY7"/>
+                        <segue destination="Jf6-I8-e17" kind="relationship" relationship="viewControllers" id="Ias-1S-PwJ"/>
+                        <segue destination="obZ-Wp-wyR" kind="relationship" relationship="viewControllers" id="NPJ-rc-sMN"/>
+                        <segue destination="ZEo-1q-VjF" kind="relationship" relationship="viewControllers" id="7Lo-fS-bSO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzc-TG-Y8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5129" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FAQ-sample" width="414" height="896"/>
+        <image name="line.horizontal.3.decrease.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

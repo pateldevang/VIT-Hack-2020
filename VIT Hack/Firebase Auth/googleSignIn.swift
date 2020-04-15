@@ -27,7 +27,7 @@ extension AppDelegate: GIDSignInDelegate{
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         if let error = error {
-            debugLog(message: error as! String)
+            debugLog(message: ("\(error)"))
             return
         }
         guard let authentication = user.authentication else { return }
@@ -42,6 +42,14 @@ extension AppDelegate: GIDSignInDelegate{
             guard let uid = user.userID else { return }
             debugLog(message: "Sucessfully logged into firebase with Google!")
             debugLog(message: "UID=\(uid)")
+            
+            
+            // ---------------------------------- To BE REMOVED ------------------
+            UserDefaults.standard.setValue(true, forKey: "login")
+            // ---------------------------------------------------------------
+            
+            
+            
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let viewController: UserFormVC = storyboard.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormVC

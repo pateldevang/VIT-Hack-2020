@@ -36,7 +36,7 @@
 		775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFA2436624100E6F221 /* alert+Function.swift */; };
 		775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */; };
 		775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFE2436634900E6F221 /* keyboard+Hide.swift */; };
-		775B2002243663DA00E6F221 /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* dataManager.swift */; };
+		775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* firebaseNetworking.swift */; };
 		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
 		776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC024470F2C00D6349C /* google+SignIn.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,7 @@
 		775B1FFA2436624100E6F221 /* alert+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "alert+Function.swift"; sourceTree = "<group>"; };
 		775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "instantiate+ViewController.swift"; sourceTree = "<group>"; };
 		775B1FFE2436634900E6F221 /* keyboard+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "keyboard+Hide.swift"; sourceTree = "<group>"; };
-		775B2001243663DA00E6F221 /* dataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
+		775B2001243663DA00E6F221 /* firebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseNetworking.swift; sourceTree = "<group>"; };
 		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
 		776A7FC024470F2C00D6349C /* google+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "google+SignIn.swift"; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,7 +212,7 @@
 		775B2000243663BC00E6F221 /* Firebase Data Manager */ = {
 			isa = PBXGroup;
 			children = (
-				775B2001243663DA00E6F221 /* dataManager.swift */,
+				775B2001243663DA00E6F221 /* firebaseNetworking.swift */,
 			);
 			path = "Firebase Data Manager";
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 				5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */,
 				5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
-				775B2002243663DA00E6F221 /* dataManager.swift in Sources */,
+				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
 				5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */,
 				5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */,
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,

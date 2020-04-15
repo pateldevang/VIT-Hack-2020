@@ -58,10 +58,20 @@
         <!--LoginVC-->
         <scene sceneID="h3O-yM-hgh">
             <objects>
-                <viewController id="fdo-iq-k3J" customClass="LoginVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="fdo-iq-k3J" customClass="LoginVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9aR-G4-8h2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2o-QA-Brk">
+                                <rect key="frame" x="157" y="618" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Google Sign In"/>
+                                <connections>
+                                    <action selector="googleSignInAction:" destination="fdo-iq-k3J" eventType="touchUpInside" id="h8Y-Q1-lux"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="15c-La-sBL"/>
                     </view>
@@ -73,7 +83,7 @@
         <!--User FormVC-->
         <scene sceneID="Xu0-L4-G5R">
             <objects>
-                <viewController id="e9i-j9-TTZ" customClass="UserFormVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserFormVC" id="e9i-j9-TTZ" customClass="UserFormVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0d-bn-C4w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +176,16 @@
                     <view key="view" contentMode="scaleToFill" id="QUD-XJ-Kwa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCq-Os-X8g">
+                                <rect key="frame" x="177" y="410" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutAction:" destination="obZ-Wp-wyR" eventType="touchUpInside" id="buD-KU-3JP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="reh-WL-jXc"/>
                     </view>
@@ -234,7 +254,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Y3v-9m-KeC">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5E3-GJ-fFP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tapBar" automaticallyAdjustsScrollViewInsets="NO" id="5E3-GJ-fFP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bi7-2k-v6v">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

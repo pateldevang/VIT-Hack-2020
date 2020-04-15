@@ -37,6 +37,8 @@
 		775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */; };
 		775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFE2436634900E6F221 /* keyboard+Hide.swift */; };
 		775B2002243663DA00E6F221 /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* dataManager.swift */; };
+		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
+		776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC024470F2C00D6349C /* google+SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "instantiate+ViewController.swift"; sourceTree = "<group>"; };
 		775B1FFE2436634900E6F221 /* keyboard+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "keyboard+Hide.swift"; sourceTree = "<group>"; };
 		775B2001243663DA00E6F221 /* dataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
+		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
+		776A7FC024470F2C00D6349C /* google+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "google+SignIn.swift"; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +204,7 @@
 			children = (
 				775B1FF22436615D00E6F221 /* FirebaseAuth.swift */,
 				775B1FF42436618200E6F221 /* firebaseSignOut.swift */,
+				776A7FBE24470A9D00D6349C /* googleSignIn.swift */,
 			);
 			path = "Firebase Auth";
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				775B1FF62436622000E6F221 /* checkNetwork.swift */,
+				776A7FC024470F2C00D6349C /* google+SignIn.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 			);
@@ -410,6 +416,7 @@
 				775B2002243663DA00E6F221 /* dataManager.swift in Sources */,
 				5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */,
 				5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */,
+				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */,
 				5BCAC2DE2446F2D700C19FEE /* AboutUsVC.swift in Sources */,
 				5BCAC2E02446F2F700C19FEE /* Speaker+SponsorVC.swift in Sources */,
@@ -423,6 +430,7 @@
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
 				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
 				5BCAC2E22446F30700C19FEE /* FAQVC.swift in Sources */,
+				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
 				5BCAC2D22446F23600C19FEE /* LoginVC.swift in Sources */,
 			);

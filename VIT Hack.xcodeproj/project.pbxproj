@@ -39,6 +39,7 @@
 		775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* firebaseNetworking.swift */; };
 		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
 		776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC024470F2C00D6349C /* google+SignIn.swift */; };
+		776A7FC324474BD900D6349C /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC224474BD900D6349C /* regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		775B2001243663DA00E6F221 /* firebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseNetworking.swift; sourceTree = "<group>"; };
 		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
 		776A7FC024470F2C00D6349C /* google+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "google+SignIn.swift"; sourceTree = "<group>"; };
+		776A7FC224474BD900D6349C /* regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 				776A7FC024470F2C00D6349C /* google+SignIn.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
+				776A7FC224474BD900D6349C /* regex.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */,
 				5BCAC2DE2446F2D700C19FEE /* AboutUsVC.swift in Sources */,
+				776A7FC324474BD900D6349C /* regex.swift in Sources */,
 				5BCAC2E02446F2F700C19FEE /* Speaker+SponsorVC.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,

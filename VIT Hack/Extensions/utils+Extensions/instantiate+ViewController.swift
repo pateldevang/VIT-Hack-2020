@@ -13,7 +13,7 @@ import GoogleSignIn
 
 extension AppDelegate {
     
-    //    // Function setting up intial view controller
+    //MARK: - Function setting up intial view controller
     func setInitialViewController() {
         
         // app delegate setup

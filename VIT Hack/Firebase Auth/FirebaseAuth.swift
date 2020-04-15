@@ -30,7 +30,7 @@ class FirebaseAuth: UIViewController {
                 case "There is no user record corresponding to this identifier. The user may have been deleted.":
                     completion("There is no user registered to this Email ID.")
                 default:
-                    completion("Error")
+                    completion("Contact Developer")
                 }
             }
             else {

@@ -24,6 +24,20 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
         checkNewtork(ifError: "Cannot login")
     }
     
+    // MARK: - Login button action
+    @IBAction func loginAction(_ sender: Any) {
+        // Check internet connection
+        checkNewtork(ifError: "Cannot login")
+        
+        FirebaseAuth.emailLoginIn(email: "MOFO@g.com", pass: "MOFO!!!") { (result) in
+            switch result {
+            case "Sucess":
+                print("Go to Next VC")
+            default:
+                self.authAlert(titlepass: "Error", message: result)
+            }
+        }
+    }
     
     //MARK: - Login with Google action
     @IBAction func googleSignInAction(_ sender: Any) {

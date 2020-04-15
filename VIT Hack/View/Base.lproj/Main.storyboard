@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fdo-iq-k3J">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1307" y="321"/>
-        </scene>
         <!--Sign UpVC-->
         <scene sceneID="YuQ-ge-PL0">
             <objects>
@@ -30,7 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="WlF-VW-tgD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kQb-Gg-ejl"/>
                     </view>
                 </viewController>
@@ -45,7 +32,7 @@
                     <view key="view" contentMode="scaleToFill" id="IOq-5e-0Rs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="08Y-sY-jIe"/>
                     </view>
                 </viewController>
@@ -60,7 +47,7 @@
                     <view key="view" contentMode="scaleToFill" id="wE4-SF-ADO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Jhh-dW-zF0"/>
                     </view>
                 </viewController>
@@ -75,13 +62,13 @@
                     <view key="view" contentMode="scaleToFill" id="9aR-G4-8h2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="15c-La-sBL"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvZ-Ke-BSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="321"/>
+            <point key="canvasLocation" x="239" y="321"/>
         </scene>
         <!--User FormVC-->
         <scene sceneID="Xu0-L4-G5R">
@@ -90,7 +77,7 @@
                     <view key="view" contentMode="scaleToFill" id="g0d-bn-C4w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Mmi-YM-MiG"/>
                     </view>
                 </viewController>
@@ -105,10 +92,10 @@
                     <view key="view" contentMode="scaleToFill" id="ZyY-wf-euh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JLs-xV-dUV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tracks" image="line.horizontal.3.decrease.circle.fill" catalog="system" id="6d7-Gs-QJb"/>
+                    <tabBarItem key="tabBarItem" title="Tracks" id="6d7-Gs-QJb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdT-Co-mdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,10 +108,10 @@
                     <view key="view" contentMode="scaleToFill" id="dfF-EW-sVm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QpB-Xw-u6N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timeline" image="timer" catalog="system" id="4C2-7F-B19"/>
+                    <tabBarItem key="tabBarItem" title="Timeline" id="4C2-7F-B19"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOF-cy-MCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,10 +134,10 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Mxp-cp-baU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sponsors" image="personalhotspot" catalog="system" id="Rxc-8l-SnI"/>
+                    <tabBarItem key="tabBarItem" title="Sponsors" id="Rxc-8l-SnI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G37-83-Uew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,9 +148,9 @@
             <objects>
                 <viewController id="xeT-Qq-RQP" customClass="AboutUsVC" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXj-Zv-bf5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zFz-GO-8JV"/>
                     </view>
                     <navigationItem key="navigationItem" id="bCm-85-wSL"/>
@@ -179,10 +166,10 @@
                     <view key="view" contentMode="scaleToFill" id="QUD-XJ-Kwa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="reh-WL-jXc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="pRq-XO-zh4"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="pRq-XO-zh4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DQ-vH-gd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,10 +194,10 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ksw-QA-1uw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queries" image="questionmark.circle" catalog="system" id="zII-13-imM"/>
+                    <tabBarItem key="tabBarItem" title="Queries" id="zII-13-imM"/>
                     <navigationItem key="navigationItem" id="7an-ze-2aW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oll-Bm-GQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,14 +209,14 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="Atd-hv-2Cf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvr-qC-r3U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FAQ-sample" translatesAutoresizingMaskIntoConstraints="NO" id="Cnq-ln-p1e">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="942"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="952"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cnq-ln-p1e" firstAttribute="top" secondItem="b9o-hf-lOF" secondAttribute="top" id="N97-CK-0QT"/>
                             <constraint firstItem="Cnq-ln-p1e" firstAttribute="leading" secondItem="b9o-hf-lOF" secondAttribute="leading" id="QyA-HT-tNI"/>
@@ -250,6 +237,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5E3-GJ-fFP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bi7-2k-v6v">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -268,10 +256,5 @@
     </scenes>
     <resources>
         <image name="FAQ-sample" width="414" height="896"/>
-        <image name="line.horizontal.3.decrease.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="personalhotspot" catalog="system" width="128" height="75"/>
-        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
     </resources>
 </document>

@@ -30,3 +30,10 @@ public func debugLog(message: String) {
     #endif
 }
 
+
+// Company name
+enum companyName {
+    case Servify
+    case HP
+    case otherCompantName
+}

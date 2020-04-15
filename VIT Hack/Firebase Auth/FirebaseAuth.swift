@@ -19,12 +19,22 @@ class FirebaseAuth: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pass) { (user, error)
             in
             if error != nil {
-                // Vibrates on errors
+                // Haptic on errors
                 UIDevice.invalidVibrate()
-                completion(error?.localizedDescription ?? "Error")
+                print(error?.localizedDescription ?? "Error")
+                switch error?.localizedDescription ?? "Error" {
+                case "The email address is badly formatted.":
+                    completion(error?.localizedDescription ?? "Error")
+                case "The password is invalid or the user does not have a password.":
+                    completion(error?.localizedDescription ?? "Error")
+                case "There is no user record corresponding to this identifier. The user may have been deleted.":
+                    completion("There is no user registered to this Email ID.")
+                default:
+                    completion("Error")
+                }
             }
             else {
-                // Vibrates on valid
+                // Haptic on valid
                 UIDevice.validVibrate()
                 completion("Sucess")
             }
@@ -40,7 +50,15 @@ class FirebaseAuth: UIViewController {
             if error != nil {
                 // Vibrates on errors
                 UIDevice.invalidVibrate()
-                completion(error?.localizedDescription ?? "Error")
+                print(error?.localizedDescription ?? "Error")
+                switch error?.localizedDescription ?? "Error" {
+                case "The password must be 6 characters long or more.":
+                    completion(error?.localizedDescription ?? "Error")
+                case "The email address is already in use by another account.":
+                    completion(error?.localizedDescription ?? "Error")
+                default:
+                    completion("Contact Developer")
+                }
             }
             else {
                 // Vibrates on valid
@@ -56,7 +74,15 @@ class FirebaseAuth: UIViewController {
             if error != nil {
                 // Vibrates on errors
                 UIDevice.invalidVibrate()
-                completion(error?.localizedDescription ?? "Error")
+                print(error?.localizedDescription ?? "Error")
+                switch error?.localizedDescription ?? "Error" {
+                case "The email address is badly formatted.":
+                    completion(error?.localizedDescription ?? "Error")
+                case "There is no user record corresponding to this identifier. The user may have been deleted.":
+                    completion("There is no user registered to this Email ID.")
+                default:
+                    completion("Contact Developer")
+                }
             }
             else {
                 // Vibrates on valid

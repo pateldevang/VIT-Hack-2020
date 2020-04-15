@@ -42,9 +42,6 @@ extension AppDelegate: GIDSignInDelegate{
             guard let uid = user.userID else { return }
             print("Sucessfully logged into firebase with Google!",uid)
             
-            // TODO: Remove after testing
-            UserDefaults.standard.set(true, forKey: "login")
-            
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let viewController: UserFormVC = storyboard.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormVC

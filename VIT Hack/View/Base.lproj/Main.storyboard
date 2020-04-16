@@ -79,6 +79,14 @@
                                     <action selector="loginAction:" destination="fdo-iq-k3J" eventType="touchUpInside" id="4m9-6S-kWB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-fn-8JC">
+                                <rect key="frame" x="164" y="548" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apple Sign In"/>
+                                <connections>
+                                    <action selector="appleAction:" destination="fdo-iq-k3J" eventType="touchUpInside" id="THG-0H-oA7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="15c-La-sBL"/>

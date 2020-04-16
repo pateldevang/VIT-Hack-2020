@@ -45,5 +45,9 @@ class LoginVC: UIViewController, GIDSignInUIDelegate {
         gSignIn()
     }
     
+    //MARK: - Login with Apple ID action
+    @IBAction func appleAction(_ sender: Any) {
+        checkNewtork(ifError: "Cannot login")
+    }
     
 }

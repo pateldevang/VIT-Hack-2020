@@ -60,5 +60,8 @@ class firebaseNetworking {
     
     
     //MARK: - Function to get FAQ's
+    public func getFAQ(completion: @escaping (Bool) -> ()) {
+        
+    }
     
 }

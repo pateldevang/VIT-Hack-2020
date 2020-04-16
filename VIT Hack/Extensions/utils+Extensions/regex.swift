@@ -33,6 +33,16 @@ extension String {
             return false
         }
     }
+    
+    var isRoomNo: Bool {
+        do {
+            // format of XYYYY where Y - [0,9] & X - [A-T]
+            let regex = try NSRegularExpression(pattern: "^[A-T][0-9][0-9][0-9]*[0-9]$", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
+        } catch {
+            return false
+        }
+    }
 }
 
 

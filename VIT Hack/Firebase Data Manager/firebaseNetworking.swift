@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import SwiftyJSON
 
 class firebaseNetworking {
     
@@ -54,14 +55,27 @@ class firebaseNetworking {
             completion(logoURL, name, pageURL)
             
         }) { (error) in
-            print(error.localizedDescription)
+            debugPrint(error.localizedDescription)
         }
     }
     
     
     //MARK: - Function to get FAQ's
-    public func getFAQ(completion: @escaping (Bool) -> ()) {
-        
+    public func getFAQ(completion: @escaping (Bool, FAQData) -> ()) {
+        var FAQ = FAQData()
+        database.child("FAQs").observe(DataEventType.value, with: { (snapshot) in
+            let json = JSON((snapshot.value as? NSArray) as Any)
+            for i in 0...json.count-1 {
+                FAQ.question.append(json[i]["question"].stringValue)
+                FAQ.answer.append(json[i]["answer"].stringValue)
+                FAQ.tagZero.append(json[i]["tags"][0].stringValue)
+                FAQ.tagOne.append(json[i]["tags"][1].stringValue)
+            }
+            completion(true, FAQ)
+        }) { (error) in
+            completion(false, FAQ)
+            debugPrint(error.localizedDescription)
+        }
     }
     
 }

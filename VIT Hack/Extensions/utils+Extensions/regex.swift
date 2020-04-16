@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    var isValidContact: Bool {
+    var isValidPhone: Bool {
         let phoneNumberRegex = "^[6-9]\\d{9}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
         let isValidPhone = phoneTest.evaluate(with: self)
@@ -23,4 +23,14 @@ extension String {
             return false
         }
     }
+    var isRegNo: Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "^[1-2]{1}[0-9]{1}[A-Z]{3}[0-9]{4}$", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
+        } catch {
+            return false
+        }
+    }
 }
+
+

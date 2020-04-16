@@ -18,19 +18,6 @@ class firebaseNetworking {
     
     
     //MARK: - Function to fill the user form
-    // Use bolow data arrary to pass in fillUserdata form function
-    
-    //      let data = ["company": "Servify", "fcmToken": "\(getUID())","mail": "\(getEmail())", "name": "Devang", "phone": 9999999999, "isVitan": true, "regno": "18BCE0811", "room": "H955", "uid": getUID()] as [String : Any]
-    
-    // Example how to use it
-    //        firebaseNetworking.shared.fillUserForm(param: data) { (status) in
-    //              if status == true {
-    //    print("Done Nigga")
-    //}
-    //else {
-    //    print("Fuck you dumbass")
-    //}
-    //        }
     
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {
         
@@ -70,5 +57,8 @@ class firebaseNetworking {
             print(error.localizedDescription)
         }
     }
+    
+    
+    //MARK: - Function to get FAQ's
     
 }

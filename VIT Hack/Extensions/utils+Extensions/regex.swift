@@ -27,6 +27,9 @@ extension String {
     var isRegNo: Bool {
         do {
             // format of YZ(Branch)XXXX where Y - [1,2], Z - [0-9] & X - [A-Z]
+            //1[0-9]BCE0811 VALID
+            //20BCE0811 VALID
+            //21BCE0811 NOT VALID
             let regex = try NSRegularExpression(pattern: "^[1-2]{1}[0-9]{1}[A-Z]{3}[0-9]{4}$", options: .caseInsensitive)
             return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
         } catch {
@@ -37,6 +40,16 @@ extension String {
     var isRoomNo: Bool {
         do {
             // format of XYYYY where Y - [0,9] & X - [A-T]
+            // [A-T][0-9][0-9][0-9] VALID
+            // [A-T][0-9][0-9][0-9][0-9] VALID
+            //[A-T][0-9] NOT VALID
+            //[A-T][0-9][0-9] NOT VALID
+            var length: Int { return self.count }
+            if (length > 3 && length < 6) {
+            }
+            else {
+                return false
+            }
             let regex = try NSRegularExpression(pattern: "^[A-T][0-9][0-9][0-9]*[0-9]$", options: .caseInsensitive)
             return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
         } catch {

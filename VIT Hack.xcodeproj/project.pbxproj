@@ -20,6 +20,7 @@
 		5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E32446F31F00C19FEE /* TracksVC.swift */; };
 		5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */; };
 		5BCAC2E82446F35000C19FEE /* AskFAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */; };
+		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
 		7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742B9FF24365A3200030DF5 /* AppDelegate.swift */; };
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
 		7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0624365A3300030DF5 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		5BCAC2E32446F31F00C19FEE /* TracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksVC.swift; sourceTree = "<group>"; };
 		5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskFAQVC.swift; sourceTree = "<group>"; };
+		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7742B9FF24365A3200030DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7742BA0424365A3200030DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				77F62C1B24484363007F4A6E /* FAQData.swift */,
+				772E408D244873D200276317 /* SponsorData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
 				5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
+				772E408E244873D200276317 /* SponsorData.swift in Sources */,
 				5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */,
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */,

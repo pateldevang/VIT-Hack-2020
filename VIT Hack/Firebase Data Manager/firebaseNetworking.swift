@@ -188,4 +188,8 @@ class firebaseNetworking {
         }
     }
     
+    // TODO: - function for getting tracks [After finalizing schema]
+    public func getTracks() {
+        
+    }
 }

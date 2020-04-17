@@ -10,7 +10,7 @@ import Foundation
 
 
 struct SponsorData {
-    var name:[String] = []
-    var logoUrl:[String] = []
-    var pageUrl:[String] = []
+    var name:String?
+    var logoUrl:String?
+    var pageUrl:String?
 }

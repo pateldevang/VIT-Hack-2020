@@ -9,8 +9,8 @@
 import Foundation
 
 struct FAQData {
-    var answer:[String] = []
-    var question:[String] = []
-    var tagZero:[String] = []
-    var tagOne:[String] = []
+    var answer:String?
+    var question:String?
+    var tagZero:String?
+    var tagOne:String?
 }

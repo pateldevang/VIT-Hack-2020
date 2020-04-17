@@ -19,7 +19,6 @@ class firebaseNetworking {
     
     
     //MARK: - Function to fill the user form
-    
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {
         
         self.database.child("users").child(myUID).setValue(param) {
@@ -36,7 +35,6 @@ class firebaseNetworking {
     
     
     //MARK: - Function to fetch Sponsors data
-    
     public func getSponsor(completion: @escaping (Bool, [SponsorData]) -> ()) {
         var sponsor = SponsorData()
         var sponsorDataArray = [SponsorData]()
@@ -55,19 +53,35 @@ class firebaseNetworking {
     
     
     //MARK: - Function to get FAQ's
-    public func getFAQ(completion: @escaping (Bool, FAQData) -> ()) {
+    public func getFAQ(completion: @escaping (Bool, [FAQData]) -> ()) {
+        // Variables
         var FAQ = FAQData()
+        var FAQDataArray = [FAQData]()
+        // Observe FAQs child with .value type
         database.child("FAQs").observe(DataEventType.value, with: { (snapshot) in
-            let json = JSON((snapshot.value as? NSArray) as Any)
-            for i in 0...json.count-1 {
-                FAQ.question.append(json[i]["question"].stringValue)
-                FAQ.answer.append(json[i]["answer"].stringValue)
-                FAQ.tagZero.append(json[i]["tags"][0].stringValue)
-                FAQ.tagOne.append(json[i]["tags"][1].stringValue)
+            // Making Array empty to avoid duplicate entry when value changes
+            FAQDataArray = []
+            // Initializing Eumerator
+            let enumer = snapshot.children
+            // nextObject() calls next child
+            while let enumerator = enumer.nextObject() as? DataSnapshot {
+                // enumerator for all objects
+                let all = enumerator.children.allObjects
+                // Adding the data from child snapshots
+                if let answer = all[0] as? DataSnapshot { FAQ.answer = answer.value as? String }
+                if let question = all[1] as? DataSnapshot { FAQ.question = question.value as? String }
+                if let tag = all[2] as? DataSnapshot {
+                    let j = JSON(tag.value as Any)
+                    FAQ.tagZero = j[0].stringValue
+                    FAQ.tagOne = j[1].stringValue
+                }
+                // Appending into FAQDataArray
+                FAQDataArray.append(FAQ)
             }
-            completion(true, FAQ)
-        }) { (error) in
-            completion(false, FAQ)
+            // Completion handler
+            completion(true, FAQDataArray)
+        }) { (error) in // Error Handling
+            completion(false, FAQDataArray)
             debugPrint(error.localizedDescription)
         }
     }

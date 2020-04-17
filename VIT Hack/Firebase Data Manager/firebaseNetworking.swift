@@ -33,7 +33,11 @@ class firebaseNetworking {
             }
         })
     }
-
+    // deinitializing class
+    deinit {
+        // remove all observer to free memory
+        self.database.removeAllObservers()
+    }
     
     //MARK: - Function to fill the user form
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {

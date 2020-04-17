@@ -20,39 +20,43 @@ class firebaseNetworking {
     
     //MARK: - Function to fill the user form
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {
-        
+        // setValue with param = ["name": "yourName", ....] type
         self.database.child("users").child(myUID).setValue(param) {
             (error:Error?, database:DatabaseReference) in
-            if let error = error {
+            if let error = error { // Error Handling
                 debugLog(message: "Data could not be saved: \(error).")
                 completion(false)
             } else {
                 debugLog(message: "Data saved successfully!")
-                completion(true)
+                completion(true)  // Completion handler
             }
         }
     }
     
     
-    //MARK: - Function to fetch Sponsors data
+    //MARK: - Function to fetch Sponsors data (Fetch Once then cache)
     public func getSponsor(completion: @escaping (Bool, [SponsorData]) -> ()) {
+        // Variables
         var sponsor = SponsorData()
         var sponsorDataArray = [SponsorData]()
+        // Observe sponsors child with .childAdded type
         database.child("sponsors").observe(DataEventType.childAdded, with: { (snapshot) in
+            // Initializing Eumerator
             let enumerator = snapshot.children.allObjects
+            // Adding the data from child snapshots
             if let t1 = enumerator[0] as? DataSnapshot { sponsor.logoUrl = t1.value as? String }
             if let t2 = enumerator[1] as? DataSnapshot { sponsor.name = t2.value as? String }
             if let t3 = enumerator[2] as? DataSnapshot { sponsor.pageUrl = t3.value as? String }
-            sponsorDataArray.append(sponsor)
-            completion(true, sponsorDataArray)
-        }) { (error) in
-            completion(false, sponsorDataArray)
+            sponsorDataArray.append(sponsor)  // Appending into sponsorDataArray
+            completion(true, sponsorDataArray)  // Completion handler
+        }) { (error) in // Error Handling
+            completion(false, sponsorDataArray) 
             debugPrint(error.localizedDescription)
         }
     }
     
     
-    //MARK: - Function to get FAQ's
+    //MARK: - Function to get FAQ's (Fetch everytime when data changes)
     public func getFAQ(completion: @escaping (Bool, [FAQData]) -> ()) {
         // Variables
         var FAQ = FAQData()

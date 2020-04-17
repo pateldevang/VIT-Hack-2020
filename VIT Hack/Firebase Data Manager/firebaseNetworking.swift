@@ -90,4 +90,29 @@ class firebaseNetworking {
         }
     }
     
+    
+    //MARK: - Function to get Company details (Fecth once)
+    public func getCompanyDetails(completion: @escaping (Bool, [CompanyData]) -> ()) {
+        // Variables
+        var company = CompanyData()
+        var companyDataArray = [CompanyData]()
+        // Observe sponsors child with .childAdded type
+        database.child("company").observe(DataEventType.childAdded, with:
+            { (snapshot) in
+                // Initializing Eumerator
+                let enumerator = snapshot.children.allObjects
+                // Adding the data from child snapshots
+                if let t1 = enumerator[0] as? DataSnapshot { company.description = t1.value as? String }
+                if let t2 = enumerator[1] as? DataSnapshot { company.logoUrl = t2.value as? String }
+                if let t3 = enumerator[2] as? DataSnapshot { company.name = t3.value as? String }
+                if let t4 = enumerator[3] as? DataSnapshot { company.pageUrl = t4.value as? String }
+                if let t5 = enumerator[4] as? DataSnapshot { company.venue = t5.value as? String }
+                companyDataArray.append(company)  // Appending into sponsorDataArray
+                completion(true, companyDataArray)  // Completion handler
+        }) { (error) in // Error Handling
+            debugPrint(error.localizedDescription)
+            completion(false, companyDataArray)
+        }
+    }
+    
 }

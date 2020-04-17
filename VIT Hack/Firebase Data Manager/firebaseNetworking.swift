@@ -17,6 +17,23 @@ class firebaseNetworking {
     let database = Database.database().reference()
     let myUID = getUID()
     
+    // Initializing class
+    init() {
+        let connectedRef = Database.database().reference(withPath: ".info/connected")
+        connectedRef.observe(.value, with: { snapshot in
+            if let connected = snapshot.value as? Bool , connected {
+                // internet connected
+                // later banner alert will be added
+                print("Connected")
+            } else {
+                // internet disconnected
+                // banner alert
+                print("FUCK")
+                self.database.removeAllObservers()
+            }
+        })
+    }
+
     
     //MARK: - Function to fill the user form
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {

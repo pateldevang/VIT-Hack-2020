@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */; };
+		5B846879244B36CD00956AF5 /* EmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B846878244B36CD00956AF5 /* EmailVC.swift */; };
+		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5BCAC2D22446F23600C19FEE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D12446F23600C19FEE /* LoginVC.swift */; };
-		5BCAC2D42446F24100C19FEE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D32446F24100C19FEE /* SignUpVC.swift */; };
 		5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */; };
 		5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D72446F26900C19FEE /* UserFormVC.swift */; };
 		5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */; };
@@ -20,6 +21,7 @@
 		5BCAC2E42446F31F00C19FEE /* TracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E32446F31F00C19FEE /* TracksVC.swift */; };
 		5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */; };
 		5BCAC2E82446F35000C19FEE /* AskFAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */; };
+		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
 		7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742B9FF24365A3200030DF5 /* AppDelegate.swift */; };
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
@@ -48,8 +50,9 @@
 
 /* Begin PBXFileReference section */
 		1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
+		5B846878244B36CD00956AF5 /* EmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVC.swift; sourceTree = "<group>"; };
+		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BCAC2D12446F23600C19FEE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		5BCAC2D32446F24100C19FEE /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		5BCAC2D72446F26900C19FEE /* UserFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormVC.swift; sourceTree = "<group>"; };
 		5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		5BCAC2E32446F31F00C19FEE /* TracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksVC.swift; sourceTree = "<group>"; };
 		5BCAC2E52446F32C00C19FEE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		5BCAC2E72446F35000C19FEE /* AskFAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskFAQVC.swift; sourceTree = "<group>"; };
+		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
 		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7742B9FF24365A3200030DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			children = (
 				7742BA0324365A3200030DF5 /* Main.storyboard */,
 				7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */,
+				5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5BCAC2D12446F23600C19FEE /* LoginVC.swift */,
-				5BCAC2D32446F24100C19FEE /* SignUpVC.swift */,
+				5B846878244B36CD00956AF5 /* EmailVC.swift */,
 				5BCAC2D52446F25600C19FEE /* ForgotPasswordVC.swift */,
 				5BCAC2D72446F26900C19FEE /* UserFormVC.swift */,
 				5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */,
@@ -248,6 +253,7 @@
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 				776A7FC224474BD900D6349C /* regex.swift */,
+				5BDBE2FB244C327F00636CF1 /* UI + Color.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -428,9 +434,12 @@
 				5BCAC2E62446F32C00C19FEE /* ProfileVC.swift in Sources */,
 				5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
+				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
 				5BCAC2D62446F25600C19FEE /* ForgotPasswordVC.swift in Sources */,
+				5B846879244B36CD00956AF5 /* EmailVC.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
+				5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
 				5BCAC2D82446F26900C19FEE /* UserFormVC.swift in Sources */,
@@ -441,7 +450,6 @@
 				5BCAC2E02446F2F700C19FEE /* Speaker+SponsorVC.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
-				5BCAC2D42446F24100C19FEE /* SignUpVC.swift in Sources */,
 				5BCAC2E82446F35000C19FEE /* AskFAQVC.swift in Sources */,
 				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,

@@ -36,7 +36,7 @@ class FirebaseAuth: UIViewController {
             else {
                 // Haptic on valid
                 UIDevice.validVibrate()
-                completion("Sucess")
+                completion("Success")
             }
         }
     }
@@ -63,7 +63,7 @@ class FirebaseAuth: UIViewController {
             else {
                 // Vibrates on valid
                 UIDevice.validVibrate()
-                completion("Sucess")
+                completion("Success")
             }
         }
     }
@@ -87,10 +87,8 @@ class FirebaseAuth: UIViewController {
             else {
                 // Vibrates on valid
                 UIDevice.validVibrate()
-                completion("Sucess")
+                completion("Success")
             }
         }
-        
     }
-    
 }

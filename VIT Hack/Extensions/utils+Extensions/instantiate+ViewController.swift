@@ -20,7 +20,7 @@ extension AppDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
+
         // Get UID function
         print(getUID())
         
@@ -31,7 +31,7 @@ extension AppDelegate {
             do {
                 try firebaseAuth.signOut()
                 GIDSignIn.sharedInstance().signOut()
-                debugLog(message: "SignOut sucessful")
+                debugLog(message: "SignOut successful")
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }

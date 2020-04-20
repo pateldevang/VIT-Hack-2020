@@ -40,7 +40,7 @@ extension AppDelegate: GIDSignInDelegate{
                 return
             }
             guard let uid = user.userID else { return }
-            debugLog(message: "Sucessfully logged into firebase with Google!")
+            debugLog(message: "Successfully logged into firebase with Google!")
             debugLog(message: "UID=\(uid)")
             
             

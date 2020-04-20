@@ -17,7 +17,7 @@ extension UIDevice {
         AudioServicesPlaySystemSound(SystemSoundID(1102))
     }
     
-    // For sucess login
+    // For success login
     static func validVibrate() {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }

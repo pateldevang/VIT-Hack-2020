@@ -17,8 +17,10 @@ extension UIViewController {
         
         let firebaseAuth = Auth.auth()
         do {
-            // Set initial user default for login as false
-            UserDefaults.standard.set(false, forKey: "login")
+            // Deleting all user Defaults
+            if let appDomain = Bundle.main.bundleIdentifier {
+                UserDefaults.standard.removePersistentDomain(forName: appDomain)
+            }
             try firebaseAuth.signOut()
             GIDSignIn.sharedInstance().signOut()
             debugLog(message: "SignOut successful")

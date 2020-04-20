@@ -7,45 +7,52 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class CompanyVC: UIViewController {
-    @IBOutlet var navItem: UINavigationItem!
     
     //MARK:- Outlets
+    @IBOutlet var navItem: UINavigationItem!
     @IBOutlet var companyCollectionview: UICollectionView!
     
-    
     //MARK:- Variables
+    var selectedIndexPath: IndexPath?
+    var selectedComany = String()
     var companies = [CompanyData](){
         didSet{
             DispatchQueue.main.async {
-                    self.companyCollectionview.reloadData()
+                self.companyCollectionview.reloadData()
             }
         }
     }
     
-    var selectedIndexPath: IndexPath?
-    var selectedComany = String()
     
     //MARK:- This Data is Sample and for testing Purposes
-      var sampleCompanies : [CompanyData] = [CompanyData(description: "Very Good Company", logoUrl: "fb_sample", name: "Facebook", pageUrl: "pageUrl", venue: "SJT"),CompanyData(description: "Very Good Company", logoUrl: "honeywell_sample", name: "Honeywell", pageUrl: "pageUrl", venue: "TT"),CompanyData(description: "Very Good Company", logoUrl: "starbucks_sample", name: "Starbucks", pageUrl: "pageUrl", venue: "SJT"),CompanyData(description: "Very Good Company", logoUrl: "snapchat_sample", name: "Snapchat", pageUrl: "pageUrl", venue: "GDN")]
+    var sampleCompanies : [CompanyData] = [CompanyData(description: "Very Good Company", logoUrl: "fb_sample", name: "Facebook", pageUrl: "pageUrl", venue: "SJT"),CompanyData(description: "Very Good Company", logoUrl: "honeywell_sample", name: "Honeywell", pageUrl: "pageUrl", venue: "TT"),CompanyData(description: "Very Good Company", logoUrl: "starbucks_sample", name: "Starbucks", pageUrl: "pageUrl", venue: "SJT"),CompanyData(description: "Very Good Company", logoUrl: "snapchat_sample", name: "Snapchat", pageUrl: "pageUrl", venue: "GDN")]
     
-     var sampleColors : [UIColor] = [#colorLiteral(red: 0.2588235294, green: 0.4039215686, blue: 0.6980392157, alpha: 1),#colorLiteral(red: 1, green: 0, blue: 0, alpha: 1),#colorLiteral(red: 0.02745098039, green: 0.4392156863, blue: 0.2588235294, alpha: 1),#colorLiteral(red: 1, green: 0.9843137255, blue: 0, alpha: 1),]
+    var sampleColors : [UIColor] = [#colorLiteral(red: 0.2588235294, green: 0.4039215686, blue: 0.6980392157, alpha: 1),#colorLiteral(red: 1, green: 0, blue: 0, alpha: 1),#colorLiteral(red: 0.02745098039, green: 0.4392156863, blue: 0.2588235294, alpha: 1),#colorLiteral(red: 1, green: 0.9843137255, blue: 0, alpha: 1),]
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Calling getCompanyDetails
         firebaseNetworking.shared.getCompanyDetails { (result, data) in
             if result { self.companies = data }
         }
     }
     
-    //MARK:- Sample func TBD
+    //MARK:- next button action after selecting company
     @IBAction func NextClicked(_ sender: UIButton) {
-        let ref = Database.database().reference().child("users").child(getUID())
-        ref.updateChildValues(["company" : selectedComany])
+        firebaseNetworking.shared.updateCompanyName(companyName: selectedComany) { (status) in
+            print(status)
+            if status == true {
+                self.performSegue(withIdentifier: "goToTabBar", sender: self)
+                UserDefaults.standard.set(true, forKey: "login")
+            }
+            else {
+                self.authAlert(titlepass: "Error", message: "Please try again!")
+            }
+        }
     }
 }
 
@@ -53,14 +60,17 @@ class CompanyVC: UIViewController {
 
 //MARK:- CollectionView Delegate Methdos
 extension CompanyVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    //MARK: - numberOfItemsInSection section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //MARK:- unhighlight is not using sample Data
-       // return companies.count
+        // return companies.count
         return sampleCompanies.count
     }
     
+    //MARK: - cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = companyCollectionview.dequeueReusableCell(withReuseIdentifier: "companycell", for: indexPath) as? CompanyCollectionViewCell
+        let cell = companyCollectionview.dequeueReusableCell(withReuseIdentifier: "companycell", for: indexPath) as! CompanyCollectionViewCell
         
         //MARK:- unhighlight is not using sample Data
         //let company = companies[indexPath.item]
@@ -68,8 +78,8 @@ extension CompanyVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let company = sampleCompanies[indexPath.row]
         let color = sampleColors[indexPath.row]
         
-        setupCell(cell: cell!, company: company, color: color)
-        return cell!
+        setupCell(cell: cell, company: company, color: color)
+        return cell
     }
     
     
@@ -90,9 +100,10 @@ extension CompanyVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     
+    //MARK: - didSelectItemAt
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //MARK:- unhighlight is not using sample Data
-       // let company = companies[indexPath.item]
+        // let company = companies[indexPath.item]
         let company = sampleCompanies[indexPath.item]
         
         //MARK:- assigning User company
@@ -106,6 +117,7 @@ extension CompanyVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
         }
     }
     
+    //MARK:- didDeselectItemAt
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let cell = companyCollectionview.cellForItem(at: indexPath) as? CompanyCollectionViewCell {
             cell.bgView.backgroundColor = .white
@@ -114,17 +126,17 @@ extension CompanyVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     //MARK:- Static cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-                return CGSize(width: 182, height: 207)
+        return CGSize(width: 182, height: 207)
     }
     
     
-//MARK:- Will review later ( function for dynamic height )
-/*  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-                let Screenwidth = UIScreen.main.bounds.width
-                let width = (Screenwidth-42)/2
-                let aspectRatio : CGFloat = 1.0810810811
-                let height = width * aspectRatio
-                return CGSize(width: width, height: height)
-    }
-    */
+    //MARK:- Will review later ( function for dynamic height )
+    /*  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+     let Screenwidth = UIScreen.main.bounds.width
+     let width = (Screenwidth-42)/2
+     let aspectRatio : CGFloat = 1.0810810811
+     let height = width * aspectRatio
+     return CGSize(width: width, height: height)
+     }
+     */
 }

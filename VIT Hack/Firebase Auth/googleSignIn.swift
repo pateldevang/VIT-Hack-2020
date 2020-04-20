@@ -40,14 +40,8 @@ extension AppDelegate: GIDSignInDelegate{
                 return
             }
             guard let uid = user.userID else { return }
+            print(uid)
             debugLog(message: "Successfully logged into firebase with Google!")
-            debugLog(message: "UID=\(uid)")
-            
-            
-            // ---------------------------------- To BE REMOVED ------------------
-            UserDefaults.standard.setValue(true, forKey: "login")
-            // ---------------------------------------------------------------
-            
             
             
             // Access the storyboard and fetch an instance of the view controller
@@ -57,7 +51,7 @@ extension AppDelegate: GIDSignInDelegate{
             // Then push that view controller onto the navigation stack
             let rootViewController = self.window!.rootViewController
             rootViewController?.show(viewController, sender: true)
-            //             Haptic feedback when logged in
+            // Haptic feedback when logged in
             UIDevice.validVibrate()
         }
         

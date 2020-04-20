@@ -9,7 +9,7 @@
 import UIKit
 
 class UserFormVC: UIViewController {
-
+    
     
     //MARK:- Outlets
     @IBOutlet var nameTextField: UITextField!
@@ -25,12 +25,17 @@ class UserFormVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUp()
+    }
+    
+    //MARK: - Function to setUp initial view
+    func setUp() {
         errorLabel.alpha = 0
         emailTextField.text = getEmail()
         emailTextField.isEnabled = false
-        // Do any additional setup after loading the view.
     }
     
+    // MARK: - Toogle action
     @IBAction func toggleValueChanged(_ sender: UISwitch) {
         if sender.isOn {
             registrationStack.isHidden = false
@@ -42,11 +47,11 @@ class UserFormVC: UIViewController {
         errorLabel.text = ""
     }
     
+    // MARK: - Function to check regex
     private func regExCheck() -> String?{
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please Fill in ALL The Fields☝🏻"
         }
-        
         if !phoneTextField.text!.isValidPhone{
             return"Please Enter a Valid Phone Number"
         }
@@ -54,7 +59,6 @@ class UserFormVC: UIViewController {
             if !registrationTextField.text!.isRegNo{
                 return "Please Enter a Valid Registration Number"
             }
-            
             if !roomNoTextField.text!.isRoomNo{
                 return "Please Enter Valid Room Number"
             }
@@ -62,6 +66,8 @@ class UserFormVC: UIViewController {
         return nil
     }
     
+    
+    // MARK: - Function to set parameter
     func setParams() -> [String:Any]?{
         if regExCheck() != nil{
             let error = regExCheck()
@@ -69,22 +75,14 @@ class UserFormVC: UIViewController {
             errorLabel.text = error!
             return nil
         } else{
-            
             errorLabel.text = ""
-            
             var param : [String:Any]
-            let name = nameTextField.text
-            let email = getEmail()
-            let phone = phoneTextField.text
             let isVitian = VITianToggleButton.isOn
-            let uid = getUID()
-            let company = "not chosen yet"
             let FCMToken = "something"
-            param = ["name":name!,"mail":email,"phone":phone!,"isVitian":isVitian,"uid":uid,"fcmToken":FCMToken,"company":company]
+            param = ["name":nameTextField.text!,"mail":getEmail(),"phone":phoneTextField.text!,"isVitian":isVitian,"uid":getUID(),"fcmToken":FCMToken,"company": "not chosen yet"]
             if isVitian {
                 let regNo = registrationTextField.text
                 let roomNo = roomNoTextField.text
-                
                 param["regno"] = regNo
                 param["room"] = roomNo
             }
@@ -92,11 +90,12 @@ class UserFormVC: UIViewController {
         }
     }
     
+    //MARK: - Set user param action
     @IBAction func doneClicked(_ sender: UIButton) {
         if let params = setParams(){
             firebaseNetworking.shared.fillUserForm(param: params) { (result) in
                 if result {
-                print("User data has been saved? ")
+                    print("User data has been saved? ")
                     self.performSegue(withIdentifier: "toCompanyVC", sender: nil)
                 }else{
                     self.authAlert(titlepass: "Sorry", message: "Please Try again")

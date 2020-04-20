@@ -54,6 +54,22 @@ class firebaseNetworking {
         }
     }
     
+    //MARK: - Function to update company name
+    public func updateCompanyName(companyName: String,completion: @escaping (Bool) -> ()) {
+        let ref = database.child("users").child("JotCjfXkYZMawzonXkgq5AKtemh1")
+        ref.updateChildValues(["company" : companyName])
+        {
+            (error:Error?, database:DatabaseReference) in
+            if let error = error { // Error Handling
+                debugLog(message: "Data could not be saved: \(error).")
+                completion(false)
+            } else {
+                debugLog(message: "Data saved successfully!")
+                completion(true)  // Completion handler
+            }
+        }
+    }
+    
     
     //MARK: - Function to fetch Sponsors data (Fetch Once then cache)
     public func getSponsor(completion: @escaping (Bool, [SponsorData]) -> ()) {

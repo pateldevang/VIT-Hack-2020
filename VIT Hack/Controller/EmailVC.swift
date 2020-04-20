@@ -10,7 +10,7 @@ import UIKit
 
 class EmailVC: UIViewController {
     
-
+    
     //MARK:- Outlets
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var emailTextField: UITextField!
@@ -18,18 +18,16 @@ class EmailVC: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var navbar: UINavigationBar!
     @IBOutlet var navItem: UINavigationItem!
-    
     @IBOutlet var forgotPasswordButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
     
-    //MARK:- Setup App
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    
+    //MARK: - Segment control
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -41,13 +39,15 @@ class EmailVC: UIViewController {
         }
     }
     
+    //MARK: - Function to set Navbar Title
     func setTitles(_ title : String, _ bool : Bool){
         navItem.title = title
         loginButton.setTitle(title, for: .normal)
-         forgotPasswordButton.isHidden = bool
+        forgotPasswordButton.isHidden = bool
     }
     
     
+    //MARK: - Action for sign/login button
     @IBAction func buttonClicked(_ sender: UIButton) {
         if segmentedControl.selectedSegmentIndex == 0 {
             logInAction()
@@ -56,13 +56,15 @@ class EmailVC: UIViewController {
         }
     }
     
+    // MARK: - Function for login
     private func logInAction(){
         // Check internet connection
         checkNewtork(ifError: "Cannot login")
+        // Change later to text field entries
         FirebaseAuth.emailLoginIn(email: "a@k.com", pass: "testing") { (result) in
             switch result {
             case "Success":
-                self.goToTabbarVC()
+                self.goToFormVC()
                 debugLog(message: "Go to TabBarVC")
             default:
                 self.authAlert(titlepass: "Error", message: result)
@@ -70,7 +72,9 @@ class EmailVC: UIViewController {
         }
     }
     
+    // MARK: - Function for Sign in
     private func signUpAction(){
+        // Change later to text field entries
         FirebaseAuth.emailSignIn(email: "sampleSignup@abc.com", pass: "testing") { (result) in
             switch result {
             case "Success":
@@ -82,17 +86,12 @@ class EmailVC: UIViewController {
         }
     }
     
+    // MARK: - Function to instantiate view to UserFormVC
     private func goToFormVC(){
         let vc = storyboard!.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormVC
         let presentingController =  self.presentingViewController
         self.dismiss(animated: false) {
             presentingController?.present(vc, animated: false, completion: nil)
         }
-    }
-    
-    private func goToTabbarVC(){
-        let tap = mainStoryboard.instantiateViewController(withIdentifier: "tapBar") as! UITabBarController
-        appDelegate.window?.rootViewController = tap
-        appDelegate.window?.makeKeyAndVisible()
     }
 }

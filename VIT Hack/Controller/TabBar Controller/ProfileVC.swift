@@ -21,10 +21,6 @@ class ProfileVC: UIViewController {
     @IBAction func signOutAction(_ sender: Any) {
         // calling signOut function
         signOut()
-        // Deleting all user Defaults
-        if let appDomain = Bundle.main.bundleIdentifier {
-            UserDefaults.standard.removePersistentDomain(forName: appDomain)
-        }
     }
 }
 

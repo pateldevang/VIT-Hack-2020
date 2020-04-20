@@ -25,11 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-        //         Setting up initial view controller
-        //setInitialViewController()
+        //Setting up initial view controller
+        setInitialViewController()
         
         // Increse Launch Time will uncommit during deployment
-        //        Thread.sleep(forTimeInterval: 1.3)
+        //Thread.sleep(forTimeInterval: 1.3)
         
         return true
     }

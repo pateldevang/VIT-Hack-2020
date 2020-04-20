@@ -10,6 +10,7 @@ import UIKit
 
 class CompanyCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Outlets
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var bgView: UIView!

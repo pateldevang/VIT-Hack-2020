@@ -414,7 +414,7 @@
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="160" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="160" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OTQ-20-9jh" id="uDH-pB-QOC">
@@ -518,6 +518,9 @@
                         <viewLayoutGuide key="safeArea" id="QpB-Xw-u6N"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timeline" image="star" catalog="system" selectedImage="star.fill" id="4C2-7F-B19"/>
+                    <connections>
+                        <outlet property="tableView" destination="Al1-Yh-erX" id="F1c-1L-MgU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOF-cy-MCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

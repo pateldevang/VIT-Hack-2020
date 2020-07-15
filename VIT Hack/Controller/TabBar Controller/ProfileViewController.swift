@@ -18,8 +18,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var registration: UILabel!
     
     
+    //Email Address
+    //dpdcnf87nu@privaterelay.appleid.com
+    
+    
+    //Your Institute
+    //Vellore Institute of Technology
     
     override func viewDidLoad() {
+        UserDefaults.standard.set("Saryan Kothari", forKey: Keys.name)
         super.viewDidLoad()
         loadData()
     }
@@ -30,6 +37,7 @@ class ProfileViewController: UIViewController {
         institute.text = Defaults.institute()
         registration.text = Defaults.registration()
         header.text = "What’s up " + getFirstName()
+        initials.text = getInitials()
     }
     
     func getFirstName()->String{
@@ -54,6 +62,6 @@ class ProfileViewController: UIViewController {
 extension String {
     var wordList: [String] {
         let separation = CharacterSet.alphanumerics.inverted
-        return components(separatedBy: separation).filter { !$0.isEmpty }
+        return self.isEmpty ? [] : components(separatedBy: separation).filter { !$0.isEmpty }
     }
 }

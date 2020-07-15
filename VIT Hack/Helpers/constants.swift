@@ -30,10 +30,10 @@ public func debugLog(message: String) {
     #endif
 }
 
-
-// Company name
-enum companyName {
-    case Servify
-    case HP
-    case otherCompantName
+struct Keys {
+    static let name = "name"
+    static let institute = "institute"
+    static let registration = "registration"
+    
+    static let login = "login"
 }

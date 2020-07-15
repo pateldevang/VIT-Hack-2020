@@ -10,29 +10,50 @@ import UIKit
 
 class TimelineViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        FirebaseAuth.emailLoginIn(email: "a@k.com", pass: "000000") { (success) in
-            if success  == "Success"{
-                firebaseNetworking.shared.getTimeline { (success, data) in
-                    print(success,data)
-                }
+    @IBOutlet weak var tableView: UITableView!
+    
+    var timeline = [TimelineData]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
-        
-        // Do any additional setup after loading the view.
     }
     
+    let cellIdentifier = "timelinecell"
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        firebaseNetworking.shared.getTimeline(completion: timelinehandler(status:timeline:))
     }
-    */
+    
+    func timelinehandler(status:Bool,timeline : [TimelineData]){
+        if status{      self.timeline = timeline       }
+    }
+    
+    
+}
 
+//MARK: Tableview delegate + datasource methods
+extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return timeline.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TimelineCell
+        
+        let timelineData = timeline[indexPath.row]
+        
+        cell.setupCell(timelineData)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    
+    //TODO dynamic height
 }

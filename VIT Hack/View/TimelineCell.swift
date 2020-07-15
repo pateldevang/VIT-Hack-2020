@@ -10,15 +10,23 @@ import UIKit
 
 class TimelineCell: UITableViewCell {
 
+    //Outlets
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCell(_ timeline : TimelineData) {
+        titleLabel.text = timeline.title
+        bodyTextView.text = timeline.subtitle
+        
+        timeLabel.text = timeline.time.time
+        titleLabel.textColor = (timeline.time < Date().timeIntervalSince1970) ? .red : UIColor.purple
     }
-
+    
+    
 }

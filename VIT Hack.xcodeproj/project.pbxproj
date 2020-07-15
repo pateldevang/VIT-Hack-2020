@@ -35,6 +35,7 @@
 		5BBD889124BE41B0009E8F8E /* TracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889024BE41B0009E8F8E /* TracksCell.swift */; };
 		5BBD889324BE41BC009E8F8E /* DomainsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889224BE41BC009E8F8E /* DomainsCell.swift */; };
 		5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889424BE41CE009E8F8E /* TimelineCell.swift */; };
+		5BBD889724BED509009E8F8E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889624BED509009E8F8E /* Time.swift */; };
 		5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */; };
 		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
@@ -92,6 +93,7 @@
 		5BBD889024BE41B0009E8F8E /* TracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksCell.swift; sourceTree = "<group>"; };
 		5BBD889224BE41BC009E8F8E /* DomainsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainsCell.swift; sourceTree = "<group>"; };
 		5BBD889424BE41CE009E8F8E /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		5BBD889624BED509009E8F8E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
 		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
 		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 				776A7FC224474BD900D6349C /* regex.swift */,
 				5BDBE2FB244C327F00636CF1 /* UI + Color.swift */,
+				5BBD889624BED509009E8F8E /* Time.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
+				5BBD889724BED509009E8F8E /* Time.swift in Sources */,
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,

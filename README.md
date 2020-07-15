@@ -59,10 +59,10 @@ iOS app for VIT HACK - 2020
    - [ ] Problem statements
       - [ ] Networking
       - [ ] Design
- - [ ] Profile
+ - [x] Profile
    - [ ] Networking 
-   - [ ] Design
-      - [ ] Placeholder image only
+   - [x] Design
+      - [x] Placeholder image only
       - [x] Logout
 - [ ] Notifications
   - [ ] FCM token setup 

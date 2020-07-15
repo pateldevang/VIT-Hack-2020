@@ -14,18 +14,26 @@ class TimelineCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var tick: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        tick.isHidden = true
     }
     
     func setupCell(_ timeline : TimelineData) {
+        
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         
-        timeLabel.text = timeline.startUnix!.timeStringConverter
+        if let sTime = timeline.startUnix {
+        timeLabel.text = sTime.timeStringConverter
+        }
         
+        if let eTime = timeline.endUnix, eTime < Date().timeIntervalSince1970 {
+            tick.isHidden = false
+        }
     }
     
     

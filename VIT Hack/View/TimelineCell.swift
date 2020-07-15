@@ -36,5 +36,4 @@ class TimelineCell: UITableViewCell {
         }
     }
     
-    
 }

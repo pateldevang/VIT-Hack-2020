@@ -46,7 +46,7 @@ extension AppDelegate: GIDSignInDelegate{
             
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
-            let viewController: UserFormVC = storyboard.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormVC
+            let viewController: UserFormViewController = storyboard.instantiateViewController(withIdentifier: "UserFormVC") as! UserFormViewController
             
             // Then push that view controller onto the navigation stack
             let rootViewController = self.window!.rootViewController

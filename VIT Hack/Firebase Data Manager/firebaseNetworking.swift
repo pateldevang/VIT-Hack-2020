@@ -174,12 +174,12 @@ class firebaseNetworking {
     }
     
     //MARK: - Function to get timeline (Fetch everytime when data changes)
-    public func getTimeline(companyName:String, completion: @escaping (Bool, [TimelineData]) -> ()) {
+    public func getTimeline(completion: @escaping (Bool, [TimelineData]) -> ()) {
         // Variables
         var timeline = TimelineData()
         var TimelineDataArray = [TimelineData]()
         // Observe timeline child with .value type
-        database.child("timeline/\(companyName)").observe(DataEventType.value, with: { (snapshot) in
+        database.child("timeline").observe(DataEventType.value, with: { (snapshot) in
             // Making Array empty to avoid duplicate entry when value changes
             TimelineDataArray = []
             // Initializing Eumerator
@@ -189,8 +189,8 @@ class firebaseNetworking {
                 // enumerator for all objects
                 let all = enumerator.children.allObjects
                 // Adding the data from child snapshots
-                if let end = all[0] as? DataSnapshot { timeline.endUnix = end.value as? String }
-                if let start = all[1] as? DataSnapshot { timeline.startUnix = start.value as? String }
+                if let end = all[0] as? DataSnapshot { timeline.endUnix = end.value as? Double }
+                if let start = all[1] as? DataSnapshot { timeline.startUnix = start.value as? Double }
                 if let subtitle = all[2] as? DataSnapshot { timeline.subtitle = subtitle.value as? String }
                 if let title = all[3] as? DataSnapshot { timeline.title = title.value as? String }
                 // Appending into TimelineDataArray

@@ -13,6 +13,14 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        FirebaseAuth.emailLoginIn(email: "a@k.com", pass: "000000") { (success) in
+            if success  == "Success"{
+                firebaseNetworking.shared.getTimeline { (success, data) in
+                    print(success,data)
+                }
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     

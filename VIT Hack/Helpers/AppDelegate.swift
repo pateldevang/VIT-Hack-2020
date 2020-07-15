@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().delegate = self
         
         //Setting up initial view controller
-        setInitialViewController()
+        //setInitialViewController()
         
         // Increse Launch Time will uncommit during deployment
         //Thread.sleep(forTimeInterval: 1.3)

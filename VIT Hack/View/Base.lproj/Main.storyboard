@@ -408,10 +408,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-Yh-erX">
                                 <rect key="frame" x="0.0" y="103" width="414" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="A8T-NC-jbQ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj0-5Q-Loq">
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="35"/>
+                                            <fontDescription key="fontDescription" name="Lato-Italic" family="Lato" pointSize="20"/>
+                                            <color key="textColor" name="blue"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="fj0-5Q-Loq" secondAttribute="bottom" id="MxL-16-xdf"/>
+                                        <constraint firstItem="fj0-5Q-Loq" firstAttribute="leading" secondItem="A8T-NC-jbQ" secondAttribute="leading" id="NAu-kB-JJb"/>
+                                        <constraint firstItem="fj0-5Q-Loq" firstAttribute="width" secondItem="A8T-NC-jbQ" secondAttribute="width" multiplier="0.66" id="mxN-Ei-2pe"/>
+                                        <constraint firstItem="fj0-5Q-Loq" firstAttribute="top" secondItem="A8T-NC-jbQ" secondAttribute="top" id="q01-it-F7v"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="160" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
@@ -503,6 +518,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="e6d-Mc-v4B" id="NbA-1y-3jP"/>
+                                    <outlet property="delegate" destination="e6d-Mc-v4B" id="s0S-9i-edw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

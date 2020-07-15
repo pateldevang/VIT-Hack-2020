@@ -21,10 +21,12 @@ iOS app for VIT HACK - 2020
   - [ ] Design 
       - [ ] About You
       - [ ] Phone Number
-- [ ] Timeline 
-  - [ ] Networking
-  - [ ] Timeline setup according to design
-    - [ ] Timeline - check for completed events(green tick)
+- [x] Timeline 
+  - [x] Networking
+  - [x] Timeline setup according to design
+    - [ ] Timeline watch now button
+    - [ ] Timeline row dynamic height
+    - [x] Timeline - check for completed events(green tick)
 - [ ] Speakers, Sponsors and Collaborators Screen
    - [ ] Speakers collection view
         - [ ] Networking

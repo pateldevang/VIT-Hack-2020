@@ -10,15 +10,30 @@ import UIKit
 
 class TimelineCell: UITableViewCell {
 
+    //Outlets
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var tick: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        tick.isHidden = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCell(_ timeline : TimelineData) {
+        
+        titleLabel.text = timeline.title
+        bodyTextView.text = timeline.subtitle
+        
+        if let sTime = timeline.startUnix {
+        timeLabel.text = sTime.timeStringConverter
+        }
+        
+        if let eTime = timeline.endUnix, eTime < Date().timeIntervalSince1970 {
+            tick.isHidden = false
+        }
     }
-
+    
 }

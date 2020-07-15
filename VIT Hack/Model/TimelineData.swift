@@ -9,8 +9,8 @@
 import Foundation
 
 struct TimelineData {
-    var endUnix:String?
-    var startUnix:String?
+    var endUnix:Double?
+    var startUnix:Double?
     var subtitle:String?
     var title:String?
 }

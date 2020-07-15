@@ -24,8 +24,8 @@ class TimelineCell: UITableViewCell {
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         
-        timeLabel.text = timeline.time.time
-        titleLabel.textColor = (timeline.time < Date().timeIntervalSince1970) ? .red : UIColor.purple
+        timeLabel.text = timeline.startUnix!.timeStringConverter
+        
     }
     
     

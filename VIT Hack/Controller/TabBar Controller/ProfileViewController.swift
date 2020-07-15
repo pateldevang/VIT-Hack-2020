@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    //OUTLETS
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
     @IBOutlet weak var name: UILabel!
@@ -17,20 +18,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var institute: UILabel!
     @IBOutlet weak var registration: UILabel!
     
-    
-    //Email Address
-    //dpdcnf87nu@privaterelay.appleid.com
-    
-    
-    //Your Institute
-    //Vellore Institute of Technology
-    
     override func viewDidLoad() {
-        UserDefaults.standard.set("Saryan Kothari", forKey: Keys.name)
         super.viewDidLoad()
         loadData()
     }
     
+    ///Fetch data  from `Userdefaults`
     func loadData(){
         name.text = Defaults.name()
         email.text = getEmail()
@@ -46,13 +39,11 @@ class ProfileViewController: UIViewController {
     }
     
     func getInitials()->String{
-        var name = Defaults.name().wordList
+        let name = Defaults.name().wordList
         let fName = name.first?.first ?? Character("")
         let lname = name.last?.first ??  Character("")
         return String(fName) + " " + String(lname)
     }
-    
-    
     
     @IBAction func logoutClicked(_ sender: UIButton) {
         signOut()

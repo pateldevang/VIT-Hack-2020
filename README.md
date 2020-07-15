@@ -11,7 +11,7 @@ iOS app for VIT HACK - 2020
 - [ ] Authentication
   - [x] Networking for Google Authentication
   - [ ] Networking for Apple Authentication
-  - [ ] Networking for Email Authentication
+  - [x] Networking for Email Authentication
   - [ ] New design setup for sign up and login (email)
     - [ ] Hello (Sign Up)
     - [ ] Welcome (Login)

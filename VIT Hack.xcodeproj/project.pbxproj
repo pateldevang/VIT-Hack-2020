@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */; };
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
+		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
+		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
 		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */; };
 		5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */; };
@@ -37,7 +39,6 @@
 		5BBD889324BE41BC009E8F8E /* DomainsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889224BE41BC009E8F8E /* DomainsCell.swift */; };
 		5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889424BE41CE009E8F8E /* TimelineCell.swift */; };
 		5BBD889724BED509009E8F8E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889624BED509009E8F8E /* Time.swift */; };
-		5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */; };
 		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
 		7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742B9FF24365A3200030DF5 /* AppDelegate.swift */; };
@@ -68,6 +69,8 @@
 /* Begin PBXFileReference section */
 		1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		5BBD889224BE41BC009E8F8E /* DomainsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainsCell.swift; sourceTree = "<group>"; };
 		5BBD889424BE41CE009E8F8E /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		5BBD889624BED509009E8F8E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVC.swift; sourceTree = "<group>"; };
 		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
 		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B086C6324C0188F00D5264C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5BBD887624BE2DEF009E8F8E /* HomeViewController.swift */,
+				5BBD887824BE3237009E8F8E /* SignupViewController.swift */,
+				5BBD887A24BE33B4009E8F8E /* UserFormViewController.swift */,
+				5BBD887C24BE33BE009E8F8E /* PhoneViewController.swift */,
+				5BBD887E24BE377E009E8F8E /* LoginViewController.swift */,
+				5BBD888024BE3858009E8F8E /* ForgotPasswordViewController.swift */,
+				5B086C6124C0188A00D5264C /* OnboardingViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5B086C6424C0189700D5264C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */,
+				5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */,
+				5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */,
+				5BBD888824BE3F50009E8F8E /* FAQViewController.swift */,
+				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
+				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		5BBD886124BE2C35009E8F8E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,19 +184,6 @@
 				5BBD886B24BE2C53009E8F8E /* Lato-ThinItalic.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		5BCAC2E92446F35E00C19FEE /* TabBar Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */,
-				5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */,
-				5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */,
-				5BBD888824BE3F50009E8F8E /* FAQViewController.swift */,
-				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
-				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
-			);
-			path = "TabBar Controller";
 			sourceTree = "<group>";
 		};
 		7742B9F324365A3200030DF5 = {
@@ -216,6 +232,7 @@
 				5BBD889024BE41B0009E8F8E /* TracksCell.swift */,
 				5BBD889224BE41BC009E8F8E /* DomainsCell.swift */,
 				5BBD889424BE41CE009E8F8E /* TimelineCell.swift */,
+				5B086C6524C01D6500D5264C /* OnboardingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,14 +240,8 @@
 		775B1FE224365EEF00E6F221 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5BCAC2D92446F29F00C19FEE /* CompanyVC.swift */,
-				5BCAC2E92446F35E00C19FEE /* TabBar Controller */,
-				5BBD887624BE2DEF009E8F8E /* HomeViewController.swift */,
-				5BBD887824BE3237009E8F8E /* SignupViewController.swift */,
-				5BBD887A24BE33B4009E8F8E /* UserFormViewController.swift */,
-				5BBD887C24BE33BE009E8F8E /* PhoneViewController.swift */,
-				5BBD887E24BE377E009E8F8E /* LoginViewController.swift */,
-				5BBD888024BE3858009E8F8E /* ForgotPasswordViewController.swift */,
+				5B086C6424C0189700D5264C /* Main */,
+				5B086C6324C0188F00D5264C /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -504,7 +515,7 @@
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
 				5BBD887724BE2DEF009E8F8E /* HomeViewController.swift in Sources */,
 				5BBD887D24BE33BE009E8F8E /* PhoneViewController.swift in Sources */,
-				5BCAC2DA2446F29F00C19FEE /* CompanyVC.swift in Sources */,
+				5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
@@ -521,6 +532,7 @@
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5BBD888F24BE41A2009E8F8E /* FAQTableViewCell.swift in Sources */,
 				776A7FC324474BD900D6349C /* regex.swift in Sources */,
+				5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */,
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				5BBD889124BE41B0009E8F8E /* TracksCell.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,

@@ -6,7 +6,7 @@ iOS app for VIT HACK - 2020
 - [ ] Add Kingfisher for images
 - [ ] Splash screen (Logo)
 - [ ] Onboarding
-  - [ ] Design
+  - [x] Design
   - [ ] UserDefaults - should show only first time
 - [ ] Authentication
   - [x] Networking for Google Authentication

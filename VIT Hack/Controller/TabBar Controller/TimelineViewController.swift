@@ -56,4 +56,5 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     //TODO dynamic height
+    //TODO add watch now button
 }

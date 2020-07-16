@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */; };
+		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */; };
 		5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
+		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */,
 				77D6AA312449EB6400E405B1 /* PrizeData.swift */,
 				77D6AA332449EE1500E405B1 /* TimelineData.swift */,
+				5B086C3A24BF80FF00D5264C /* Defaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
+				5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */,
 				5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */,
 				5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */,
 				5BBD888924BE3F50009E8F8E /* FAQViewController.swift in Sources */,

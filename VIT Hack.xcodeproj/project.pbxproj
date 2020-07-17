@@ -64,6 +64,8 @@
 		77D6AA322449EB6400E405B1 /* PrizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA312449EB6400E405B1 /* PrizeData.swift */; };
 		77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA332449EE1500E405B1 /* TimelineData.swift */; };
 		77F62C1C24484363007F4A6E /* FAQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F62C1B24484363007F4A6E /* FAQData.swift */; };
+		86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89924C01E3500FE6DBE /* UserModel.swift */; };
+		86BBF89C24C02A0400FE6DBE /* Encodable + dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,8 @@
 		77D6AA312449EB6400E405B1 /* PrizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeData.swift; sourceTree = "<group>"; };
 		77D6AA332449EE1500E405B1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
 		77F62C1B24484363007F4A6E /* FAQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQData.swift; sourceTree = "<group>"; };
+		86BBF89924C01E3500FE6DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + dictionary.swift"; sourceTree = "<group>"; };
 		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				77F62C1B24484363007F4A6E /* FAQData.swift */,
+				86BBF89924C01E3500FE6DBE /* UserModel.swift */,
 				772E408D244873D200276317 /* SponsorData.swift */,
 				77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */,
 				77D6AA312449EB6400E405B1 /* PrizeData.swift */,
@@ -318,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				775B1FF62436622000E6F221 /* checkNetwork.swift */,
+				86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */,
 				776A7FC024470F2C00D6349C /* google+SignIn.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
@@ -520,6 +526,7 @@
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
 				5BBD889724BED509009E8F8E /* Time.swift in Sources */,
+				86BBF89C24C02A0400FE6DBE /* Encodable + dictionary.swift in Sources */,
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
@@ -529,6 +536,7 @@
 				5BBD888924BE3F50009E8F8E /* FAQViewController.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
+				86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */,
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5BBD888F24BE41A2009E8F8E /* FAQTableViewCell.swift in Sources */,
 				776A7FC324474BD900D6349C /* regex.swift in Sources */,

@@ -13,14 +13,15 @@ iOS app for VIT HACK - 2020
   - [ ] Networking for Apple Authentication
   - [x] Networking for Email Authentication
   - [ ] New design setup for sign up and login (email)
-    - [ ] Hello (Sign Up)
+    - [x] Hello (Sign Up)
     - [ ] Welcome (Login)
     - [ ] Forgot Password
-- [ ] Getting data from user (for signup)
-  - [ ] Networking 
-  - [ ] Design 
-      - [ ] About You
-      - [ ] Phone Number
+- [x] Getting data from user (for signup)
+  - [x] Networking 
+  - [x] Design 
+      - [x] About You
+      - [x] Phone Number
+      - [ ] Regex for international numbers
 - [x] Timeline 
   - [x] Networking
   - [x] Timeline setup according to design

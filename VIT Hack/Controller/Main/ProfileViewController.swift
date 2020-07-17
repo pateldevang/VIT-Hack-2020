@@ -40,8 +40,8 @@ class ProfileViewController: UIViewController {
     
     func getInitials()->String{
         let name = Defaults.name().wordList
-        let fName = name.first?.first ?? Character("")
-        let lname = name.last?.first ??  Character("")
+        let fName = name.first?.first ?? Character(" ")
+        let lname = name.last?.first ??  Character(" ")
         return String(fName) + " " + String(lname)
     }
     

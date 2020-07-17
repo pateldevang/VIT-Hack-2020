@@ -10,21 +10,22 @@ import UIKit
 
 class PhoneViewController: UIViewController {
 
+    var newUser: User!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        guard let phoneNumber = phoneNumberTextField.text else {
+            dismissAlert(titlepass: "Phone missing", message: "Please enter your phone number")
+            return
+        }
+        newUser.phone = phoneNumber
+        do {
+            let params = try newUser.asDictionary()
+            firebaseNetworking.shared.fillUserForm(param: params) { completion in
+                print("STATUS: \(completion)")
+            }
+        } catch { print(error) }
     }
-    */
-
 }

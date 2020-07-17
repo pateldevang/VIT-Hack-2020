@@ -10,21 +10,28 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        guard let emailId = emailTextField.text else {
+            authAlert(titlepass: "Invalid Email", message: "Please enter an email id")
+            return
+        }
+        if emailId.isEmail {
+            FirebaseAuth.emailSignIn(email: emailId, pass: passwordTextField.text!) { authStatus in
+                if authStatus == "Success" {
+                    self.performSegue(withIdentifier: "goToUserForm", sender: Any.self)
+                } else {
+                    self.authAlert(titlepass: "Oops! Signup failed", message: "\(authStatus)")
+                }
+            }
+        } else {
+            self.authAlert(titlepass: "Oops! Signup failed", message: "Please enter a valid email id and try again")
+        }
     }
-    */
-
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn
+//import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,9 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Configure GoogleSignIn
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        //TODO
+       /* GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        */
         
+        //TODO
         //Setting up initial view controller
         //setInitialViewController()
         

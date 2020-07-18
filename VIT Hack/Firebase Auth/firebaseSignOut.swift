@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-import GoogleSignIn
+//import GoogleSignIn
 
 extension UIViewController {
     
@@ -22,7 +22,7 @@ extension UIViewController {
                 UserDefaults.standard.removePersistentDomain(forName: appDomain)
             }
             try firebaseAuth.signOut()
-            GIDSignIn.sharedInstance().signOut()
+            //GIDSignIn.sharedInstance().signOut() //TODO
             debugLog(message: "SignOut successful")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "navVC") as! UINavigationController

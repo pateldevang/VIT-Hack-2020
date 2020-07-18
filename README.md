@@ -29,9 +29,9 @@ iOS app for VIT HACK - 2020
     - [ ] Timeline row dynamic height
     - [x] Timeline - check for completed events(green tick)
 - [ ] Speakers, Sponsors and Collaborators Screen
-   - [ ] Speakers collection view
+   - [x] Speakers collection view
         - [ ] Networking
-        - [ ] Design
+        - [x] Design
         - [ ] Link to video - YouTube or webView
    - [ ] Collaborators collection view
         - [ ] Networking

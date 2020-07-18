@@ -58,7 +58,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -84,6 +84,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 12a17283909d4943e1eae5562ccc5341db105f88
+PODFILE CHECKSUM: 8b23dad4e9f410ec75bc5d407c7ba5c4d5cb9a47
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3

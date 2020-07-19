@@ -14,11 +14,23 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var instituteNameTextField: UITextField!
     @IBOutlet weak var registrationNumberTextField: UITextField!
+    @IBOutlet weak var progressView: UIView!
+
+    
 
     var newUser = User()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var isEmail = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showProgress()
+    }
+    
+    func showProgress(){
+        let start : CGFloat = isEmail ? 0.33 : 0.0
+        let end : CGFloat = isEmail ? 0.66 : 0.5
+        let progress = Progressbar(for: progressView, duration: 2, startValue: start, endValue: end)
+        self.progressView.layer.insertSublayer(progress, above: self.progressView.layer)
     }
 
     @IBAction func continueButtonPressed(_ sender: Any) {
@@ -53,6 +65,7 @@ class UserFormViewController: UIViewController {
         if segue.identifier == "goToPhone" {
             let phoneViewController = segue.destination as! PhoneViewController
             phoneViewController.newUser = self.newUser
+            phoneViewController.isEmail = self.isEmail
         }
     }
 }

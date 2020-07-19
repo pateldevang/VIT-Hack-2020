@@ -44,6 +44,7 @@
 		5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889424BE41CE009E8F8E /* TimelineCell.swift */; };
 		5BBD889724BED509009E8F8E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889624BED509009E8F8E /* Time.swift */; };
 		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
+		5BF310A324C36EC200F3E874 /* Progressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF310A224C36EC200F3E874 /* Progressbar.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
 		7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7742B9FF24365A3200030DF5 /* AppDelegate.swift */; };
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
@@ -110,6 +111,7 @@
 		5BBD889424BE41CE009E8F8E /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		5BBD889624BED509009E8F8E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
+		5BF310A224C36EC200F3E874 /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
 		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7742B9FF24365A3200030DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				5BBD889424BE41CE009E8F8E /* TimelineCell.swift */,
 				5B086C6524C01D6500D5264C /* OnboardingCell.swift */,
 				5B3E9E9124C329D20038CF05 /* Sponsors */,
+				5BF310A224C36EC200F3E874 /* Progressbar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
 				86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */,
 				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
+				5BF310A324C36EC200F3E874 /* Progressbar.swift in Sources */,
 				5BBD888F24BE41A2009E8F8E /* FAQTableViewCell.swift in Sources */,
 				5B3E9E8A24C321F30038CF05 /* SpeakersCell.swift in Sources */,
 				776A7FC324474BD900D6349C /* regex.swift in Sources */,

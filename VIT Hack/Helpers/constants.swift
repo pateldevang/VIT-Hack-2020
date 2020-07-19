@@ -34,6 +34,5 @@ struct Keys {
     static let name = "name"
     static let institute = "institute"
     static let registration = "registration"
-    
     static let login = "login"
 }

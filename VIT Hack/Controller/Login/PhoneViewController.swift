@@ -10,11 +10,24 @@ import UIKit
 
 class PhoneViewController: UIViewController {
 
-    var newUser: User!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var progressView: UIView!
+
+    var newUser: User!
+    var isEmail = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showProgress()
     }
+    
+    func showProgress(){
+        let start : CGFloat = isEmail ? 0.66 : 0.5
+        let progress = Progressbar(for: progressView, duration: 2, startValue: start, endValue: 1)
+        self.progressView.layer.insertSublayer(progress, above: self.progressView.layer)
+    }
+    
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
         guard let phoneNumber = phoneNumberTextField.text else {
             dismissAlert(titlepass: "Phone missing", message: "Please enter your phone number")

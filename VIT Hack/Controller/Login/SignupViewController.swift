@@ -12,11 +12,18 @@ class SignupViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var progressView: UIView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showProgress()
     }
+    
+    func showProgress(){
+        let progress = Progressbar(for: progressView, duration: 2, startValue: 0.0, endValue: 0.33)
+        self.progressView.layer.insertSublayer(progress, above: self.progressView.layer)
+    }
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
         guard let emailId = emailTextField.text else {
             authAlert(titlepass: "Invalid Email", message: "Please enter an email id")
@@ -32,6 +39,12 @@ class SignupViewController: UIViewController {
             }
         } else {
             self.authAlert(titlepass: "Oops! Signup failed", message: "Please enter a valid email id and try again")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let formViewController = segue.destination as? UserFormViewController {
+            formViewController.isEmail = true
         }
     }
 }

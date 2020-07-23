@@ -190,7 +190,7 @@ class firebaseNetworking {
                 let all = enumerator.children.allObjects
                 // Adding the data from child snapshots
                 if let end = all[0] as? DataSnapshot { timeline.endUnix = end.value as? Double }
-                if let end = all[1] as? DataSnapshot { timeline.endUnix = end.value as? Double }
+                if let link = all[1] as? DataSnapshot { timeline.link = link.value as? String }
                 if let start = all[2] as? DataSnapshot { timeline.startUnix = start.value as? Double }
                 if let subtitle = all[3] as? DataSnapshot { timeline.subtitle = subtitle.value as? String }
                 if let title = all[4] as? DataSnapshot { timeline.title = title.value as? String }

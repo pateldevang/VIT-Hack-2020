@@ -10,6 +10,7 @@ import Foundation
 
 struct TimelineData {
     var endUnix:Double?
+    var link : String?
     var startUnix:Double?
     var subtitle:String?
     var title:String?

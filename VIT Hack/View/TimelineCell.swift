@@ -14,6 +14,7 @@ class TimelineCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var watchNowButton: UIButton!
     @IBOutlet weak var tick: UIImageView!
     
     
@@ -23,7 +24,7 @@ class TimelineCell: UITableViewCell {
     }
     
     func setupCell(_ timeline : TimelineData) {
-        
+        watchNowButton.isHidden = timeline.link == nil
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         
@@ -36,4 +37,7 @@ class TimelineCell: UITableViewCell {
         }
     }
     
+    @IBAction func watchNow(_ sender: Any) {
+        
+    }
 }

@@ -16,6 +16,11 @@ class PhoneViewController: UIViewController {
     var newUser: User!
     var isEmail = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        phoneNumberTextField.setUnderLine()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()

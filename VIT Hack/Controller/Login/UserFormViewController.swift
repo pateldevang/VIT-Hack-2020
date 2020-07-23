@@ -21,6 +21,13 @@ class UserFormViewController: UIViewController {
     var newUser = User()
     var isEmail = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTextField.setUnderLine()
+        instituteNameTextField.setUnderLine()
+        registrationNumberTextField.setUnderLine()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()

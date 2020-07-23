@@ -40,8 +40,9 @@ iOS app for VIT HACK - 2020
         - [ ] Networking
         - [ ] Design 
 - [ ] About Us
-   - [ ] Networking
-   - [ ] Design
+   - [ ] ~~Networking~~
+   - [x] Design
+   - [ ] SFSafariVC + link
 - [ ] FAQs 
    - [ ] Static
         - [ ] Networking

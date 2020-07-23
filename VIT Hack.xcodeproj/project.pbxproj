@@ -15,6 +15,8 @@
 		5B3E9E8C24C3246C0038CF05 /* SpeakersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */; };
 		5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */; };
 		5B3E9E9024C329CD0038CF05 /* SponsorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */; };
+		5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B44651F24C8B46C00E2D47F /* AboutUsData.swift */; };
+		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */; };
 		5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */; };
@@ -82,6 +84,8 @@
 		5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersData.swift; sourceTree = "<group>"; };
 		5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsCell.swift; sourceTree = "<group>"; };
 		5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCell.swift; sourceTree = "<group>"; };
+		5B44651F24C8B46C00E2D47F /* AboutUsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsData.swift; sourceTree = "<group>"; };
+		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				5B086C6524C01D6500D5264C /* OnboardingCell.swift */,
 				5B3E9E9124C329D20038CF05 /* Sponsors */,
 				5BF310A224C36EC200F3E874 /* Progressbar.swift */,
+				5B7DC75424C893C6007F1762 /* AboutUsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				77D6AA332449EE1500E405B1 /* TimelineData.swift */,
 				5B086C3A24BF80FF00D5264C /* Defaults.swift */,
 				5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */,
+				5B44651F24C8B46C00E2D47F /* AboutUsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
 				5BBD887724BE2DEF009E8F8E /* HomeViewController.swift in Sources */,
+				5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */,
 				5BBD887D24BE33BE009E8F8E /* PhoneViewController.swift in Sources */,
 				5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
@@ -535,6 +542,7 @@
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
+				5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */,
 				5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */,
 				5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */,
 				5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */,

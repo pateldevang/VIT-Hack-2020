@@ -25,9 +25,10 @@ iOS app for VIT HACK - 2020
 - [x] Timeline 
   - [x] Networking
   - [x] Timeline setup according to design
-    - [ ] Timeline watch now button
-    - [ ] Timeline row dynamic height
+    - [x] Timeline watch now button
+    - [x] Timeline row dynamic height
     - [x] Timeline - check for completed events(green tick)
+    - [ ] Timeline - embed youtube ??
 - [ ] Speakers, Sponsors and Collaborators Screen
    - [x] Speakers collection view
         - [ ] Networking

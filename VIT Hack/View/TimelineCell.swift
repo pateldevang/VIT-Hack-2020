@@ -51,7 +51,7 @@ class TimelineCell: UITableViewCell {
         let shadowPath0 = UIBezierPath(roundedRect: view.bounds, cornerRadius: 4)
         let layer0 = CALayer()
         
-        layer0.cornerRadius = 15.0
+        layer0.cornerRadius = 4
         layer0.borderWidth = 0.0
         layer0.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
         layer0.shadowOffset = CGSize(width: 0, height: 4)

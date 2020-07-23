@@ -526,7 +526,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="293" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="293" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="414" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OTQ-20-9jh" id="uDH-pB-QOC">

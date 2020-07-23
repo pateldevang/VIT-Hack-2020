@@ -27,8 +27,11 @@ class TimelineCell: UITableViewCell {
         if timeline.link == ""{
             watchNowButton.isHidden = true
             bottom.priority = UILayoutPriority(rawValue: 1000)
+        } else {
+            watchNowButton.isHidden = false
+            bottom.priority = UILayoutPriority(rawValue: 500)
         }
-        addShadow(watchNowButton)
+        addShadow()
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         
@@ -45,25 +48,12 @@ class TimelineCell: UITableViewCell {
         
     }
     
-    func addShadow(_ view : UIView){
-
-
-        let shadowPath0 = UIBezierPath(roundedRect: view.bounds, cornerRadius: 4)
-        let layer0 = CALayer()
-        
-        layer0.cornerRadius = 4
-        layer0.borderWidth = 0.0
-        layer0.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
-        layer0.shadowOffset = CGSize(width: 0, height: 4)
-        layer0.shadowRadius = 4
-        layer0.shadowOpacity = 1
-        layer0.masksToBounds = false
-        
-        
-        layer0.shadowPath = shadowPath0.cgPath
-        view.layer.addSublayer(layer0)
-        
-        /// Background Shadow
-
+    func addShadow(){
+        watchNowButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        watchNowButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        watchNowButton.layer.shadowOpacity = 1.0
+        watchNowButton.layer.shadowRadius = 4.0
+        watchNowButton.layer.masksToBounds = false
+        watchNowButton.layer.cornerRadius = 4.0
     }
 }

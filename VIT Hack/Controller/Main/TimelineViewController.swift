@@ -25,7 +25,10 @@ class TimelineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseNetworking.shared.getTimeline(completion: timelinehandler(status:timeline:))
+        FirebaseAuth.emailLoginIn(email: "c@k.com", pass: "123456") { (String) in
+            firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
+        }
+
     }
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
@@ -60,7 +63,11 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
         if !(data.link == "") {
             height += 62
         }
-        return height + 90
+        return height + 92
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }

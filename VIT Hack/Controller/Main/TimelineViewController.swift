@@ -55,9 +55,26 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 202
+        let data = timeline[indexPath.row]
+        var height = extimateFrameForText(text: data.subtitle ?? "")
+        if !(data.link == "") {
+            height += 62
+        }
+        return height + 90
     }
     
-    //TODO dynamic height
-    //TODO add watch now button
+}
+
+extension TimelineViewController {
+    private func extimateFrameForText(text: String) -> CGFloat {
+        let width = (view.frame.width * 0.6) - 50
+        
+        let size = CGSize(width: width, height: 1000)
+        
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
+        
+        return height
+    }
 }

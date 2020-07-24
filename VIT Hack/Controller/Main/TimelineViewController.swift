@@ -25,11 +25,17 @@ class TimelineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseNetworking.shared.getTimeline(completion: timelinehandler(status:timeline:))
+        FirebaseAuth.emailLoginIn(email: "c@k.com", pass: "123456") { (String) in
+            firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
+        }
+
     }
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
-        if status{      self.timeline = timeline       }
+        if status{
+            self.timeline = timeline
+            print(timeline)
+        }
     }
     
     
@@ -52,9 +58,30 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        let data = timeline[indexPath.row]
+        var height = extimateFrameForText(text: data.subtitle ?? "")
+        if !(data.link == "") {
+            height += 62
+        }
+        return height + 92
     }
     
-    //TODO dynamic height
-    //TODO add watch now button
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+}
+
+extension TimelineViewController {
+    private func extimateFrameForText(text: String) -> CGFloat {
+        let width = (view.frame.width * 0.6) - 50
+        
+        let size = CGSize(width: width, height: 1000)
+        
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
+        
+        return height
+    }
 }

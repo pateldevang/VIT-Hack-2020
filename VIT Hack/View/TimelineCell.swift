@@ -14,8 +14,9 @@ class TimelineCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var watchNowButton: UIButton!
     @IBOutlet weak var tick: UIImageView!
-    
+    @IBOutlet weak var bottom: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,14 @@ class TimelineCell: UITableViewCell {
     }
     
     func setupCell(_ timeline : TimelineData) {
-        
+        if timeline.link == ""{
+            watchNowButton.isHidden = true
+            bottom.priority = UILayoutPriority(rawValue: 1000)
+        } else {
+            watchNowButton.isHidden = false
+            bottom.priority = UILayoutPriority(rawValue: 500)
+        }
+        addShadow()
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         
@@ -36,4 +44,16 @@ class TimelineCell: UITableViewCell {
         }
     }
     
+    @IBAction func watchNow(_ sender: Any) {
+        
+    }
+    
+    func addShadow(){
+        watchNowButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        watchNowButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        watchNowButton.layer.shadowOpacity = 1.0
+        watchNowButton.layer.shadowRadius = 4.0
+        watchNowButton.layer.masksToBounds = false
+        watchNowButton.layer.cornerRadius = 4.0
+    }
 }

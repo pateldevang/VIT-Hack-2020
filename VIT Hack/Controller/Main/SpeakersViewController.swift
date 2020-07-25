@@ -10,19 +10,37 @@ import UIKit
 
 class SpeakersViewController: UIViewController {
     
+    
+    @IBOutlet weak var speakerCollectionView: UICollectionView!
+    @IBOutlet weak var collaboratorCollectionView: UICollectionView!
+    @IBOutlet weak var sponsorsCollectionView: UICollectionView!
+    
+    
+    
     let speakerIdentifier = "speakercell"
     let collaboratorIdentifier = "Collaboratorcell"
     let sponsorIdentifier = "sponsorcell"
     
-    let collaboratorData = [#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28")]
-    let sponsorData = [#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33"),#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33")]
-    let speakerData = [#imageLiteral(resourceName: "speaker1"),#imageLiteral(resourceName: "speaker2"),#imageLiteral(resourceName: "speaker3"),#imageLiteral(resourceName: "speaker1"),#imageLiteral(resourceName: "speaker2"),#imageLiteral(resourceName: "speaker3")]
+    var collaboratorData = [#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28")]
+    var sponsorData = [#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33"),#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33")]
+    var speakerData : [SpeakersData] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+
+    }
+    
+    func getSpeakers(){
+        firebaseNetworking.shared.getSpeaker { (status, result) in
+            if status {
+                self.speakerData = result
+                DispatchQueue.main.async {
+                    self.speakerCollectionView.reloadData()
+                }
+            }
+        }
     }
     
 }

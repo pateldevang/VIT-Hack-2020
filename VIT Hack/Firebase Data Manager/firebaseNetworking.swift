@@ -72,12 +72,13 @@ class firebaseNetworking {
     
     
     //MARK: - Function to fetch Sponsors data (Fetch Once then cache)
-    public func getSponsor(completion: @escaping (Bool, [SponsorData]) -> ()) {
+    public func getSponsor(isCollaborator : Bool = false,completion: @escaping (Bool, [SponsorData]) -> ()) {
         // Variables
         var sponsor = SponsorData()
         var sponsorDataArray = [SponsorData]()
         // Observe sponsors child with .childAdded type
-        database.child("sponsors").observe(DataEventType.childAdded, with: { (snapshot) in
+        let child = isCollaborator ? "collaborators" : "sponsors"
+        database.child(child).observe(DataEventType.childAdded, with: { (snapshot) in
             // Initializing Eumerator
             let enumerator = snapshot.children.allObjects
             // Adding the data from child snapshots

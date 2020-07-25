@@ -21,15 +21,14 @@ class SpeakersViewController: UIViewController {
     let collaboratorIdentifier = "Collaboratorcell"
     let sponsorIdentifier = "sponsorcell"
     
-    var collaboratorData = [#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "Rectangle 30"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28")]
-    var sponsorData = [#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33"),#imageLiteral(resourceName: "Rectangle 32"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33")]
+    var collaboratorData = [#imageLiteral(resourceName: "instagram"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "LinkedIn"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28")]
+    var sponsorData = [#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33")]
     var speakerData : [SpeakersData] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        getSpeakers()
     }
     
     func getSpeakers(){
@@ -54,7 +53,7 @@ extension SpeakersViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collection(rawValue: collectionView.tag) {
         case .speakers:
-            return sponsorData.count
+            return speakerData.count
         case .collaborators:
             return collaboratorData.count
         case .sponsors:
@@ -70,7 +69,7 @@ extension SpeakersViewController : UICollectionViewDataSource {
         if collectionView.tag == 0{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: speakerIdentifier, for: indexPath) as! SpeakersCell
             let speaker = speakerData[indexPath.item]
-            cell.image.image = speaker
+            cell.setupCell(speaker)
             cellToReturn = cell
         } else if collectionView.tag == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collaboratorIdentifier, for: indexPath) as! CollaboratorsCell

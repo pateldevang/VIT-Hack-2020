@@ -10,4 +10,5 @@ target 'VIT Hack' do
 	pod 'Firebase/Auth'
         pod 'Firebase/Database'
 	pod 'GoogleSignIn', '~> 4.4.0'
+  	pod 'Kingfisher' 
 end

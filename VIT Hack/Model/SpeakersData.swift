@@ -9,5 +9,11 @@
 import Foundation
 
 struct SpeakersData {
-
+    var company: String?
+    var designation: String?
+    var endUnix: Double?
+    var imageUrl: String?
+    var name: String?
+    var sessionUrl: String?
+    var startUnix: Double?
 }

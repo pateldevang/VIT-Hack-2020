@@ -72,12 +72,13 @@ class firebaseNetworking {
     
     
     //MARK: - Function to fetch Sponsors data (Fetch Once then cache)
-    public func getSponsor(completion: @escaping (Bool, [SponsorData]) -> ()) {
+    public func getSponsor(isCollaborator : Bool = false,completion: @escaping (Bool, [SponsorData]) -> ()) {
         // Variables
         var sponsor = SponsorData()
         var sponsorDataArray = [SponsorData]()
         // Observe sponsors child with .childAdded type
-        database.child("sponsors").observe(DataEventType.childAdded, with: { (snapshot) in
+        let child = isCollaborator ? "collaborators" : "sponsors"
+        database.child(child).observe(DataEventType.childAdded, with: { (snapshot) in
             // Initializing Eumerator
             let enumerator = snapshot.children.allObjects
             // Adding the data from child snapshots
@@ -88,6 +89,32 @@ class firebaseNetworking {
             completion(true, sponsorDataArray)  // Completion handler
         }) { (error) in // Error Handling
             completion(false, sponsorDataArray) 
+            debugPrint(error.localizedDescription)
+        }
+    }
+    
+    //MARK: - Function to fetch Speakers data (Fetch Once then cache)
+    public func getSpeaker(completion: @escaping (Bool, [SpeakersData]) -> ()) {
+        // Variables
+        var speaker = SpeakersData()
+        var speakerDataArray = [SpeakersData]()
+        // Observe sponsors child with .childAdded type
+        database.child("speakers").observe(DataEventType.childAdded, with: { (snapshot) in
+            // Initializing Eumerator
+            let enumerator = snapshot.children.allObjects
+            // Adding the data from child snapshots
+            if let t1 = enumerator[0] as? DataSnapshot { speaker.company = t1.value as? String }
+            if let t2 = enumerator[1] as? DataSnapshot { speaker.designation = t2.value as? String }
+            if let t3 = enumerator[2] as? DataSnapshot { speaker.endUnix = t3.value as? Double }
+            if let t4 = enumerator[3] as? DataSnapshot { speaker.imageUrl = t4.value as? String }
+            if let t5 = enumerator[4] as? DataSnapshot { speaker.name = t5.value as? String }
+            if let t6 = enumerator[5] as? DataSnapshot { speaker.sessionUrl = t6.value as? String }
+            if let t7 = enumerator[6] as? DataSnapshot { speaker.startUnix = t7.value as? Double }
+
+            speakerDataArray.append(speaker)  // Appending into sponsorDataArray
+            completion(true, speakerDataArray)  // Completion handler
+        }) { (error) in // Error Handling
+            completion(false, speakerDataArray)
             debugPrint(error.localizedDescription)
         }
     }

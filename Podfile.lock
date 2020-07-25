@@ -48,6 +48,9 @@ PODS:
   - GoogleUtilities/Reachability (6.2.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - leveldb-library (1.20)
   - SwiftyJSON (5.0.0)
 
@@ -55,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - GoogleSignIn (~> 4.4.0)
+  - Kingfisher
   - SwiftyJSON
 
 SPEC REPOS:
@@ -68,6 +72,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - SwiftyJSON
 
@@ -81,9 +86,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 8b23dad4e9f410ec75bc5d407c7ba5c4d5cb9a47
+PODFILE CHECKSUM: 08bbb543baa2d39d5f39bb0564fbea18092a9971
 
 COCOAPODS: 1.9.3

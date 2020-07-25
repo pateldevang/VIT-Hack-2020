@@ -7,8 +7,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SponsorsCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
+    
+    func setImage(_ data : String?){
+        image.kf.indicatorType = .activity
+        
+        if let imageUrl =  data ,let url = URL(string: imageUrl){
+            image.kf.setImage(
+                with: url,
+                options: [
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+            ])
+        }
+    }
+
 }

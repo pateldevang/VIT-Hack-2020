@@ -25,7 +25,7 @@ class SpeakersViewController: UIViewController {
     var collaboratorData : [SponsorData] = []
     var sponsorData  : [SponsorData] = []
     var speakerData : [SpeakersData] = []
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +108,31 @@ extension SpeakersViewController : UICollectionViewDataSource {
             cellToReturn = cell
         }
         return cellToReturn
+    }
+}
+
+extension SpeakersViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 0{
+            let speaker = speakerData[indexPath.item]
+            openWebsite(speaker.sessionUrl)
+        } else if collectionView.tag == 1{
+            let collaborator = collaboratorData[indexPath.item]
+            openWebsite(collaborator.pageUrl)
+        } else {
+            let sponsor = sponsorData[indexPath.item]
+            openWebsite(sponsor.pageUrl)
+        }
+    }
+}
+
+extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if !(collectionView.tag == 0){
+            return CGSize(width: 124, height: 124)
+        } else {
+            return CGSize(width: 200, height: 296)
+        }
     }
 }
 

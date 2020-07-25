@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SpeakersViewController: UIViewController {
     
@@ -110,22 +111,21 @@ extension SpeakersViewController : UICollectionViewDataSource {
     }
 }
 
-extension SpeakersViewController : UICollectionViewDelegate {
-    
+extension SpeakersViewController : SFSafariViewControllerDelegate {
+    func openWebsite(_ link : String?){
+        if let link = link,let url = URL(string: link) {
+            let safariVC = SFSafariViewController(url: url)
+            self.present(safariVC, animated: true, completion: nil)
+            safariVC.delegate = self
+        }
+    }
 }
-
-//extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if !(collectionView.tag == 0){
-//            let height =  sponsorsCollectionView.frame.height
-//            return CGSize(width: height, height: height)
-//        }
-//    }
-//}
 
 enum collection : Int {
     case speakers = 0
     case collaborators = 1
     case sponsors = 2
 }
+
+
 

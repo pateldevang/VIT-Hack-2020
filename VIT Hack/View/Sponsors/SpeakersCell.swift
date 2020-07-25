@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SpeakersCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
@@ -20,7 +21,22 @@ class SpeakersCell: UICollectionViewCell {
         name.text = data.name
         designation.text = data.designation
         company.text = data.company
-        image.image = #imageLiteral(resourceName: "speaker1") //TODO
+        setImage(data)
+    }
+    
+    func setImage(_ data : SpeakersData){
+        image.kf.indicatorType = .activity
+        
+        
+        if let imageUrl =  data.imageUrl ,let url = URL(string: imageUrl){
+            image.kf.setImage(
+                with: url,
+                options: [
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+            ])
+        }
     }
     
 }

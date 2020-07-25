@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		282EA3A6D0C4F6BD8F82D3C8 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FB838D79A6A42EF3CDA38D /* Pods_VIT_Hack.framework */; };
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
 		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
@@ -77,7 +77,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
+		05FB838D79A6A42EF3CDA38D /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D25353E0E57329093F0EFAE /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -146,8 +147,7 @@
 		77F62C1B24484363007F4A6E /* FAQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQData.swift; sourceTree = "<group>"; };
 		86BBF89924C01E3500FE6DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + dictionary.swift"; sourceTree = "<group>"; };
-		C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
+		952C43A41C7DCA6564C2ED45 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ECEF60533D0D13783AD4B27 /* Pods_VIT_Hack.framework in Frameworks */,
+				282EA3A6D0C4F6BD8F82D3C8 /* Pods_VIT_Hack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +223,7 @@
 				5BBD886124BE2C35009E8F8E /* Fonts */,
 				7742B9FD24365A3200030DF5 /* Products */,
 				B277EA640F0D1F77586361B2 /* Pods */,
-				F9427AF83B857227D928267F /* Frameworks */,
+				B4A686B4DB6BCA1EAFF47FC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -369,16 +369,16 @@
 		B277EA640F0D1F77586361B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */,
-				F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */,
+				4D25353E0E57329093F0EFAE /* Pods-VIT Hack.debug.xcconfig */,
+				952C43A41C7DCA6564C2ED45 /* Pods-VIT Hack.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F9427AF83B857227D928267F /* Frameworks */ = {
+		B4A686B4DB6BCA1EAFF47FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C68E46FB1A73B9D9B034A773 /* Pods_VIT_Hack.framework */,
+				05FB838D79A6A42EF3CDA38D /* Pods_VIT_Hack.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,12 +390,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7742BA0E24365A3300030DF5 /* Build configuration list for PBXNativeTarget "VIT Hack" */;
 			buildPhases = (
-				2A92D95CFEE404D1703FA9D8 /* [CP] Check Pods Manifest.lock */,
+				4760C02B04638550A3106C92 /* [CP] Check Pods Manifest.lock */,
 				7742B9F824365A3200030DF5 /* Sources */,
 				7742B9F924365A3200030DF5 /* Frameworks */,
 				7742B9FA24365A3200030DF5 /* Resources */,
-				EA2FA89F6098AA825E1F08AB /* [CP] Embed Pods Frameworks */,
-				87FB73BF2E80674DDDE79841 /* [CP] Copy Pods Resources */,
+				59E14D11353CCD8EE8BD1F15 /* [CP] Embed Pods Frameworks */,
+				CD691DC7CCD92C2BF515F8E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -464,7 +464,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A92D95CFEE404D1703FA9D8 /* [CP] Check Pods Manifest.lock */ = {
+		4760C02B04638550A3106C92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,24 +486,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87FB73BF2E80674DDDE79841 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA2FA89F6098AA825E1F08AB /* [CP] Embed Pods Frameworks */ = {
+		59E14D11353CCD8EE8BD1F15 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -518,6 +501,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD691DC7CCD92C2BF515F8E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -722,7 +722,7 @@
 		};
 		7742BA0F24365A3300030DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C7A15E74F4A59D355C3A86F /* Pods-VIT Hack.debug.xcconfig */;
+			baseConfigurationReference = 4D25353E0E57329093F0EFAE /* Pods-VIT Hack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,7 +740,7 @@
 		};
 		7742BA1024365A3300030DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F12DB90A886B3457475AA2F5 /* Pods-VIT Hack.release.xcconfig */;
+			baseConfigurationReference = 952C43A41C7DCA6564C2ED45 /* Pods-VIT Hack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

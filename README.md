@@ -3,7 +3,7 @@ iOS app for VIT HACK - 2020
 
 ## Checklist
 - [x] Initial setup
-- [ ] Add Kingfisher for images
+- [x] Add Kingfisher for images
 - [ ] Splash screen (Logo)
 - [ ] Onboarding
   - [x] Design
@@ -31,15 +31,17 @@ iOS app for VIT HACK - 2020
     - [ ] Timeline - embed youtube ??
 - [ ] Speakers, Sponsors and Collaborators Screen
    - [x] Speakers collection view
-        - [ ] Networking
+        - [x] Networking
         - [x] Design
         - [ ] Link to video - YouTube or webView
    - [ ] Collaborators collection view
-        - [ ] Networking
-        - [ ] Design
+        - [x] Networking
+        - [x] Design
+        - [x] SFSafariVC + link
    - [ ] Sponsors collection view
-        - [ ] Networking
-        - [ ] Design 
+        - [x] Networking
+        - [x] Design 
+        - [x] SFSafariVC + link
 - [ ] About Us
    - [ ] ~~Networking~~
    - [x] Design
@@ -76,7 +78,7 @@ iOS app for VIT HACK - 2020
       - [ ] Speakers
       - [ ] Sponsors
       - [ ] Collaborators
-      - [ ] About Us 
+      - [x] About Us 
    - [ ] User info (for profile section)
    
 ## How to contribute:

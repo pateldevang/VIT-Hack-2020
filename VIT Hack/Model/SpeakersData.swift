@@ -9,11 +9,11 @@
 import Foundation
 
 struct SpeakersData {
-    let company: String?
-    let designation: String?
-    let endUnix: Double?
-    let imageUrl: String?
-    let name: String?
-    let sessionUrl: String?
-    let startUnix: Double?
+    var company: String?
+    var designation: String?
+    var endUnix: Double?
+    var imageUrl: String?
+    var name: String?
+    var sessionUrl: String?
+    var startUnix: Double?
 }

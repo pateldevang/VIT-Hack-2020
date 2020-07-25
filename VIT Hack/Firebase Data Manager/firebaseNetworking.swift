@@ -94,7 +94,7 @@ class firebaseNetworking {
     }
     
     //MARK: - Function to fetch Speakers data (Fetch Once then cache)
-    public func getSponsor(completion: @escaping (Bool, [SpeakersData]) -> ()) {
+    public func getSpeaker(completion: @escaping (Bool, [SpeakersData]) -> ()) {
         // Variables
         var speaker = SpeakersData()
         var speakerDataArray = [SpeakersData]()
@@ -104,12 +104,17 @@ class firebaseNetworking {
             let enumerator = snapshot.children.allObjects
             // Adding the data from child snapshots
             if let t1 = enumerator[0] as? DataSnapshot { speaker.company = t1.value as? String }
-            if let t2 = enumerator[1] as? DataSnapshot { sponsor.name = t2.value as? String }
-            if let t3 = enumerator[2] as? DataSnapshot { sponsor.pageUrl = t3.value as? String }
-            sponsorDataArray.append(sponsor)  // Appending into sponsorDataArray
-            completion(true, sponsorDataArray)  // Completion handler
+            if let t2 = enumerator[1] as? DataSnapshot { speaker.designation = t2.value as? String }
+            if let t3 = enumerator[2] as? DataSnapshot { speaker.endUnix = t3.value as? Double }
+            if let t4 = enumerator[3] as? DataSnapshot { speaker.imageUrl = t4.value as? String }
+            if let t5 = enumerator[4] as? DataSnapshot { speaker.name = t5.value as? String }
+            if let t6 = enumerator[5] as? DataSnapshot { speaker.sessionUrl = t6.value as? String }
+            if let t7 = enumerator[6] as? DataSnapshot { speaker.startUnix = t7.value as? Double }
+
+            speakerDataArray.append(speaker)  // Appending into sponsorDataArray
+            completion(true, speakerDataArray)  // Completion handler
         }) { (error) in // Error Handling
-            completion(false, sponsorDataArray)
+            completion(false, speakerDataArray)
             debugPrint(error.localizedDescription)
         }
     }

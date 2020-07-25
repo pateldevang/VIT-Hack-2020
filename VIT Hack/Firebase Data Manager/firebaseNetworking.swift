@@ -93,6 +93,27 @@ class firebaseNetworking {
         }
     }
     
+    //MARK: - Function to fetch Speakers data (Fetch Once then cache)
+    public func getSponsor(completion: @escaping (Bool, [SpeakersData]) -> ()) {
+        // Variables
+        var speaker = SpeakersData()
+        var speakerDataArray = [SpeakersData]()
+        // Observe sponsors child with .childAdded type
+        database.child("speakers").observe(DataEventType.childAdded, with: { (snapshot) in
+            // Initializing Eumerator
+            let enumerator = snapshot.children.allObjects
+            // Adding the data from child snapshots
+            if let t1 = enumerator[0] as? DataSnapshot { speaker.company = t1.value as? String }
+            if let t2 = enumerator[1] as? DataSnapshot { sponsor.name = t2.value as? String }
+            if let t3 = enumerator[2] as? DataSnapshot { sponsor.pageUrl = t3.value as? String }
+            sponsorDataArray.append(sponsor)  // Appending into sponsorDataArray
+            completion(true, sponsorDataArray)  // Completion handler
+        }) { (error) in // Error Handling
+            completion(false, sponsorDataArray)
+            debugPrint(error.localizedDescription)
+        }
+    }
+    
     
     //MARK: - Function to get FAQ's (Fetch everytime when data changes)
     public func getFAQ(completion: @escaping (Bool, [FAQData]) -> ()) {

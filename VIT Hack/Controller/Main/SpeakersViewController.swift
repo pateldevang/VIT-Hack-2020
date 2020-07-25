@@ -21,14 +21,16 @@ class SpeakersViewController: UIViewController {
     let collaboratorIdentifier = "Collaboratorcell"
     let sponsorIdentifier = "sponsorcell"
     
-    var collaboratorData = [#imageLiteral(resourceName: "instagram"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "LinkedIn"),#imageLiteral(resourceName: "Rectangle 31"),#imageLiteral(resourceName: "Rectangle 28")]
-    var sponsorData = [#imageLiteral(resourceName: "Rectangle 28"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 34"),#imageLiteral(resourceName: "Rectangle 33")]
+    var collaboratorData : [SponsorData] = []
+    var sponsorData  : [SponsorData] = []
     var speakerData : [SpeakersData] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getSpeakers()
+        getSponsors()
+        getCollaborators()
     }
     
     func getSpeakers(){
@@ -37,6 +39,28 @@ class SpeakersViewController: UIViewController {
                 self.speakerData = result
                 DispatchQueue.main.async {
                     self.speakerCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func getSponsors(){
+        firebaseNetworking.shared.getSponsor { (status, result) in
+            if status {
+                self.sponsorData = result
+                DispatchQueue.main.async {
+                    self.sponsorsCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func getCollaborators(){
+        firebaseNetworking.shared.getSponsor(isCollaborator: true) { (status, result) in
+            if status {
+                self.collaboratorData = result
+                DispatchQueue.main.async {
+                    self.collaboratorCollectionView.reloadData()
                 }
             }
         }
@@ -74,12 +98,12 @@ extension SpeakersViewController : UICollectionViewDataSource {
         } else if collectionView.tag == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collaboratorIdentifier, for: indexPath) as! CollaboratorsCell
             let collaborator = collaboratorData[indexPath.item]
-            cell.image.image = collaborator
+            cell.setImage(collaborator.logoUrl)
             cellToReturn = cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sponsorIdentifier, for: indexPath) as! SponsorsCell
             let sponsor = sponsorData[indexPath.item]
-            cell.image.image = sponsor
+            cell.setImage(sponsor.logoUrl)
             cellToReturn = cell
         }
         return cellToReturn
@@ -89,6 +113,16 @@ extension SpeakersViewController : UICollectionViewDataSource {
 extension SpeakersViewController : UICollectionViewDelegate {
     
 }
+
+//extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if !(collectionView.tag == 0){
+//            let height =  sponsorsCollectionView.frame.height
+//            return CGSize(width: height, height: height)
+//        }
+//    }
+//}
+
 enum collection : Int {
     case speakers = 0
     case collaborators = 1

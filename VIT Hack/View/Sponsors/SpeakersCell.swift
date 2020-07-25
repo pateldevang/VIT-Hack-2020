@@ -27,7 +27,6 @@ class SpeakersCell: UICollectionViewCell {
     func setImage(_ data : SpeakersData){
         image.kf.indicatorType = .activity
         
-        
         if let imageUrl =  data.imageUrl ,let url = URL(string: imageUrl){
             image.kf.setImage(
                 with: url,

@@ -15,7 +15,7 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var instituteNameTextField: UITextField!
     @IBOutlet weak var registrationNumberTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
-
+    @IBOutlet weak var continueButton: UIButton!
     
 
     var newUser = User()
@@ -26,6 +26,7 @@ class UserFormViewController: UIViewController {
         nameTextField.setUnderLine()
         instituteNameTextField.setUnderLine()
         registrationNumberTextField.setUnderLine()
+        continueButton.bottomShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {

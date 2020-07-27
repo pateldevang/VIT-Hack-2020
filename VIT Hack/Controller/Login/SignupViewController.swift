@@ -13,11 +13,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
+        continueButton.bottomShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {

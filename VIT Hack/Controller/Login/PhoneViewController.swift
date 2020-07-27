@@ -12,13 +12,15 @@ class PhoneViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
-
+    @IBOutlet weak var continueButton: UIButton!
+    
     var newUser: User!
     var isEmail = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberTextField.setUnderLine()
+        continueButton.bottomShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {

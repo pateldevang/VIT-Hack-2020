@@ -9,9 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var appleButton: UIButton!
+    @IBOutlet weak var googleButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
+    
+    // Unhashed nonce.
+    var currentNonce: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       self.navigationController?.navigationItem.hidesBackButton = true
+        appleButton.bottomShadow()
+        googleButton.bottomShadow()
+        emailButton.bottomShadow()
     }
 }

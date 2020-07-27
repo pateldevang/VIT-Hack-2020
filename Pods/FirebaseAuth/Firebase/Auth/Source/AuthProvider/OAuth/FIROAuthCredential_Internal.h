@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** @extension FIROAuthCredential
     @brief Internal implementation of FIRAuthCredential for generic credentials.
  */
-@interface FIROAuthCredential()
+@interface FIROAuthCredential ()
 
 /** @property OAuthResponseURLString
     @brief A string representation of the response URL corresponding to this OAuthCredential.
@@ -42,23 +42,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly, nullable) NSString *pendingToken;
 
-/** @property secret
-    @brief The secret associated with this credential. This will be nil for OAuth 2.0 providers.
-    @detail OAuthCredential already exposes a providerId getter. This will help the developer
-        determine whether an access token/secret pair is needed.
- */
-@property(nonatomic, readonly, nullable) NSString *secret;
-
 /** @fn initWithProviderId:IDToken:accessToken:secret:pendingToken
     @brief Designated initializer.
     @param providerID The provider ID associated with the credential being created.
     @param IDToken The ID Token associated with the credential being created.
+    @param rawNonce The raw nonce associated with the Auth credential being created.
     @param accessToken The access token associated with the credential being created.
     @param secret The secret associated with the credential being created.
     @param pendingToken The pending token associated with the credential being created.
  */
 - (instancetype)initWithProviderID:(NSString *)providerID
                            IDToken:(nullable NSString *)IDToken
+                          rawNonce:(nullable NSString *)rawNonce
                        accessToken:(nullable NSString *)accessToken
                             secret:(nullable NSString *)secret
                       pendingToken:(nullable NSString *)pendingToken NS_DESIGNATED_INITIALIZER;

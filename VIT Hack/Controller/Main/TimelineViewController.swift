@@ -27,6 +27,9 @@ class TimelineViewController: UIViewController {
         super.viewDidLoad()
         FirebaseAuth.emailLoginIn(email: "c@k.com", pass: "123456") { (String) in
             firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
+            firebaseNetworking.shared.getFAQ { (success, result) in
+                print(success,result)
+            }
         }
 
     }

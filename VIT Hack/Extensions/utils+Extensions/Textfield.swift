@@ -9,13 +9,17 @@
 import UIKit
 
 extension UITextField {
-func setUnderLine() {
-let underline = CALayer()
-let origin = CGPoint(x: 0, y:self.frame.height + 4)
-let size = CGSize(width: self.frame.width, height: 1)
-underline.frame = CGRect(origin: origin, size: size)
-underline.backgroundColor = UIColor.black.cgColor
-self.layer.addSublayer(underline)
-}
+    func setUnderLine() {
+        let underline = CALayer()
+        let origin = CGPoint(x: 0, y:self.frame.height + 4)
+        let size = CGSize(width: self.frame.width, height: 1)
+        underline.frame = CGRect(origin: origin, size: size)
+        if #available(iOS 13.0, *) {
+            underline.backgroundColor = UIColor.label.cgColor
+        } else {
+            underline.backgroundColor = UIColor.black.cgColor
+        }
+        self.layer.addSublayer(underline)
+    }
 }
 

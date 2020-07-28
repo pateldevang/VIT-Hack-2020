@@ -19,6 +19,7 @@
 		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
 		5B9A16A824CF125F009B5311 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A724CF125F009B5311 /* Button.swift */; };
+		5B9F673E24D00566005CBD22 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F673D24D00566005CBD22 /* Tabbar.swift */; };
 		5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */; };
 		5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */; };
 		5BBD886E24BE2C53009E8F8E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD886424BE2C51009E8F8E /* Lato-Black.ttf */; };
@@ -74,7 +75,6 @@
 		77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA332449EE1500E405B1 /* TimelineData.swift */; };
 		77F62C1C24484363007F4A6E /* FAQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F62C1B24484363007F4A6E /* FAQData.swift */; };
 		86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89924C01E3500FE6DBE /* UserModel.swift */; };
-		86BBF89C24C02A0400FE6DBE /* Encodable + dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */; };
 		B8C4A59DEC1455F4A5C50E22 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4605EFF330CD9C92305F7208 /* Pods_VIT_Hack.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +93,7 @@
 		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
 		5B9A16A724CF125F009B5311 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5B9F673D24D00566005CBD22 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		5BBD886224BE2C50009E8F8E /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		5BBD886324BE2C50009E8F8E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		5BBD886424BE2C51009E8F8E /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -151,7 +152,6 @@
 		77D6AA332449EE1500E405B1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
 		77F62C1B24484363007F4A6E /* FAQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQData.swift; sourceTree = "<group>"; };
 		86BBF89924C01E3500FE6DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + dictionary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +189,7 @@
 				5BBD888824BE3F50009E8F8E /* FAQViewController.swift */,
 				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
 				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
+				5B9F673D24D00566005CBD22 /* Tabbar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -359,7 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				775B1FF62436622000E6F221 /* checkNetwork.swift */,
-				86BBF89B24C02A0400FE6DBE /* Encodable + dictionary.swift */,
 				776A7FC024470F2C00D6349C /* google+SignIn.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
@@ -547,7 +547,6 @@
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
 				5BBD889724BED509009E8F8E /* Time.swift in Sources */,
-				86BBF89C24C02A0400FE6DBE /* Encodable + dictionary.swift in Sources */,
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
@@ -573,6 +572,7 @@
 				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
 				5BBD888D24BE3F68009E8F8E /* AboutUsViewController.swift in Sources */,
+				5B9F673E24D00566005CBD22 /* Tabbar.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
 				5B3E9E9024C329CD0038CF05 /* SponsorsCell.swift in Sources */,
 				5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */,
@@ -735,10 +735,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vithack.VIT-Hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -753,10 +749,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vithack.VIT-Hack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

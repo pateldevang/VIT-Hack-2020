@@ -41,7 +41,7 @@ import Firebase
 //            appDelegate.window?.makeKeyAndVisible()
 //        }
 //        else if loginstatus == true {
-//            let tap = mainStoryboard.instantiateViewController(withIdentifier: "tapBar") as! UITabBarController
+//            let tap = mainStoryboard.instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
 //            appDelegate.window?.rootViewController = tap
 //            appDelegate.window?.makeKeyAndVisible()
 //        }

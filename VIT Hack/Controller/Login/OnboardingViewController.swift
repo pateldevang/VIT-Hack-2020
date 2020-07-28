@@ -24,6 +24,9 @@ class OnboardingViewController: UIViewController {
         flowLayout.minimumInteritemSpacing = 0.0
         pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
     }
+    @IBAction func skip(_ sender: Any) {
+        performSegue(withIdentifier: "home", sender: nil)
+    }
 }
 
 extension OnboardingViewController : UICollectionViewDataSource,UICollectionViewDelegate {

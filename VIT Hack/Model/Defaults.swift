@@ -23,5 +23,15 @@ class Defaults
     static func institute() -> String {
         return (userDefaults.value(forKey: Keys.institute) as? String) ?? ""
     }
+    
+    static func isLogin() -> Bool {
+        return (userDefaults.value(forKey: Keys.login) as? Bool) ?? false
+    }
+    
+    static func saveUser(_ user : User){
+        userDefaults.set(user.name, forKey: Keys.name)
+        userDefaults.set(user.regno, forKey: Keys.registration)
+        userDefaults.set(user.collegeName, forKey: Keys.institute)
+    }
 }
 

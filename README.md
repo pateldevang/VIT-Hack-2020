@@ -8,20 +8,20 @@ iOS app for VIT HACK - 2020
 - [ ] Onboarding
   - [x] Design
   - [ ] UserDefaults - should show only first time
-- [ ] Authentication
+- [x] Authentication
   - [x] Networking for Google Authentication
-  - [ ] Networking for Apple Authentication
+  - [x] Networking for Apple Authentication
   - [x] Networking for Email Authentication
-  - [ ] New design setup for sign up and login (email)
+  - [x] New design setup for sign up and login (email)
     - [x] Hello (Sign Up)
-    - [ ] Welcome (Login)
-    - [ ] Forgot Password
+    - [x] Welcome (Login)
+    - [x] Forgot Password
 - [x] Getting data from user (for signup)
   - [x] Networking 
   - [x] Design 
       - [x] About You
       - [x] Phone Number
-      - [ ] Regex for international numbers
+      - [x] Regex for international numbers
 - [x] Timeline 
   - [x] Networking
   - [x] Timeline setup according to design
@@ -65,7 +65,7 @@ iOS app for VIT HACK - 2020
       - [ ] Networking
       - [ ] Design
  - [x] Profile
-   - [ ] Networking 
+   - ~~[ ] Networking~~
    - [x] Design
       - [x] Placeholder image only
       - [x] Logout
@@ -73,13 +73,13 @@ iOS app for VIT HACK - 2020
   - [ ] FCM token setup 
   - [ ] Networking for recieving notification using Firebase
 - [ ] Data Persistence
-   - [ ] Auth 
+   - [x] Auth 
    - [ ] Images 
       - [ ] Speakers
       - [ ] Sponsors
       - [ ] Collaborators
       - [x] About Us 
-   - [ ] User info (for profile section)
+   - [x] User info (for profile section)
    
 ## How to contribute:
 

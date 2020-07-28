@@ -24,9 +24,7 @@ extension UIViewController {
             try firebaseAuth.signOut()
             //GIDSignIn.sharedInstance().signOut() //TODO
             debugLog(message: "SignOut successful")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "navVC") as! UINavigationController
-            self.present(controller, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "logout", sender: nil)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

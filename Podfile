@@ -9,7 +9,8 @@ target 'VIT Hack' do
 	pod 'SwiftyJSON'
 	pod 'Firebase/Auth'
         pod 'Firebase/Database'
-	pod 'GoogleSignIn', '~> 4.4.0'
+	pod 'GoogleSignIn'
   	pod 'Kingfisher' 
+	pod 'PhoneNumberKit'
 
 end

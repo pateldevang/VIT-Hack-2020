@@ -9,7 +9,7 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
@@ -33,21 +33,37 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        guard let emailId = emailTextField.text else {
-            authAlert(titlepass: "Invalid Email", message: "Please enter an email id")
-            return
+        if validate(){
+        //TODO add indicator
+        FirebaseAuth.emailSignIn(email: emailTextField.text!, pass: passwordTextField.text!, completion: handleSignin(authStatus:))
         }
-        if emailId.isEmail {
-            FirebaseAuth.emailSignIn(email: emailId, pass: passwordTextField.text!) { authStatus in
-                if authStatus == "Success" {
-                    self.performSegue(withIdentifier: "goToUserForm", sender: Any.self)
-                } else {
-                    self.authAlert(titlepass: "Oops! Signup failed", message: "\(authStatus)")
-                }
-            }
+    }
+    
+    func handleSignin(authStatus : String){
+        if authStatus == "Success" {
+            self.performSegue(withIdentifier: "goToUserForm", sender: Any.self)
         } else {
-            self.authAlert(titlepass: "Oops! Signup failed", message: "Please enter a valid email id and try again")
+            self.authAlert(message: authStatus)
         }
+    }
+    
+    func validate()->Bool{
+        if emailTextField.text?.isEmpty ?? true {
+            authAlert(message: "Email is Empty!")
+            return false
+        }
+        
+        if passwordTextField.text?.isEmpty ?? true {
+            authAlert(message: "you need a password to Signup!")
+            return false
+        }
+        
+        if !(emailTextField.text?.isEmail ?? false) {
+            authAlert(message: "Please enter a valid email ID!")
+            return false
+        }
+        
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

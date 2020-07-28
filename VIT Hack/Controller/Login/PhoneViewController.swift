@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import PhoneNumberKit
 
 class PhoneViewController: UIViewController {
-
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    @IBOutlet weak var phoneNumberTextField: PhoneNumberTextField!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     
@@ -21,11 +22,18 @@ class PhoneViewController: UIViewController {
         super.viewDidLoad()
         phoneNumberTextField.setUnderLine()
         continueButton.bottomShadow()
+        setupPhoneField()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()
+    }
+    
+    func setupPhoneField(){
+        PhoneNumberKit.CountryCodePicker.commonCountryCodes = ["IN"]
+        phoneNumberTextField.withFlag = true
+        phoneNumberTextField.withExamplePlaceholder = true
     }
     
     func showProgress(){
@@ -36,16 +44,39 @@ class PhoneViewController: UIViewController {
     
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        guard let phoneNumber = phoneNumberTextField.text else {
-            dismissAlert(titlepass: "Phone missing", message: "Please enter your phone number")
-            return
+        if validate(){
+            addUser()
         }
-        newUser.phone = phoneNumber
-        do {
-            let params = try newUser.asDictionary()
-            firebaseNetworking.shared.fillUserForm(param: params) { completion in
-                print("STATUS: \(completion)")
-            }
-        } catch { print(error) }
+    }
+    
+    func addUser(){
+        newUser.phone = String(phoneNumberTextField?.text?.replacingOccurrences(of: " ", with: "") ?? "")
+        let params = newUser.asDictionary
+        firebaseNetworking.shared.fillUserForm(param: params, completion: handlePostUser(success:))
+    }
+    
+    func handlePostUser(success:Bool){
+        if success{
+            Defaults.saveUser(newUser)
+            Defaults.userDefaults.set(true, forKey: Keys.login)
+            performSegue(withIdentifier: "main", sender: nil)
+        } else {
+            authAlert(message: "Please try again!")
+        }
+    }
+    
+    func validate()->Bool{
+        let phone = String(phoneNumberTextField?.text?.replacingOccurrences(of: " ", with: "") ?? "")
+        if phone.isEmpty {
+            authAlert(message: "Phone number missing!")
+            return false
+        }
+        
+        if !phoneNumberTextField.isValidNumber{
+            authAlert(message: "Phone number invalid")
+            return false
+        }
+        
+        return true
     }
 }

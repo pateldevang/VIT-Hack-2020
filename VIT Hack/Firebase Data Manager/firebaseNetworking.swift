@@ -54,6 +54,35 @@ class firebaseNetworking {
         }
     }
     
+    public func getUser(_ uid: String,completion:@escaping (Bool,User)->()){
+        var user = User()
+        database.child("users").child(uid).observeSingleEvent(of: .value, with:  { (snapshot) in
+            print(snapshot)
+            // Initializing Eumerator
+            let enumerator = snapshot.children.allObjects
+            // Adding the data from child snapshots
+            if let t1 = enumerator[0] as? DataSnapshot { user.collegeName = t1.value as? String }
+            if let t3 = enumerator[2] as? DataSnapshot { user.mail = t3.value as? String }
+            if let t4 = enumerator[3] as? DataSnapshot { user.name = t4.value as? String }
+            if let t5 = enumerator[4] as? DataSnapshot { user.phone = t5.value as? String }
+            if let t6 = enumerator[5] as? DataSnapshot { user.regno = t6.value as? String }
+            completion(true,user)
+        }){ (error) in // Error Handling
+            completion(false, user)
+            debugPrint(error.localizedDescription)
+        }
+    }
+    
+    public func checkUser(_ uid : String,completion:@escaping(Bool)->()){
+        database.child("users").observeSingleEvent(of: .value) { (snap) in
+            if snap.hasChild(uid) {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+    
     
     //MARK: - Function to fetch Sponsors data (Fetch Once then cache)
     public func getSponsor(isCollaborator : Bool = false,completion: @escaping (Bool, [SponsorData]) -> ()) {
@@ -94,7 +123,7 @@ class firebaseNetworking {
             if let t5 = enumerator[4] as? DataSnapshot { speaker.name = t5.value as? String }
             if let t6 = enumerator[5] as? DataSnapshot { speaker.sessionUrl = t6.value as? String }
             if let t7 = enumerator[6] as? DataSnapshot { speaker.startUnix = t7.value as? Double }
-
+            
             speakerDataArray.append(speaker)  // Appending into sponsorDataArray
             completion(true, speakerDataArray)  // Completion handler
         }) { (error) in // Error Handling
@@ -132,7 +161,7 @@ class firebaseNetworking {
             debugPrint(error.localizedDescription)
         }
     }
-
+    
     
     //MARK: - Function to get prize data (Fetch once)
     public func getPrize(companyName:String, completion: @escaping (Bool, [PrizeData]) -> ()) {

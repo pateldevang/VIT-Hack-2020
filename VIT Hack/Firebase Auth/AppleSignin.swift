@@ -112,7 +112,7 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
                 
                 print("Sucessfully logged into firebase with Apple!",uid)
                 
-                //MARK: TODO Further setup
+                firebaseNetworking.shared.checkUser(uid, completion: self.handleUser(success:))
                 
             }
         }

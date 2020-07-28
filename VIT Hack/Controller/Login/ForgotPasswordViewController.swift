@@ -11,11 +11,12 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
-    
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.setUnderLine()
+        sendButton.bottomShadow()
     }
     
     @IBAction func SendLink(_ sender: UIButton) {
@@ -29,19 +30,19 @@ class ForgotPasswordViewController: UIViewController {
             if response == "Success"{
                 self.dismissAlert(titlepass: "yay 😄", message: "Reset link sent to email.")
             } else {
-                self.authAlert(titlepass: "Uh oh 😕", message: response)
+                self.authAlert(message: response)
             }
         }
     }
     
     func validate()->Bool{
         if emailTextField.text?.isEmpty ?? true {
-            authAlert(titlepass: "Empty Field", message: "Please enter your Email Address.")
+            authAlert(message: "Please enter your Email Address.")
             return false
         }
         
         if !(emailTextField.text?.isEmail ?? false){
-            authAlert(titlepass: "Invalid Field", message: "Please enter a valid Email Address.")
+            authAlert(message: "Please enter a valid Email Address.")
             return false
         }
         return true

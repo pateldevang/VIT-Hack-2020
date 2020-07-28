@@ -15,6 +15,16 @@ struct User: Encodable {
     var collegeName: String?
     var regno: String?
     var phone: String?
-    var selectedDomain = ""
-    var fcmToken = ""
+    var fcmToken : String?
+    
+    var asDictionary : [String:String]{
+        return ["uid": getUID(),
+                "regno": regno ?? "",
+                "collegeName": collegeName ?? "",
+                "phone": phone ?? "",
+                "name": name ?? "",
+                "mail": mail ?? "",
+                "fcmToken": "",
+                "selectedDomain" : ""]
+    }
 }

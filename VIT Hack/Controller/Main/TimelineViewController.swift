@@ -25,13 +25,7 @@ class TimelineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseAuth.emailLoginIn(email: "c@k.com", pass: "123456") { (String) in
-            firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
-            firebaseNetworking.shared.getFAQ { (success, result) in
-                print(success,result)
-            }
-        }
-
+        firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
     }
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
@@ -40,7 +34,6 @@ class TimelineViewController: UIViewController {
             print(timeline)
         }
     }
-    
     
 }
 

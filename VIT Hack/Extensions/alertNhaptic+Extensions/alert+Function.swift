@@ -27,10 +27,10 @@ extension UIViewController
     }
     
     //MARK: - ALERT function for Authentication
-    internal func authAlert(titlepass: String,message: String) {
+    internal func authAlert(message: String) {
         // Vibrates on errors
         UIDevice.invalidVibrate()
-        let alert = UIAlertController(title: titlepass, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Uh oh 🙁", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert,animated: true,completion: nil)
     }

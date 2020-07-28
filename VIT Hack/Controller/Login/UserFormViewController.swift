@@ -9,7 +9,7 @@
 import UIKit
 
 class UserFormViewController: UIViewController {
-
+    
     //MARK: IBOutlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var instituteNameTextField: UITextField!
@@ -17,7 +17,7 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     
-
+    
     var newUser = User()
     var isEmail = false
     
@@ -40,35 +40,42 @@ class UserFormViewController: UIViewController {
         let progress = Progressbar(for: progressView, duration: 2, startValue: start, endValue: end)
         self.progressView.layer.insertSublayer(progress, above: self.progressView.layer)
     }
-
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
-        guard let name = nameTextField.text else {
-            dismissAlert(titlepass: "Name missing", message: "Please enter your name")
-            return
+        if validate() {
+            proceedToPhone()
         }
-        guard let instituteName = instituteNameTextField.text else {
-            dismissAlert(titlepass: "Institute Name missing", message: "Please enter your institute's name")
-            return
-        }
-        guard let registrationNumber = registrationNumberTextField.text else {
-            dismissAlert(titlepass: "Registration Number missing", message: "Please enter your institute's registration number!")
-            return
-        }
-        newUser.name = name
-        newUser.collegeName = instituteName
-        newUser.regno = registrationNumber
+    }
+    
+    func proceedToPhone(){
+        newUser.name = nameTextField.text!
+        newUser.collegeName = instituteNameTextField.text!
+        newUser.regno = registrationNumberTextField.text!
         newUser.mail = getEmail()
         newUser.uid = getUID()
-        do {
-            let params = try newUser.asDictionary()
-            firebaseNetworking.shared.fillUserForm(param: params) { completion in
-                print("STATUS: \(completion)")
-            }
-        } catch { print(error) }
-
         self.performSegue(withIdentifier: "goToPhone", sender: Any.self)
     }
-
+    
+    func validate()->Bool{
+        if nameTextField.text?.isEmpty ?? true {
+            authAlert(message: "Please enter your name!")
+            return false
+        }
+        
+        if instituteNameTextField.text?.isEmpty ?? true {
+            authAlert(message: "Which institute are you a part of?")
+            return false
+        }
+        
+        if registrationNumberTextField.text?.isEmpty ?? true {
+            authAlert(message: "Please enter your registration number")
+            return false
+        }
+        
+        return true
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToPhone" {
             let phoneViewController = segue.destination as! PhoneViewController

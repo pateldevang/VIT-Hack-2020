@@ -9,10 +9,10 @@
 import UIKit
 
 struct DomainData {
-    var title : String
-    var body : String
-    var Image : UIImage //TODO
-    var color : UIColor //TODO
-    var problemStatements : [String]
-    
+    var domain : String?
+    var description : String?
+    var icon : String?
+    var colour : String?
+    var problemStatements : [String]?
 }
+

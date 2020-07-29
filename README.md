@@ -55,15 +55,15 @@ iOS app for VIT HACK - 2020
       - [ ] Networking to post questions
       - [ ] Design for popover
       
-- [ ] Problem Statement and Tracks 
-   - [ ] Domains
-      - [ ] Networking to get colour, icon, name
-      - [ ] Design
-          - [ ] Regular collection view
-          - [ ] Add Carousel for animation
-   - [ ] Problem statements
-      - [ ] Networking
-      - [ ] Design
+- [x] Problem Statement and Tracks 
+   - [x] Domains
+      - [x] Networking to get colour, icon, name
+      - [x] Design
+          - [x] Regular collection view
+          - [x] Add Carousel for animation
+   - [x] Problem statements
+      - [x] Networking
+      - [x] Design
  - [x] Profile
    - ~~[ ] Networking~~
    - [x] Design

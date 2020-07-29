@@ -50,6 +50,7 @@
 		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
 		5BE25AEB24D133EA00E33FAB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25AEA24D133EA00E33FAB /* Navigation.swift */; };
 		5BE25AED24D1385E00E33FAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25AEC24D1385E00E33FAB /* ViewController.swift */; };
+		5BE25AEF24D154B700E33FAB /* DomainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25AEE24D154B700E33FAB /* DomainData.swift */; };
 		5BF310A324C36EC200F3E874 /* Progressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF310A224C36EC200F3E874 /* Progressbar.swift */; };
 		5BF8920724C97FDF00C3A073 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8920624C97FDF00C3A073 /* Textfield.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
@@ -125,6 +126,7 @@
 		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
 		5BE25AEA24D133EA00E33FAB /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		5BE25AEC24D1385E00E33FAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BE25AEE24D154B700E33FAB /* DomainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainData.swift; sourceTree = "<group>"; };
 		5BF310A224C36EC200F3E874 /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
 		5BF8920624C97FDF00C3A073 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		6CDF85CE3365DD823C4BEB48 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				5B086C3A24BF80FF00D5264C /* Defaults.swift */,
 				5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */,
 				5B44651F24C8B46C00E2D47F /* AboutUsData.swift */,
+				5BE25AEE24D154B700E33FAB /* DomainData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
 				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
+				5BE25AEF24D154B700E33FAB /* DomainData.swift in Sources */,
 				5BBD888D24BE3F68009E8F8E /* AboutUsViewController.swift in Sources */,
 				5B9F673E24D00566005CBD22 /* Tabbar.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,

@@ -545,6 +545,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jf6-I8-e17" id="TYv-cF-2hb"/>
+                                    <outlet property="delegate" destination="Jf6-I8-e17" id="s8D-Rd-l1e"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -563,6 +567,9 @@
                         <viewLayoutGuide key="safeArea" id="JLs-xV-dUV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tracks" image="star" catalog="system" selectedImage="star.fill" id="6d7-Gs-QJb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RqP-nv-HKL" id="a2v-mr-KRw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdT-Co-mdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

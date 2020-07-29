@@ -16,7 +16,6 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     
     
     @IBInspectable open var sideItemScale: CGFloat = 0.84
-    @IBInspectable open var sideItemAlpha: CGFloat = 1.0
     @IBInspectable open var sideItemShift: CGFloat = 0.0
         
     
@@ -72,12 +71,10 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
         let distance = min(abs(center - normalizedCenter), max)
         let ratio = (max - distance)/max
         
-        let alpha = ratio * (1 - self.sideItemAlpha) + self.sideItemAlpha
         let scale = ratio * (1 - self.sideItemScale) + self.sideItemScale
         let shift = (1 - ratio) * self.sideItemShift
-        attributes.alpha = alpha
         attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
-        attributes.zIndex = Int(alpha * 10)
+        attributes.zIndex = Int(10)
         
         attributes.center.y = attributes.center.y + shift
         
@@ -86,6 +83,7 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     }
     
     override open func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        
         guard let collectionView = collectionView , !collectionView.isPagingEnabled,
             let layoutAttributes = self.layoutAttributesForElements(in: collectionView.bounds)
             else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset) }

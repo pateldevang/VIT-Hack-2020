@@ -9,38 +9,21 @@
 import UIKit
 
 
-public enum AKCarouselFlowLayoutSpacingMode {
-    case overlap(visibleOffset: CGFloat)
-}
+
 
 
 open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     
-    fileprivate struct LayoutState {
-        var size: CGSize
-        func isEqual(_ otherState: LayoutState) -> Bool {
-            return self.size.equalTo(otherState.size)
-        }
-    }
     
     @IBInspectable open var sideItemScale: CGFloat = 0.84
     @IBInspectable open var sideItemAlpha: CGFloat = 1.0
     @IBInspectable open var sideItemShift: CGFloat = 0.0
-    
-    open var spacingMode = AKCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
-    
-    fileprivate var state = LayoutState(size: CGSize.zero)
-    
+        
     
     override open func prepare() {
         super.prepare()
-        let currentState = LayoutState(size: self.collectionView!.bounds.size)
-        
-        if !self.state.isEqual(currentState) {
-            self.setupCollectionView()
-            self.updateLayout()
-            self.state = currentState
-        }
+        self.setupCollectionView()
+        self.updateLayout()
     }
     
     fileprivate func setupCollectionView() {
@@ -61,12 +44,10 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
         
         let side = self.itemSize.width
         let scaledItemOffset =  (side - side*self.sideItemScale) / 2
-        switch self.spacingMode {
-        case .overlap(let visibleOffset):
-            let fullSizeSideItemOverlap = visibleOffset + scaledItemOffset
-            let inset = xInset
-            self.minimumLineSpacing = inset - fullSizeSideItemOverlap
-        }
+        
+        let fullSizeSideItemOverlap = 30 + scaledItemOffset
+        let inset = xInset
+        self.minimumLineSpacing = inset - fullSizeSideItemOverlap
     }
     
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

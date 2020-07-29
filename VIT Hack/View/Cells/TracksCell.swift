@@ -16,6 +16,16 @@ class TracksCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        shadow()
+    }
+    
+    
+    func shadow(){
+        layer.cornerRadius = 24
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12).cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        layer.shadowRadius = 24
+        layer.shadowOpacity = 1
+        layer.masksToBounds = false
     }
 }

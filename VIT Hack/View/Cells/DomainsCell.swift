@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DomainsCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var body: UITextView!
@@ -17,12 +18,26 @@ class DomainsCell: UICollectionViewCell {
     @IBOutlet weak var card: UIView!
     
     func setupCell(_ data : DomainData){
-        header.text = data.title
-        body.text = data.body
-        icon.image = data.Image
-        card.backgroundColor = data.color
+        setImage(data)
+        header.text = data.domain
+        body.text = data.description
+        card.backgroundColor = UIColor(hex: data.colour ?? "#ADDAFF")
         card.layer.cornerRadius = 16
         shadow()
+    }
+    
+    func setImage(_ data : DomainData){
+        icon.kf.indicatorType = .activity
+        
+        if let imageUrl =  data.icon ,let url = URL(string: imageUrl){
+            icon.kf.setImage(
+                with: url,
+                options: [
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+            ])
+        }
     }
     
     func shadow(){

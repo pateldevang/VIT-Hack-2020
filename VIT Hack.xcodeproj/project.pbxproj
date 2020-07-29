@@ -16,7 +16,6 @@
 		5B3E9E9024C329CD0038CF05 /* SponsorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */; };
 		5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B44651F24C8B46C00E2D47F /* AboutUsData.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
-		5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
 		5B9A16A824CF125F009B5311 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A724CF125F009B5311 /* Button.swift */; };
@@ -93,7 +92,6 @@
 		5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCell.swift; sourceTree = "<group>"; };
 		5B44651F24C8B46C00E2D47F /* AboutUsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsData.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
-		5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
 		5B9A16A724CF125F009B5311 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 			children = (
 				5B3E9E9124C329D20038CF05 /* Sponsors */,
 				5B7DC75424C893C6007F1762 /* AboutUsCell.swift */,
-				5B84687A244B967600956AF5 /* CompanyCollectionViewCell.swift */,
 				5BBD888E24BE41A2009E8F8E /* FAQTableViewCell.swift */,
 				5BBD889024BE41B0009E8F8E /* TracksCell.swift */,
 				5BBD889224BE41BC009E8F8E /* DomainsCell.swift */,
@@ -572,7 +569,6 @@
 				5BF8920724C97FDF00C3A073 /* Textfield.swift in Sources */,
 				5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */,
 				5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */,
-				5B84687B244B967600956AF5 /* CompanyCollectionViewCell.swift in Sources */,
 				5BBD888924BE3F50009E8F8E /* FAQViewController.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,

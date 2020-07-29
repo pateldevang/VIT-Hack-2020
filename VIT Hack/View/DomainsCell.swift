@@ -21,28 +21,6 @@ class DomainsCell: UICollectionViewCell {
         body.text = data.body
         icon.image = data.Image
         card.backgroundColor = data.color
-      //  self.transform = CGAffineTransform(scaleX: 1, y: 1)
-    }
-    
-    func transformCell(){
-        UIView.animate(withDuration: 0.2) {
-            self.transform = CGAffineTransform(scaleX: 1.18, y: 1.18)
-        }
-    }
-    
-    func transformNormal(){
-        UIView.animate(withDuration: 2) {
-            self.transform = .identity
-        }
-    }
-
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    override func prepareForReuse() {
-       // self.transform = CGAffineTransform(scaleX: collectionViewScale, y: collectionViewScale)
+        card.layer.cornerRadius = 16
     }
 }

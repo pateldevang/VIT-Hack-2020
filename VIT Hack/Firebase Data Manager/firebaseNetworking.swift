@@ -216,8 +216,26 @@ class firebaseNetworking {
         }
     }
     
-    // TODO: - function for getting tracks [After finalizing schema]
-    public func getTracks() {
-        
+    public func getDomains(completion: @escaping (Bool, [DomainData]) -> ()) {
+        // Variables
+        var domain = DomainData()
+        var domainDataArray = [DomainData]()
+        // Observe sponsors child with .childAdded type
+        database.child("speakers").observe(DataEventType.childAdded, with: { (snapshot) in
+            // Initializing Eumerator
+            let enumerator = snapshot.children.allObjects
+            // Adding the data from child snapshots
+            if let t1 = enumerator[0] as? DataSnapshot { domain.colour = t1.value as? String }
+            if let t2 = enumerator[1] as? DataSnapshot { domain.description = t2.value as? String }
+            if let t3 = enumerator[2] as? DataSnapshot { domain.domain = t3.value as? String }
+            if let t4 = enumerator[3] as? DataSnapshot { domain.icon = t4.value as? String }
+            if let t5 = enumerator[4] as? DataSnapshot { domain.problemStatements = t5.value as? [String] }
+            
+            domainDataArray.append(domain)  // Appending into sponsorDataArray
+            completion(true, domainDataArray)  // Completion handler
+        }) { (error) in // Error Handling
+            completion(false, domainDataArray)
+            debugPrint(error.localizedDescription)
+        }
     }
 }

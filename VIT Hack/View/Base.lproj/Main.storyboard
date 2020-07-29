@@ -502,6 +502,9 @@
                                                                     <integer key="value" value="7"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="showMore:" destination="sqd-Ce-OU4" eventType="touchUpInside" id="sVF-ar-lIa"/>
+                                                            </connections>
                                                         </button>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W73-3z-btd">
                                                             <rect key="frame" x="26" y="288.5" width="214" height="155"/>
@@ -571,9 +574,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="RqP-nv-HKL" id="a2v-mr-KRw"/>
-                        <segue destination="Rus-k9-pKl" kind="popoverPresentation" popoverAnchorView="l3J-3K-pSd" id="kFs-T0-mI5">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="Rus-k9-pKl" kind="show" identifier="tracks" id="kFs-T0-mI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdT-Co-mdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -583,9 +584,9 @@
         <!--Tracks View Controller-->
         <scene sceneID="ddG-3c-eBt">
             <objects>
-                <viewController id="Rus-k9-pKl" customClass="TracksViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="Rus-k9-pKl" customClass="TracksViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJ7-gP-TsM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-Or-WjV">
@@ -601,7 +602,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pME-oh-M6n">
-                                <rect key="frame" x="0.0" y="159.5" width="414" height="648.5"/>
+                                <rect key="frame" x="0.0" y="159.5" width="414" height="653.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackscell" rowHeight="172" id="tfz-h5-pAW" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
@@ -674,6 +675,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-eE-zdh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dKs-CN-MOz"/>
                     <connections>
                         <outlet property="tableView" destination="pME-oh-M6n" id="db1-15-vdC"/>
                     </connections>

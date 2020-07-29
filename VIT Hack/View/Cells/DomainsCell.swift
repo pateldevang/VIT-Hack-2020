@@ -17,6 +17,8 @@ class DomainsCell: UICollectionViewCell {
     @IBOutlet weak var showMore: UIButton!
     @IBOutlet weak var card: UIView!
     
+    var showmore : ((_ path : Int) -> Void)? = nil
+    
     func setupCell(_ data : DomainData){
         setImage(data)
         header.text = data.domain
@@ -48,4 +50,13 @@ class DomainsCell: UICollectionViewCell {
         layer.shadowOpacity = 1
         layer.masksToBounds = false
     }
+    
+    @IBAction func showMore(_ sender: Any) {
+        if let action = self.showmore
+        {
+            action(0)
+            //  user!("pass string")
+        }
+    }
+    
 }

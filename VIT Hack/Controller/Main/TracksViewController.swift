@@ -22,6 +22,8 @@ class TracksViewController: UIViewController {
     }
     
 
+    
+
 }
 
 extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
@@ -32,9 +34,9 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tracksCellIdentifier) as! TracksCell
         cell.body.text = tracks[indexPath.row]
-        
-        
+        return cell
     }
     
+
     
 }

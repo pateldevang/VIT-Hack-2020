@@ -34,6 +34,14 @@ class DomainsViewController: UIViewController {
         pageSize.width += layout.minimumLineSpacing
         return pageSize
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tracksVC = segue.destination as? TracksViewController {
+            if let ps = sender as? [String]{
+                tracksVC.tracks = ps
+            }
+        }
+    }
 }
 
 extension DomainsViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -46,6 +54,7 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: domainCellIdentifier, for: indexPath) as! DomainsCell
         let data = domains[indexPath.item]
         cell.setupCell(data)
+        cell.showmore = showMore(_:)
         return cell
     }
     
@@ -56,5 +65,9 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: width, height: height)
     }
     
+    func showMore(_ path : Int){
+        let ps = self.domains[path].problemStatements
+        performSegue(withIdentifier: "tracks", sender: ps)
+    }
 }
 

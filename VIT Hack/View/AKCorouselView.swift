@@ -18,9 +18,8 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     
     fileprivate struct LayoutState {
         var size: CGSize
-        var direction: UICollectionView.ScrollDirection
         func isEqual(_ otherState: LayoutState) -> Bool {
-            return self.size.equalTo(otherState.size) && self.direction == otherState.direction
+            return self.size.equalTo(otherState.size)
         }
     }
     
@@ -30,12 +29,12 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     
     open var spacingMode = AKCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
     
-    fileprivate var state = LayoutState(size: CGSize.zero, direction: .horizontal)
+    fileprivate var state = LayoutState(size: CGSize.zero)
     
     
     override open func prepare() {
         super.prepare()
-        let currentState = LayoutState(size: self.collectionView!.bounds.size, direction: self.scrollDirection)
+        let currentState = LayoutState(size: self.collectionView!.bounds.size)
         
         if !self.state.isEqual(currentState) {
             self.setupCollectionView()
@@ -84,13 +83,13 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     fileprivate func transformLayoutAttributes(_ attributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         guard let collectionView = self.collectionView else { return attributes }
         
-        let collectionCenter = collectionView.frame.size.width/2
+        let center = collectionView.frame.size.width/2
         let offset =  collectionView.contentOffset.x
         let normalizedCenter =  attributes.center.x - offset
         
-        let maxDistance = self.itemSize.width  + self.minimumLineSpacing
-        let distance = min(abs(collectionCenter - normalizedCenter), maxDistance)
-        let ratio = (maxDistance - distance)/maxDistance
+        let max = self.itemSize.width  + self.minimumLineSpacing
+        let distance = min(abs(center - normalizedCenter), max)
+        let ratio = (max - distance)/max
         
         let alpha = ratio * (1 - self.sideItemAlpha) + self.sideItemAlpha
         let scale = ratio * (1 - self.sideItemScale) + self.sideItemScale
@@ -111,14 +110,16 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
             else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset) }
         
         
-        let midSide = collectionView.bounds.size.width / 2
-        let proposedContentOffsetCenterOrigin = proposedContentOffset.x + midSide
+        let middle = collectionView.bounds.size.width / 2
+        let proposedContentOffsetCenterOrigin = proposedContentOffset.x + middle
         
-        var targetContentOffset: CGPoint
+        var offset: CGPoint
         let closest = layoutAttributes.sorted { abs($0.center.x - proposedContentOffsetCenterOrigin) < abs($1.center.x - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
-        targetContentOffset = CGPoint(x: floor(closest.center.x - midSide), y: proposedContentOffset.y)
+        offset = CGPoint(x: floor(closest.center.x - middle), y: proposedContentOffset.y)
         
         
-        return targetContentOffset
+        return offset
     }
+    
 }
+

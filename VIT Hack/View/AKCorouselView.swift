@@ -9,16 +9,11 @@
 import UIKit
 
 
-
-
-
 open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
-    
     
     @IBInspectable open var sideItemScale: CGFloat = 0.84
     @IBInspectable open var sideItemShift: CGFloat = 0.0
         
-    
     override open func prepare() {
         super.prepare()
         self.setupCollectionView()

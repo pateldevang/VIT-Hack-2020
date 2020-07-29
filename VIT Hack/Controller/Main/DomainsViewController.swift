@@ -65,7 +65,7 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
 extension DomainsViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = view.frame.width
-        let width = screenWidth * 0.64
+        let width = screenWidth * 0.68
         let height = width * 1.8
         return CGSize(width: width, height: height)
     }

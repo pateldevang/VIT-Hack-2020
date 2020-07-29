@@ -10,6 +10,8 @@ import UIKit
 
 class DomainsCell: UICollectionViewCell {
 
-
-
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var header: UILabel!
+    @IBOutlet weak var body: UITextView!
+    @IBOutlet weak var showMore: UIButton!
 }

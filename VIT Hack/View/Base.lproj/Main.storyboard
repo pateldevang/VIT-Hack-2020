@@ -537,6 +537,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="288" height="541"/>
+                                        <connections>
+                                            <outlet property="body" destination="W73-3z-btd" id="oim-9c-3hZ"/>
+                                            <outlet property="header" destination="rVx-jL-kl6" id="9Cf-M7-2lh"/>
+                                            <outlet property="icon" destination="7Md-sx-0Bz" id="ZxG-C0-OD5"/>
+                                            <outlet property="showMore" destination="l3J-3K-pSd" id="0Lj-QW-6XX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

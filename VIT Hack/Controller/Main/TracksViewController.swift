@@ -37,6 +37,24 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let text = tracks[indexPath.row]
+        let height = extimateFrameForText(text : text)
+        return height
+    }
     
+}
+
+extension TracksViewController {
+    private func extimateFrameForText(text: String) -> CGFloat {
+        let width = view.frame.width - 75
+        
+        let size = CGSize(width: width, height: 1000)
+        
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
+        
+        return height
+    }
 }

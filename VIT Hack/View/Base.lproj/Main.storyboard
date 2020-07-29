@@ -601,9 +601,10 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pME-oh-M6n">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pME-oh-M6n">
                                 <rect key="frame" x="0.0" y="159.5" width="414" height="653.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackscell" rowHeight="172" id="tfz-h5-pAW" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="172"/>
@@ -650,6 +651,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="body" destination="fwb-Ye-Kfz" id="7Uz-JD-EIw"/>
+                                            <outlet property="card" destination="b2h-AN-z5p" id="2wu-Rj-ZaE"/>
                                             <outlet property="header" destination="BCO-9L-5VM" id="CTv-FK-WLk"/>
                                         </connections>
                                     </tableViewCell>

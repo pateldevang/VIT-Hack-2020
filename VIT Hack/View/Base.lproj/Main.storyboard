@@ -571,7 +571,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="RqP-nv-HKL" id="a2v-mr-KRw"/>
-                        <segue destination="Rus-k9-pKl" kind="popoverPresentation" id="kFs-T0-mI5">
+                        <segue destination="Rus-k9-pKl" kind="popoverPresentation" popoverAnchorView="l3J-3K-pSd" id="kFs-T0-mI5">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -647,6 +647,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="b2h-AN-z5p" secondAttribute="trailing" constant="16" id="l2h-ag-yOD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="body" destination="fwb-Ye-Kfz" id="7Uz-JD-EIw"/>
+                                            <outlet property="header" destination="BCO-9L-5VM" id="CTv-FK-WLk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

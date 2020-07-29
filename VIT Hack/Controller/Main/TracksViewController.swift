@@ -40,7 +40,7 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let text = tracks[indexPath.row]
         let height = extimateFrameForText(text : text)
-        return height
+        return height + 150
     }
     
 }

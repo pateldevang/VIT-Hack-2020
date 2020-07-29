@@ -13,19 +13,20 @@ class TracksCell: UITableViewCell {
     
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var body: UITextView!
+    @IBOutlet weak var card: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        shadow()
+        shadow(card)
     }
+
     
-    
-    func shadow(){
-        layer.cornerRadius = 24
-        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12).cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 4)
-        layer.shadowRadius = 24
-        layer.shadowOpacity = 1
-        layer.masksToBounds = false
+    func shadow(_ view : UIView){
+        view.layer.cornerRadius = 8
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12).cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        view.layer.shadowRadius = 24
+        view.layer.shadowOpacity = 1
+        view.layer.masksToBounds = false
     }
 }

@@ -22,5 +22,15 @@ class DomainsCell: UICollectionViewCell {
         icon.image = data.Image
         card.backgroundColor = data.color
         card.layer.cornerRadius = 16
+        shadow()
+    }
+    
+    func shadow(){
+        layer.cornerRadius = 24
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowRadius = 24
+        layer.shadowOpacity = 1
+        layer.masksToBounds = false
     }
 }

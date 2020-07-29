@@ -23,6 +23,7 @@ class DomainsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
     
     
      var centercell : DomainsCell!

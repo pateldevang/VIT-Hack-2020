@@ -14,4 +14,12 @@ class DomainsCell: UICollectionViewCell {
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var body: UITextView!
     @IBOutlet weak var showMore: UIButton!
+    @IBOutlet weak var card: UIView!
+    
+    func setupCell(_ data : DomainData){
+        header.text = data.title
+        body.text = data.body
+        icon.image = data.Image
+        card.backgroundColor = data.color
+    }
 }

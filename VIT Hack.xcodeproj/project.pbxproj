@@ -15,6 +15,7 @@
 		5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */; };
 		5B3E9E9024C329CD0038CF05 /* SponsorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */; };
 		5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B44651F24C8B46C00E2D47F /* AboutUsData.swift */; };
+		5B49B9CF24D2070D00EEF2E8 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
@@ -91,6 +92,7 @@
 		5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsCell.swift; sourceTree = "<group>"; };
 		5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCell.swift; sourceTree = "<group>"; };
 		5B44651F24C8B46C00E2D47F /* AboutUsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsData.swift; sourceTree = "<group>"; };
+		5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
 				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
 				5B9F673D24D00566005CBD22 /* Tabbar.swift */,
+				5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				5BBD887724BE2DEF009E8F8E /* HomeViewController.swift in Sources */,
 				5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */,
 				5BBD887D24BE33BE009E8F8E /* PhoneViewController.swift in Sources */,
+				5B49B9CF24D2070D00EEF2E8 /* TracksViewController.swift in Sources */,
 				5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */,
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,

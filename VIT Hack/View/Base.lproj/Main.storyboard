@@ -580,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="7150.7246376811599" y="952.90178571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Tracks View Controller-->
         <scene sceneID="ddG-3c-eBt">
             <objects>
-                <viewController id="Rus-k9-pKl" sceneMemberID="viewController">
+                <viewController id="Rus-k9-pKl" customClass="TracksViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJ7-gP-TsM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,7 +604,7 @@
                                 <rect key="frame" x="0.0" y="159.5" width="414" height="648.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="172" id="tfz-h5-pAW" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackscell" rowHeight="172" id="tfz-h5-pAW" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tfz-h5-pAW" id="zXj-t8-EDf">
@@ -653,6 +653,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rus-k9-pKl" id="rhh-0w-Awt"/>
+                                    <outlet property="delegate" destination="Rus-k9-pKl" id="Jfq-at-xQU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -670,6 +674,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-eE-zdh"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="pME-oh-M6n" id="db1-15-vdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdG-64-Psi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

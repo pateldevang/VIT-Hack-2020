@@ -14,4 +14,5 @@ struct DomainData {
     var Image : UIImage //TODO
     var color : UIColor //TODO
     var problemStatements : [String]
+    
 }

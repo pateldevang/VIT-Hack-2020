@@ -14,6 +14,7 @@ class PhoneViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: PhoneNumberTextField!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     var newUser: User!
     var isEmail = false
@@ -23,6 +24,8 @@ class PhoneViewController: UIViewController {
         phoneNumberTextField.setUnderLine()
         continueButton.bottomShadow()
         setupPhoneField()
+        hideKeyboardWhenTappedAround()
+        loadButton(false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,9 +34,11 @@ class PhoneViewController: UIViewController {
     }
     
     func setupPhoneField(){
-        PhoneNumberKit.CountryCodePicker.commonCountryCodes = ["IN"]
         phoneNumberTextField.withFlag = true
         phoneNumberTextField.withExamplePlaceholder = true
+        if phoneNumberTextField.currentRegion == "IN" {
+            phoneNumberTextField.maxDigits = 10
+        }
     }
     
     func showProgress(){
@@ -45,6 +50,7 @@ class PhoneViewController: UIViewController {
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         if validate(){
+             loadButton(true)
             addUser()
         }
     }
@@ -59,16 +65,17 @@ class PhoneViewController: UIViewController {
         if success{
             Defaults.saveUser(newUser)
             Defaults.userDefaults.set(true, forKey: Keys.login)
-            performSegue(withIdentifier: "main", sender: nil)
+            gototabbar()
         } else {
+            loadButton(false)
             authAlert(message: "Please try again!")
         }
     }
     
     func validate()->Bool{
-        let phone = String(phoneNumberTextField?.text?.replacingOccurrences(of: " ", with: "") ?? "")
-        if phone.isEmpty {
-            authAlert(message: "Phone number missing!")
+
+        if phoneNumberTextField.text?.isEmpty ?? true {
+          authAlert(message: "Phone number missing!")
             return false
         }
         
@@ -79,4 +86,15 @@ class PhoneViewController: UIViewController {
         
         return true
     }
+    
+    func loadButton(_ bool : Bool){
+        let title = bool ? "Loading..." : "Continue"
+        continueButton.setTitle(title, for: .normal)
+        bool ? indicator.startAnimating() : indicator.stopAnimating()
+        indicator.isHidden = !bool
+        phoneNumberTextField.isEnabled = !bool
+        
+        indicator.style = .whiteLarge
+    }
+    
 }

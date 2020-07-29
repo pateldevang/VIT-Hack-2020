@@ -9,7 +9,7 @@
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
@@ -17,6 +17,7 @@ class ForgotPasswordViewController: UIViewController {
         super.viewDidLoad()
         emailTextField.setUnderLine()
         sendButton.bottomShadow()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func SendLink(_ sender: UIButton) {
@@ -28,7 +29,7 @@ class ForgotPasswordViewController: UIViewController {
     func resetPassword(){
         FirebaseAuth.forgetPassword(email: emailTextField.text!) { (response) in
             if response == "Success"{
-                self.dismissAlert(titlepass: "yay 😄", message: "Reset link sent to email.")
+                self.emailSuccessAlert()
             } else {
                 self.authAlert(message: response)
             }
@@ -48,4 +49,22 @@ class ForgotPasswordViewController: UIViewController {
         return true
     }
     
+}
+
+extension ForgotPasswordViewController {
+    //MARK: - ALERT fucntion for success forget password
+    func emailSuccessAlert() {
+        UIDevice.validVibrate()
+        let alert = UIAlertController(title: "yay 😄", message: "Please check your mail" , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Mail", style: .cancel) { (_) -> Void in
+            let settingsUrl =  URL(string: "message://")
+            if let url = settingsUrl {
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            }
+        })
+        alert.addAction(UIAlertAction(title: "dissmiss", style: .default){ (a) in
+            self.navigationController?.popViewController(animated: true)
+        })
+            present(alert, animated: true, completion: nil)
+    }
 }

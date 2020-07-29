@@ -48,6 +48,8 @@
 		5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889424BE41CE009E8F8E /* TimelineCell.swift */; };
 		5BBD889724BED509009E8F8E /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD889624BED509009E8F8E /* Time.swift */; };
 		5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBE2FB244C327F00636CF1 /* UI + Color.swift */; };
+		5BE25AEB24D133EA00E33FAB /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25AEA24D133EA00E33FAB /* Navigation.swift */; };
+		5BE25AED24D1385E00E33FAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE25AEC24D1385E00E33FAB /* ViewController.swift */; };
 		5BF310A324C36EC200F3E874 /* Progressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF310A224C36EC200F3E874 /* Progressbar.swift */; };
 		5BF8920724C97FDF00C3A073 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8920624C97FDF00C3A073 /* Textfield.swift */; };
 		772E408E244873D200276317 /* SponsorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E408D244873D200276317 /* SponsorData.swift */; };
@@ -68,19 +70,18 @@
 		775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFE2436634900E6F221 /* keyboard+Hide.swift */; };
 		775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* firebaseNetworking.swift */; };
 		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
-		776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC024470F2C00D6349C /* google+SignIn.swift */; };
 		776A7FC324474BD900D6349C /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC224474BD900D6349C /* regex.swift */; };
 		77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */; };
 		77D6AA322449EB6400E405B1 /* PrizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA312449EB6400E405B1 /* PrizeData.swift */; };
 		77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA332449EE1500E405B1 /* TimelineData.swift */; };
 		77F62C1C24484363007F4A6E /* FAQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F62C1B24484363007F4A6E /* FAQData.swift */; };
 		86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89924C01E3500FE6DBE /* UserModel.swift */; };
-		B8C4A59DEC1455F4A5C50E22 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4605EFF330CD9C92305F7208 /* Pods_VIT_Hack.framework */; };
+		874BB9D7084507D226055EA2 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3449C4A7E2BCCAD78B3BD826 /* Pods_VIT_Hack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4605EFF330CD9C92305F7208 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A1FD2ED468D966C038A6DFE /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
+		3449C4A7E2BCCAD78B3BD826 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47AF4BE9BFC43577B450579A /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -122,9 +123,11 @@
 		5BBD889424BE41CE009E8F8E /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		5BBD889624BED509009E8F8E /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		5BDBE2FB244C327F00636CF1 /* UI + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Color.swift"; sourceTree = "<group>"; };
+		5BE25AEA24D133EA00E33FAB /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		5BE25AEC24D1385E00E33FAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5BF310A224C36EC200F3E874 /* Progressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progressbar.swift; sourceTree = "<group>"; };
 		5BF8920624C97FDF00C3A073 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
-		71854F205196DC1BA5309295 /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
+		6CDF85CE3365DD823C4BEB48 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 		772E408D244873D200276317 /* SponsorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorData.swift; sourceTree = "<group>"; };
 		7742B9FC24365A3200030DF5 /* VIT Hack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIT Hack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7742B9FF24365A3200030DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +148,6 @@
 		775B1FFE2436634900E6F221 /* keyboard+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "keyboard+Hide.swift"; sourceTree = "<group>"; };
 		775B2001243663DA00E6F221 /* firebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseNetworking.swift; sourceTree = "<group>"; };
 		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
-		776A7FC024470F2C00D6349C /* google+SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "google+SignIn.swift"; sourceTree = "<group>"; };
 		776A7FC224474BD900D6349C /* regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
 		77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		77D6AA312449EB6400E405B1 /* PrizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeData.swift; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8C4A59DEC1455F4A5C50E22 /* Pods_VIT_Hack.framework in Frameworks */,
+				874BB9D7084507D226055EA2 /* Pods_VIT_Hack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +178,7 @@
 				5BBD887E24BE377E009E8F8E /* LoginViewController.swift */,
 				5BBD888024BE3858009E8F8E /* ForgotPasswordViewController.swift */,
 				5B086C6124C0188A00D5264C /* OnboardingViewController.swift */,
+				5BE25AEA24D133EA00E33FAB /* Navigation.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -228,7 +231,7 @@
 				5BBD886124BE2C35009E8F8E /* Fonts */,
 				7742B9FD24365A3200030DF5 /* Products */,
 				B277EA640F0D1F77586361B2 /* Pods */,
-				ECF31202B8A11D73CDD114B3 /* Frameworks */,
+				8FBECABB91DFEB1321F1CF2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -360,7 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				775B1FF62436622000E6F221 /* checkNetwork.swift */,
-				776A7FC024470F2C00D6349C /* google+SignIn.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 				776A7FC224474BD900D6349C /* regex.swift */,
@@ -368,25 +370,26 @@
 				5BBD889624BED509009E8F8E /* Time.swift */,
 				5BF8920624C97FDF00C3A073 /* Textfield.swift */,
 				5B9A16A724CF125F009B5311 /* Button.swift */,
+				5BE25AEC24D1385E00E33FAB /* ViewController.swift */,
 			);
 			path = "utils+Extensions";
+			sourceTree = "<group>";
+		};
+		8FBECABB91DFEB1321F1CF2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3449C4A7E2BCCAD78B3BD826 /* Pods_VIT_Hack.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				71854F205196DC1BA5309295 /* Pods-VIT Hack.debug.xcconfig */,
-				4A1FD2ED468D966C038A6DFE /* Pods-VIT Hack.release.xcconfig */,
+				47AF4BE9BFC43577B450579A /* Pods-VIT Hack.debug.xcconfig */,
+				6CDF85CE3365DD823C4BEB48 /* Pods-VIT Hack.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		ECF31202B8A11D73CDD114B3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4605EFF330CD9C92305F7208 /* Pods_VIT_Hack.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,12 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7742BA0E24365A3300030DF5 /* Build configuration list for PBXNativeTarget "VIT Hack" */;
 			buildPhases = (
-				B07D684C28EE82A5CE3D8C91 /* [CP] Check Pods Manifest.lock */,
+				9BE3A963DBA479F9492FC659 /* [CP] Check Pods Manifest.lock */,
 				7742B9F824365A3200030DF5 /* Sources */,
 				7742B9F924365A3200030DF5 /* Frameworks */,
 				7742B9FA24365A3200030DF5 /* Resources */,
-				32EC0A10FC03D1E2DCA5299E /* [CP] Copy Pods Resources */,
-				2336402C0EE91F72282810C8 /* [CP] Embed Pods Frameworks */,
+				47EC9AF78EE73FFD0668601F /* [CP] Embed Pods Frameworks */,
+				937E09B4ED2FAAA11DDD4334 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -470,7 +473,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2336402C0EE91F72282810C8 /* [CP] Embed Pods Frameworks */ = {
+		47EC9AF78EE73FFD0668601F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,7 +490,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		32EC0A10FC03D1E2DCA5299E /* [CP] Copy Pods Resources */ = {
+		937E09B4ED2FAAA11DDD4334 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -504,7 +507,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B07D684C28EE82A5CE3D8C91 /* [CP] Check Pods Manifest.lock */ = {
+		9BE3A963DBA479F9492FC659 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -559,7 +562,6 @@
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
 				86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */,
-				776A7FC124470F2C00D6349C /* google+SignIn.swift in Sources */,
 				5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */,
 				5BF310A324C36EC200F3E874 /* Progressbar.swift in Sources */,
 				5BBD888F24BE41A2009E8F8E /* FAQTableViewCell.swift in Sources */,
@@ -579,7 +581,9 @@
 				5B9A16A824CF125F009B5311 /* Button.swift in Sources */,
 				5B3E9E8C24C3246C0038CF05 /* SpeakersData.swift in Sources */,
 				5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */,
+				5BE25AED24D1385E00E33FAB /* ViewController.swift in Sources */,
 				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
+				5BE25AEB24D133EA00E33FAB /* Navigation.swift in Sources */,
 				5BBD887924BE3237009E8F8E /* SignupViewController.swift in Sources */,
 				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				5BBD888124BE3858009E8F8E /* ForgotPasswordViewController.swift in Sources */,
@@ -730,7 +734,7 @@
 		};
 		7742BA0F24365A3300030DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71854F205196DC1BA5309295 /* Pods-VIT Hack.debug.xcconfig */;
+			baseConfigurationReference = 47AF4BE9BFC43577B450579A /* Pods-VIT Hack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -744,7 +748,7 @@
 		};
 		7742BA1024365A3300030DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A1FD2ED468D966C038A6DFE /* Pods-VIT Hack.release.xcconfig */;
+			baseConfigurationReference = 6CDF85CE3365DD823C4BEB48 /* Pods-VIT Hack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

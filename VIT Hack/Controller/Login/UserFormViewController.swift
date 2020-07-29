@@ -26,12 +26,18 @@ class UserFormViewController: UIViewController {
         nameTextField.setUnderLine()
         instituteNameTextField.setUnderLine()
         registrationNumberTextField.setUnderLine()
+        hideKeyboardWhenTappedAround()
         continueButton.bottomShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        progressView.layer.sublayers = nil
     }
     
     func showProgress(){

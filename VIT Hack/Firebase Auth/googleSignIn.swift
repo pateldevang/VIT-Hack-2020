@@ -70,17 +70,6 @@ extension HomeViewController : GIDSignInDelegate{
         }
     }
     
-    func gototabbar(){
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        if #available(iOS 13.0, *) {
-            let vc = storyboard.instantiateViewController(identifier: "tabbar") as! UITabBarController
-            self.present(vc,animated: true)
-        } else {
-            // TODO iOS 12
-        }
-        
-    }
-    
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
         -> Bool {

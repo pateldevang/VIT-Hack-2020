@@ -9,13 +9,7 @@
 import Foundation
 
 extension String {
-    var isValidPhone: Bool {
-        // Indian Numbering system 6000000000 to 9999999999
-        let phoneNumberRegex = "^[6-9]\\d{9}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
-        let isValidPhone = phoneTest.evaluate(with: self)
-        return isValidPhone
-    }
+    
     var isEmail: Bool {
         do {
             let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)
@@ -36,26 +30,7 @@ extension String {
             return false
         }
     }
-    
-    var isRoomNo: Bool {
-        do {
-            // format of XYYYY where Y - [0,9] & X - [A-T]
-            // [A-T][0-9][0-9][0-9] VALID
-            // [A-T][0-9][0-9][0-9][0-9] VALID
-            //[A-T][0-9] NOT VALID
-            //[A-T][0-9][0-9] NOT VALID
-            var length: Int { return self.count }
-            if (length > 3 && length < 6) {
-            }
-            else {
-                return false
-            }
-            let regex = try NSRegularExpression(pattern: "^[A-T][0-9][0-9][0-9]*[0-9]$", options: .caseInsensitive)
-            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
-        } catch {
-            return false
-        }
-    }
+
 }
 
 

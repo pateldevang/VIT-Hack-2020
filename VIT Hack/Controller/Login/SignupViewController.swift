@@ -14,17 +14,26 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
         continueButton.bottomShadow()
+        hideKeyboardWhenTappedAround()
+        loadButton(false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        loadButton(false)
+        progressView.layer.sublayers = nil
     }
     
     func showProgress(){
@@ -34,7 +43,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         if validate(){
-        //TODO add indicator
+        loadButton(true)
         FirebaseAuth.emailSignIn(email: emailTextField.text!, pass: passwordTextField.text!, completion: handleSignin(authStatus:))
         }
     }
@@ -43,6 +52,7 @@ class SignupViewController: UIViewController {
         if authStatus == "Success" {
             self.performSegue(withIdentifier: "goToUserForm", sender: Any.self)
         } else {
+            loadButton(false)
             self.authAlert(message: authStatus)
         }
     }
@@ -64,6 +74,17 @@ class SignupViewController: UIViewController {
         }
         
         return true
+    }
+    
+    func loadButton(_ bool : Bool){
+        let title = bool ? "Signing Up" : "Continue"
+        continueButton.setTitle(title, for: .normal)
+        bool ? activity.startAnimating() : activity.stopAnimating()
+        activity.isHidden = !bool
+        emailTextField.isEnabled = !bool
+        passwordTextField.isEnabled = !bool
+        
+        activity.style = .whiteLarge
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

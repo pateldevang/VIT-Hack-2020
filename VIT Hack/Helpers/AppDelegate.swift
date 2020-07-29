@@ -21,11 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure Firebase
         FirebaseApp.configure()
         
-        // Configure GoogleSignIn
-        //TODO
-       /* GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
-        */
         
         //TODO
         //Setting up initial view controller

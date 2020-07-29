@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-//import GoogleSignIn
+import GoogleSignIn
 
 extension UIViewController {
     
@@ -22,7 +22,7 @@ extension UIViewController {
                 UserDefaults.standard.removePersistentDomain(forName: appDomain)
             }
             try firebaseAuth.signOut()
-            //GIDSignIn.sharedInstance().signOut() //TODO
+            GIDSignIn.sharedInstance().signOut()
             debugLog(message: "SignOut successful")
             self.performSegue(withIdentifier: "logout", sender: nil)
         } catch let signOutError as NSError {

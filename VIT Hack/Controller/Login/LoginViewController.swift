@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         emailTextField.setUnderLine()
         passwordTextField.setUnderLine()
         signinButton.bottomShadow()
+        hideKeyboardWhenTappedAround()
         loadButton(false)
     }
     
@@ -84,19 +85,8 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let form = segue.destination as? UserFormViewController {
-            form.isEmail = true
+            form.isEmail = false
         }
-    }
-    
-    func gototabbar(){
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        if #available(iOS 13.0, *) {
-            let vc = storyboard.instantiateViewController(identifier: "tabbar") as! UITabBarController
-            self.present(vc,animated: true)
-        } else {
-            // TODO iOS 12
-        }
-        
     }
     
     func loadButton(_ bool : Bool){

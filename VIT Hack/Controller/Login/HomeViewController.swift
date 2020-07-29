@@ -46,7 +46,5 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
     }
-
-    @IBAction func unwindToHome(segue:UIStoryboardSegue) { }
 }
 

@@ -21,7 +21,7 @@ class DomainsCell: UICollectionViewCell {
         setImage(data)
         header.text = data.domain
         body.text = data.description
-        card.backgroundColor = UIColor(hex: data.colour ?? "#ADDAFF")
+        card.backgroundColor = UIColor(hexString: data.colour ?? "#FFFFFF")
         card.layer.cornerRadius = 16
         shadow()
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dA-ws-0DS">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -471,6 +471,18 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="goC-gS-Lnn">
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="541"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btW-9x-Wu8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="541"/>
+                                                    <color key="backgroundColor" name="lightBlue"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="btW-9x-Wu8" firstAttribute="leading" secondItem="goC-gS-Lnn" secondAttribute="leading" id="B6P-6Y-yQX"/>
+                                                <constraint firstAttribute="bottom" secondItem="btW-9x-Wu8" secondAttribute="bottom" id="VHC-zT-1bz"/>
+                                                <constraint firstAttribute="trailing" secondItem="btW-9x-Wu8" secondAttribute="trailing" id="fhP-U2-H5C"/>
+                                                <constraint firstItem="btW-9x-Wu8" firstAttribute="top" secondItem="goC-gS-Lnn" secondAttribute="top" id="heo-vs-Rbi"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="288" height="541"/>
                                     </collectionViewCell>
@@ -2148,6 +2160,9 @@
         </namedColor>
         <namedColor name="google">
             <color red="0.29800000786781311" green="0.54500001668930054" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightBlue">
+            <color red="0.62699997425079346" green="0.83499997854232788" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -28,6 +28,10 @@ class Defaults
         return (userDefaults.value(forKey: Keys.login) as? Bool) ?? false
     }
     
+    static func fcmToken() -> String {
+        return (userDefaults.value(forKey: Keys.fcmToken) as? String) ?? ""
+    }
+    
     static func saveUser(_ user : User){
         userDefaults.set(user.name, forKey: Keys.name)
         userDefaults.set(user.regno, forKey: Keys.registration)

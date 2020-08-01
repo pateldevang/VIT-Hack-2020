@@ -35,4 +35,5 @@ struct Keys {
     static let institute = "institute"
     static let registration = "registration"
     static let login = "login"
+    static let fcmToken = "fcmToken"
 }

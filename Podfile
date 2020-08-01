@@ -12,5 +12,7 @@ target 'VIT Hack' do
 	pod 'GoogleSignIn'
   	pod 'Kingfisher' 
 	pod 'PhoneNumberKit'
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Messaging'
 
 end

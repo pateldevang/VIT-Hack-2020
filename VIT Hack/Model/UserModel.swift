@@ -24,7 +24,7 @@ struct User: Encodable {
                 "phone": phone ?? "",
                 "name": name ?? "",
                 "mail": mail ?? "",
-                "fcmToken": "",
+                "fcmToken": fcmToken ?? "",
                 "selectedDomain" : ""]
     }
 }

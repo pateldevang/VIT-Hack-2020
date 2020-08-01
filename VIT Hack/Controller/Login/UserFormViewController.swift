@@ -59,6 +59,7 @@ class UserFormViewController: UIViewController {
         newUser.regno = registrationNumberTextField.text!
         newUser.mail = getEmail()
         newUser.uid = getUID()
+        newUser.fcmToken = Defaults.fcmToken()
         self.performSegue(withIdentifier: "goToPhone", sender: Any.self)
     }
     

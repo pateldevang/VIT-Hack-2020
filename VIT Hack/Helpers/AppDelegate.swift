@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Messaging.messaging().delegate = self
         
+       let token = Messaging.messaging().fcmToken
+       UserDefaults.standard.set(token, forKey: Keys.fcmToken)
+        
         //TODO
         //Setting up initial view controller
         //setInitialViewController()

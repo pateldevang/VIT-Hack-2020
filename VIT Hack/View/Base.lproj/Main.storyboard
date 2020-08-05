@@ -1674,13 +1674,54 @@
                                 <rect key="frame" x="0.0" y="169" width="414" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="c5h-CB-SnF" customClass="FAQTableViewCell" customModule="VIT_Hack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackscell" rowHeight="172" id="e3D-zg-g18" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="172"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c5h-CB-SnF" id="aA1-KO-SCN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e3D-zg-g18" id="sfm-XN-KbV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzR-wv-N0G">
+                                                    <rect key="frame" x="16" y="16" width="382" height="140"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCi-z5-QSI">
+                                                            <rect key="frame" x="12" y="13" width="341" height="43.5"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                            <color key="textColor" name="blue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-Ni-EPD">
+                                                            <rect key="frame" x="13" y="59.5" width="340" height="53.5"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="vCi-z5-QSI" secondAttribute="trailing" constant="29" id="43k-fY-d4X"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1Mh-Ni-EPD" secondAttribute="bottom" constant="27" id="HDX-4G-oxx"/>
+                                                        <constraint firstItem="1Mh-Ni-EPD" firstAttribute="top" secondItem="vCi-z5-QSI" secondAttribute="bottom" constant="3" id="LgW-bC-Y7k"/>
+                                                        <constraint firstItem="1Mh-Ni-EPD" firstAttribute="leading" secondItem="hzR-wv-N0G" secondAttribute="leading" constant="13" id="fhs-1k-Wkx"/>
+                                                        <constraint firstItem="vCi-z5-QSI" firstAttribute="top" secondItem="hzR-wv-N0G" secondAttribute="top" constant="13" id="jp1-Ee-u8Q"/>
+                                                        <constraint firstItem="vCi-z5-QSI" firstAttribute="leading" secondItem="hzR-wv-N0G" secondAttribute="leading" constant="12" id="pOb-Rh-Szt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1Mh-Ni-EPD" secondAttribute="trailing" constant="29" id="vyK-hD-NBx"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hzR-wv-N0G" secondAttribute="trailing" constant="16" id="2c0-cg-vuM"/>
+                                                <constraint firstItem="hzR-wv-N0G" firstAttribute="top" secondItem="sfm-XN-KbV" secondAttribute="top" constant="16" id="5kH-tT-yPs"/>
+                                                <constraint firstAttribute="bottom" secondItem="hzR-wv-N0G" secondAttribute="bottom" constant="16" id="FeE-4M-vr9"/>
+                                                <constraint firstItem="hzR-wv-N0G" firstAttribute="leading" secondItem="sfm-XN-KbV" secondAttribute="leading" constant="16" id="WkF-xO-FYL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="body" destination="1Mh-Ni-EPD" id="qm9-QQ-mFd"/>
+                                            <outlet property="card" destination="hzR-wv-N0G" id="gl6-Kz-YcK"/>
+                                            <outlet property="header" destination="vCi-z5-QSI" id="Mta-5l-qNj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

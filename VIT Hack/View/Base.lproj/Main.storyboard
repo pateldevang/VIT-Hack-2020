@@ -1721,59 +1721,100 @@
                                 <state key="normal" title="Add Question"/>
                                 <connections>
                                     <action selector="addTapped:" destination="skH-13-UzS" eventType="touchUpInside" id="zmf-2E-nSq"/>
-                                    <segue destination="eOt-je-CyF" kind="show" id="bBj-Cb-e4Q"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kwt-SY-avn" kind="show" identifier="ask" id="gUi-77-6xo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZJ-7K-9UD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10669.565217391306" y="326.78571428571428"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fWf-uW-Yfn">
+        <!--Question View Controller-->
+        <scene sceneID="fNJ-Wz-kTe">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="eOt-je-CyF" sceneMemberID="viewController">
-                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="RyH-Jw-Yrl">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="kwt-SY-avn" customClass="QuestionViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcg-Pt-I7u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hlg-gb-rDv">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ntx-Dq-o7U">
-                                    <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wSs-Yk-JVY">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="768"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </view>
-                                    <vibrancyEffect>
-                                        <blurEffect style="regular"/>
-                                    </vibrancyEffect>
-                                </visualEffectView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-tV-TD0">
-                                    <rect key="frame" x="18" y="141" width="378" height="236.5"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Uhs-tV-TD0" secondAttribute="height" multiplier="1.6" id="F3Y-u5-V6J"/>
-                                    </constraints>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Uhs-tV-TD0" secondAttribute="trailing" constant="18" id="BTE-8J-2aT"/>
-                                <constraint firstItem="Uhs-tV-TD0" firstAttribute="top" secondItem="hlg-gb-rDv" secondAttribute="top" constant="141" id="EXt-s4-5Q6"/>
-                                <constraint firstItem="Uhs-tV-TD0" firstAttribute="leading" secondItem="hlg-gb-rDv" secondAttribute="leading" constant="18" id="YDS-JJ-SG2"/>
-                            </constraints>
-                        </view>
-                        <blurEffect style="regular"/>
-                    </visualEffectView>
-                    <navigationItem key="navigationItem" id="YSk-Gd-WeR"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-tV-TD0">
+                                <rect key="frame" x="18" y="194" width="378" height="236.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naa-N9-oaB">
+                                        <rect key="frame" x="28" y="184.5" width="96" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Naa-N9-oaB" secondAttribute="height" multiplier="3.2" id="PRY-pk-B12"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="askTapped:" destination="kwt-SY-avn" eventType="touchUpInside" id="XUr-uk-Kra"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask a Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-ke-Cwt">
+                                        <rect key="frame" x="16" y="16" width="346" height="24"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-pi-YlX">
+                                        <rect key="frame" x="16" y="50" width="346" height="114.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKc-CI-RQA">
+                                        <rect key="frame" x="254" y="184.5" width="96" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zKc-CI-RQA" secondAttribute="height" multiplier="3.2" id="G7b-2m-Js5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="kwt-SY-avn" eventType="touchUpInside" id="vHC-rX-W8z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RFj-pi-YlX" secondAttribute="trailing" constant="16" id="9Y9-D4-ZFV"/>
+                                    <constraint firstItem="Naa-N9-oaB" firstAttribute="leading" secondItem="Uhs-tV-TD0" secondAttribute="leading" constant="28" id="Ek8-Qe-iWG"/>
+                                    <constraint firstAttribute="width" secondItem="Uhs-tV-TD0" secondAttribute="height" multiplier="1.6" id="F3Y-u5-V6J"/>
+                                    <constraint firstItem="RFj-pi-YlX" firstAttribute="top" secondItem="Ezr-ke-Cwt" secondAttribute="bottom" constant="10" id="GN1-wx-UxQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zKc-CI-RQA" secondAttribute="bottom" constant="22" id="LGd-7i-vSK"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKc-CI-RQA" secondAttribute="trailing" constant="28" id="O0S-Er-al3"/>
+                                    <constraint firstItem="Naa-N9-oaB" firstAttribute="top" secondItem="RFj-pi-YlX" secondAttribute="bottom" constant="20" id="Tuq-T4-Odz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ezr-ke-Cwt" secondAttribute="trailing" constant="16" id="XtF-kz-Crd"/>
+                                    <constraint firstItem="Ezr-ke-Cwt" firstAttribute="top" secondItem="Uhs-tV-TD0" secondAttribute="top" constant="16" id="Yhd-ns-AC9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Naa-N9-oaB" secondAttribute="bottom" constant="22" id="bzw-IF-ghl"/>
+                                    <constraint firstItem="RFj-pi-YlX" firstAttribute="leading" secondItem="Uhs-tV-TD0" secondAttribute="leading" constant="16" id="l0h-N7-apv"/>
+                                    <constraint firstItem="Ezr-ke-Cwt" firstAttribute="leading" secondItem="Uhs-tV-TD0" secondAttribute="leading" constant="16" id="rEd-dv-F1V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uhs-tV-TD0" firstAttribute="leading" secondItem="aAA-8X-anS" secondAttribute="leading" constant="18" id="ims-kH-rz1"/>
+                            <constraint firstItem="aAA-8X-anS" firstAttribute="trailing" secondItem="Uhs-tV-TD0" secondAttribute="trailing" constant="18" id="ltS-6R-0ZZ"/>
+                            <constraint firstItem="Uhs-tV-TD0" firstAttribute="top" secondItem="aAA-8X-anS" secondAttribute="top" constant="150" id="xFJ-3r-I6T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aAA-8X-anS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v6e-MO-6tF"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="askButton" destination="Naa-N9-oaB" id="u5Z-C0-yxJ"/>
+                        <outlet property="cancelButton" destination="zKc-CI-RQA" id="ZeK-rV-JxD"/>
+                        <outlet property="card" destination="Uhs-tV-TD0" id="0DZ-EU-FIe"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j5c-GB-g9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljZ-kl-sbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11388" y="330"/>
+            <point key="canvasLocation" x="11450.72463768116" y="326.78571428571428"/>
         </scene>
         <!--Tabbar-->
         <scene sceneID="Y3v-9m-KeC">

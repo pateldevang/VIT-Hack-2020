@@ -31,7 +31,6 @@ class TimelineViewController: UIViewController {
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.timeline = timeline
-            print(timeline)
         }
     }
     

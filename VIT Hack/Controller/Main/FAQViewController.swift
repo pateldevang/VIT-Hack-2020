@@ -21,7 +21,7 @@ class FAQViewController: UITableViewController {
     
     
     @IBAction func addTapped(_ sender: Any) {
-        
+        performSegue(withIdentifier: "ask", sender: nil)
     }
     
     func fetchStaticFAQ(){

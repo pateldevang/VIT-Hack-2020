@@ -1648,10 +1648,10 @@
             </objects>
             <point key="canvasLocation" x="5911.594202898551" y="1232.8125"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="dKz-yG-H5c">
             <objects>
-                <tableViewController id="O9s-YA-QJ4" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ResultsTableViewController" id="O9s-YA-QJ4" customClass="ResultsTableViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a8b-Cz-D1d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

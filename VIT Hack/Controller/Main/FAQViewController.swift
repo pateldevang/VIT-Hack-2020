@@ -11,15 +11,19 @@ import UIKit
 class FAQViewController: UITableViewController {
     
     var staticFAQ : [FAQData] = []
+    
+    let faqCellIdentifier = "faqcell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchStaticFAQ()
     }
     
     func fetchStaticFAQ(){
         firebaseNetworking.shared.getFAQ { (success, response) in
             if success {
                 self.staticFAQ = response
+                print(response)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -34,7 +38,24 @@ class FAQViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-  
-        return 0
+        return staticFAQ.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: faqCellIdentifier) as! TracksCell
+        let faq = staticFAQ[indexPath.row]
+        cell.header.text = faq.question
+        cell.body.text = faq.answer
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
 }

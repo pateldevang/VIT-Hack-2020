@@ -10,6 +10,8 @@
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
 		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
+		5B3A06BF24DAF62F00687B1E /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */; };
+		5B3A06C124DAFF8F00687B1E /* FaqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06C024DAFF8F00687B1E /* FaqCell.swift */; };
 		5B3E9E8A24C321F30038CF05 /* SpeakersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8924C321F30038CF05 /* SpeakersCell.swift */; };
 		5B3E9E8C24C3246C0038CF05 /* SpeakersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */; };
 		5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */; };
@@ -41,7 +43,6 @@
 		5BBD888324BE3F23009E8F8E /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */; };
 		5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */; };
 		5BBD888724BE3F3C009E8F8E /* DomainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */; };
-		5BBD888924BE3F50009E8F8E /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888824BE3F50009E8F8E /* FAQViewController.swift */; };
 		5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */; };
 		5BBD888D24BE3F68009E8F8E /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */; };
 		5BBD888F24BE41A2009E8F8E /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD888E24BE41A2009E8F8E /* FAQTableViewCell.swift */; };
@@ -87,6 +88,8 @@
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		5B3A06C024DAFF8F00687B1E /* FaqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCell.swift; sourceTree = "<group>"; };
 		5B3E9E8924C321F30038CF05 /* SpeakersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersCell.swift; sourceTree = "<group>"; };
 		5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersData.swift; sourceTree = "<group>"; };
 		5B3E9E8D24C329C10038CF05 /* CollaboratorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsCell.swift; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 		5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainsViewController.swift; sourceTree = "<group>"; };
-		5BBD888824BE3F50009E8F8E /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		5BBD888E24BE41A2009E8F8E /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,11 +198,11 @@
 				5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */,
 				5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */,
 				5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */,
-				5BBD888824BE3F50009E8F8E /* FAQViewController.swift */,
 				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
 				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
 				5B9F673D24D00566005CBD22 /* Tabbar.swift */,
 				5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */,
+				5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -225,6 +227,7 @@
 				5BBD889224BE41BC009E8F8E /* DomainsCell.swift */,
 				5BBD889424BE41CE009E8F8E /* TimelineCell.swift */,
 				5B086C6524C01D6500D5264C /* OnboardingCell.swift */,
+				5B3A06C024DAFF8F00687B1E /* FaqCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
 				5BBD887724BE2DEF009E8F8E /* HomeViewController.swift in Sources */,
 				5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */,
+				5B3A06BF24DAF62F00687B1E /* FAQViewController.swift in Sources */,
 				5BBD887D24BE33BE009E8F8E /* PhoneViewController.swift in Sources */,
 				5B49B9CF24D2070D00EEF2E8 /* TracksViewController.swift in Sources */,
 				5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */,
@@ -578,8 +582,8 @@
 				5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */,
 				5BF8920724C97FDF00C3A073 /* Textfield.swift in Sources */,
 				5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */,
+				5B3A06C124DAFF8F00687B1E /* FaqCell.swift in Sources */,
 				5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */,
-				5BBD888924BE3F50009E8F8E /* FAQViewController.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
 				86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */,

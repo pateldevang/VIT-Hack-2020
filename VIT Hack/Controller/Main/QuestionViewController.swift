@@ -12,13 +12,16 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var askButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
+    
+    @IBOutlet weak var askTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         askButton.bottomShadow()
         cancelButton.outline()
+        askTextView.outline()
     }
 
     

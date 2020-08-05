@@ -1741,7 +1741,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-YZ-JpL">
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-YZ-JpL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oK6-oQ-9jS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1829,6 +1829,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="askButton" destination="Naa-N9-oaB" id="u5Z-C0-yxJ"/>
+                        <outlet property="askTextView" destination="RFj-pi-YlX" id="elb-7h-zyf"/>
                         <outlet property="cancelButton" destination="zKc-CI-RQA" id="ZeK-rV-JxD"/>
                         <outlet property="card" destination="Uhs-tV-TD0" id="0DZ-EU-FIe"/>
                     </connections>

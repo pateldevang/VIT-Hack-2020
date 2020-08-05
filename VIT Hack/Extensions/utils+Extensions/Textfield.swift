@@ -23,3 +23,11 @@ extension UITextField {
     }
 }
 
+extension UITextView {
+    func outline(){
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = 7
+    }
+}
+

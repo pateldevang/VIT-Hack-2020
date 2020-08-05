@@ -238,4 +238,19 @@ class firebaseNetworking {
             debugPrint(error.localizedDescription)
         }
     }
+    
+    
+    //MARK: - Function to ask faq
+    public func postQuestion(param: [String:String],completion: @escaping (Bool) -> ()) {
+        self.database.child("QFAQs").updateChildValues(param) {
+            (error:Error?, database:DatabaseReference) in
+            if let error = error { // Error Handling
+                debugLog(message: "Data could not be sent: \(error).")
+                completion(false)
+            } else {
+                debugLog(message: "Data sent successfully!")
+                completion(true)  // Completion handler
+            }
+        }
+    }
 }

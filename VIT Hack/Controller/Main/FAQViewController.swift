@@ -28,6 +28,11 @@ class FAQViewController: UITableViewController {
         firebaseNetworking.shared.getFAQ(completion: handleFAQ(success:response:))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.searchController = searchController
+    }
+    
     fileprivate func setupSearchController() {
         resultsTableController =
             self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? ResultsTableViewController
@@ -100,14 +105,10 @@ extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UI
         updateSearchResults(for: searchController.searchBar)
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-       // setupFetchedResultsController(sort: sort)    /// Setup fetchedResultsController
-    }
-    
     func updateSearchResults(for searchbar: UISearchBar) {
         if let text = searchbar.text{
             if text.count > 0 {
-                let filterData = staticFAQ.filter { ($0.question?.contains(text) ?? false)}
+                let filterData = staticFAQ.filter { ($0.question?.lowercased().contains(text.lowercased()) ?? false) || ($0.answer?.lowercased().contains(text.lowercased()) ?? false)}
                 if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
                     resultsController.filteredProducts = filterData
                     resultsController.tableView.reloadData()

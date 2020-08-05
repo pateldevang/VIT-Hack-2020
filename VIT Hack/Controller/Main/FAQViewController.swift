@@ -10,8 +10,8 @@ import UIKit
 
 class FAQViewController: UITableViewController {
     
-    var staticFAQ : [FAQData] = []
     
+    var staticFAQ : [FAQData] = []
     
     /// cell identifier for `faqCell`
     let faqCellIdentifier = "faqcell"

@@ -51,11 +51,28 @@ class FAQViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        let text = staticFAQ[indexPath.row].answer
+        let height = extimateFrameForText(text: text ?? "")
+        return height + 90
     }
+    
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
     
+}
+
+extension FAQViewController {
+    private func extimateFrameForText(text: String) -> CGFloat {
+        let width = (view.frame.width) - 100
+        
+        let size = CGSize(width: width, height: 1000)
+        
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        
+        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
+        
+        return height
+    }
 }

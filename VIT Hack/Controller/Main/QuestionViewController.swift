@@ -13,7 +13,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var askButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    
     @IBOutlet weak var askTextView: UITextView!
     
     override func viewDidLoad() {
@@ -35,11 +34,25 @@ class QuestionViewController: UIViewController {
 
     
     @IBAction func askTapped(_ sender: Any) {
-        
+        askQuestion()
     }
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func askQuestion(){
+        if !askTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            let question = ["\(Int(Date().timeIntervalSince1970*1000))":askTextView.text!]
+            print(question)
+            firebaseNetworking.shared.postQuestion(param: question, completion: handleQuestion(success:))
+        }
+    }
+    
+    func handleQuestion(success : Bool){
+        if success{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 

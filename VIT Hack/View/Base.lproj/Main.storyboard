@@ -1726,7 +1726,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="kwt-SY-avn" kind="presentation" identifier="ask" modalTransitionStyle="crossDissolve" id="gUi-77-6xo"/>
+                        <segue destination="kwt-SY-avn" kind="presentation" identifier="ask" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="gUi-77-6xo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZJ-7K-9UD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1741,6 +1741,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-YZ-JpL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oK6-oQ-9jS">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhs-tV-TD0">
                                 <rect key="frame" x="18" y="194" width="378" height="236.5"/>
                                 <subviews>
@@ -1807,6 +1815,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fdP-YZ-JpL" firstAttribute="top" secondItem="dcg-Pt-I7u" secondAttribute="top" id="0du-JM-G1O"/>
+                            <constraint firstItem="fdP-YZ-JpL" firstAttribute="bottom" secondItem="dcg-Pt-I7u" secondAttribute="bottom" id="Dy6-wN-HjT"/>
+                            <constraint firstItem="fdP-YZ-JpL" firstAttribute="leading" secondItem="aAA-8X-anS" secondAttribute="leading" id="WoK-w8-eOl"/>
+                            <constraint firstItem="aAA-8X-anS" firstAttribute="trailing" secondItem="fdP-YZ-JpL" secondAttribute="trailing" id="fbn-gV-h8f"/>
                             <constraint firstItem="Uhs-tV-TD0" firstAttribute="leading" secondItem="aAA-8X-anS" secondAttribute="leading" constant="18" id="ims-kH-rz1"/>
                             <constraint firstItem="aAA-8X-anS" firstAttribute="trailing" secondItem="Uhs-tV-TD0" secondAttribute="trailing" constant="18" id="ltS-6R-0ZZ"/>
                             <constraint firstItem="Uhs-tV-TD0" firstAttribute="top" secondItem="aAA-8X-anS" secondAttribute="top" constant="150" id="xFJ-3r-I6T"/>

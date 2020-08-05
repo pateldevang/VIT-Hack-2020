@@ -19,6 +19,11 @@ class FAQViewController: UITableViewController {
         fetchStaticFAQ()
     }
     
+    
+    @IBAction func addTapped(_ sender: Any) {
+        
+    }
+    
     func fetchStaticFAQ(){
         firebaseNetworking.shared.getFAQ { (success, response) in
             if success {

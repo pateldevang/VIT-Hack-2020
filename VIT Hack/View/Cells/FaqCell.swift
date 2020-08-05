@@ -10,15 +10,23 @@ import UIKit
 
 class FaqCell: UITableViewCell {
 
+    @IBOutlet weak var header: UILabel!
+    @IBOutlet weak var body: UITextView!
+    @IBOutlet weak var card: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        shadow(card)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func shadow(_ view : UIView){
+        view.layer.cornerRadius = 8
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12).cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        view.layer.shadowRadius = 24
+        view.layer.shadowOpacity = 1
+        view.layer.masksToBounds = false
     }
 
 }

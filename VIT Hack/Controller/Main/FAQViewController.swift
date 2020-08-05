@@ -53,7 +53,7 @@ class FAQViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let text = staticFAQ[indexPath.row].answer
         let height = extimateFrameForText(text: text ?? "")
-        return height + 90
+        return height + 130
     }
     
     

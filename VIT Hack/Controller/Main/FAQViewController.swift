@@ -12,11 +12,31 @@ class FAQViewController: UITableViewController {
     
     var staticFAQ : [FAQData] = []
     
+    
+    /// cell identifier for `faqCell`
     let faqCellIdentifier = "faqcell"
+    
+    /// Search controller to help us with filtering items in the table view.
+    var searchController: UISearchController!
+    
+    /// `Search` results table view.
+    private var resultsTableController: ResultsTableViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchController()
         firebaseNetworking.shared.getFAQ(completion: handleFAQ(success:response:))
+    }
+    
+    fileprivate func setupSearchController() {
+        resultsTableController =
+            self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? ResultsTableViewController
+        resultsTableController.tableView.delegate = self
+        searchController = UISearchController(searchResultsController: resultsTableController)
+        searchController.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.autocapitalizationType = .none
+        searchController.searchBar.delegate = self
     }
     
     
@@ -71,5 +91,28 @@ extension FAQViewController {
         let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
         
         return height
+    }
+}
+
+//MARK:- SearchController Delegate Methods
+extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        updateSearchResults(for: searchController.searchBar)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       // setupFetchedResultsController(sort: sort)    /// Setup fetchedResultsController
+    }
+    
+    func updateSearchResults(for searchbar: UISearchBar) {
+        if let text = searchbar.text{
+            if text.count > 0 {
+                let filterData = staticFAQ.filter { ($0.question?.contains(text) ?? false)}
+                if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
+                    resultsController.filteredProducts = filterData
+                    resultsController.tableView.reloadData()
+                }
+            }
+        }
     }
 }

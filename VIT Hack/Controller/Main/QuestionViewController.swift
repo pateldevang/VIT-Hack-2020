@@ -22,6 +22,15 @@ class QuestionViewController: UIViewController {
         askButton.bottomShadow()
         cancelButton.outline()
         askTextView.outline()
+        cardShadow()
+    }
+    
+    func cardShadow(){
+        card.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
+        card.layer.shadowOffset = CGSize(width: 0, height: 0)
+        card.layer.shadowRadius = 24
+        card.layer.shadowOpacity = 1
+        card.layer.masksToBounds = false
     }
 
     

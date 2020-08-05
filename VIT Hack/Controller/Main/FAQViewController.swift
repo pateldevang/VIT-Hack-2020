@@ -13,10 +13,10 @@ class FAQViewController: UITableViewController {
     var staticFAQ : [FAQData] = []
     
     let faqCellIdentifier = "faqcell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchStaticFAQ()
+        firebaseNetworking.shared.getFAQ(completion: handleFAQ(success:response:))
     }
     
     
@@ -24,18 +24,15 @@ class FAQViewController: UITableViewController {
         performSegue(withIdentifier: "ask", sender: nil)
     }
     
-    func fetchStaticFAQ(){
-        firebaseNetworking.shared.getFAQ { (success, response) in
-            if success {
-                self.staticFAQ = response
-                print(response)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+    func handleFAQ(success:Bool,response:[FAQData]){
+        if success {
+            self.staticFAQ = response
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return staticFAQ.count
     }

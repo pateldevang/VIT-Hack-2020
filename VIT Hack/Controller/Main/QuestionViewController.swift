@@ -17,10 +17,13 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
+        askButton.bottomShadow()
+        cancelButton.outline()
     }
+
     
     @IBAction func askTapped(_ sender: Any) {
+        
     }
     
     @IBAction func cancel(_ sender: Any) {

@@ -1657,13 +1657,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mku-rh-iww">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faqcell2" rowHeight="196" id="0KQ-dw-FC4" customClass="FaqCell" customModule="VIT_Hack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="196"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mku-rh-iww" id="idY-YD-NVN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0KQ-dw-FC4" id="5Fh-mv-66c">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Bq-4O6">
+                                            <rect key="frame" x="16" y="8" width="382" height="180"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WM-gw-EeS">
+                                                    <rect key="frame" x="12" y="13" width="341" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                                    <color key="textColor" name="blue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-mh-gLN">
+                                                    <rect key="frame" x="13" y="58" width="340" height="95"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TWB-mh-gLN" secondAttribute="trailing" constant="29" id="4gi-3x-kry"/>
+                                                <constraint firstItem="0WM-gw-EeS" firstAttribute="top" secondItem="dfG-Bq-4O6" secondAttribute="top" constant="13" id="Ehf-iJ-CVy"/>
+                                                <constraint firstItem="0WM-gw-EeS" firstAttribute="leading" secondItem="dfG-Bq-4O6" secondAttribute="leading" constant="12" id="Qbw-jb-SfN"/>
+                                                <constraint firstItem="TWB-mh-gLN" firstAttribute="leading" secondItem="dfG-Bq-4O6" secondAttribute="leading" constant="13" id="VTa-PJ-k5t"/>
+                                                <constraint firstItem="TWB-mh-gLN" firstAttribute="top" secondItem="0WM-gw-EeS" secondAttribute="bottom" constant="3" id="WGo-wU-H1Z"/>
+                                                <constraint firstAttribute="bottom" secondItem="TWB-mh-gLN" secondAttribute="bottom" constant="27" id="XYg-hj-vc3"/>
+                                                <constraint firstAttribute="trailing" secondItem="0WM-gw-EeS" secondAttribute="trailing" constant="29" id="qlu-Cy-Qej"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dfG-Bq-4O6" firstAttribute="leading" secondItem="5Fh-mv-66c" secondAttribute="leading" constant="16" id="8Rm-IR-62P"/>
+                                        <constraint firstAttribute="trailing" secondItem="dfG-Bq-4O6" secondAttribute="trailing" constant="16" id="8Xs-Qp-pKo"/>
+                                        <constraint firstAttribute="bottom" secondItem="dfG-Bq-4O6" secondAttribute="bottom" constant="8" id="SOa-yi-J9i"/>
+                                        <constraint firstItem="dfG-Bq-4O6" firstAttribute="top" secondItem="5Fh-mv-66c" secondAttribute="top" constant="8" id="Wea-hA-XpA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="body" destination="TWB-mh-gLN" id="oCk-ok-yry"/>
+                                    <outlet property="card" destination="dfG-Bq-4O6" id="6HU-Zu-alU"/>
+                                    <outlet property="header" destination="0WM-gw-EeS" id="xpj-Is-510"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

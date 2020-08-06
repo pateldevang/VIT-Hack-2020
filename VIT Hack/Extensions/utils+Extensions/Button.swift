@@ -18,4 +18,10 @@ extension UIButton {
         layer.shadowOpacity = 1
         layer.masksToBounds = false
     }
+    
+    func outline(){
+        layer.borderColor = UIColor(named: "blue")?.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 4
+    }
 }

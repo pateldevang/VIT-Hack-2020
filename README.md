@@ -1,6 +1,17 @@
 # VIT-Hack-2020
 iOS app for VIT HACK - 2020
 
+# TODO
+- [ ] Data persistance 
+- [ ] embed Youtube?
+
+# TODO Design
+- [ ] Tabbar icons
+- [ ] Appicon
+- [ ] LaunchScreen
+
+
+
 ## Checklist
 - [x] Initial setup
 - [x] Add Kingfisher for images
@@ -46,14 +57,14 @@ iOS app for VIT HACK - 2020
    - [ ] ~~Networking~~
    - [x] Design
    - [ ] SFSafariVC + link
-- [ ] FAQs 
-   - [ ] Static
-        - [ ] Networking
-        - [ ] Tableview for QnA
-        - [ ] Search bar implementation 
-   - [ ] Ask Question
-      - [ ] Networking to post questions
-      - [ ] Design for popover
+- [x] FAQs 
+   - [x] Static
+        - [x] Networking
+        - [x] Tableview for QnA
+        - [x] Search bar implementation 
+   - [x] Ask Question
+      - [x] Networking to post questions
+      - [x] Design for popover
       
 - [x] Problem Statement and Tracks 
    - [x] Domains

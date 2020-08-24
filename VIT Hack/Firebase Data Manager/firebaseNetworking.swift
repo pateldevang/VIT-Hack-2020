@@ -99,6 +99,7 @@ class firebaseNetworking {
             if let t2 = enumerator[1] as? DataSnapshot { sponsor.name = t2.value as? String }
             if let t3 = enumerator[2] as? DataSnapshot { sponsor.pageUrl = t3.value as? String }
             sponsorDataArray.append(sponsor)  // Appending into sponsorDataArray
+            ControllerDefaults.saveSponsors(sponsorDataArray, isCollaborator: isCollaborator)
             completion(true, sponsorDataArray)  // Completion handler
         }) { (error) in // Error Handling
             completion(false, sponsorDataArray) 
@@ -125,6 +126,7 @@ class firebaseNetworking {
             if let t7 = enumerator[6] as? DataSnapshot { speaker.startUnix = t7.value as? Double }
             
             speakerDataArray.append(speaker)  // Appending into sponsorDataArray
+            ControllerDefaults.saveSpeakers(speakerDataArray)
             completion(true, speakerDataArray)  // Completion handler
         }) { (error) in // Error Handling
             completion(false, speakerDataArray)
@@ -157,6 +159,7 @@ class firebaseNetworking {
             // Completion handler
             completion(true, FAQDataArray)
         }) { (error) in // Error Handling
+            ControllerDefaults.saveFAQs(FAQDataArray)
             completion(false, FAQDataArray)
             debugPrint(error.localizedDescription)
         }
@@ -209,6 +212,7 @@ class firebaseNetworking {
                 TimelineDataArray.append(timeline)
             }
             // Completion handler
+            ControllerDefaults.saveTimeline(TimelineDataArray)
             completion(true, TimelineDataArray)
         }) { (error) in // Error Handling
             completion(false, TimelineDataArray)
@@ -234,6 +238,7 @@ class firebaseNetworking {
             domainDataArray.append(domain)  // Appending into domainDataArray
             completion(true, domainDataArray)  // Completion handler
         }) { (error) in // Error Handling
+            ControllerDefaults.saveTracks(domainDataArray)
             completion(false, domainDataArray)
             debugPrint(error.localizedDescription)
         }

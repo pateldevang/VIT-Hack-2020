@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     let gcmMessageIDKey = "SOMETHING" //TODO
-
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,12 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Messaging.messaging().delegate = self
         
-       let token = Messaging.messaging().fcmToken
-       UserDefaults.standard.set(token, forKey: Keys.fcmToken)
+        let token = Messaging.messaging().fcmToken
+        UserDefaults.standard.set(token, forKey: Keys.fcmToken)
         
-        //TODO
         //Setting up initial view controller
-        //setInitialViewController()
+        setInitialViewController()
         
         // Increse Launch Time will uncommit during deployment
         //Thread.sleep(forTimeInterval: 1.3)

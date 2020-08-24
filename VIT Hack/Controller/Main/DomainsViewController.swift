@@ -19,6 +19,7 @@ class DomainsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let data = ControllerDefaults.tracks() { self.domains = data }
         firebaseNetworking.shared.getDomains(completion: getDomains(success:result:))
     }
     

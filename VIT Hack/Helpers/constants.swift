@@ -36,4 +36,15 @@ struct Keys {
     static let registration = "registration"
     static let login = "login"
     static let fcmToken = "fcmToken"
+    static let onboard = "onbaord"
+}
+
+struct ControllerKeys {
+    static let timeline = "timeline"
+    static let faq = "faq"
+    static let tracks = "tracks"
+    
+    static let sponsor = "sponsor"
+    static let speaker = "speaker"
+    static let collaborator = "collaborator"
 }

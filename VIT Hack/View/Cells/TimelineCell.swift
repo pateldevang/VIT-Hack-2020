@@ -44,9 +44,7 @@ class TimelineCell: UITableViewCell {
         }
     }
     
-    @IBAction func watchNow(_ sender: Any) {
-        
-    }
+    @IBAction func watchNow(_ sender: Any) { }
     
     func addShadow(){
         watchNowButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.16).cgColor
@@ -57,3 +55,4 @@ class TimelineCell: UITableViewCell {
         watchNowButton.layer.cornerRadius = 4.0
     }
 }
+

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SafariServices
 
 class TimelineViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var timeline = [TimelineData]() {
@@ -22,9 +23,10 @@ class TimelineViewController: UIViewController {
     
     let cellIdentifier = "timelinecell"
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
     }
     
@@ -48,6 +50,10 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
         let timelineData = timeline[indexPath.row]
         
         cell.setupCell(timelineData)
+        
+        cell.watchNowButton.addTarget(self, action: #selector(watchnow(sender:)), for: .touchUpInside)
+        
+        cell.watchNowButton.tag = indexPath.row
         
         return cell
     }
@@ -78,5 +84,23 @@ extension TimelineViewController {
         let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
         
         return height
+    }
+}
+
+extension TimelineViewController : SFSafariViewControllerDelegate {
+    @objc func watchnow(sender : UIButton){
+        let link = timeline[sender.tag].link
+        openWebsite(link)
+    }
+    
+    
+    func openWebsite(_ link : String?){
+        if let link = link,let url = URL(string: link) {
+            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                let safariVC = SFSafariViewController(url: url)
+                self.present(safariVC, animated: true, completion: nil)
+                safariVC.delegate = self
+            }
+        }
     }
 }

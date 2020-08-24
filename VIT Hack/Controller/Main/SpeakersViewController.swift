@@ -17,7 +17,6 @@ class SpeakersViewController: UIViewController {
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
     
     
-    
     let speakerIdentifier = "speakercell"
     let collaboratorIdentifier = "Collaboratorcell"
     let sponsorIdentifier = "sponsorcell"
@@ -29,9 +28,16 @@ class SpeakersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadOffline()
         getSpeakers()
         getSponsors()
         getCollaborators()
+    }
+    
+    func loadOffline(){
+        if let speaker = ControllerDefaults.speakers() { self.speakerData = speaker }
+        if let sponsor = ControllerDefaults.sponsors() { self.sponsorData = sponsor }
+        if let collaborator = ControllerDefaults.collaborators() { self.collaboratorData = collaborator }
     }
     
     func getSpeakers(){
@@ -95,6 +101,8 @@ extension SpeakersViewController : UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: speakerIdentifier, for: indexPath) as! SpeakersCell
             let speaker = speakerData[indexPath.item]
             cell.setupCell(speaker)
+            cell.join.addTarget(self, action: #selector(speakerJoin), for: .touchUpInside)
+            cell.join.tag = indexPath.item
             cellToReturn = cell
         } else if collectionView.tag == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collaboratorIdentifier, for: indexPath) as! CollaboratorsCell
@@ -113,10 +121,7 @@ extension SpeakersViewController : UICollectionViewDataSource {
 
 extension SpeakersViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView.tag == 0{
-            let speaker = speakerData[indexPath.item]
-            openWebsite(speaker.sessionUrl)
-        } else if collectionView.tag == 1{
+        if collectionView.tag == 1{
             let collaborator = collaboratorData[indexPath.item]
             openWebsite(collaborator.pageUrl)
         } else {
@@ -137,11 +142,18 @@ extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
 }
 
 extension SpeakersViewController : SFSafariViewControllerDelegate {
+  @objc func speakerJoin(sender:UIButton){
+         let link = speakerData[sender.tag].sessionUrl
+        openWebsite(link)
+    }
+    
     func openWebsite(_ link : String?){
         if let link = link,let url = URL(string: link) {
-            let safariVC = SFSafariViewController(url: url)
-            self.present(safariVC, animated: true, completion: nil)
-            safariVC.delegate = self
+            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                let safariVC = SFSafariViewController(url: url)
+                self.present(safariVC, animated: true, completion: nil)
+                safariVC.delegate = self
+            }
         }
     }
 }

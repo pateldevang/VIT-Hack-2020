@@ -10,7 +10,6 @@ import UIKit
 
 class FAQViewController: UITableViewController {
     
-    
     var staticFAQ : [FAQData] = []
     
     /// cell identifier for `faqCell`
@@ -25,6 +24,7 @@ class FAQViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
+        if let faq = ControllerDefaults.FAQ() { self.staticFAQ = faq }
         firebaseNetworking.shared.getFAQ(completion: handleFAQ(success:response:))
     }
     

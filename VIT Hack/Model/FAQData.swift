@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FAQData {
+struct FAQData: Codable {
     var answer:String?
     var question:String?
 }

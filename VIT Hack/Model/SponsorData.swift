@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct SponsorData {
+struct SponsorData : Codable{
     var name:String?
     var logoUrl:String?
     var pageUrl:String?

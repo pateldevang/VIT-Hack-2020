@@ -22,6 +22,7 @@ class SpeakersCell: UICollectionViewCell {
         designation.text = data.designation
         company.text = data.company
         setImage(data)
+        join.layer.cornerRadius = 4
     }
     
     func setImage(_ data : SpeakersData){

@@ -14,7 +14,6 @@ extension UIViewController {
     
     //MARK: - Signout settings
     func signOut() {
-        
         let firebaseAuth = Auth.auth()
         do {
             // Deleting all user Defaults
@@ -24,6 +23,7 @@ extension UIViewController {
             try firebaseAuth.signOut()
             GIDSignIn.sharedInstance().signOut()
             debugLog(message: "SignOut successful")
+            UserDefaults.standard.set(true, forKey: Keys.onboard)
             self.performSegue(withIdentifier: "logout", sender: nil)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

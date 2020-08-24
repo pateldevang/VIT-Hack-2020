@@ -25,6 +25,7 @@ class OnboardingViewController: UIViewController {
         pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
     }
     @IBAction func skip(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: Keys.onboard)
         performSegue(withIdentifier: "home", sender: nil)
     }
 }

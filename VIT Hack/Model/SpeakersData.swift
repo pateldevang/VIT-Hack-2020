@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SpeakersData {
+struct SpeakersData : Codable {
     var company: String?
     var designation: String?
     var endUnix: Double?

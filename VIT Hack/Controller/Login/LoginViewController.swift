@@ -55,6 +55,7 @@ class LoginViewController: UIViewController {
     
     func saveUser(status : Bool, user : User){
         if status {
+            downloadData()
             Defaults.saveUser(user)
             Defaults.userDefaults.set(true, forKey: Keys.login)
             gototabbar()

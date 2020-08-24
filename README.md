@@ -1,12 +1,7 @@
 # VIT-Hack-2020
 iOS app for VIT HACK - 2020
 
-# TODO
-- [ ] Data persistance 
-- [ ] embed Youtube?
-
-# TODO Design
-- [ ] Tabbar icons
+# TODO 
 - [ ] Appicon
 - [ ] LaunchScreen
 

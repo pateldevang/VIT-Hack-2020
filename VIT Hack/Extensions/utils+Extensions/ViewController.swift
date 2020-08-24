@@ -22,4 +22,13 @@ extension UIViewController {
         
     }
     
+    func downloadData(){
+        firebaseNetworking.shared.getTimeline { (_, _) in }
+        firebaseNetworking.shared.getDomains { (_, _) in }
+        firebaseNetworking.shared.getFAQ { (_, _) in }
+        firebaseNetworking.shared.getSponsor { (_, _) in }
+        firebaseNetworking.shared.getSpeaker { (_, _) in }
+        firebaseNetworking.shared.getSponsor(isCollaborator: true) { (_, _) in }
+    }
+
 }

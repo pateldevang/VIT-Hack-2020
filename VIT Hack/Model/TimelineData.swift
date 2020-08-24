@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TimelineData {
+struct TimelineData : Codable{
     var endUnix:Double?
     var link : String?
     var startUnix:Double?

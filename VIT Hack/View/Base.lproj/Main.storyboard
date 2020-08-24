@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5E3-GJ-fFP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2dA-ws-0DS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -168,7 +168,7 @@
         <!--Navigation-->
         <scene sceneID="wf0-fJ-vyf">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="WwK-lo-Aqp" customClass="Navigation" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginVC" modalPresentationStyle="fullScreen" id="WwK-lo-Aqp" customClass="Navigation" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="GJK-Ki-45y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7pS-Z7-DVU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -185,7 +185,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="VsD-x7-VJd">
             <objects>
-                <viewController id="2dA-ws-0DS" customClass="OnboardingViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onbaording" id="2dA-ws-0DS" customClass="OnboardingViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FfG-eH-n8H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,7 +310,7 @@
         <!--Home View Controller-->
         <scene sceneID="h3O-yM-hgh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="fdo-iq-k3J" customClass="HomeViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="fdo-iq-k3J" customClass="HomeViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9aR-G4-8h2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,7 +570,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLs-xV-dUV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tracks" image="star" catalog="system" selectedImage="star.fill" id="6d7-Gs-QJb"/>
+                    <tabBarItem key="tabBarItem" title="Tracks" image="icons-10" selectedImage="icons-10" id="6d7-Gs-QJb"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="RqP-nv-HKL" id="a2v-mr-KRw"/>
@@ -873,7 +873,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QpB-Xw-u6N"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timeline" image="star" catalog="system" selectedImage="star.fill" id="4C2-7F-B19"/>
+                    <tabBarItem key="tabBarItem" title="Timeline" image="Vector" selectedImage="Vector" id="4C2-7F-B19"/>
                     <connections>
                         <outlet property="tableView" destination="Al1-Yh-erX" id="F1c-1L-MgU"/>
                     </connections>
@@ -1161,7 +1161,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxp-cp-baU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sponsors" image="star" catalog="system" selectedImage="star.fill" id="Rxc-8l-SnI"/>
+                    <tabBarItem key="tabBarItem" title="Sponsors" image="icons-12" selectedImage="icons-12" id="Rxc-8l-SnI"/>
                     <connections>
                         <outlet property="collaboratorCollectionView" destination="Cvy-cA-4tC" id="lZk-Dm-3cD"/>
                         <outlet property="speakerCollectionView" destination="KkR-UI-TIi" id="Hc3-iR-Ple"/>
@@ -1632,7 +1632,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="reh-WL-jXc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="star" catalog="system" selectedImage="star.fill" id="pRq-XO-zh4"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons-7" selectedImage="icons-7" id="pRq-XO-zh4"/>
                     <connections>
                         <outlet property="email" destination="4by-Cs-pYQ" id="Hu4-ws-oiy"/>
                         <outlet property="header" destination="jl8-8L-2Ml" id="M2r-4K-gGC"/>
@@ -1934,7 +1934,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzc-TG-Y8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4672" y="323"/>
+            <point key="canvasLocation" x="4725" y="321"/>
         </scene>
         <!--User Form View Controller-->
         <scene sceneID="mxS-Sa-jLt">
@@ -2463,7 +2463,7 @@
         <scene sceneID="Kor-i2-uGH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o8h-8Z-pRk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FAQ" image="star" catalog="system" selectedImage="star.fill" id="FuO-4L-WX1"/>
+                    <tabBarItem key="tabBarItem" title="FAQ" image="icons-8" selectedImage="icons-8" id="FuO-4L-WX1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="luY-pL-4Xx">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -2480,21 +2480,24 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xKN-by-UKh"/>
+        <segue reference="ogw-f5-yAQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="332.5" height="362"/>
         <image name="LinkedIn" width="48" height="48"/>
+        <image name="Vector" width="20" height="20"/>
         <image name="appleIcon" width="22" height="25"/>
         <image name="button" width="303" height="72"/>
         <image name="carbon_watson-machine-learning" width="109" height="109"/>
         <image name="emailIcon" width="28" height="23"/>
         <image name="github" width="48" height="46"/>
         <image name="googleIcon" width="25" height="25"/>
+        <image name="icons-10" width="24" height="24"/>
+        <image name="icons-12" width="24" height="24"/>
+        <image name="icons-7" width="24" height="24"/>
+        <image name="icons-8" width="24" height="24"/>
         <image name="instagram" width="48" height="48"/>
         <image name="speakerRect" width="220" height="296"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="tick" width="24" height="18"/>
         <namedColor name="blue">
             <color red="0.0" green="0.44299998879432678" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

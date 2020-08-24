@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
         let name = Defaults.name().wordList
         let fName = name.first?.first ?? Character(" ")
         let lname = name.last?.first ??  Character(" ")
-        return String(fName) + " " + String(lname)
+        return (name.count == 1) ? String(fName) : String(fName) + " " + String(lname)
     }
     
     @IBAction func logoutClicked(_ sender: UIButton) {

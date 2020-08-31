@@ -11,6 +11,7 @@ import UIKit
 
 extension UIViewController {
     func gototabbar(){
+        test()
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         if #available(iOS 13.0, *) {
             let vc = storyboard.instantiateViewController(identifier: "tabbar") as! UITabBarController

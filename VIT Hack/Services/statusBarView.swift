@@ -161,19 +161,18 @@ extension UIViewController{
             print("could not start reachability notifier")
         }
     }
+    
     @objc func reachabilityChanged(note: Notification) {
         
         let reachability = note.object as! Reachability
         
         switch reachability.connection {
         case .wifi:
-            print("Reachable via WiFi")
-            StatusBarMessage.show(with: "Hello", style: .error, duration: 2.0)
+            StatusBarMessage.show(with: "Wifi Connected", style: .success, duration: 2.0)
         case .cellular:
-            print("Reachable via Cellular")
+            StatusBarMessage.show(with: "Connected", style: .success, duration: 2.0)
         case .none:
-            print("Network not reachable")
-            StatusBarMessage.show(with: "Noo", style: .success, duration: 2.0)
+            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: 2.0)
         }
     }
 }

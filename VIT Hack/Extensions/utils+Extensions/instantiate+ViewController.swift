@@ -16,6 +16,7 @@ extension AppDelegate {
     //MARK: - Function setting up intial view controller
     func setInitialViewController() {
         
+        
         // app delegate setup
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)

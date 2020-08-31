@@ -51,22 +51,6 @@ open class StatusBarMessage: UIView {
         }
     }
     
-    public func dismiss(_ complete:(() -> Void)? = nil) -> Void{
-        UIView.animate(withDuration: 0.2, animations: {
-            
-            self.frame = StatusBarMessage.originFrame()
-        }) { (finish) in
-            if finish{
-                
-                guard let complete = complete else{
-                    return
-                }
-                complete()
-            }
-        }
-        
-    }
-    
     @discardableResult
     public static func show(with text:String, style:StatusBarMessageStyle! = .success, duration:TimeInterval! = 2.0) -> StatusBarMessage{
         UIApplication.shared.keyWindow?.windowLevel = UIWindow.Level.statusBar
@@ -87,7 +71,6 @@ open class StatusBarMessage: UIView {
                 })
             }
         }
-        
         return messageVIew
     }
     
@@ -149,7 +132,7 @@ extension UIViewController{
         case .cellular:
             StatusBarMessage.show(with: "Connected", style: .success, duration: 2.0)
         case .none:
-            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: 2.0)
+            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: .infinity)
         }
     }
 }

@@ -14,6 +14,7 @@ open class StatusBarMessage: UIView {
     
     
     var duration:TimeInterval?
+    
     var text:String?{
         get {
             return textLabel.text
@@ -22,6 +23,7 @@ open class StatusBarMessage: UIView {
             textLabel.text = newValue
         }
     }
+    
     var style:StatusBarMessageStyle?
     
     static let height:CGFloat = UIApplication.shared.statusBarFrame.size.height + 20
@@ -35,37 +37,18 @@ open class StatusBarMessage: UIView {
         return textLabel
     }()
     
-    lazy var indicatorView: UIActivityIndicatorView = {
-        let indicatorView = UIActivityIndicatorView(style: .gray)
-        indicatorView.hidesWhenStopped = true
-        return indicatorView
-    }()
-    
-    
     public enum StatusBarMessageStyle {
         case success
         case error
-        case info
-        case warning
-        case loading
     }
     
     func colorWithStyle(style:StatusBarMessageStyle) -> UIColor {
         switch style {
         case .success:
-            return UIColor(red: 49/255.0, green: 211/255.0, blue: 150/255.0, alpha: 1.0)
+            return #colorLiteral(red: 0.1921568627, green: 0.8274509804, blue: 0.5882352941, alpha: 1)
         case .error:
-            return UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
-        case .info:
-            return UIColor(red: 15/255.0, green: 200/255.0, blue: 245/255.0, alpha: 1.0)
-        case .warning:
-            return UIColor.orange
-        case .loading:
-            addSubview(indicatorView)
-            indicatorView.startAnimating()
-            return UIColor(red: 15/255.0, green: 200/255.0, blue: 245/255.0, alpha: 1.0)
+            return #colorLiteral(red: 1, green: 0.3575092515, blue: 0.3653251075, alpha: 1)
         }
-        
     }
     
     public func dismiss(_ complete:(() -> Void)? = nil) -> Void{
@@ -95,7 +78,7 @@ open class StatusBarMessage: UIView {
         UIView.animate(withDuration: 0.2, animations: {
             messageVIew.frame = animateFrame()
         }) { (finish) in
-            if finish && style != .loading{
+            if finish{
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute:{
                     UIView.animate(withDuration: 0.2, animations: {
                         messageVIew.frame = originFrame()
@@ -137,13 +120,7 @@ open class StatusBarMessage: UIView {
     override open func layoutSubviews() {
         super.layoutSubviews()
         textLabel.frame = CGRect(x: 0, y: bounds.size.height - 30, width: bounds.size.width, height: 30)
-        if style == .loading{
-            indicatorView.frame = CGRect(x: textLabel.center.x - 10, y: textLabel.frame.origin.y - 20, width: 20, height: 20)
-        }
-        
     }
-    
-    
     
 }
 

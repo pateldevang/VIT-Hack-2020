@@ -14,5 +14,4 @@ target 'VIT Hack' do
 	pod 'PhoneNumberKit'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Messaging'
-	pod 'ReachabilitySwift'
 end

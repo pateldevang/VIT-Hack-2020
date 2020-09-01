@@ -107,39 +107,5 @@ open class StatusBarMessage: UIView {
     
 }
 
-extension AppDelegate{
-
-
-    func network() {
-        let reachability = try!  Reachability()
-
-            NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
-            do{
-                try reachability!.startNotifier()
-            }catch{
-                print("could not start reachability notifier")
-        }
-    }
-
-    @objc func reachabilityChanged(note: Notification) {
-
-        let reachability = note.object as! Reachability
-
-        print("REACH")
-
-        switch reachability.connection {
-        case .wifi:
-            print("REACHABILITY: WIFI")
-            StatusBarMessage.show(with: "Wifi Connected", style: .success, duration: 2.0)
-        case .cellular:
-            print("REACHABILITY: CELLULAR")
-            StatusBarMessage.show(with: "Connected", style: .success, duration: 2.0)
-        case .none:
-            print("REACHABILITY: NONE")
-            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: .infinity)
-        }
-    }
-}
-
 
 

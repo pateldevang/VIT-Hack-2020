@@ -15,11 +15,6 @@ class NetworkListner : NSObject {
     var reachabilityStatus: Reachability.Connection = .none
     var reachability = Reachability()
     
-    var isNetworkAvailable : Bool {
-        return reachabilityStatus != .none
-    }
-    
-    
     func startListner() {
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
         do {
@@ -50,7 +45,7 @@ class NetworkListner : NSObject {
             StatusBarMessage.show(with: "Connected", style: .success, duration: 2.0)
         case .none:
             print("REACHABILITY: NONE")
-            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: .infinity)
+            StatusBarMessage.show(with: "Network unavailable", style: .error, duration: 5.0)
         }
     }
 }

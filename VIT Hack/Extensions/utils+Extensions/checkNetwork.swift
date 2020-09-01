@@ -11,16 +11,16 @@ import UIKit
 
 extension UIViewController
 {
-    internal func checkNewtork(ifError: String) {
-        checkConnection { (status, statusCode) in
-            if statusCode == 404{
-                debugLog(message: "No connection!!")
-                // Vibrates on errors
-                UIDevice.invalidVibrate()
-                self.networkErrorAlert(titlepass: ifError)
-            }else{
-                debugLog(message: "connection existing!!")
-            }
-        }
-    }
+//    internal func checkNewtork(ifError: String) {
+//        checkConnection { (status, statusCode) in
+//            if statusCode == 404{
+//                debugLog(message: "No connection!!")
+//                // Vibrates on errors
+//                UIDevice.invalidVibrate()
+//                self.networkErrorAlert(titlepass: ifError)
+//            }else{
+//                debugLog(message: "connection existing!!")
+//            }
+//        }
+//    }
 }

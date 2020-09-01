@@ -18,12 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let gcmMessageIDKey = "SOMETHING" //TODO
     
     
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Configure Firebase
         FirebaseApp.configure()
         
-        
+        NetworkListner.shared.startListner()
+                
         UNUserNotificationCenter.current().delegate = self
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]

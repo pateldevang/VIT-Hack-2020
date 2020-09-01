@@ -128,6 +128,7 @@ PODS:
     - PhoneNumberKit/PhoneNumberKitCore
   - PromisesObjC (1.2.8)
   - Protobuf (3.12.0)
+  - ReachabilitySwift (5.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -138,6 +139,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - Kingfisher
   - PhoneNumberKit
+  - ReachabilitySwift
   - SwiftyJSON
 
 SPEC REPOS:
@@ -168,6 +170,7 @@ SPEC REPOS:
     - PhoneNumberKit
     - PromisesObjC
     - Protobuf
+    - ReachabilitySwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -197,8 +200,9 @@ SPEC CHECKSUMS:
   PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 3d08396d0f48ff0a90640b43a2e4c928d49db73f
+PODFILE CHECKSUM: 97eb2c01d211b06101fc02b4db0d9629df1867bb
 
 COCOAPODS: 1.9.3

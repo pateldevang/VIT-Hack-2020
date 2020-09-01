@@ -73,15 +73,10 @@
 #import "OIDTokenUtilities.h"
 #import "OIDURLQueryComponent.h"
 #import "OIDURLSessionProvider.h"
-#import "OIDAuthorizationService+IOS 2.h"
 #import "OIDAuthorizationService+IOS.h"
-#import "OIDAuthState+IOS 2.h"
 #import "OIDAuthState+IOS.h"
-#import "OIDExternalUserAgentCatalyst 2.h"
 #import "OIDExternalUserAgentCatalyst.h"
-#import "OIDExternalUserAgentIOS 2.h"
 #import "OIDExternalUserAgentIOS.h"
-#import "OIDExternalUserAgentIOSCustomBrowser 2.h"
 #import "OIDExternalUserAgentIOSCustomBrowser.h"
 
 FOUNDATION_EXPORT double AppAuthVersionNumber;

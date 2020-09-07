@@ -444,19 +444,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-hm-oft">
-                                <rect key="frame" x="16" y="50" width="382" height="33"/>
+                                <rect key="frame" x="16" y="60" width="382" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grj-sb-TCl">
-                                <rect key="frame" x="16" y="90" width="340" height="37.5"/>
+                                <rect key="frame" x="16" y="100" width="340" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RqP-nv-HKL">
-                                <rect key="frame" x="0.0" y="177.5" width="414" height="585.5"/>
+                                <rect key="frame" x="0.0" y="187.5" width="414" height="575.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="roh-f8-u6d" customClass="AKCarouselFlowLayout" customModule="VIT_Hack" customModuleProvider="target">
                                     <size key="itemSize" width="288" height="541"/>
@@ -466,7 +466,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="domaincell" id="sqd-Ce-OU4" customClass="DomainsCell" customModule="VIT_Hack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="529.5"/>
+                                        <rect key="frame" x="0.0" y="23" width="288" height="529.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="goC-gS-Lnn">
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="529.5"/>
@@ -557,7 +557,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="UbG-hm-oft" firstAttribute="top" secondItem="ZyY-wf-euh" secondAttribute="top" constant="50" id="7Ik-Tt-s4h"/>
+                            <constraint firstItem="UbG-hm-oft" firstAttribute="top" secondItem="ZyY-wf-euh" secondAttribute="top" constant="60" id="7Ik-Tt-s4h"/>
                             <constraint firstItem="JLs-xV-dUV" firstAttribute="trailing" secondItem="grj-sb-TCl" secondAttribute="trailing" constant="58" id="Ara-wN-R68"/>
                             <constraint firstItem="RqP-nv-HKL" firstAttribute="top" secondItem="grj-sb-TCl" secondAttribute="bottom" constant="50" id="J2a-PR-vtJ"/>
                             <constraint firstItem="RqP-nv-HKL" firstAttribute="leading" secondItem="JLs-xV-dUV" secondAttribute="leading" id="NmZ-L3-VOv"/>
@@ -590,19 +590,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-Or-WjV">
-                                <rect key="frame" x="16" y="50" width="382" height="33"/>
+                                <rect key="frame" x="16" y="60" width="382" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc4-OS-yEB">
-                                <rect key="frame" x="16" y="105" width="340" height="37.5"/>
+                                <rect key="frame" x="16" y="115" width="340" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pME-oh-M6n">
-                                <rect key="frame" x="0.0" y="157.5" width="414" height="655.5"/>
+                                <rect key="frame" x="0.0" y="167.5" width="414" height="645.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="30"/>
                                 <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -673,7 +673,7 @@
                             <constraint firstItem="Lc4-OS-yEB" firstAttribute="leading" secondItem="Kgb-eE-zdh" secondAttribute="leading" constant="16" id="bxe-kg-z74"/>
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="trailing" secondItem="pME-oh-M6n" secondAttribute="trailing" id="drM-LU-wl8"/>
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="bottom" secondItem="pME-oh-M6n" secondAttribute="bottom" id="gdR-2b-PUE"/>
-                            <constraint firstItem="PwZ-Or-WjV" firstAttribute="top" secondItem="IJ7-gP-TsM" secondAttribute="top" constant="50" id="i1l-xe-crz"/>
+                            <constraint firstItem="PwZ-Or-WjV" firstAttribute="top" secondItem="IJ7-gP-TsM" secondAttribute="top" constant="60" id="i1l-xe-crz"/>
                             <constraint firstItem="pME-oh-M6n" firstAttribute="top" secondItem="Lc4-OS-yEB" secondAttribute="bottom" constant="15" id="jYG-Nc-RhH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-eE-zdh"/>
@@ -696,13 +696,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q09-gr-Peo">
-                                <rect key="frame" x="16" y="50" width="382" height="33"/>
+                                <rect key="frame" x="16" y="60" width="382" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Al1-Yh-erX">
-                                <rect key="frame" x="0.0" y="103" width="414" height="656"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="A8T-NC-jbQ">
@@ -863,7 +863,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="q09-gr-Peo" firstAttribute="top" secondItem="dfF-EW-sVm" secondAttribute="top" constant="50" id="3DM-RN-ivV"/>
+                            <constraint firstItem="q09-gr-Peo" firstAttribute="top" secondItem="dfF-EW-sVm" secondAttribute="top" constant="60" id="3DM-RN-ivV"/>
                             <constraint firstItem="Al1-Yh-erX" firstAttribute="leading" secondItem="QpB-Xw-u6N" secondAttribute="leading" id="9Nm-pR-HJM"/>
                             <constraint firstItem="q09-gr-Peo" firstAttribute="leading" secondItem="QpB-Xw-u6N" secondAttribute="leading" constant="16" id="AXq-a3-qpr"/>
                             <constraint firstItem="QpB-Xw-u6N" firstAttribute="bottom" secondItem="Al1-Yh-erX" secondAttribute="bottom" id="Abf-GN-8HW"/>
@@ -891,13 +891,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speakers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-Ev-sNz">
-                                <rect key="frame" x="16" y="50" width="382" height="33"/>
+                                <rect key="frame" x="16" y="60" width="382" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC2-t7-8NU">
-                                <rect key="frame" x="0.0" y="83" width="414" height="676"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-kr-eo9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -1151,7 +1151,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="m5j-Ev-sNz" firstAttribute="top" secondItem="GSK-7c-AIv" secondAttribute="top" constant="50" id="AZf-dq-0Qw"/>
+                            <constraint firstItem="m5j-Ev-sNz" firstAttribute="top" secondItem="GSK-7c-AIv" secondAttribute="top" constant="60" id="AZf-dq-0Qw"/>
                             <constraint firstItem="EC2-t7-8NU" firstAttribute="leading" secondItem="Mxp-cp-baU" secondAttribute="leading" id="I63-ac-Ieb"/>
                             <constraint firstItem="EC2-t7-8NU" firstAttribute="bottom" secondItem="Mxp-cp-baU" secondAttribute="bottom" id="II0-PF-Dwh"/>
                             <constraint firstItem="Mxp-cp-baU" firstAttribute="trailing" secondItem="m5j-Ev-sNz" secondAttribute="trailing" constant="16" id="So0-z6-kto"/>
@@ -1181,19 +1181,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-Fe-GOz">
-                                <rect key="frame" x="16" y="50" width="382" height="33"/>
+                                <rect key="frame" x="16" y="60" width="382" height="33"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-z8-6T1">
-                                <rect key="frame" x="16" y="93" width="340" height="37.5"/>
+                                <rect key="frame" x="16" y="103" width="340" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-ZN-8SF">
-                                <rect key="frame" x="0.0" y="150.5" width="414" height="657.5"/>
+                                <rect key="frame" x="0.0" y="160.5" width="414" height="647.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="gLh-tN-61x">
                                     <size key="itemSize" width="180" height="239"/>
@@ -1391,7 +1391,7 @@
                             <constraint firstItem="gYe-z8-6T1" firstAttribute="top" secondItem="uDV-Fe-GOz" secondAttribute="bottom" constant="10" id="e4X-4Q-59k"/>
                             <constraint firstItem="zFz-GO-8JV" firstAttribute="trailing" secondItem="lYh-ZN-8SF" secondAttribute="trailing" id="lDo-HV-8Sq"/>
                             <constraint firstItem="zFz-GO-8JV" firstAttribute="trailing" secondItem="gYe-z8-6T1" secondAttribute="trailing" constant="58" id="rc8-bY-iKy"/>
-                            <constraint firstItem="uDV-Fe-GOz" firstAttribute="top" secondItem="zFz-GO-8JV" secondAttribute="top" constant="50" id="sQH-K7-NTY"/>
+                            <constraint firstItem="uDV-Fe-GOz" firstAttribute="top" secondItem="zFz-GO-8JV" secondAttribute="top" constant="60" id="sQH-K7-NTY"/>
                             <constraint firstItem="uDV-Fe-GOz" firstAttribute="leading" secondItem="zFz-GO-8JV" secondAttribute="leading" constant="16" id="sVo-0u-fde"/>
                             <constraint firstItem="zFz-GO-8JV" firstAttribute="bottom" secondItem="lYh-ZN-8SF" secondAttribute="bottom" id="ybM-n9-f4G"/>
                         </constraints>
@@ -1596,13 +1596,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VITHack’2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-2Q-be3">
-                                <rect key="frame" x="132" y="76" width="150.5" height="28"/>
+                                <rect key="frame" x="132" y="86" width="150.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                 <color key="textColor" red="0.2470588235" green="0.24313725489999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SOL-PL-Ct8">
-                                <rect key="frame" x="26" y="122" width="190" height="49"/>
+                                <rect key="frame" x="26" y="132" width="190" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s up Sparsh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl8-8L-2Ml">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="28"/>
@@ -1627,7 +1627,7 @@
                             <constraint firstItem="caq-34-H8n" firstAttribute="leading" secondItem="reh-WL-jXc" secondAttribute="leading" id="XLk-lF-U8e"/>
                             <constraint firstItem="reh-WL-jXc" firstAttribute="trailing" secondItem="caq-34-H8n" secondAttribute="trailing" id="XPR-cd-9A1"/>
                             <constraint firstItem="caq-34-H8n" firstAttribute="height" secondItem="QUD-XJ-Kwa" secondAttribute="height" multiplier="0.66183" id="YOI-lQ-Mzq"/>
-                            <constraint firstItem="eTZ-2Q-be3" firstAttribute="top" secondItem="reh-WL-jXc" secondAttribute="top" constant="20" id="bd8-cc-jtq"/>
+                            <constraint firstItem="eTZ-2Q-be3" firstAttribute="top" secondItem="reh-WL-jXc" secondAttribute="top" constant="30" id="bd8-cc-jtq"/>
                             <constraint firstItem="SOL-PL-Ct8" firstAttribute="leading" secondItem="reh-WL-jXc" secondAttribute="leading" constant="26" id="e51-5h-uYW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="reh-WL-jXc"/>

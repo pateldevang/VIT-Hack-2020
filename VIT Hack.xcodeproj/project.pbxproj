@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C641FF6355D717001F18CCB /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D169A17E6987DF06D12B1F /* Pods_VIT_Hack.framework */; };
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
 		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
@@ -22,6 +21,7 @@
 		5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B44651F24C8B46C00E2D47F /* AboutUsData.swift */; };
 		5B49B9CF24D2070D00EEF2E8 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */; };
 		5B6F635124D49F08005753AB /* firebaseCloudMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */; };
+		5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D92524FE0337001E2F8C /* NetworkListener.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
@@ -69,7 +69,6 @@
 		775B1FF02436607300E6F221 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEF2436607300E6F221 /* constants.swift */; };
 		775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF22436615D00E6F221 /* FirebaseAuth.swift */; };
 		775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF42436618200E6F221 /* firebaseSignOut.swift */; };
-		775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF62436622000E6F221 /* checkNetwork.swift */; };
 		775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF82436622D00E6F221 /* haptic+Feedback.swift */; };
 		775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFA2436624100E6F221 /* alert+Function.swift */; };
 		775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */; };
@@ -82,10 +81,12 @@
 		77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA332449EE1500E405B1 /* TimelineData.swift */; };
 		77F62C1C24484363007F4A6E /* FAQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F62C1B24484363007F4A6E /* FAQData.swift */; };
 		86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89924C01E3500FE6DBE /* UserModel.swift */; };
+		F58C151A2A257712A1183544 /* Pods_VIT_Hack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C7E748E45D4DA5A8682FE7 /* Pods_VIT_Hack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19D169A17E6987DF06D12B1F /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C7E748E45D4DA5A8682FE7 /* Pods_VIT_Hack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIT_Hack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253E048A1DCCD13BABE560D4 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		5B6F634F24D49EB6005753AB /* VIT Hack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VIT Hack.entitlements"; sourceTree = "<group>"; };
 		5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseCloudMessaging.swift; sourceTree = "<group>"; };
+		5B79D92524FE0337001E2F8C /* NetworkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
@@ -150,7 +152,6 @@
 		775B1FEF2436607300E6F221 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		775B1FF22436615D00E6F221 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		775B1FF42436618200E6F221 /* firebaseSignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseSignOut.swift; sourceTree = "<group>"; };
-		775B1FF62436622000E6F221 /* checkNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkNetwork.swift; sourceTree = "<group>"; };
 		775B1FF82436622D00E6F221 /* haptic+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "haptic+Feedback.swift"; sourceTree = "<group>"; };
 		775B1FFA2436624100E6F221 /* alert+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "alert+Function.swift"; sourceTree = "<group>"; };
 		775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "instantiate+ViewController.swift"; sourceTree = "<group>"; };
@@ -163,8 +164,7 @@
 		77D6AA332449EE1500E405B1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
 		77F62C1B24484363007F4A6E /* FAQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQData.swift; sourceTree = "<group>"; };
 		86BBF89924C01E3500FE6DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		A5D0C5C801FB4D16BE4FD79E /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
-		BADD72926351B04EFA577677 /* Pods-VIT Hack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.release.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.release.xcconfig"; sourceTree = "<group>"; };
+		BDF489AEFA3D36CE4B8B6EC8 /* Pods-VIT Hack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIT Hack.debug.xcconfig"; path = "Target Support Files/Pods-VIT Hack/Pods-VIT Hack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C641FF6355D717001F18CCB /* Pods_VIT_Hack.framework in Frameworks */,
+				F58C151A2A257712A1183544 /* Pods_VIT_Hack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +259,7 @@
 				5BBD886124BE2C35009E8F8E /* Fonts */,
 				7742B9FD24365A3200030DF5 /* Products */,
 				B277EA640F0D1F77586361B2 /* Pods */,
-				C58E401F23E030D3F4537098 /* Frameworks */,
+				A6AAD82107279E26CC57C1B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,6 +351,7 @@
 			children = (
 				775B1FEB2436601500E6F221 /* Reachability.swift */,
 				775B1FED2436604300E6F221 /* statusBarView.swift */,
+				5B79D92524FE0337001E2F8C /* NetworkListener.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -387,7 +388,6 @@
 		775B2005243664A100E6F221 /* utils+Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				775B1FF62436622000E6F221 /* checkNetwork.swift */,
 				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 				776A7FC224474BD900D6349C /* regex.swift */,
@@ -400,21 +400,21 @@
 			path = "utils+Extensions";
 			sourceTree = "<group>";
 		};
+		A6AAD82107279E26CC57C1B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C7E748E45D4DA5A8682FE7 /* Pods_VIT_Hack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B277EA640F0D1F77586361B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5D0C5C801FB4D16BE4FD79E /* Pods-VIT Hack.debug.xcconfig */,
-				BADD72926351B04EFA577677 /* Pods-VIT Hack.release.xcconfig */,
+				BDF489AEFA3D36CE4B8B6EC8 /* Pods-VIT Hack.debug.xcconfig */,
+				253E048A1DCCD13BABE560D4 /* Pods-VIT Hack.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C58E401F23E030D3F4537098 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				19D169A17E6987DF06D12B1F /* Pods_VIT_Hack.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,12 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7742BA0E24365A3300030DF5 /* Build configuration list for PBXNativeTarget "VIT Hack" */;
 			buildPhases = (
-				CC6EDC9214C320338B54B1AA /* [CP] Check Pods Manifest.lock */,
+				BCB4595CF4696A30F951B303 /* [CP] Check Pods Manifest.lock */,
 				7742B9F824365A3200030DF5 /* Sources */,
 				7742B9F924365A3200030DF5 /* Frameworks */,
 				7742B9FA24365A3200030DF5 /* Resources */,
-				2CEB3E9AFCA148E0B581450C /* [CP] Embed Pods Frameworks */,
-				AB7ECAD5E82C152B80F21FE7 /* [CP] Copy Pods Resources */,
+				4DFB026AC9FF082153546EC7 /* [CP] Embed Pods Frameworks */,
+				B08A01421484876D054A8996 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -498,7 +498,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CEB3E9AFCA148E0B581450C /* [CP] Embed Pods Frameworks */ = {
+		4DFB026AC9FF082153546EC7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,7 +515,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AB7ECAD5E82C152B80F21FE7 /* [CP] Copy Pods Resources */ = {
+		B08A01421484876D054A8996 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -532,7 +532,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIT Hack/Pods-VIT Hack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC6EDC9214C320338B54B1AA /* [CP] Check Pods Manifest.lock */ = {
+		BCB4595CF4696A30F951B303 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -588,6 +588,7 @@
 				5B3A06C524DB0E8900687B1E /* ResultsTableViewController.swift in Sources */,
 				5B3A06C124DAFF8F00687B1E /* FaqCell.swift in Sources */,
 				5BBD888524BE3F30009E8F8E /* ProfileViewController.swift in Sources */,
+				5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */,
 				5B3A06C324DB008400687B1E /* QuestionViewController.swift in Sources */,
 				77F62C1C24484363007F4A6E /* FAQData.swift in Sources */,
 				772E408E244873D200276317 /* SponsorData.swift in Sources */,
@@ -600,7 +601,6 @@
 				775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */,
 				5BBD889124BE41B0009E8F8E /* TracksCell.swift in Sources */,
 				775B1FEC2436601500E6F221 /* Reachability.swift in Sources */,
-				775B1FF72436622000E6F221 /* checkNetwork.swift in Sources */,
 				775B1FF32436615D00E6F221 /* FirebaseAuth.swift in Sources */,
 				5BE25AEF24D154B700E33FAB /* DomainData.swift in Sources */,
 				5BBD888D24BE3F68009E8F8E /* AboutUsViewController.swift in Sources */,
@@ -764,7 +764,7 @@
 		};
 		7742BA0F24365A3300030DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5D0C5C801FB4D16BE4FD79E /* Pods-VIT Hack.debug.xcconfig */;
+			baseConfigurationReference = BDF489AEFA3D36CE4B8B6EC8 /* Pods-VIT Hack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
@@ -781,7 +781,7 @@
 		};
 		7742BA1024365A3300030DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BADD72926351B04EFA577677 /* Pods-VIT Hack.release.xcconfig */;
+			baseConfigurationReference = 253E048A1DCCD13BABE560D4 /* Pods-VIT Hack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";

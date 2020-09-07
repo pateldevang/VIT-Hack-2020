@@ -24,9 +24,11 @@ open class StatusBarMessage: UIView {
         }
     }
     
+
+    
     var style:StatusBarMessageStyle?
     
-    static let height:CGFloat = UIApplication.shared.statusBarFrame.size.height + 20
+    static let height:CGFloat = UIApplication.shared.statusBarFrame.size.height + 40
     static let currentWindow:UIWindow! = UIApplication.shared.windows.last
     
     lazy var textLabel: UILabel = {
@@ -37,24 +39,21 @@ open class StatusBarMessage: UIView {
         return textLabel
     }()
     
-    public enum StatusBarMessageStyle {
-        case success
-        case error
-    }
-    
     func colorWithStyle(style:StatusBarMessageStyle) -> UIColor {
         switch style {
         case .success:
-            return #colorLiteral(red: 0.1921568627, green: 0.8274509804, blue: 0.5882352941, alpha: 1)
+            return #colorLiteral(red: 0.2941176471, green: 0.7098039216, blue: 0.262745098, alpha: 1)
         case .error:
             return #colorLiteral(red: 1, green: 0.3575092515, blue: 0.3653251075, alpha: 1)
         }
+        
     }
+
     
     @discardableResult
-    public static func show(with text:String, style:StatusBarMessageStyle! = .success, duration:TimeInterval! = 2.0) -> StatusBarMessage{
+    public static func show(with text:String, color: UIColor, duration:TimeInterval! = 2.0) -> StatusBarMessage{
         UIApplication.shared.keyWindow?.windowLevel = UIWindow.Level.statusBar
-        let messageVIew = StatusBarMessage(text, style: style, duration: duration)
+        let messageVIew = StatusBarMessage(text, color: color, duration: duration)
         messageVIew.frame = originFrame()
         currentWindow.addSubview(messageVIew)
         currentWindow.bringSubviewToFront(messageVIew)
@@ -66,6 +65,7 @@ open class StatusBarMessage: UIView {
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute:{
                     UIView.animate(withDuration: 0.2, animations: {
                         messageVIew.frame = originFrame()
+                        statusBarHidden = true
                         UIApplication.shared.keyWindow?.windowLevel = UIWindow.Level.normal
                     })
                 })
@@ -83,12 +83,11 @@ open class StatusBarMessage: UIView {
         return CGRect.init(x: 0, y: 0, width: currentWindow.bounds.size.width, height: height)
     }
     
-    convenience init(_ text:String, style:StatusBarMessageStyle , duration:TimeInterval) {
+    convenience init(_ text:String, color:UIColor , duration:TimeInterval) {
         self.init(frame: CGRect.zero)
         self.text = text
-        self.style = style
         self.duration = duration
-        self.backgroundColor = colorWithStyle(style: style)
+        self.backgroundColor = color
     }
     
     public override init(frame: CGRect) {
@@ -107,5 +106,7 @@ open class StatusBarMessage: UIView {
     
 }
 
-
-
+var statusBarHidden = true {
+  didSet(newValue) {
+      }
+}

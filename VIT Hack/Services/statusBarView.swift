@@ -12,7 +12,6 @@ import Foundation
 
 open class StatusBarMessage: UIView {
     
-    
     var duration:TimeInterval?
     
     var text:String?{
@@ -24,11 +23,7 @@ open class StatusBarMessage: UIView {
         }
     }
     
-
-    
-    var style:StatusBarMessageStyle?
-    
-    static let height:CGFloat = UIApplication.shared.statusBarFrame.size.height + 40
+    static let height:CGFloat = UIApplication.shared.statusBarFrame.size.height + 45
     static let currentWindow:UIWindow! = UIApplication.shared.windows.last
     
     lazy var textLabel: UILabel = {
@@ -38,16 +33,6 @@ open class StatusBarMessage: UIView {
         textLabel.textAlignment = .center
         return textLabel
     }()
-    
-    func colorWithStyle(style:StatusBarMessageStyle) -> UIColor {
-        switch style {
-        case .success:
-            return #colorLiteral(red: 0.2941176471, green: 0.7098039216, blue: 0.262745098, alpha: 1)
-        case .error:
-            return #colorLiteral(red: 1, green: 0.3575092515, blue: 0.3653251075, alpha: 1)
-        }
-        
-    }
 
     
     @discardableResult

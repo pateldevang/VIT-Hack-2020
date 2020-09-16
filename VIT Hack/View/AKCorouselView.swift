@@ -33,7 +33,7 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
         let collectionSize = collectionView.bounds.size
         
         let yInset = (collectionSize.height - self.itemSize.height) / 2
-        let xInset = (collectionSize.width - self.itemSize.width) / 2
+        let xInset = (collectionSize.width - self.itemSize.width) / 4
         self.sectionInset = UIEdgeInsets.init(top: yInset, left: xInset, bottom: yInset, right: xInset)
         
         let side = self.itemSize.width

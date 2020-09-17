@@ -30,5 +30,4 @@ extension UIViewController {
         firebaseNetworking.shared.getSpeaker { (_, _) in }
         firebaseNetworking.shared.getSponsor(isCollaborator: true) { (_, _) in }
     }
-
 }

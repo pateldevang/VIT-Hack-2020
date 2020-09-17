@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     
     // Unhashed nonce.
     var currentNonce: String?
+    let activityView = UIActivityIndicatorView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +48,26 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
     }
+    
+    func blurView(){
+        let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffect.Style.light))
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        activityView.center = self.view.center
+        activityView.tintColor = .white
+        view.addSubview(activityView)
+        activityView.startAnimating()
+    }
+    
+    func removeBlurView(){
+        for subview in view.subviews {
+            if subview is UIVisualEffectView || subview is UIActivityIndicatorView{
+                subview.removeFromSuperview()
+            }
+        }
+        activityView.stopAnimating()
+    }
+    
 }
 

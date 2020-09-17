@@ -60,11 +60,8 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let height = view.frame.height - 290
-//        let width = height/1.8
-         let screenWidth = view.frame.width
-         let width = screenWidth * 0.68
-         let height = width * 1.8
+        let height = collectionView.frame.height * 0.85
+        let width = collectionView.frame.width * 0.67
         return CGSize(width: width, height: height)
     }
     

@@ -34,15 +34,5 @@ extension UIViewController
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert,animated: true,completion: nil)
     }
-    
-    //MARK: - ALERT to dismiss the View Controller
-    internal func dismissAlert(titlepass: String,message: String) {
-        let alert = UIAlertController(title: titlepass, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        present(alert,animated: true,completion: nil)
-    }
-    
 }
 

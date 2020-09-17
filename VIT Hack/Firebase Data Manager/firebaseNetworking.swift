@@ -165,28 +165,6 @@ class firebaseNetworking {
         }
     }
     
-    
-    //MARK: - Function to get prize data (Fetch once)
-    public func getPrize(companyName:String, completion: @escaping (Bool, [PrizeData]) -> ()) {
-        // Variables
-        var prize = PrizeData()
-        var prizeDataArray = [PrizeData]()
-        // Observe prize child with .childAdded type
-        database.child("prizes/\(companyName)").observe(DataEventType.childAdded, with:
-            { (snapshot) in
-                // Initializing Eumerator
-                let enumerator = snapshot.children.allObjects
-                // Adding the data from child snapshots
-                if let name = enumerator[0] as? DataSnapshot { prize.name = name.value as? String }
-                if let winnable = enumerator[1] as? DataSnapshot { prize.winnable = winnable.value as? String }
-                prizeDataArray.append(prize)  // Appending into prizeDataArray
-                completion(true, prizeDataArray)  // Completion handler
-        }) { (error) in // Error Handling
-            debugPrint(error.localizedDescription)
-            completion(false, prizeDataArray)
-        }
-    }
-    
     //MARK: - Function to get timeline (Fetch everytime when data changes)
     public func getTimeline(completion: @escaping (Bool, [TimelineData]) -> ()) {
         // Variables

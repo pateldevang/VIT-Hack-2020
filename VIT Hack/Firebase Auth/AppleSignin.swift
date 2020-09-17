@@ -121,6 +121,7 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
     
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        self.removeBlurView()
         print("ASAuthorizationController: ",error.localizedDescription)
     }
     

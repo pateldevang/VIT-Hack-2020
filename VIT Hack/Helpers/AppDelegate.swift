@@ -25,7 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         NetworkListner.shared.startListner()
-                
+        
+        setInitialViewController()
+        
+        Messaging.messaging().delegate = self
+        
         UNUserNotificationCenter.current().delegate = self
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -35,16 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         
-        Messaging.messaging().delegate = self
         
         let token = Messaging.messaging().fcmToken
         UserDefaults.standard.set(token, forKey: Keys.fcmToken)
         
-        //Setting up initial view controller
-        setInitialViewController()
         
-        // Increse Launch Time will uncommit during deployment
-        //Thread.sleep(forTimeInterval: 1.3)
+        Thread.sleep(forTimeInterval: 2)
         
         return true
     }
@@ -71,7 +71,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkListner.shared.stopListener()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
 

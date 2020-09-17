@@ -24,6 +24,7 @@
 		5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D92524FE0337001E2F8C /* NetworkListener.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
+		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
 		5B9A16A824CF125F009B5311 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A724CF125F009B5311 /* Button.swift */; };
 		5B9F673E24D00566005CBD22 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F673D24D00566005CBD22 /* Tabbar.swift */; };
@@ -64,7 +65,6 @@
 		7742BA0524365A3200030DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0324365A3200030DF5 /* Main.storyboard */; };
 		7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0624365A3300030DF5 /* Assets.xcassets */; };
 		7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7742BA0824365A3300030DF5 /* LaunchScreen.storyboard */; };
-		775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775B1FE724365F8000E6F221 /* GoogleService-Info.plist */; };
 		775B1FEC2436601500E6F221 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEB2436601500E6F221 /* Reachability.swift */; };
 		775B1FEE2436604300E6F221 /* statusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FED2436604300E6F221 /* statusBarView.swift */; };
 		775B1FF02436607300E6F221 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FEF2436607300E6F221 /* constants.swift */; };
@@ -78,7 +78,6 @@
 		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
 		776A7FC324474BD900D6349C /* regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FC224474BD900D6349C /* regex.swift */; };
 		77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */; };
-		77D6AA322449EB6400E405B1 /* PrizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA312449EB6400E405B1 /* PrizeData.swift */; };
 		77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6AA332449EE1500E405B1 /* TimelineData.swift */; };
 		77F62C1C24484363007F4A6E /* FAQData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F62C1B24484363007F4A6E /* FAQData.swift */; };
 		86BBF89A24C01E3500FE6DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF89924C01E3500FE6DBE /* UserModel.swift */; };
@@ -101,11 +100,11 @@
 		5B3E9E8F24C329CD0038CF05 /* SponsorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsCell.swift; sourceTree = "<group>"; };
 		5B44651F24C8B46C00E2D47F /* AboutUsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsData.swift; sourceTree = "<group>"; };
 		5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
-		5B6F634F24D49EB6005753AB /* VIT Hack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VIT Hack.entitlements"; sourceTree = "<group>"; };
 		5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseCloudMessaging.swift; sourceTree = "<group>"; };
 		5B79D92524FE0337001E2F8C /* NetworkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
+		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
 		5B9A16A724CF125F009B5311 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B9F673D24D00566005CBD22 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
@@ -147,7 +146,6 @@
 		7742BA0624365A3300030DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7742BA0924365A3300030DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7742BA0B24365A3300030DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		775B1FE724365F8000E6F221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		775B1FEB2436601500E6F221 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		775B1FED2436604300E6F221 /* statusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusBarView.swift; sourceTree = "<group>"; };
 		775B1FEF2436607300E6F221 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
 		776A7FC224474BD900D6349C /* regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regex.swift; sourceTree = "<group>"; };
 		77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
-		77D6AA312449EB6400E405B1 /* PrizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeData.swift; sourceTree = "<group>"; };
 		77D6AA332449EE1500E405B1 /* TimelineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineData.swift; sourceTree = "<group>"; };
 		77F62C1B24484363007F4A6E /* FAQData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQData.swift; sourceTree = "<group>"; };
 		86BBF89924C01E3500FE6DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -274,7 +271,6 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
-				5B6F634F24D49EB6005753AB /* VIT Hack.entitlements */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B2000243663BC00E6F221 /* Firebase Data Manager */,
@@ -284,7 +280,7 @@
 				775B1FEA24365FDA00E6F221 /* Services */,
 				775B1FE324365F0800E6F221 /* Helpers */,
 				7742BA0B24365A3300030DF5 /* Info.plist */,
-				775B1FE724365F8000E6F221 /* GoogleService-Info.plist */,
+				5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */,
 			);
 			path = "VIT Hack";
 			sourceTree = "<group>";
@@ -327,7 +323,6 @@
 				86BBF89924C01E3500FE6DBE /* UserModel.swift */,
 				772E408D244873D200276317 /* SponsorData.swift */,
 				77D6AA2F2449CDFB00E405B1 /* CompanyData.swift */,
-				77D6AA312449EB6400E405B1 /* PrizeData.swift */,
 				77D6AA332449EE1500E405B1 /* TimelineData.swift */,
 				5B086C3A24BF80FF00D5264C /* Defaults.swift */,
 				5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */,
@@ -487,11 +482,11 @@
 				5BBD887224BE2C53009E8F8E /* Lato-Thin.ttf in Resources */,
 				7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */,
 				5BBD887024BE2C53009E8F8E /* Lato-BlackItalic.ttf in Resources */,
-				775B1FE824365F8000E6F221 /* GoogleService-Info.plist in Resources */,
 				5BBD887124BE2C53009E8F8E /* Lato-Regular.ttf in Resources */,
 				7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */,
 				7742BA0524365A3200030DF5 /* Main.storyboard in Resources */,
 				5BBD887424BE2C53009E8F8E /* Lato-LightItalic.ttf in Resources */,
+				5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +613,6 @@
 				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				5BBD888124BE3858009E8F8E /* ForgotPasswordViewController.swift in Sources */,
 				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
-				77D6AA322449EB6400E405B1 /* PrizeData.swift in Sources */,
 				77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */,
 				5BBD888324BE3F23009E8F8E /* TimelineViewController.swift in Sources */,
 			);
@@ -768,12 +762,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vithack.VIT-Hack";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -785,12 +782,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vithack.VIT-Hack";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

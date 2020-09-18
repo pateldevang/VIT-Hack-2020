@@ -6,7 +6,7 @@
 //  Copyright © 2020 VIT Hack. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct AboutUsData {
     let name : String
@@ -22,3 +22,5 @@ enum socialMedia : String {
     case mail
     case twitter
 }
+
+

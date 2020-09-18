@@ -8,10 +8,13 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class AboutUsViewController: UIViewController {
     
     /// Collectionview to present `AboutUs` data.
     @IBOutlet weak var collectionview: UICollectionView!
+    
+
     
     /// `datasource` of collectionview
     var aboutUs = [
@@ -27,6 +30,7 @@ class AboutUsViewController: UIViewController {
 }
 
 //MARK:- CollectionView Datasource + Delegate Methods
+@available(iOS 13.0, *)
 extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,10 +48,34 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         cell.setupCell(data.socialHandles)
         return cell
     }
+    
+    @available(iOS 13.0, *)
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { suggestedActions in
+            return self.makeContextMenu(for: indexPath.row)
+        })
+    }
+    
+    
+    @available(iOS 13.0, *)
+    func makeContextMenu(for index:Int) -> UIMenu {
+        var actions = [UIAction]()
+        let person = aboutUs[index]
+        for item in person.socialHandles {
+            let action = UIAction(title: item.rawValue, image: UIImage(named: item.rawValue), identifier: nil, discoverabilityTitle: nil) { _ in
+                
+            }
+            actions.append(action)
+        }
+        let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
+        actions.append(cancel)
+        return UIMenu(title: "", children: actions)
+    }
 }
 
 
 //MARK:- CollectionView FlowLayout Methods
+@available(iOS 13.0, *)
 extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
     /// Dynamic cell size `According to screen size!`

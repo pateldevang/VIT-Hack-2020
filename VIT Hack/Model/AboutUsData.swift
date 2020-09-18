@@ -13,6 +13,7 @@ struct AboutUsData {
     let role : String
     let image : String
     let socialHandles : [socialMedia]
+    var socailUrls : [String?] = []
 }
 
 enum socialMedia : String {

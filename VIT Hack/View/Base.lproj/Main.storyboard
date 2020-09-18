@@ -617,7 +617,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pME-oh-M6n">
                                 <rect key="frame" x="0.0" y="169.5" width="375" height="448.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="30"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="100"/>
                                 <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackscell" rowHeight="172" id="tfz-h5-pAW" customClass="TracksCell" customModule="VIT_Hack" customModuleProvider="target">
@@ -1344,6 +1344,11 @@
                                                                 <constraint firstAttribute="bottom" secondItem="4sR-4q-zzg" secondAttribute="bottom" constant="6" id="lB8-EY-w78"/>
                                                                 <constraint firstAttribute="trailing" secondItem="4sR-4q-zzg" secondAttribute="trailing" constant="6" id="pZg-EZ-Tc2"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="100"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

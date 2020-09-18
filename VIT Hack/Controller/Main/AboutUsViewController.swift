@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 @available(iOS 13.0, *)
 class AboutUsViewController: UIViewController {
@@ -18,7 +19,7 @@ class AboutUsViewController: UIViewController {
     
     /// `datasource` of collectionview
     var aboutUs = [
-    AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram]),
+        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/"]),
     AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.mail]),
     AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.twitter]),
     AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram]),
@@ -63,13 +64,19 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         let person = aboutUs[index]
         for item in person.socialHandles {
             let action = UIAction(title: item.rawValue, image: UIImage(named: item.rawValue), identifier: nil, discoverabilityTitle: nil) { _ in
-                
+                let social = person.socialHandles.firstIndex(of: item)
+                self.didSelectItemAtIndex(person: person, social: social!)
             }
             actions.append(action)
         }
         let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
         actions.append(cancel)
         return UIMenu(title: "", children: actions)
+    }
+    
+    func didSelectItemAtIndex(person index : AboutUsData,social id : Int){
+        let url = index.socailUrls[id]
+        openWebsite(url)
     }
 }
 
@@ -88,3 +95,15 @@ extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
 }
 
+@available(iOS 13.0, *)
+extension AboutUsViewController : SFSafariViewControllerDelegate {
+    func openWebsite(_ link : String?){
+        if let link = link,let url = URL(string: link) {
+            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                let safariVC = SFSafariViewController(url: url)
+                self.present(safariVC, animated: true, completion: nil)
+                safariVC.delegate = self
+            }
+        }
+    }
+}

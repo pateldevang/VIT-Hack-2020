@@ -28,8 +28,7 @@ extension HomeViewController : GIDSignInDelegate{
         
         if let error = error {
             print(error.localizedDescription)
-            //self.removeBlurView()
-            //self.activityView.stopAnimating()
+            self.removeBlurView()
             return
         }
         

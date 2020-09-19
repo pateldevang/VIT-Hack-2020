@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NetworkListner.shared.startListner()
         
-        setInitialViewController()
+       // setInitialViewController() //FOR DEBUGGING
         
         Messaging.messaging().delegate = self
         

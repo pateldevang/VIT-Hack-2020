@@ -20,24 +20,32 @@ class UserFormViewController: UIViewController {
     
     var newUser = User()
     var isEmail = false
+    var textfieldBottom : CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.setUnderLine()
-        instituteNameTextField.setUnderLine()
-        registrationNumberTextField.setUnderLine()
         hideKeyboardWhenTappedAround()
         continueButton.bottomShadow()
+        subscribeToKeyboardNotifications()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()
+        nameTextField.setUnderLine()
+        instituteNameTextField.setUnderLine()
+        registrationNumberTextField.setUnderLine()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        let frame = registrationNumberTextField.convert(view.frame, from:view).maxY
+        textfieldBottom = (textfieldBottom == 0.0) ? frame : textfieldBottom
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         progressView.layer.sublayers = nil
+        unsubscribeFromKeyboardNotifications()
     }
     
     func showProgress(){
@@ -89,5 +97,50 @@ class UserFormViewController: UIViewController {
             phoneViewController.newUser = self.newUser
             phoneViewController.isEmail = self.isEmail
         }
+    }
+}
+
+//MARK:- Keyboard show + hide functions
+extension UserFormViewController {
+    //MARK: Add Observers
+    func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardNotification), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    //MARK: Remove Observers
+    func unsubscribeFromKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    //MARK: Move stackView based on keybaord
+    @objc func keyboardNotification(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        
+        //MARK: Get Keboard Y point on screen
+        let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        let endFrameY = endFrame?.origin.y ?? 0
+        
+        //MARK: Get keyboard display time
+        let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        
+        //MARK: Set animations
+        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+        let animationCurve:UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        
+        // MARK: Get Keyboard Top Inset
+        let viewHeight = UIScreen.main.bounds.height
+        let keyboardIsUp = endFrameY == viewHeight
+        
+        print(textfieldBottom,endFrameY)
+        let diff = (viewHeight - endFrameY) - textfieldBottom + 35
+        print(diff)
+        let offset : CGFloat = diff>0 ? (keyboardIsUp ? 0 : diff) : 0
+        
+        UIView.animate(withDuration: duration,
+                       delay: TimeInterval(0),
+                       options: animationCurve,
+                       animations: { self.view.layoutIfNeeded(); self.view.frame.origin.y = -offset },
+                       completion: nil)
     }
 }

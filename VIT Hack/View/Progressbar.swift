@@ -52,7 +52,7 @@ final class Progressbar: CAShapeLayer, CAAnimationDelegate {
         progress.lineWidth = height
         progress.strokeEnd =  start > 0.5 ? (1-start) : (start)
         progress.lineCap = .round
-        progress.strokeColor = UIColor(named: "lightBlue")?.cgColor
+        progress.strokeColor = UIColor(named: "progress")?.cgColor
         self.insertSublayer(progress, above: self)
         
         let strokeEnd = animate(duration: animationDuration)

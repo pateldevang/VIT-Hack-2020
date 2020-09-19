@@ -25,6 +25,7 @@ extension UIViewController {
             debugLog(message: "SignOut successful")
             UserDefaults.standard.set(true, forKey: Keys.onboard)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! UINavigationController
+            vc.modalTransitionStyle = .flipHorizontal
             self.present(vc,animated: true)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)

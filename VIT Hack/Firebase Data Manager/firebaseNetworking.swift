@@ -236,4 +236,12 @@ class firebaseNetworking {
             }
         }
     }
+    
+    public func updateFCM(token : String){
+        self.checkUser(myUID) { (present) in
+            if present{
+                self.database.child("users").child(self.myUID).updateChildValues(["fcmToken":token])
+            }
+        }
+    }
 }

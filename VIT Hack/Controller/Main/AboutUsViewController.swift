@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SafariServices
 
+@available(iOS 13.0, *)
 class AboutUsViewController: UIViewController {
     
     /// Collectionview to present `AboutUs` data.
     @IBOutlet weak var collectionview: UICollectionView!
     
+
+    
     /// `datasource` of collectionview
     var aboutUs = [
-    AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram]),
+        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/"]),
     AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.mail]),
     AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.twitter]),
     AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram]),
@@ -27,6 +31,7 @@ class AboutUsViewController: UIViewController {
 }
 
 //MARK:- CollectionView Datasource + Delegate Methods
+@available(iOS 13.0, *)
 extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,10 +49,40 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         cell.setupCell(data.socialHandles)
         return cell
     }
+    
+    @available(iOS 13.0, *)
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { suggestedActions in
+            return self.makeContextMenu(for: indexPath.row)
+        })
+    }
+    
+    
+    @available(iOS 13.0, *)
+    func makeContextMenu(for index:Int) -> UIMenu {
+        var actions = [UIAction]()
+        let person = aboutUs[index]
+        for item in person.socialHandles {
+            let action = UIAction(title: item.rawValue, image: UIImage(named: item.rawValue), identifier: nil, discoverabilityTitle: nil) { _ in
+                let social = person.socialHandles.firstIndex(of: item)
+                self.didSelectItemAtIndex(person: person, social: social!)
+            }
+            actions.append(action)
+        }
+        let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
+        actions.append(cancel)
+        return UIMenu(title: "", children: actions)
+    }
+    
+    func didSelectItemAtIndex(person index : AboutUsData,social id : Int){
+        let url = index.socailUrls[id]
+        openWebsite(url)
+    }
 }
 
 
 //MARK:- CollectionView FlowLayout Methods
+@available(iOS 13.0, *)
 extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
     /// Dynamic cell size `According to screen size!`
@@ -60,3 +95,15 @@ extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
 }
 
+@available(iOS 13.0, *)
+extension AboutUsViewController : SFSafariViewControllerDelegate {
+    func openWebsite(_ link : String?){
+        if let link = link,let url = URL(string: link) {
+            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                let safariVC = SFSafariViewController(url: url)
+                self.present(safariVC, animated: true, completion: nil)
+                safariVC.delegate = self
+            }
+        }
+    }
+}

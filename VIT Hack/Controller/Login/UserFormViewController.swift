@@ -132,9 +132,7 @@ extension UserFormViewController {
         let viewHeight = UIScreen.main.bounds.height
         let keyboardIsUp = endFrameY == viewHeight
         
-        print(textfieldBottom,endFrameY)
         let diff = (viewHeight - endFrameY) - textfieldBottom + 35
-        print(diff)
         let offset : CGFloat = diff>0 ? (keyboardIsUp ? 0 : diff) : 0
         
         UIView.animate(withDuration: duration,

@@ -24,7 +24,8 @@ extension UIViewController {
             GIDSignIn.sharedInstance().signOut()
             debugLog(message: "SignOut successful")
             UserDefaults.standard.set(true, forKey: Keys.onboard)
-            self.performSegue(withIdentifier: "logout", sender: nil)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! UINavigationController
+            self.present(vc,animated: true)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }

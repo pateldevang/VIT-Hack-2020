@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        setupPrivacyLabel()
     }
     
     override func viewDidLayoutSubviews() {
@@ -34,6 +35,20 @@ class ProfileViewController: UIViewController {
     
     @IBAction func privacyTapped(_ sender: Any) {
         openWebsite(privacyPolicy)
+    }
+    
+    func setupPrivacyLabel(){
+        let attributesForUnderLine: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "AvenirNext-Medium", size: 12),
+            .foregroundColor: UIColor.blue,
+            .underlineStyle: NSUnderlineStyle.single.rawValue]
+        
+        let textToSet = "Privacy Policy"
+        let rangeOfUnderLine = (textToSet as NSString).range(of: "Privacy Policy")
+        
+        let attributedText = NSMutableAttributedString(string: textToSet)
+        attributedText.addAttributes(attributesForUnderLine, range: rangeOfUnderLine)
+        privacyPolicyLabel.attributedText = attributedText
     }
     
     ///Fetch data  from `Userdefaults`

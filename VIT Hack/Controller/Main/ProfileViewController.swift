@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     //OUTLETS
     @IBOutlet weak var profileTabel: UITableView!
     @IBOutlet weak var header: UILabel!
@@ -19,8 +19,11 @@ class ProfileViewController: UIViewController {
     //VARIABLES
     var profileValues = ["Your Name":"","Email Address":"Your Institute","Registration Number":""]
     var tableHeight : CGFloat = 0.0
+    
+    // CONSTANTS
+    let profileIdentifier = "ProfileCell"
     let privacyPolicy = "https://gist.githubusercontent.com/aaryankotharii/02c59dee50c694a7c180a976f5543287/raw/8ea0f530f9e699b25aaaed4eb90d3e6b5f795bbd/gistfile1.txt"
-
+    
     // APP-CYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,14 +92,14 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = profileTabel.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-        
+        let cell = profileTabel.dequeueReusableCell(withIdentifier: profileIdentifier, for: indexPath) as! ProfileCell
+        cell.setupCell(profileValues, indexPath)
         return cell
     }
     
-   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          return tableHeight/4
-      }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableHeight/4 /// FOUR EQUAL ROWS
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()

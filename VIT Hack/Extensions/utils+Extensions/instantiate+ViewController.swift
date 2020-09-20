@@ -20,7 +20,6 @@ extension AppDelegate {
         // app delegate setup
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         // Get UID function
         debugLog(message: getUID())
@@ -37,16 +36,14 @@ extension AppDelegate {
             appDelegate.window?.makeKeyAndVisible()
         } else {
             if loginstatus{
-                let VC = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! UINavigationController
+                let VC = mainStoryboard.instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
                 appDelegate.window?.rootViewController = VC
                 appDelegate.window?.makeKeyAndVisible()
-                VC.gototabbar()
             } else {
                 logout()
                 let VC = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! UINavigationController
                 appDelegate.window?.rootViewController = VC
                 appDelegate.window?.makeKeyAndVisible()
-                
             }
         }
     }

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NetworkListner.shared.startListner()
         
-        setInitialViewController()
+        setInitialViewController() //FOR DEBUGGING
         
         Messaging.messaging().delegate = self
         
@@ -42,9 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let token = Messaging.messaging().fcmToken
         UserDefaults.standard.set(token, forKey: Keys.fcmToken)
-        
-        
-        Thread.sleep(forTimeInterval: 2)
         
         return true
     }

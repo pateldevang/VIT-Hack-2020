@@ -22,7 +22,11 @@ class FaqCell: UITableViewCell {
     
     func shadow(_ view : UIView){
         view.layer.cornerRadius = 8
-        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12).cgColor
+        if #available(iOS 13.0, *) {
+            view.layer.shadowColor = UIColor.label.withAlphaComponent(0.16).cgColor
+        } else {
+            view.layer.shadowColor = UIColor.black.withAlphaComponent(0.16).cgColor
+        }
         view.layer.shadowOffset = CGSize(width: 0, height: 4)
         view.layer.shadowRadius = 24
         view.layer.shadowOpacity = 1

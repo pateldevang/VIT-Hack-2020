@@ -14,10 +14,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileTabel: UITableView!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
+    @IBOutlet weak var privacyPolicyLabel: UILabel!
     
     var profileValues = ["Your Name":"","Email Address":"Your Institute","Registration Number":""]
-    
     var tableHeight : CGFloat = 0.0
+    let privacyPolicy = "https://gist.githubusercontent.com/aaryankotharii/02c59dee50c694a7c180a976f5543287/raw/8ea0f530f9e699b25aaaed4eb90d3e6b5f795bbd/gistfile1.txt"
 
     
     override func viewDidLoad() {
@@ -30,6 +31,11 @@ class ProfileViewController: UIViewController {
         self.profileTabel.reloadData()
     }
     
+    
+    @IBAction func privacyTapped(_ sender: Any) {
+        openWebsite(privacyPolicy)
+    }
+    
     ///Fetch data  from `Userdefaults`
     func loadData(){
         profileValues["Your Name"] = Defaults.name()
@@ -39,6 +45,7 @@ class ProfileViewController: UIViewController {
         header.text = "What’s up " + getFirstName()
         initials.text = getInitials()
     }
+    
     
     func getFirstName()->String{
         let name = Defaults.name().wordList
@@ -86,3 +93,4 @@ extension String {
         return self.isEmpty ? [] : components(separatedBy: separation).filter { !$0.isEmpty }
     }
 }
+

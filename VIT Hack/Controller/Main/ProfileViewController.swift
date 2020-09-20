@@ -16,11 +16,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var initials: UILabel!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     
+    //VARIABLES
     var profileValues = ["Your Name":"","Email Address":"Your Institute","Registration Number":""]
     var tableHeight : CGFloat = 0.0
     let privacyPolicy = "https://gist.githubusercontent.com/aaryankotharii/02c59dee50c694a7c180a976f5543287/raw/8ea0f530f9e699b25aaaed4eb90d3e6b5f795bbd/gistfile1.txt"
 
-    
+    // APP-CYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -32,19 +33,19 @@ class ProfileViewController: UIViewController {
         self.profileTabel.reloadData()
     }
     
-    
+    // PRIVACY POLICY TAPPED
     @IBAction func privacyTapped(_ sender: Any) {
         openWebsite(privacyPolicy)
     }
     
     func setupPrivacyLabel(){
         let attributesForUnderLine: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name: "AvenirNext-Medium", size: 12),
+            .font: UIFont.systemFont(ofSize: 12),
             .foregroundColor: UIColor.blue,
             .underlineStyle: NSUnderlineStyle.single.rawValue]
         
         let textToSet = "Privacy Policy"
-        let rangeOfUnderLine = (textToSet as NSString).range(of: "Privacy Policy")
+        let rangeOfUnderLine = (textToSet as NSString).range(of: textToSet)
         
         let attributedText = NSMutableAttributedString(string: textToSet)
         attributedText.addAttributes(attributesForUnderLine, range: rangeOfUnderLine)
@@ -61,12 +62,13 @@ class ProfileViewController: UIViewController {
         initials.text = getInitials()
     }
     
-    
+    /// GET `First Name` of user
     func getFirstName()->String{
         let name = Defaults.name().wordList
         return name.first ?? ""
     }
     
+    /// GET `Initials` of user
     func getInitials()->String{
         let name = Defaults.name().wordList
         let fName = name.first?.first ?? Character(" ")
@@ -74,11 +76,13 @@ class ProfileViewController: UIViewController {
         return (name.count == 1) ? String(fName) : String(fName) + " " + String(lname)
     }
     
+    // LOGOUT
     @IBAction func logoutClicked(_ sender: UIButton) {
         signOut()
     }
 }
 
+//MARK - PROFILE TABLEVIEW DELEGATE + DATASOURCE METHODS
 extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profileValues.count
@@ -86,8 +90,6 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = profileTabel.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-        cell.title.text = Array(profileValues.keys)[indexPath.row]
-        cell.value.text = Array(profileValues.values)[indexPath.row]
         
         return cell
     }

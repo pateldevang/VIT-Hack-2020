@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let token = Messaging.messaging().fcmToken
         UserDefaults.standard.set(token, forKey: Keys.fcmToken)
         
-        Thread.sleep(forTimeInterval: 1.2)
+        Thread.sleep(forTimeInterval: 1.5)
         
         return true
     }

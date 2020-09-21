@@ -19,12 +19,12 @@ class AboutUsViewController: UIViewController {
     
     /// `datasource` of collectionview
     var aboutUs = [
-        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/"]),
-    AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.mail]),
-    AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.twitter]),
-    AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram]),
-    AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "speaker3", socialHandles: [.github,.LinkedIn,.instagram]),
-    AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "speaker1", socialHandles: [.github,.LinkedIn,.instagram])]
+        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","https://www.linkedin.com/in/aaryankotharii/"]),
+    AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail]),
+    AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.twitter]),
+    AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "original", socialHandles: [.github,.LinkedIn,.instagram]),
+    AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram]),
+    AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram])]
     
     ///Cell Identifier of AboutUs Cell
     let aboutusIdentifier = "aboutuscell"

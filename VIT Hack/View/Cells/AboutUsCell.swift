@@ -32,6 +32,8 @@ class AboutUsCell: UICollectionViewCell {
         /// Corner radius
         card.layer.cornerRadius = 12
         photoBack.layer.cornerRadius = photoBack.frame.size.width/2
+        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
+        profilePhoto.clipsToBounds = true
         photoBack.clipsToBounds = true
         
         

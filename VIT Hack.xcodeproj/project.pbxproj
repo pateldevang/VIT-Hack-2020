@@ -770,7 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,7 +790,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";

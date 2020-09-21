@@ -34,6 +34,7 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tracksCellIdentifier) as! TracksCell
         cell.body.text = tracks[indexPath.row]
+        cell.header.text = "PS-" + "-" + "0" + String(indexPath.row+1)
         return cell
     }
     

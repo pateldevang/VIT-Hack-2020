@@ -141,20 +141,10 @@ extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension SpeakersViewController : SFSafariViewControllerDelegate {
+extension SpeakersViewController {
   @objc func speakerJoin(sender:UIButton){
          let link = speakerData[sender.tag].sessionUrl
         openWebsite(link)
-    }
-    
-    func openWebsite(_ link : String?){
-        if let link = link,let url = URL(string: link) {
-            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
-                let safariVC = SFSafariViewController(url: url)
-                self.present(safariVC, animated: true, completion: nil)
-                safariVC.delegate = self
-            }
-        }
     }
 }
 

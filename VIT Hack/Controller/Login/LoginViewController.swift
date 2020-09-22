@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
         passwordTextField.setUnderLine()
         signinButton.bottomShadow()
         hideKeyboardWhenTappedAround()
+        addInputAccessoryForTextFields(textFields: [emailTextField,passwordTextField])
         loadButton(false)
     }
     

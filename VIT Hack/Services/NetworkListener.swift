@@ -39,12 +39,19 @@ class NetworkListner : NSObject {
         switch reachability.connection {
         case .wifi:
             print("REACHABILITY: WIFI")
+            if Defaults.networkDisconnected(){
+            UserDefaults.standard.set(false, forKey: Keys.network)
             StatusBarMessage.show(with: "Wifi Connected", color: #colorLiteral(red: 0.2941176471, green: 0.7098039216, blue: 0.262745098, alpha: 1), duration: 2.0)
+            }
         case .cellular:
             print("REACHABILITY: CELLULAR")
-            StatusBarMessage.show(with: "Connected", color: #colorLiteral(red: 0.2941176471, green: 0.7098039216, blue: 0.262745098, alpha: 1), duration: 2.0)
+            if Defaults.networkDisconnected(){
+            UserDefaults.standard.set(false, forKey: Keys.network)
+            StatusBarMessage.show(with: "Cellular Connected", color: #colorLiteral(red: 0.2941176471, green: 0.7098039216, blue: 0.262745098, alpha: 1), duration: 2.0)
+            }
         case .none:
             print("REACHABILITY: NONE")
+            UserDefaults.standard.set(true, forKey: Keys.network)
             StatusBarMessage.show(with: "Network unavailable", color: #colorLiteral(red: 1, green: 0.3575092515, blue: 0.3653251075, alpha: 1), duration: 5.0)
         }
     }

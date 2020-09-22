@@ -26,6 +26,7 @@ class UserFormViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         continueButton.bottomShadow()
+        addInputAccessoryForTextFields(textFields: [nameTextField,instituteNameTextField,registrationNumberTextField])
         subscribeToKeyboardNotifications()
     }
     

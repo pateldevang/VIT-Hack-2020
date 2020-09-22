@@ -10,6 +10,7 @@
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
 		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
+		5B25697D2519EA9F0055DD09 /* domain short.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25697C2519EA9F0055DD09 /* domain short.swift */; };
 		5B3A06BF24DAF62F00687B1E /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */; };
 		5B3A06C124DAFF8F00687B1E /* FaqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06C024DAFF8F00687B1E /* FaqCell.swift */; };
 		5B3A06C324DB008400687B1E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06C224DB008400687B1E /* QuestionViewController.swift */; };
@@ -91,6 +92,7 @@
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		5B25697C2519EA9F0055DD09 /* domain short.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "domain short.swift"; sourceTree = "<group>"; };
 		5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		5B3A06C024DAFF8F00687B1E /* FaqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCell.swift; sourceTree = "<group>"; };
 		5B3A06C224DB008400687B1E /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				5B9A16A724CF125F009B5311 /* Button.swift */,
 				5BE25AEC24D1385E00E33FAB /* ViewController.swift */,
 				5B4AC2AB2517258300534934 /* Safari.swift */,
+				5B25697C2519EA9F0055DD09 /* domain short.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				5BBD888124BE3858009E8F8E /* ForgotPasswordViewController.swift in Sources */,
 				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
+				5B25697D2519EA9F0055DD09 /* domain short.swift in Sources */,
 				77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */,
 				5BBD888324BE3F23009E8F8E /* TimelineViewController.swift in Sources */,
 			);
@@ -770,7 +774,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,7 +794,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";

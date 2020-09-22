@@ -41,6 +41,10 @@ class Defaults
     static func onbaorded() -> Bool {
         return (userDefaults.value(forKey: Keys.onboard) as? Bool) ?? false
     }
+    
+    static func networkDisconnected() -> Bool {
+        return (userDefaults.value(forKey: Keys.network) as? Bool) ?? false
+    }
 }
 
 

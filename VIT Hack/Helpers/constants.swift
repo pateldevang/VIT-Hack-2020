@@ -39,6 +39,7 @@ struct Keys {
     static let login = "login"
     static let fcmToken = "fcmToken"
     static let onboard = "onbaord"
+    static let network = "network"
 }
 
 struct ControllerKeys {

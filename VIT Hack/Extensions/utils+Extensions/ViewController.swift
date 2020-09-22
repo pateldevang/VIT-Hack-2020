@@ -30,4 +30,36 @@ extension UIViewController {
         firebaseNetworking.shared.getSpeaker { (_, _) in }
         firebaseNetworking.shared.getSponsor(isCollaborator: true) { (_, _) in }
     }
+    
+    func addInputAccessoryForTextFields(textFields: [UITextField]) {
+        for (index, textField) in textFields.enumerated() {
+            let toolbar: UIToolbar = UIToolbar()
+            toolbar.sizeToFit()
+            
+            var items = [UIBarButtonItem]()
+            let previousButton = UIBarButtonItem(title: "Previous", style: .plain, target: nil, action: nil)
+            previousButton.width = 30
+            if textField == textFields.first {
+                previousButton.isEnabled = false
+            } else {
+                previousButton.target = textFields[index - 1]
+                previousButton.action = #selector(UITextField.becomeFirstResponder)
+            }
+            
+            var nextButton = UIBarButtonItem(title: "Next", style: .plain, target: nil, action: nil)
+            nextButton.width = 30
+            if textField == textFields.last {
+                nextButton = UIBarButtonItem(barButtonSystemItem: .done, target: view, action: #selector(UIView.endEditing))
+            } else {
+                nextButton.target = textFields[index + 1]
+                nextButton.action = #selector(UITextField.becomeFirstResponder)
+            }
+            let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            
+            items.append(contentsOf: [previousButton,spacer ,nextButton])
+            
+            toolbar.setItems(items, animated: false)
+            textField.inputAccessoryView = toolbar
+        }
+    }
 }

@@ -15,6 +15,8 @@ class DomainsViewController: UIViewController {
     
     var domains = [DomainData]()
     
+    var domain = ""
+    
     let domainCellIdentifier = "domaincell"
     
     override func viewDidLoad() {
@@ -40,6 +42,7 @@ class DomainsViewController: UIViewController {
         if let tracksVC = segue.destination as? TracksViewController {
             if let ps = sender as? [String]{
                 tracksVC.tracks = ps
+                tracksVC.domain = self.domain
             }
         }
     }
@@ -67,6 +70,7 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
     
     func showMore(_ path : Int){
         let ps = self.domains[path].problemStatements
+        self.domain = self.domains[path].domain ?? ""
         performSegue(withIdentifier: "tracks", sender: ps)
     }
 }

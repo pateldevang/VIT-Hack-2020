@@ -24,6 +24,7 @@ extension UIViewController {
             GIDSignIn.sharedInstance().signOut()
             debugLog(message: "SignOut successful")
             UserDefaults.standard.set(true, forKey: Keys.onboard)
+            UserDefaults.standard.set(nil, forKey: Keys.uid)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! UINavigationController
             vc.modalTransitionStyle = .flipHorizontal
             self.present(vc,animated: true)

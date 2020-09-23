@@ -17,7 +17,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     
     //VARIABLES
-    var profileValues = ["Your Name":"","Email Address":"Your Institute","Registration Number":""]
+    var profileTitles = ["Your Name","Email Address","Your Institute","Registration Number"]
+    var profileValues = ["","","",""]
     var tableHeight : CGFloat = 0.0
     
     // CONSTANTS
@@ -57,10 +58,10 @@ class ProfileViewController: UIViewController {
     
     ///Fetch data  from `Userdefaults`
     func loadData(){
-        profileValues["Your Name"] = Defaults.name()
-        profileValues["Email Address"] = getEmail()
-        profileValues["Your Institute"] = Defaults.institute()
-        profileValues["Registration Number"] = Defaults.registration()
+        profileValues[0] = Defaults.name()
+        profileValues[1] = getEmail()
+        profileValues[2] = Defaults.institute()
+        profileValues[3] = Defaults.registration()
         header.text = "What’s up " + getFirstName()
         initials.text = getInitials()
     }
@@ -93,7 +94,7 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = profileTabel.dequeueReusableCell(withIdentifier: profileIdentifier, for: indexPath) as! ProfileCell
-        cell.setupCell(profileValues, indexPath)
+        cell.setupCell(profileTitles,profileValues, indexPath)
         return cell
     }
     

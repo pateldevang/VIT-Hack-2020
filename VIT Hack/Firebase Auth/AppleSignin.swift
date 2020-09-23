@@ -110,10 +110,11 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
                 
                 guard let uid = authResult?.user.uid else { return }
                 
+                UserDefaults.standard.set(uid, forKey: Keys.uid)
+                
                 print("Sucessfully logged into firebase with Apple!",uid)
                 
-                firebaseNetworking.shared.checkUser(uid, completion: self.handleUser(success:))
-                
+                firebaseNetworking.shared.checkUser(uid: uid,completion: self.handleUser(success:))
             }
         }
     }

@@ -46,13 +46,15 @@ extension HomeViewController : GIDSignInDelegate{
             
             print("Sucessfully logged into firebase with Google!",uid)
             
-            firebaseNetworking.shared.checkUser(uid, completion: self.handleUser(success:))
+            UserDefaults.standard.set(uid, forKey: Keys.uid)
+            
+            firebaseNetworking.shared.checkUser(uid: uid, completion: self.handleUser(success:))
         }
     }
     
     func handleUser(success : Bool){
         if success {
-            firebaseNetworking.shared.getUser(getUID(), completion: saveUser(status:user:))
+            firebaseNetworking.shared.getUser(completion: saveUser(status:user:))
         } else {
             self.performSegue(withIdentifier: "apple", sender: nil)
         }

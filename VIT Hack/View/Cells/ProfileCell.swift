@@ -13,8 +13,8 @@ class ProfileCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var value: UILabel!
     
-    func setupCell(_ data: [String:String],_ indexPath : IndexPath){
-        title.text = Array(data.keys)[indexPath.row]
-        value.text = Array(data.values)[indexPath.row]
+    func setupCell(_ title: [String],_ value:[String],_ indexPath : IndexPath){
+        self.title.text = title[indexPath.row]
+        self.value.text = value[indexPath.row]
     }
 }

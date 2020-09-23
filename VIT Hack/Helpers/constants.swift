@@ -11,12 +11,6 @@ import Firebase
 
 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
-//MARK: -  function to get uid
-internal func getUID() -> String {
-    let uid = Auth.auth().currentUser?.uid
-    return uid ?? "notFound"
-}
-
 //MARK: -  function to get Registred Email
 internal func getEmail() -> String {
     let userEmail = Auth.auth().currentUser?.email
@@ -33,6 +27,7 @@ public func debugLog(message: String) {
 }
 
 struct Keys {
+    static let uid = "uid"
     static let name = "name"
     static let institute = "institute"
     static let registration = "registration"

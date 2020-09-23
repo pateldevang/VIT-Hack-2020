@@ -18,7 +18,7 @@ struct User: Encodable {
     var fcmToken : String?
     
     var asDictionary : [String:String]{
-        return ["uid": getUID(),
+        return ["uid": Defaults.uid() ?? "",
                 "regno": regno ?? "",
                 "collegeName": collegeName ?? "",
                 "phone": phone ?? "",

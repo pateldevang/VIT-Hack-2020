@@ -30,6 +30,7 @@ class QuestionViewController: UIViewController {
         card.layer.shadowRadius = 24
         card.layer.shadowOpacity = 1
         card.layer.masksToBounds = false
+        card.alpha = 1.0
     }
 
     
@@ -51,8 +52,24 @@ class QuestionViewController: UIViewController {
     
     func handleQuestion(success : Bool){
         if success{
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.alpha = 0.0
+                self.view.endEditing(true)
+            }) { (_) in
+                self.showAlert()
+            }
+        } else {
+            authAlert(message: "Please try again!")
+        }
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "Question Sent ↗️", message: "We will answer your question shortly!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okay", style: .default) { (_) in
             self.dismiss(animated: true, completion: nil)
         }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
 

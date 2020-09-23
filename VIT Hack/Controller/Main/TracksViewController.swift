@@ -11,10 +11,16 @@ import UIKit
 class TracksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var subtitel: UILabel!
+    
+    var domain = DomainData()
     var tracks = [String]()
-    var domain = ""
     
     let tracksCellIdentifier = "trackscell"
+    
+    override func viewDidLoad() {
+        subtitel.text = domain.domain ?? ""
+    }
 }
 
 extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
@@ -25,7 +31,7 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tracksCellIdentifier) as! TracksCell
         cell.body.text = tracks[indexPath.row]
-        cell.header.text = "PS-" + self.domain.domainShortValue + "-0" + String(indexPath.row+1)
+        cell.header.text = "PS-" + (self.domain.domain?.domainShortValue ?? "") + "-0" + String(indexPath.row+1)
         return cell
     }
     

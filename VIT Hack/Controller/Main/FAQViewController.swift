@@ -36,7 +36,6 @@ class FAQViewController: UITableViewController {
     fileprivate func setupSearchController() {
         resultsTableController =
             self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? ResultsTableViewController
-        resultsTableController.tableView.delegate = self
         searchController = UISearchController(searchResultsController: resultsTableController)
         searchController.delegate = self
         searchController.searchResultsUpdater = self
@@ -73,9 +72,10 @@ class FAQViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let text = staticFAQ[indexPath.row].answer
-        let height = extimateFrameForText(text: text ?? "")
-        return height + 100
+        let text = staticFAQ[indexPath.row].answer ?? ""
+        let question = staticFAQ[indexPath.row].question ?? ""
+        let height = extimateFrameForText(text: text,question: question)
+        return height + 60
     }
     
     
@@ -85,9 +85,9 @@ class FAQViewController: UITableViewController {
     
 }
 
-//TODO question hrigth 
+
 extension FAQViewController {
-    private func extimateFrameForText(text: String) -> CGFloat {
+    private func extimateFrameForText(text: String, question : String) -> CGFloat {
         let width = (view.frame.width) - 80
         
         let size = CGSize(width: width, height: 1000)
@@ -96,7 +96,9 @@ extension FAQViewController {
         
         let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 16)!], context: nil).height
         
-        return height
+        let qHeight = NSString(string: question).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Bold", size: 18)!], context: nil).height
+        
+        return height + qHeight
     }
 }
 
@@ -112,7 +114,9 @@ extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UI
                 let filterData = staticFAQ.filter { ($0.question?.lowercased().contains(text.lowercased()) ?? false) || ($0.answer?.lowercased().contains(text.lowercased()) ?? false)}
                 if let resultsController = searchController.searchResultsController as? ResultsTableViewController {
                     resultsController.filteredProducts = filterData
-                    resultsController.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        resultsController.tableView.reloadData()
+                    }
                 }
             }
         }

@@ -1651,29 +1651,29 @@
         <scene sceneID="dKz-yG-H5c">
             <objects>
                 <tableViewController storyboardIdentifier="ResultsTableController" id="O9s-YA-QJ4" customClass="ResultsTableViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a8b-Cz-D1d">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a8b-Cz-D1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faqcell2" rowHeight="196" id="0KQ-dw-FC4" customClass="FaqCell" customModule="VIT_Hack" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="faqcell2" rowHeight="196" id="7D5-cJ-QVq" customClass="FaqCell" customModule="VIT_Hack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="196"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0KQ-dw-FC4" id="5Fh-mv-66c">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7D5-cJ-QVq" id="R8l-mC-ed2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-Bq-4O6">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-Rf-lHz">
                                             <rect key="frame" x="16" y="8" width="343" height="180"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WM-gw-EeS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brw-Sa-SQm">
                                                     <rect key="frame" x="12" y="13" width="273.5" height="43.5"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                     <color key="textColor" name="blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-mh-gLN">
-                                                    <rect key="frame" x="13" y="59.5" width="301" height="93.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-iu-F6x">
+                                                    <rect key="frame" x="9" y="59.5" width="305" height="105.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
@@ -1682,27 +1682,27 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="TWB-mh-gLN" secondAttribute="trailing" constant="29" id="4gi-3x-kry"/>
-                                                <constraint firstItem="0WM-gw-EeS" firstAttribute="top" secondItem="dfG-Bq-4O6" secondAttribute="top" constant="13" id="Ehf-iJ-CVy"/>
-                                                <constraint firstItem="0WM-gw-EeS" firstAttribute="leading" secondItem="dfG-Bq-4O6" secondAttribute="leading" constant="12" id="Qbw-jb-SfN"/>
-                                                <constraint firstItem="TWB-mh-gLN" firstAttribute="leading" secondItem="dfG-Bq-4O6" secondAttribute="leading" constant="13" id="VTa-PJ-k5t"/>
-                                                <constraint firstItem="TWB-mh-gLN" firstAttribute="top" secondItem="0WM-gw-EeS" secondAttribute="bottom" constant="3" id="WGo-wU-H1Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="TWB-mh-gLN" secondAttribute="bottom" constant="27" id="XYg-hj-vc3"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0WM-gw-EeS" secondAttribute="trailing" constant="29" id="qlu-Cy-Qej"/>
+                                                <constraint firstAttribute="trailing" secondItem="5lf-iu-F6x" secondAttribute="trailing" constant="29" id="75j-it-dS9"/>
+                                                <constraint firstItem="Brw-Sa-SQm" firstAttribute="leading" secondItem="NHj-Rf-lHz" secondAttribute="leading" constant="12" id="Fxl-AK-Bly"/>
+                                                <constraint firstItem="5lf-iu-F6x" firstAttribute="top" secondItem="Brw-Sa-SQm" secondAttribute="bottom" constant="3" id="I4M-Tz-xY0"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Brw-Sa-SQm" secondAttribute="trailing" constant="29" id="gKr-vK-9og"/>
+                                                <constraint firstAttribute="bottom" secondItem="5lf-iu-F6x" secondAttribute="bottom" constant="15" id="gxe-jq-LtD"/>
+                                                <constraint firstItem="5lf-iu-F6x" firstAttribute="leading" secondItem="NHj-Rf-lHz" secondAttribute="leading" constant="9" id="kMU-Ax-iyH"/>
+                                                <constraint firstItem="Brw-Sa-SQm" firstAttribute="top" secondItem="NHj-Rf-lHz" secondAttribute="top" constant="13" id="lWn-G1-O9s"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dfG-Bq-4O6" firstAttribute="leading" secondItem="5Fh-mv-66c" secondAttribute="leading" constant="16" id="8Rm-IR-62P"/>
-                                        <constraint firstAttribute="trailing" secondItem="dfG-Bq-4O6" secondAttribute="trailing" constant="16" id="8Xs-Qp-pKo"/>
-                                        <constraint firstAttribute="bottom" secondItem="dfG-Bq-4O6" secondAttribute="bottom" constant="8" id="SOa-yi-J9i"/>
-                                        <constraint firstItem="dfG-Bq-4O6" firstAttribute="top" secondItem="5Fh-mv-66c" secondAttribute="top" constant="8" id="Wea-hA-XpA"/>
+                                        <constraint firstItem="NHj-Rf-lHz" firstAttribute="leading" secondItem="R8l-mC-ed2" secondAttribute="leading" constant="16" id="1P9-on-BCo"/>
+                                        <constraint firstAttribute="bottom" secondItem="NHj-Rf-lHz" secondAttribute="bottom" constant="8" id="E7C-4G-A6l"/>
+                                        <constraint firstItem="NHj-Rf-lHz" firstAttribute="top" secondItem="R8l-mC-ed2" secondAttribute="top" constant="8" id="Zzg-is-dqW"/>
+                                        <constraint firstAttribute="trailing" secondItem="NHj-Rf-lHz" secondAttribute="trailing" constant="16" id="asK-9c-CGj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="body" destination="TWB-mh-gLN" id="oCk-ok-yry"/>
-                                    <outlet property="card" destination="dfG-Bq-4O6" id="6HU-Zu-alU"/>
-                                    <outlet property="header" destination="0WM-gw-EeS" id="xpj-Is-510"/>
+                                    <outlet property="body" destination="5lf-iu-F6x" id="HzB-Di-pgo"/>
+                                    <outlet property="card" destination="NHj-Rf-lHz" id="eA0-L3-3e5"/>
+                                    <outlet property="header" destination="Brw-Sa-SQm" id="jI8-Od-VB2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1737,14 +1737,14 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orc-Da-5q3">
                                             <rect key="frame" x="16" y="8" width="343" height="180"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-p3-gtv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-p3-gtv">
                                                     <rect key="frame" x="12" y="13" width="273.5" height="43.5"/>
                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                     <color key="textColor" name="blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-iI-znk">
-                                                    <rect key="frame" x="13" y="59.5" width="301" height="105.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-iI-znk">
+                                                    <rect key="frame" x="9" y="59.5" width="305" height="105.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
@@ -1754,7 +1754,7 @@
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstItem="7ho-p3-gtv" firstAttribute="top" secondItem="Orc-Da-5q3" secondAttribute="top" constant="13" id="75v-IG-HyE"/>
-                                                <constraint firstItem="pdz-iI-znk" firstAttribute="leading" secondItem="Orc-Da-5q3" secondAttribute="leading" constant="13" id="7My-qa-hgn"/>
+                                                <constraint firstItem="pdz-iI-znk" firstAttribute="leading" secondItem="Orc-Da-5q3" secondAttribute="leading" constant="9" id="7My-qa-hgn"/>
                                                 <constraint firstItem="pdz-iI-znk" firstAttribute="top" secondItem="7ho-p3-gtv" secondAttribute="bottom" constant="3" id="Fmj-jE-YaE"/>
                                                 <constraint firstAttribute="trailing" secondItem="pdz-iI-znk" secondAttribute="trailing" constant="29" id="chX-5k-jdr"/>
                                                 <constraint firstAttribute="bottom" secondItem="pdz-iI-znk" secondAttribute="bottom" constant="15" id="djW-dS-jnQ"/>

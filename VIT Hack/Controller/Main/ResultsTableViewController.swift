@@ -37,20 +37,24 @@ class ResultsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let text = filteredProducts[indexPath.row].answer
-        let height = extimateFrameForText(text: text ?? "")
-        return height + 130
+        let text = filteredProducts[indexPath.row].answer ?? ""
+        let question = filteredProducts[indexPath.row].question ?? ""
+        let height = extimateFrameForText(text: text,question: question)
+        return height + 60
     }
     
-    private func extimateFrameForText(text: String) -> CGFloat {
-        let width = (view.frame.width) - 100
+    private func extimateFrameForText(text: String, question : String) -> CGFloat {
+        let width = (view.frame.width) - 80
         
         let size = CGSize(width: width, height: 1000)
         
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         
-        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
+        let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 16)!], context: nil).height
         
-        return height
+        let qHeight = NSString(string: question).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Bold", size: 18)!], context: nil).height
+        
+        return height + qHeight
     }
+    
 }

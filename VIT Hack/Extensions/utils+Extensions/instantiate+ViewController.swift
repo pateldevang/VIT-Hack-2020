@@ -21,9 +21,6 @@ extension AppDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
         
-        // Get UID function
-        debugLog(message: getUID())
-        
         let loginstatus = UserDefaults.standard.bool(forKey: Keys.login)
         let onboarded = Defaults.onbaorded()
         

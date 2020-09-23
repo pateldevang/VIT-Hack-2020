@@ -14,7 +14,7 @@ class FirebaseAuth: UIViewController {
     
     
     //MARK: - Function for Login using email and password
-    public static func emailLoginIn(email: String, pass: String, completion: @escaping (String) -> ()) {
+    public static func emailLoginIn(email: String, pass: String, completion: @escaping (String,String) -> ()) {
         
         Auth.auth().signIn(withEmail: email, password: pass) { (user, error)
             in
@@ -24,19 +24,24 @@ class FirebaseAuth: UIViewController {
                 debugLog(message: error?.localizedDescription ?? "Error")
                 switch error?.localizedDescription ?? "Error" {
                 case "The email address is badly formatted.":
-                    completion(error?.localizedDescription ?? "Error")
+                    completion(error?.localizedDescription ?? "Error", "")
                 case "The password is invalid or the user does not have a password.":
-                    completion(error?.localizedDescription ?? "Error")
+                    completion(error?.localizedDescription ?? "Error", "")
                 case "There is no user record corresponding to this identifier. The user may have been deleted.":
-                    completion("There is no user registered to this Email ID.")
+                    completion("There is no user registered to this Email ID.", "")
                 default:
-                    completion("Contact Developer")
+                    completion("Contact Developer", "")
                 }
             }
-            else {
-                // Haptic on valid
-                UIDevice.validVibrate()
-                completion("Success")
+            else{
+                if let uid = user?.user.uid{
+                    // Haptic on valid
+                    UIDevice.validVibrate()
+                    UserDefaults.standard.set(uid, forKey: Keys.uid)
+                    completion("Success", uid)
+                } else {
+                    completion("Contact Developer", "")
+                }
             }
         }
     }
@@ -63,6 +68,7 @@ class FirebaseAuth: UIViewController {
             else {
                 // Vibrates on valid
                 UIDevice.validVibrate()
+                UserDefaults.standard.set(authResult?.user.uid, forKey: Keys.uid)
                 completion("Success")
             }
         }

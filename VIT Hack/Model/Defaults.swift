@@ -12,6 +12,10 @@ class Defaults
 {
     static var userDefaults = UserDefaults.standard
     
+    static func uid() -> String? {
+        return (userDefaults.value(forKey: Keys.name) as? String)
+    }
+    
     static func name() -> String {
         return (userDefaults.value(forKey: Keys.name) as? String) ?? ""
     }

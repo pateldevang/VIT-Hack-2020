@@ -32,12 +32,12 @@ class LoginViewController: UIViewController {
     }
     
     func login(){
-        FirebaseAuth.emailLoginIn(email: emailTextField.text!, pass: passwordTextField.text!, completion: handlelogin(authStatus:))
+        FirebaseAuth.emailLoginIn(email: emailTextField.text!, pass: passwordTextField.text!, completion: handlelogin(authStatus:uid:))
     }
     
-    func handlelogin(authStatus : String){
+    func handlelogin(authStatus : String,uid:String){
         if authStatus == "Success" {
-            firebaseNetworking.shared.checkUser(getUID(), completion: handleUser(success:))
+            firebaseNetworking.shared.checkUser(uid: uid, completion: handleUser(success:))
         } else {
             loadButton(false)
             self.authAlert(message: authStatus)
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     
     func handleUser(success : Bool){
         if success {
-            firebaseNetworking.shared.getUser(getUID(), completion: saveUser(status:user:))
+            firebaseNetworking.shared.getUser(completion: saveUser(status:user:))
         } else {
             loadButton(false)
             self.performSegue(withIdentifier: "form", sender: nil)

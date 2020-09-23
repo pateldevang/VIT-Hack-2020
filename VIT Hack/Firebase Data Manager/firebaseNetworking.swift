@@ -15,7 +15,6 @@ class firebaseNetworking {
     //MARK: - variables
     static let shared = firebaseNetworking()
     let database = Database.database().reference()
-    let myUID = getUID()
     
     // Initializing class
     init() {
@@ -42,20 +41,25 @@ class firebaseNetworking {
     //MARK: - Function to fill the user form
     public func fillUserForm(param: Any,completion: @escaping (Bool) -> ()) {
         // setValue with param = ["name": "yourName", ....] type
-        self.database.child("users").child(myUID).setValue(param) {
-            (error:Error?, database:DatabaseReference) in
-            if let error = error { // Error Handling
-                debugLog(message: "Data could not be saved: \(error).")
-                completion(false)
-            } else {
-                debugLog(message: "Data saved successfully!")
-                completion(true)  // Completion handler
+        if let uid = Defaults.uid() {
+            self.database.child("users").child(uid).setValue(param) {
+                (error:Error?, database:DatabaseReference) in
+                if let error = error { // Error Handling
+                    debugLog(message: "Data could not be saved: \(error).")
+                    completion(false)
+                } else {
+                    debugLog(message: "Data saved successfully!")
+                    completion(true)  // Completion handler
+                }
             }
+        } else {
+            completion(false)  // Completion handler
         }
     }
     
-    public func getUser(_ uid: String,completion:@escaping (Bool,User)->()){
+    public func getUser(completion:@escaping (Bool,User)->()){
         var user = User()
+        guard let uid = Defaults.uid() else {completion(false,user);return}
         database.child("users").child(uid).observeSingleEvent(of: .value, with:  { (snapshot) in
             print(snapshot)
             // Initializing Eumerator
@@ -73,7 +77,7 @@ class firebaseNetworking {
         }
     }
     
-    public func checkUser(_ uid : String,completion:@escaping(Bool)->()){
+    public func checkUser(uid:String,completion:@escaping(Bool)->()){
         database.child("users").observeSingleEvent(of: .value) { (snap) in
             if snap.hasChild(uid) {
                 completion(true)
@@ -238,10 +242,12 @@ class firebaseNetworking {
     }
     
     public func updateFCM(token : String){
-        self.checkUser(myUID) { (present) in
+        guard let uid = Defaults.uid() else { return }
+        self.checkUser(uid: uid) { (present) in
             if present{
-                self.database.child("users").child(self.myUID).updateChildValues(["fcmToken":token])
+                self.database.child("users").child(uid).updateChildValues(["fcmToken":token])
             }
         }
     }
+    
 }

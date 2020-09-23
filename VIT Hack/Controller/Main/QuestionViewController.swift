@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-
+    
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var askButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
@@ -18,6 +18,14 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        initialSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initialSetup()
+    }
+    
+    func initialSetup(){
         askButton.bottomShadow()
         cancelButton.outline()
         askTextView.outline()
@@ -32,7 +40,11 @@ class QuestionViewController: UIViewController {
         card.layer.masksToBounds = false
         card.alpha = 1.0
     }
-
+    
+    func addLayer(){
+        // let layer =
+    }
+    
     
     @IBAction func askTapped(_ sender: Any) {
         askQuestion()
@@ -72,5 +84,5 @@ class QuestionViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-
+    
 }

@@ -18,12 +18,15 @@ class FAQViewController: UITableViewController {
     /// Search controller to help us with filtering items in the table view.
     var searchController: UISearchController!
     
+    var questionViewController : QuestionViewController!
+    
     /// `Search` results table view.
     private var resultsTableController: ResultsTableViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
+        setupQuestionController()
         if let faq = ControllerDefaults.FAQ() { self.staticFAQ = faq }
         firebaseNetworking.shared.getFAQ(completion: handleFAQ(success:response:))
     }
@@ -43,9 +46,18 @@ class FAQViewController: UITableViewController {
         searchController.searchBar.delegate = self
     }
     
+    fileprivate func setupQuestionController() {
+        if #available(iOS 13.0, *) {
+            self.questionViewController = mainStoryboard.instantiateViewController(identifier: "QuestionViewController")
+        } else {
+            self.questionViewController = mainStoryboard.instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController
+        }
+        questionViewController.modalPresentationStyle = .overFullScreen
+    }
+    
     
     @IBAction func addTapped(_ sender: Any) {
-        performSegue(withIdentifier: "ask", sender: nil)
+        self.present(questionViewController, animated: true, completion: nil)
     }
     
     func handleFAQ(success:Bool,response:[FAQData]){

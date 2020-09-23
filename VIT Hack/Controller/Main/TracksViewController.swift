@@ -19,7 +19,7 @@ class TracksViewController: UIViewController {
     let tracksCellIdentifier = "trackscell"
     
     override func viewDidLoad() {
-        subtitel.text = domain.domain ?? ""
+        subtitel.text = domain.description ?? ""
     }
 }
 

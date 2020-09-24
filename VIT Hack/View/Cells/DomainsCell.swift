@@ -55,7 +55,6 @@ class DomainsCell: UICollectionViewCell {
         if let action = self.showmore
         {
             action(0)
-            //  user!("pass string")
         }
     }
     

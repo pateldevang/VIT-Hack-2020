@@ -69,6 +69,7 @@ class FirebaseAuth: UIViewController {
                 // Vibrates on valid
                 UIDevice.validVibrate()
                 UserDefaults.standard.set(authResult?.user.uid, forKey: Keys.uid)
+                //authResult?.user.sendEmailVerification(completion: nil)
                 completion("Success")
             }
         }

@@ -9,6 +9,7 @@
 import UIKit
 
 struct DomainData: Codable {
+    var abbreviation : String?
     var domain : String?
     var description : String?
     var icon : String?

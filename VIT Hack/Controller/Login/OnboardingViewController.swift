@@ -15,7 +15,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     let cellIdentifier = "OnboardingCell"
-    let onboardingData : [Onboarding] = [.init(title1: "Welcome to", title2: "VIT HACK", image: #imageLiteral(resourceName: "1"), body: "The hackathon will be focusing on the feasibility, application, resourcefulness and fundability of each project idea presented by the participants"),.init(title1: "Some catchy", title2: "Headline here", image: #imageLiteral(resourceName: "2"), body: "Real-world problem statement aimed towards challenging yout abilities and tons more is in store for you"),.init(title1: "Some catchy", title2: "Headline here", image: #imageLiteral(resourceName: "3"), body: "VITHack isa 36-Hur hackathon spread over the course of 3 days. Participants are continually encouraged to network with industry professionals in this confluence of knowledge and ideas")]
+    let onboardingData : [Onboarding] = [.init(title1: "Welcome to", title2: "VIT HACK", image: #imageLiteral(resourceName: "1"), body: "VIT Hack is one of the best Pan-Indian hack-a-thons where participants creatively use cutting edge technology to solve societal problems, and compete for exciting prizes."),.init(title1: "Problem Statements", title2: "on their way", image: #imageLiteral(resourceName: "2"), body: "Get a chance to learn, ideate and grow. Pitch your wildest ideas to real-life investors and win the opportunity of getting invested, internships and many more!"),.init(title1: "Let’s hustle", title2: "to solve and win!", image: #imageLiteral(resourceName: "3"), body: "From Mentor talks, webinars, mentorships, project collabs, workshops, forums to discuss and many more...VIT Hack being a major hack-a-thon, compete at a high level and gain tremendous exposure.")]
     
     
     override func viewDidLoad() {
@@ -24,6 +24,7 @@ class OnboardingViewController: UIViewController {
         flowLayout.minimumInteritemSpacing = 0.0
         pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
     }
+    
     @IBAction func skip(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: Keys.onboard)
         performSegue(withIdentifier: "home", sender: nil)

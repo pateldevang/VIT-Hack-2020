@@ -27,6 +27,8 @@
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E60251D22E1005C2536 /* Gif.swift */; };
 		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
+		5B8B1E65251D2447005C2536 /* gif_light.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E64251D2446005C2536 /* gif_light.gif */; };
+		5B8B1E67251D268C005C2536 /* gif_dark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E66251D268B005C2536 /* gif_dark.gif */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
@@ -110,6 +112,8 @@
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B8B1E60251D22E1005C2536 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		5B8B1E64251D2446005C2536 /* gif_light.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif_light.gif; path = ../../../Downloads/gif_light.gif; sourceTree = "<group>"; };
+		5B8B1E66251D268B005C2536 /* gif_dark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif_dark.gif; path = ../../../Downloads/gif_dark.gif; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
+				5B8B1E66251D268B005C2536 /* gif_dark.gif */,
+				5B8B1E64251D2446005C2536 /* gif_light.gif */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B2000243663BC00E6F221 /* Firebase Data Manager */,
@@ -490,8 +496,10 @@
 				5BBD887324BE2C53009E8F8E /* Lato-Light.ttf in Resources */,
 				5BBD886F24BE2C53009E8F8E /* Lato-BoldItalic.ttf in Resources */,
 				5BBD887224BE2C53009E8F8E /* Lato-Thin.ttf in Resources */,
+				5B8B1E67251D268C005C2536 /* gif_dark.gif in Resources */,
 				7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */,
 				5BBD887024BE2C53009E8F8E /* Lato-BlackItalic.ttf in Resources */,
+				5B8B1E65251D2447005C2536 /* gif_light.gif in Resources */,
 				5BBD887124BE2C53009E8F8E /* Lato-Regular.ttf in Resources */,
 				7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */,
 				7742BA0524365A3200030DF5 /* Main.storyboard in Resources */,

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NetworkListner.shared.startListner()
         
-        setInitialViewController() //FOR DEBUGGING
+       // setInitialViewController()
         
         Messaging.messaging().delegate = self
         
@@ -38,9 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             completionHandler: {_, _ in })
         
         application.registerForRemoteNotifications()
-        
-        Thread.sleep(forTimeInterval: 1.5)
-        
+                
         return true
     }
     

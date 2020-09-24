@@ -9,22 +9,16 @@
 import UIKit
 
 class LaunchViewController: UIViewController {
-
+    @IBOutlet weak var launchImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if self.traitCollection.userInterfaceStyle == .dark {
+            let launchGif = UIImage.gifImageWithName("gif_dark")
+            launchImage.image = launchGif
+        } else {
+            let launchGif = UIImage.gifImageWithName("gif_light")
+            launchImage.image = launchGif
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

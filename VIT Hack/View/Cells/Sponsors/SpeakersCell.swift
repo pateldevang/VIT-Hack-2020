@@ -15,8 +15,7 @@ class SpeakersCell: UICollectionViewCell {
     @IBOutlet weak var designation: UILabel!
     @IBOutlet weak var company: UILabel!
     @IBOutlet weak var join: UIButton!
-    
-    
+        
     func setupCell(_ data : SpeakersData){
         name.text = data.name
         designation.text = data.designation
@@ -27,6 +26,8 @@ class SpeakersCell: UICollectionViewCell {
     
     func setImage(_ data : SpeakersData){
         image.kf.indicatorType = .activity
+            
+        let processor = RoundCornerImageProcessor(radius: .heightFraction(0.5))
         
         if let imageUrl =  data.imageUrl ,let url = URL(string: imageUrl){
             image.kf.setImage(
@@ -34,7 +35,8 @@ class SpeakersCell: UICollectionViewCell {
                 options: [
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
-                    .cacheOriginalImage
+                    .cacheOriginalImage,
+                    .processor(processor)
             ])
         }
     }

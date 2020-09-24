@@ -58,7 +58,8 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: domainCellIdentifier, for: indexPath) as! DomainsCell
         let data = domains[indexPath.item]
         cell.setupCell(data)
-        cell.showmore = showMore(_:)
+        cell.showMore.tag = indexPath.item
+        cell.showMore.addTarget(self, action: #selector(showMore(sender:)), for: .touchUpInside)
         return cell
     }
     
@@ -68,9 +69,10 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: width, height: height)
     }
     
-    func showMore(_ path : Int){
-        let ps = self.domains[path].problemStatements
-        self.domainData = self.domains[path]
+    @objc
+    func showMore(sender: UIButton){
+        let ps = self.domains[sender.tag].problemStatements
+        self.domainData = self.domains[sender.tag]
         performSegue(withIdentifier: "tracks", sender: ps)
     }
 }

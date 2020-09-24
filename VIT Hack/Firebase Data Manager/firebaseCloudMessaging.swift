@@ -17,7 +17,7 @@ extension AppDelegate : MessagingDelegate  {
         
         print("Firebase registration token: \(fcmToken)")
         firebaseNetworking.shared.updateFCM(token: fcmToken)
-        //UserDefaults.standard.set(fcmToken, forKey: Keys.fcmToken)
+        UserDefaults.standard.set(fcmToken, forKey: Keys.fcmToken)
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
         // TODO: If necessary send token to application server.

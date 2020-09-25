@@ -20,6 +20,7 @@ class TimelineViewController: UIViewController {
             }
         }
     }
+    var lastContentOffset: CGFloat = 0
     
     var discordButton = UIButton(type: .custom)
     
@@ -51,6 +52,7 @@ class TimelineViewController: UIViewController {
         discordButton.clipsToBounds = true
         discordButton.addTarget(self,action: #selector(joinDiscord), for: .touchUpInside)
         view.addSubview(discordButton)
+        discordButton.bottomShadow(radius: 0.0)
     }
     
     func setDiscordFrame(){
@@ -61,7 +63,6 @@ class TimelineViewController: UIViewController {
         discordButton.frame = CGRect(x: 285, y: y, width: width, height: height)
         discordButton.center.x = view.center.x
         discordButton.layer.cornerRadius = height/2
-        discordButton.bottomShadow(radius : height/2)
     }
     
     @objc func joinDiscord(){
@@ -116,6 +117,30 @@ extension TimelineViewController {
         let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
         
         return height
+    }
+}
+
+extension TimelineViewController {
+    // this delegate is called when the scrollView (i.e your UITableView) will start scrolling
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
+    
+    // while scrolling this delegate is being called so you may now check which direction your scrollView is being scrolled to
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if lastContentOffset < scrollView.contentOffset.y {
+            buttonTransition(down: true)
+        } else if lastContentOffset > scrollView.contentOffset.y {
+            buttonTransition(down: false)
+        }
+    }
+    
+    func buttonTransition(down : Bool){
+        UIView.animate(withDuration: 0.3){
+            self.discordButton.alpha = down ? 0.0 : 1.0
+            let transform = CGAffineTransform(translationX: 0, y: 40)
+            self.discordButton.transform = down ? transform : .identity
+        }
     }
 }
 

@@ -15,13 +15,9 @@ class TimelineViewController: UIViewController {
     
     @IBOutlet var dayButtons: [UIButton]!
     
-    var timeline = [TimelineData]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var timeline = [TimelineData]()
+    
+    var filteredTimeline = [TimelineData]()
     
     var lastContentOffset: CGFloat = 0
     
@@ -42,7 +38,7 @@ class TimelineViewController: UIViewController {
             button.layer.borderColor = UIColor(named: "blue")?.cgColor
             button.layer.cornerRadius = 22.5
         }
-        dayTapped(dayButtons[0])
+        dayTapped(dayButtons[lastDate])
     }
     
     override func viewDidLayoutSubviews() {
@@ -57,11 +53,20 @@ class TimelineViewController: UIViewController {
         lastDate = sender.tag
         dayButtons[lastDate].backgroundColor = blue
         dayButtons[lastDate].setTitleColor(.white, for: .normal)
+        
+        let day = sender.tag + 1
+        let total = self.timeline
+        filteredTimeline = total.filter { $0.day == day}
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.timeline = timeline
+            self.dayTapped(dayButtons[self.lastDate])
         }
     }
     
@@ -94,13 +99,13 @@ class TimelineViewController: UIViewController {
 //MARK: Tableview delegate + datasource methods
 extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timeline.count
+        return filteredTimeline.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TimelineCell
         
-        let timelineData = timeline[indexPath.row]
+        let timelineData = filteredTimeline[indexPath.row]
         
         cell.setupCell(timelineData)
         
@@ -112,12 +117,12 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let data = timeline[indexPath.row]
-        var height = extimateFrameForText(text: data.subtitle ?? "")
+        let data = filteredTimeline[indexPath.row]
+        var height = extimateFrameForText(text: data.subtitle ?? "", title: data.title ?? "")
         if !(data.link == "") {
-            height += 62
+            height += 60
         }
-        return height + 92
+        return height + 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -127,7 +132,7 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension TimelineViewController {
-    private func extimateFrameForText(text: String) -> CGFloat {
+    private func extimateFrameForText(text: String, title : String) -> CGFloat {
         let width = (view.frame.width * 0.6) - 50
         
         let size = CGSize(width: width, height: 1000)
@@ -136,7 +141,9 @@ extension TimelineViewController {
         
         let height = NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Regular", size: 14)!], context: nil).height
         
-        return height
+        let titleHeight = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.init(name: "Lato-Italic", size: 20)!], context: nil).height
+        
+        return height + titleHeight
     }
 }
 

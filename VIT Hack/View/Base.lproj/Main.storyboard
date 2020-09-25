@@ -1174,18 +1174,19 @@
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkQ-bb-SF6">
                                                 <rect key="frame" x="54" y="750" width="267" height="58"/>
+                                                <color key="backgroundColor" name="button"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="YkQ-bb-SF6" secondAttribute="height" multiplier="295:64" id="Zo1-wx-w7d"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
-                                                <state key="normal" title="About Us" backgroundImage="button">
+                                                <state key="normal" title="About Us">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="xeT-Qq-RQP" kind="popoverPresentation" popoverAnchorView="YkQ-bb-SF6" id="Bhb-0f-hcb">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
-                                                </connections>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="bg"/>
@@ -1235,6 +1236,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Sponsors" image="icons-12" selectedImage="icons-12" id="Rxc-8l-SnI"/>
                     <connections>
+                        <outlet property="aboutUsButton" destination="YkQ-bb-SF6" id="jB7-5y-N9J"/>
                         <outlet property="collaboratorCollectionView" destination="Cvy-cA-4tC" id="lZk-Dm-3cD"/>
                         <outlet property="speakerCollectionView" destination="KkR-UI-TIi" id="Hc3-iR-Ple"/>
                         <outlet property="sponsorsCollectionView" destination="mgm-Vf-loT" id="gsh-yl-M7p"/>
@@ -1249,7 +1251,7 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="xeT-Qq-RQP" customClass="AboutUsViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXj-Zv-bf5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-Fe-GOz">
@@ -1265,7 +1267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-ZN-8SF">
-                                <rect key="frame" x="0.0" y="160.5" width="375" height="486.5"/>
+                                <rect key="frame" x="0.0" y="160.5" width="375" height="506.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="gLh-tN-61x">
                                     <size key="itemSize" width="180" height="239"/>
@@ -2542,7 +2544,6 @@
         <image name="LinkedIn" width="48" height="48"/>
         <image name="Vector" width="20" height="20"/>
         <image name="appleIcon" width="22" height="25"/>
-        <image name="button" width="303" height="72"/>
         <image name="carbon_watson-machine-learning" width="109" height="109"/>
         <image name="emailIcon" width="28" height="23"/>
         <image name="github" width="48" height="46"/>
@@ -2559,7 +2560,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blue">
-            <color red="0.0" green="0.44299998879432678" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.44313725490196076" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button">
             <color red="0.17299999296665192" green="0.17299999296665192" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -23,7 +23,9 @@ class LaunchViewController: UIViewController {
     }
     
     private func playVideo() {
-        guard let path = Bundle.main.path(forResource: "light", ofType:"mp4") else {
+        let dark = self.traitCollection.userInterfaceStyle == .dark
+        let rescource = dark ? "dark" : "light"
+        guard let path = Bundle.main.path(forResource: rescource, ofType:"mp4") else {
             debugPrint("video.m4v not found")
             return
         }

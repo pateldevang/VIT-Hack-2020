@@ -59,7 +59,6 @@ class TimelineViewController: UIViewController {
         dayButtons[lastDate].setTitleColor(.white, for: .normal)
     }
     
-    
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.timeline = timeline

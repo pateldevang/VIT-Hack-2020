@@ -26,6 +26,10 @@ public func debugLog(message: String) {
     #endif
 }
 
+struct Social {
+    static let discord = "https://discord.gg/UX26KdG"
+}
+
 struct Keys {
     static let uid = "uid"
     static let name = "name"

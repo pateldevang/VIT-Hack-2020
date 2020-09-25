@@ -55,6 +55,7 @@ class SpeakersCell: UICollectionViewCell {
     }
     
     func setLayer(){
+        removeSubLayer()
         //Pulsating Layer + animate pulsating layer
         pulsatingLayer = CAShapeLayer()
         let pathForPulsatingLayer = UIBezierPath(arcCenter: .zero, radius: 40, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi , clockwise: true)
@@ -64,7 +65,6 @@ class SpeakersCell: UICollectionViewCell {
         pulsatingLayer.lineCap=CAShapeLayerLineCap.round
         pulsatingLayer.fillColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8039215686, alpha: 0.4)
         pulsatingLayer.position = image.center
-        removeSubLayer()
         contentView.layer.insertSublayer(pulsatingLayer, below: image.layer)
         
         let animation = CABasicAnimation(keyPath: "transform.scale")

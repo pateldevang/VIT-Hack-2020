@@ -15,7 +15,7 @@ class SpeakersViewController: UIViewController {
     @IBOutlet weak var speakerCollectionView: UICollectionView!
     @IBOutlet weak var collaboratorCollectionView: UICollectionView!
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
-    
+    @IBOutlet weak var aboutUsButton: UIButton!
     
     let speakerIdentifier = "speakercell"
     let collaboratorIdentifier = "Collaboratorcell"
@@ -37,6 +37,7 @@ class SpeakersViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         speakerCollectionView.reloadData()
+        aboutUsButton.bottomShadow()
     }
     
     func loadOffline(){

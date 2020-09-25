@@ -225,7 +225,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sqv-wn-eMF">
                                 <rect key="frame" x="0.0" y="30" width="375" height="520"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="bg"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i2D-Mv-Eyc">
                                     <size key="itemSize" width="414" height="685"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -269,6 +269,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="bg"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xxt-2G-1bk" secondAttribute="trailing" constant="100" id="14u-dG-8rW"/>
                                                 <constraint firstItem="FJH-dS-IO3" firstAttribute="top" secondItem="xxt-2G-1bk" secondAttribute="bottom" id="3eJ-9s-tC4"/>
@@ -287,6 +288,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="qgx-X1-CUk" secondAttribute="bottom" constant="25" id="phc-gI-JBZ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="bg"/>
                                         <size key="customSize" width="414" height="685"/>
                                         <connections>
                                             <outlet property="body" destination="qgx-X1-CUk" id="LaL-cl-ocT"/>
@@ -673,15 +675,15 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-AN-z5p">
                                                     <rect key="frame" x="16" y="16" width="343" height="140"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCO-9L-5VM">
-                                                            <rect key="frame" x="12" y="13" width="273.5" height="43.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor si" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCO-9L-5VM">
+                                                            <rect key="frame" x="12" y="13" width="166" height="22"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                                             <color key="textColor" name="blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fwb-Ye-Kfz">
-                                                            <rect key="frame" x="11" y="59.5" width="303" height="70.5"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <rect key="frame" x="11" y="38" width="303" height="92"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -719,7 +721,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="bg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Lc4-OS-yEB" firstAttribute="top" secondItem="PwZ-Or-WjV" secondAttribute="bottom" constant="22" id="I2v-16-NQ6"/>
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="trailing" secondItem="Lc4-OS-yEB" secondAttribute="trailing" constant="30" id="UFu-4c-igB"/>
@@ -943,6 +945,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOF-cy-MCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5957.971014492754" y="-539.0625"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="71b-bP-9ww">
+            <objects>
+                <viewController storyboardIdentifier="PreviewViewController" id="mht-Tz-Kqv" customClass="PreviewViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faD-aH-h4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="k3o-NF-ug7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y12-vz-mFH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yp-Zu-zOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7318" y="-1059"/>
         </scene>
         <!--Sponsors-->
         <scene sceneID="IzM-Iu-eXr">
@@ -1243,6 +1261,7 @@
                         <outlet property="collaboratorCollectionView" destination="Cvy-cA-4tC" id="lZk-Dm-3cD"/>
                         <outlet property="speakerCollectionView" destination="KkR-UI-TIi" id="Hc3-iR-Ple"/>
                         <outlet property="sponsorsCollectionView" destination="mgm-Vf-loT" id="gsh-yl-M7p"/>
+                        <segue destination="mht-Tz-Kqv" kind="show" identifier="ok" id="9Cs-sK-pif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G37-83-Uew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1678,6 +1697,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="icons-7" selectedImage="icons-7" id="pRq-XO-zh4"/>
                     <connections>
+                        <outlet property="card" destination="caq-34-H8n" id="MDq-nJ-DKz"/>
                         <outlet property="header" destination="jl8-8L-2Ml" id="M2r-4K-gGC"/>
                         <outlet property="initials" destination="6sl-7w-Upx" id="2RD-lY-qV2"/>
                         <outlet property="privacyPolicyLabel" destination="wWc-3a-4BF" id="Dmf-RP-GIW"/>
@@ -1723,7 +1743,7 @@
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. At turpis nam purus aliquet lectus sollicitudin tortor" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5lf-iu-F6x">
                                                     <rect key="frame" x="9" y="59.5" width="305" height="105.5"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" name="card"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2323,7 +2343,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="bg"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="lnA-0J-Uku" secondAttribute="trailing" id="6Wn-Og-Pht"/>
                                             <constraint firstItem="XMY-Ub-zVX" firstAttribute="trailing" secondItem="bq8-1l-aEZ" secondAttribute="trailing" id="EfN-8n-bVr"/>
@@ -2350,7 +2370,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="bg"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="3gh-rq-dBl"/>
                                             <constraint firstItem="qF6-AO-HZ7" firstAttribute="leading" secondItem="a3Z-6g-m6h" secondAttribute="leading" id="6R9-XG-47y"/>
@@ -2392,7 +2412,7 @@
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="bg"/>
                         <constraints>
                             <constraint firstItem="3YI-YS-8ao" firstAttribute="trailing" secondItem="36W-rI-2tI" secondAttribute="trailing" constant="27" id="4BT-q4-cAy"/>
                             <constraint firstItem="m6o-rv-R4X" firstAttribute="centerX" secondItem="Ty3-Gv-Mkp" secondAttribute="centerX" id="4lI-OM-Qs6"/>
@@ -2466,7 +2486,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="bg"/>
                                         <constraints>
                                             <constraint firstItem="02t-DP-XR6" firstAttribute="leading" secondItem="4bs-aE-vR4" secondAttribute="leading" id="A8F-ey-i3K"/>
                                             <constraint firstAttribute="height" constant="60" id="DX1-ZX-foy"/>
@@ -2540,7 +2560,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xKN-by-UKh"/>
+        <segue reference="D99-df-Clh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="332.5" height="362"/>
@@ -2563,7 +2583,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blue">
-            <color red="0.0" green="0.44313725490196076" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.44299998879432678" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button">
             <color red="0.17299999296665192" green="0.17299999296665192" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2587,7 +2607,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="splash">
-            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98400002717971802" green="0.98400002717971802" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

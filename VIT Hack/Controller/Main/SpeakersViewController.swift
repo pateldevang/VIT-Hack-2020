@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 import SafariServices
 
 class SpeakersViewController: UIViewController {
@@ -170,3 +171,46 @@ enum collection : Int {
 
 
 
+
+@available(iOS 13.0, *)
+extension SpeakersViewController {
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        /// SETTING IDENTIFIER
+        let tag = "\(collectionView.tag)"
+        let path = "\(indexPath.item)"
+        let id = tag+"-"+path
+        let identifier = NSString(string: id)
+        
+        return UIContextMenuConfiguration(identifier: identifier as NSCopying, previewProvider: {
+            guard let url = URL(string: self.findUrl(id) ?? "") else { return nil }
+            return SFSafariViewController(url: url)
+        }, actionProvider: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
+        animator.addCompletion {
+            if let identifier = configuration.identifier as? String {
+                guard let url = URL(string: self.findUrl(identifier) ?? "") else { return}
+                let vc = SFSafariViewController(url: url)
+                self.show(vc, sender: self)
+            }
+        }
+    }
+    
+    func findUrl(_ id : String)->String?{
+        let split = id.split(separator: "-")
+        let tag = String(split[0])
+        let row = Int(split[1])
+        switch tag {
+        case "0":
+            return speakerData[row ?? 0].sessionUrl
+        case "1":
+            return collaboratorData[row ?? 0].pageUrl
+        case "2":
+            return sponsorData[row ?? 0].pageUrl
+        default:
+            return nil
+        }
+    }
+}

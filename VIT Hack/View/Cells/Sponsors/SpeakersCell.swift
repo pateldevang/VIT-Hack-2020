@@ -32,9 +32,7 @@ class SpeakersCell: UICollectionViewCell {
         image.kf.indicatorType = .activity
             
         let processor = RoundCornerImageProcessor(radius: .heightFraction(0.5))
-        
-        let processor = RoundCornerImageProcessor(radius: .heightFraction(0.5))
-        
+                
         if let imageUrl =  data.imageUrl ,let url = URL(string: imageUrl){
             image.kf.setImage(
                 with: url,

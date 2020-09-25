@@ -69,7 +69,7 @@ class LaunchViewController: UIViewController {
     }
     
     func setViewController<view : UIViewController>(_ vc : view){
-        vc.modalTransitionStyle = .flipHorizontal
+        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
     

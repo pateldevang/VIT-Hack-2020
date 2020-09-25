@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var card: UIView!
     
     //VARIABLES
     var profileTitles = ["Your Name","Email Address","Your Institute","Registration Number"]

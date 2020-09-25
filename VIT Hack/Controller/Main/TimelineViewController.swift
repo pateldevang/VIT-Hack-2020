@@ -91,7 +91,7 @@ class TimelineViewController: UIViewController {
     }
     
     @objc func joinDiscord(){
-        
+        openWebsite(Social.discord)
     }
     
 }

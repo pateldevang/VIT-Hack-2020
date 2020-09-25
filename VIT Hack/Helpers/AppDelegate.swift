@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         Messaging.messaging().delegate = self
         
+        StoreReviewHelper.checkAndAskForReview()
+        
         UNUserNotificationCenter.current().delegate = self
                 
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]

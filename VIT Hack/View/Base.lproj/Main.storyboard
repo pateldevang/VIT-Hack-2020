@@ -1013,13 +1013,14 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2re-fT-tDe">
-                                                                    <rect key="frame" x="59" y="225" width="82" height="31"/>
+                                                                    <rect key="frame" x="55" y="225" width="90" height="31"/>
                                                                     <color key="backgroundColor" name="blue"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="3wN-Hz-46Q"/>
-                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="mjW-oH-5Ri"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="3wN-Hz-46Q"/>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="mjW-oH-5Ri"/>
                                                                         <constraint firstAttribute="height" constant="31" id="qvq-EE-nxz"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <state key="normal" title="Join Now">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>

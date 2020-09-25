@@ -35,6 +35,7 @@ struct Keys {
     static let fcmToken = "fcmToken"
     static let onboard = "onbaord"
     static let network = "network"
+    static let appOpenCount = "appOpenCount"
 }
 
 struct ControllerKeys {

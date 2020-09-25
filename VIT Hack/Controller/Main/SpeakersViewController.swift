@@ -170,8 +170,6 @@ enum collection : Int {
 }
 
 
-
-
 @available(iOS 13.0, *)
 extension SpeakersViewController {
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {

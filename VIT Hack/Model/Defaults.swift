@@ -53,6 +53,10 @@ class Defaults
     static func appOpenCount() -> Int {
         return (userDefaults.value(forKey: Keys.appOpenCount) as? Int) ?? 1
     }
+    
+    static func hackStartReview() -> Bool {
+       return (UserDefaults.standard.value(forKey: Keys.hackStarted) as? Bool) ?? true
+    }
 }
 
 

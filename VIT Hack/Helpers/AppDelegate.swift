@@ -25,20 +25,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         NetworkListner.shared.startListner()
-                
+        
         Messaging.messaging().delegate = self
         
-        StoreReviewHelper.checkAndAskForReview()
+        StoreReviewHelper.incrementAppOpenedCount()
         
         UNUserNotificationCenter.current().delegate = self
-                
+        
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions,
-            completionHandler: {_, _ in })
+        if Defaults.onbaorded() && Defaults.isLogin(){
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        }
         
         application.registerForRemoteNotifications()
-                
+        
         return true
     }
     

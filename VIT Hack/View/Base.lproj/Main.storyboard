@@ -1020,7 +1020,6 @@
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="mjW-oH-5Ri"/>
                                                                         <constraint firstAttribute="height" constant="31" id="qvq-EE-nxz"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <state key="normal" title="Join Now">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>

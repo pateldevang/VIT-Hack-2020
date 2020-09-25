@@ -21,6 +21,8 @@ class TimelineViewController: UIViewController {
         }
     }
     
+    var discordButton = UIButton(type: .custom)
+    
     let cellIdentifier = "timelinecell"
     
     
@@ -28,12 +30,42 @@ class TimelineViewController: UIViewController {
         super.viewDidLoad()
         if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
+        floatingButton()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        floatingButton()
     }
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.timeline = timeline
         }
+    }
+    
+    func floatingButton(){
+        setDiscordFrame()
+        discordButton.setTitle("Join Discord", for: .normal)
+        discordButton.backgroundColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8039215686, alpha: 1)
+        discordButton.clipsToBounds = true
+        discordButton.addTarget(self,action: #selector(joinDiscord), for: .touchUpInside)
+        view.addSubview(discordButton)
+    }
+    
+    func setDiscordFrame(){
+        let width = view.frame.width * 0.56
+        let height = width / 4
+        let tabHeight = tabBarController?.tabBar.frame.size.height ?? 0.0
+        let y = view.frame.height - height - 15 - tabHeight
+        discordButton.frame = CGRect(x: 285, y: y, width: width, height: height)
+        discordButton.center.x = view.center.x
+        discordButton.layer.cornerRadius = height/2
+        discordButton.bottomShadow(radius : height/2)
+    }
+    
+    @objc func joinDiscord(){
+        
     }
     
 }

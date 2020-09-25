@@ -16,15 +16,14 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView!
     
 
-    
     /// `datasource` of collectionview
     var aboutUs = [
-        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","https://www.linkedin.com/in/aaryankotharii/"]),
-    AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail]),
-    AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.twitter]),
-    AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "original", socialHandles: [.github,.LinkedIn,.instagram]),
-    AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram]),
-    AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram])]
+        AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.instagram], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","aaryan.kothari@gmail.com"]),
+        AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
+        AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/garima94921","https://www.linkedin.com/in/garima-bothra/","gaarimabothra@gmail.com"]),
+    AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "original", socialHandles: [.dribble,.LinkedIn,.mail], socailUrls: ["https://rohanxdesign.in","https://www.linkedin.com/in/rohanxdesign/","rohanxdesign@gmail.com"]),
+    AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
+    AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/VibhorChinda","https://www.linkedin.com/in/vibhor-chinda-465927169/","vibhorchinda@gmail.com"])]
     
     ///Cell Identifier of AboutUs Cell
     let aboutusIdentifier = "aboutuscell"

@@ -36,6 +36,7 @@ struct Keys {
     static let onboard = "onbaord"
     static let network = "network"
     static let appOpenCount = "appOpenCount"
+    static let hackStarted = "hackStarted"
 }
 
 struct ControllerKeys {

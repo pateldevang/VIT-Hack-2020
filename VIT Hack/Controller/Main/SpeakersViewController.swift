@@ -34,6 +34,11 @@ class SpeakersViewController: UIViewController {
         getCollaborators()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        speakerCollectionView.reloadData()
+    }
+    
     func loadOffline(){
         if let speaker = ControllerDefaults.speakers() { self.speakerData = speaker }
         if let sponsor = ControllerDefaults.sponsors() { self.sponsorData = sponsor }
@@ -117,6 +122,14 @@ extension SpeakersViewController : UICollectionViewDataSource {
         }
         return cellToReturn
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if collectionView.tag == 0{
+            if let speakerCell = cell as? SpeakersCell{
+                speakerCell.setupCell(speakerData[indexPath.item])
+            }
+        }
+    }
 }
 
 extension SpeakersViewController : UICollectionViewDelegate {
@@ -142,8 +155,8 @@ extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
 }
 
 extension SpeakersViewController {
-  @objc func speakerJoin(sender:UIButton){
-         let link = speakerData[sender.tag].sessionUrl
+    @objc func speakerJoin(sender:UIButton){
+        let link = speakerData[sender.tag].sessionUrl
         openWebsite(link)
     }
 }

@@ -13,6 +13,8 @@ class TimelineViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var dayButtons: [UIButton]!
+    
     var timeline = [TimelineData]() {
         didSet {
             DispatchQueue.main.async {
@@ -20,7 +22,10 @@ class TimelineViewController: UIViewController {
             }
         }
     }
+    
     var lastContentOffset: CGFloat = 0
+    
+    var lastDate : Int = 0
     
     var discordButton = UIButton(type: .custom)
     
@@ -32,12 +37,28 @@ class TimelineViewController: UIViewController {
         if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
         floatingButton()
+        for button in dayButtons{
+            button.layer.borderWidth = 1.0
+            button.layer.borderColor = UIColor(named: "blue")?.cgColor
+            button.layer.cornerRadius = 22.5
+        }
+        dayTapped(dayButtons[0])
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         floatingButton()
     }
+    
+    @IBAction func dayTapped(_ sender: UIButton) {
+        let blue = UIColor(named: "blue")
+        dayButtons[lastDate].backgroundColor = .clear
+        dayButtons[lastDate].setTitleColor(blue, for: .normal)
+        lastDate = sender.tag
+        dayButtons[lastDate].backgroundColor = blue
+        dayButtons[lastDate].setTitleColor(.white, for: .normal)
+    }
+    
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{

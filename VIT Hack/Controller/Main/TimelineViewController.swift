@@ -148,12 +148,11 @@ extension TimelineViewController {
 }
 
 extension TimelineViewController {
-    // this delegate is called when the scrollView (i.e your UITableView) will start scrolling
+
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.lastContentOffset = scrollView.contentOffset.y
     }
     
-    // while scrolling this delegate is being called so you may now check which direction your scrollView is being scrolled to
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if lastContentOffset < scrollView.contentOffset.y {
             buttonTransition(down: true)

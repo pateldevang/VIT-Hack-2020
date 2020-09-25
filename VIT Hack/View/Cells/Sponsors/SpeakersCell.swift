@@ -25,12 +25,13 @@ class SpeakersCell: UICollectionViewCell {
         setImage(data)
         join.setTitle("Watch Now", for: .normal)
         join.layer.cornerRadius = 4
-        initialSetup(data.startUnix, data.endUnix)
     }
     
     func setImage(_ data : SpeakersData){
         image.kf.indicatorType = .activity
             
+        initialSetup(data.startUnix, data.endUnix)
+        
         let processor = RoundCornerImageProcessor(radius: .heightFraction(0.5))
                 
         if let imageUrl =  data.imageUrl ,let url = URL(string: imageUrl){
@@ -43,6 +44,8 @@ class SpeakersCell: UICollectionViewCell {
                     .processor(processor)
             ])
         }
+        
+        image.layer.cornerRadius = image.frame.width/2
     }
     
     func initialSetup(_ startTime : Double?, _ endTime : Double?){

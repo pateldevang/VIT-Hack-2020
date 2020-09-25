@@ -187,7 +187,7 @@
         <!--Launch View Controller-->
         <scene sceneID="HsJ-mD-XAB">
             <objects>
-                <viewController id="KUU-6F-rxG" customClass="LaunchViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchViewController" id="KUU-6F-rxG" customClass="LaunchViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e77-V8-Xw0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

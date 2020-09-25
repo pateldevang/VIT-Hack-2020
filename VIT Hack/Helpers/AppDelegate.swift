@@ -25,9 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         NetworkListner.shared.startListner()
-        
-       // setInitialViewController()
-        
+                
         Messaging.messaging().delegate = self
         
         UNUserNotificationCenter.current().delegate = self

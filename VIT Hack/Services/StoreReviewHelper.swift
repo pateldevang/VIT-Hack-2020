@@ -11,9 +11,11 @@ import StoreKit
 
 struct StoreReviewHelper {
     static func incrementAppOpenedCount() {
-        var appOpenCount = Defaults.appOpenCount()
-        appOpenCount += 1
-        UserDefaults.standard.set(appOpenCount, forKey: Keys.appOpenCount)
+        if Defaults.onbaorded() && Defaults.isLogin(){
+            var appOpenCount = Defaults.appOpenCount()
+            appOpenCount += 1
+            UserDefaults.standard.set(appOpenCount, forKey: Keys.appOpenCount)
+        }
     }
     
     static func checkAndAskForReview() {
@@ -22,7 +24,7 @@ struct StoreReviewHelper {
         let appOpenCount = Defaults.appOpenCount()
         
         switch appOpenCount {
-        case 5,50:
+        case 4,30:
             StoreReviewHelper().requestReview()
         case _ where appOpenCount%100 == 0 :
             StoreReviewHelper().requestReview()

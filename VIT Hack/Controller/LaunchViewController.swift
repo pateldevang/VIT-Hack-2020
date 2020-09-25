@@ -70,6 +70,7 @@ class LaunchViewController: UIViewController {
     
     func setViewController<view : UIViewController>(_ vc : view){
         vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     

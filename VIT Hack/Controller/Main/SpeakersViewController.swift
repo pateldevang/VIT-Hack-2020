@@ -15,7 +15,7 @@ class SpeakersViewController: UIViewController {
     @IBOutlet weak var speakerCollectionView: UICollectionView!
     @IBOutlet weak var collaboratorCollectionView: UICollectionView!
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
-    
+    @IBOutlet weak var aboutUsButton: UIButton!
     
     let speakerIdentifier = "speakercell"
     let collaboratorIdentifier = "Collaboratorcell"
@@ -32,6 +32,12 @@ class SpeakersViewController: UIViewController {
         getSpeakers()
         getSponsors()
         getCollaborators()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        speakerCollectionView.reloadData()
+        aboutUsButton.bottomShadow()
     }
     
     func loadOffline(){
@@ -117,6 +123,14 @@ extension SpeakersViewController : UICollectionViewDataSource {
         }
         return cellToReturn
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if collectionView.tag == 0{
+            if let speakerCell = cell as? SpeakersCell{
+                speakerCell.setupCell(speakerData[indexPath.item])
+            }
+        }
+    }
 }
 
 extension SpeakersViewController : UICollectionViewDelegate {
@@ -142,8 +156,8 @@ extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
 }
 
 extension SpeakersViewController {
-  @objc func speakerJoin(sender:UIButton){
-         let link = speakerData[sender.tag].sessionUrl
+    @objc func speakerJoin(sender:UIButton){
+        let link = speakerData[sender.tag].sessionUrl
         openWebsite(link)
     }
 }

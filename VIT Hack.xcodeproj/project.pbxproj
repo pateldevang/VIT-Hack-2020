@@ -25,6 +25,10 @@
 		5B6F635124D49F08005753AB /* firebaseCloudMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */; };
 		5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D92524FE0337001E2F8C /* NetworkListener.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
+		5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E60251D22E1005C2536 /* Gif.swift */; };
+		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
+		5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E68251D9E86005C2536 /* light.mp4 */; };
+		5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6A251DA527005C2536 /* dark.mp4 */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
@@ -73,7 +77,6 @@
 		775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF42436618200E6F221 /* firebaseSignOut.swift */; };
 		775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FF82436622D00E6F221 /* haptic+Feedback.swift */; };
 		775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFA2436624100E6F221 /* alert+Function.swift */; };
-		775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */; };
 		775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B1FFE2436634900E6F221 /* keyboard+Hide.swift */; };
 		775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B2001243663DA00E6F221 /* firebaseNetworking.swift */; };
 		776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A7FBE24470A9D00D6349C /* googleSignIn.swift */; };
@@ -106,6 +109,10 @@
 		5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseCloudMessaging.swift; sourceTree = "<group>"; };
 		5B79D92524FE0337001E2F8C /* NetworkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
+		5B8B1E60251D22E1005C2536 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		5B8B1E68251D9E86005C2536 /* light.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = light.mp4; path = ../../light.mp4; sourceTree = "<group>"; };
+		5B8B1E6A251DA527005C2536 /* dark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dark.mp4; path = ../../dark.mp4; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
@@ -155,7 +162,6 @@
 		775B1FF42436618200E6F221 /* firebaseSignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseSignOut.swift; sourceTree = "<group>"; };
 		775B1FF82436622D00E6F221 /* haptic+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "haptic+Feedback.swift"; sourceTree = "<group>"; };
 		775B1FFA2436624100E6F221 /* alert+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "alert+Function.swift"; sourceTree = "<group>"; };
-		775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "instantiate+ViewController.swift"; sourceTree = "<group>"; };
 		775B1FFE2436634900E6F221 /* keyboard+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "keyboard+Hide.swift"; sourceTree = "<group>"; };
 		775B2001243663DA00E6F221 /* firebaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseNetworking.swift; sourceTree = "<group>"; };
 		776A7FBE24470A9D00D6349C /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
@@ -273,6 +279,8 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
+				5B8B1E68251D9E86005C2536 /* light.mp4 */,
+				5B8B1E6A251DA527005C2536 /* dark.mp4 */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B2000243663BC00E6F221 /* Firebase Data Manager */,
@@ -304,6 +312,7 @@
 			children = (
 				5B086C6424C0189700D5264C /* Main */,
 				5B086C6324C0188F00D5264C /* Login */,
+				5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -385,7 +394,6 @@
 		775B2005243664A100E6F221 /* utils+Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				775B1FFC243662B100E6F221 /* instantiate+ViewController.swift */,
 				775B1FFE2436634900E6F221 /* keyboard+Hide.swift */,
 				776A7FC224474BD900D6349C /* regex.swift */,
 				5BDBE2FB244C327F00636CF1 /* UI + Color.swift */,
@@ -394,6 +402,7 @@
 				5B9A16A724CF125F009B5311 /* Button.swift */,
 				5BE25AEC24D1385E00E33FAB /* ViewController.swift */,
 				5B4AC2AB2517258300534934 /* Safari.swift */,
+				5B8B1E60251D22E1005C2536 /* Gif.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -481,10 +490,12 @@
 				5BBD887524BE2C53009E8F8E /* Lato-ThinItalic.ttf in Resources */,
 				5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */,
 				5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */,
+				5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */,
 				5BBD887324BE2C53009E8F8E /* Lato-Light.ttf in Resources */,
 				5BBD886F24BE2C53009E8F8E /* Lato-BoldItalic.ttf in Resources */,
 				5BBD887224BE2C53009E8F8E /* Lato-Thin.ttf in Resources */,
 				7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */,
+				5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */,
 				5BBD887024BE2C53009E8F8E /* Lato-BlackItalic.ttf in Resources */,
 				5BBD887124BE2C53009E8F8E /* Lato-Regular.ttf in Resources */,
 				7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */,
@@ -565,7 +576,6 @@
 				5BBD887F24BE377F009E8F8E /* LoginViewController.swift in Sources */,
 				5B6F635124D49F08005753AB /* firebaseCloudMessaging.swift in Sources */,
 				775B1FFB2436624100E6F221 /* alert+Function.swift in Sources */,
-				775B1FFD243662B100E6F221 /* instantiate+ViewController.swift in Sources */,
 				7742BA0024365A3200030DF5 /* AppDelegate.swift in Sources */,
 				5BBD887724BE2DEF009E8F8E /* HomeViewController.swift in Sources */,
 				5B44652024C8B46C00E2D47F /* AboutUsData.swift in Sources */,
@@ -576,12 +586,14 @@
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
+				5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */,
 				5BBD889724BED509009E8F8E /* Time.swift in Sources */,
 				5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */,
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,
 				5BBD888B24BE3F59009E8F8E /* SpeakersViewController.swift in Sources */,
 				77D6AA302449CDFB00E405B1 /* CompanyData.swift in Sources */,
 				5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */,
+				5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */,
 				5BF8920724C97FDF00C3A073 /* Textfield.swift in Sources */,
 				5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */,
 				5B3A06C524DB0E8900687B1E /* ResultsTableViewController.swift in Sources */,
@@ -769,10 +781,10 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = I;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,10 +802,10 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = I;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vithack;
 				PRODUCT_NAME = "$(TARGET_NAME)";

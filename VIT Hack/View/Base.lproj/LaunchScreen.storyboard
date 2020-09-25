@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,20 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lPG-Kf-3gE">
-                                <rect key="frame" x="52" y="293" width="310.5" height="310.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lPG-Kf-3gE" secondAttribute="height" multiplier="1:1" id="axF-Uk-Dcd"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="lPG-Kf-3gE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9jd-Ns-N8K"/>
-                            <constraint firstItem="lPG-Kf-3gE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YuL-ys-3cG"/>
-                            <constraint firstItem="lPG-Kf-3gE" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.75" id="nDr-WO-GJJ"/>
-                        </constraints>
+                        <color key="backgroundColor" name="splash"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -38,6 +26,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="300" height="300"/>
+        <namedColor name="splash">
+            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

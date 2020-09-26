@@ -24,9 +24,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         googleSetup()
-        appleButton.bottomShadow()
-        googleButton.bottomShadow()
-        emailButton.bottomShadow()
         hideNavbar()
     }
     

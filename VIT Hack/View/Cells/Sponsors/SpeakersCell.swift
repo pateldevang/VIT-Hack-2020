@@ -22,15 +22,13 @@ class SpeakersCell: UICollectionViewCell {
         name.text = data.name
         designation.text = data.designation
         company.text = data.company
-        setImage(data)
-        join.setTitle("Watch Now", for: .normal)
+        initialSetup(data.startUnix, data.endUnix)
         join.layer.cornerRadius = 4
+        setImage(data)
     }
     
     func setImage(_ data : SpeakersData){
         image.kf.indicatorType = .activity
-            
-        initialSetup(data.startUnix, data.endUnix)
         
         let processor = RoundCornerImageProcessor(radius: .heightFraction(0.5))
                 
@@ -51,9 +49,13 @@ class SpeakersCell: UICollectionViewCell {
     func initialSetup(_ startTime : Double?, _ endTime : Double?){
         guard let sTime = startTime else { return }
         guard let eTime = endTime else { return }
+        print(Date(timeIntervalSince1970: eTime) , Date())
         if Date(timeIntervalSince1970: sTime) < Date() && Date(timeIntervalSince1970: eTime) > Date() {
             setLayer()
             join.setTitle("Join Now", for: .normal)
+        } else {
+            join.setTitle("Watch Now", for: .normal)
+            removeSubLayer()
         }
     }
     

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SocialDelegate : class {
+    func didPressButton(_ tag: Int)
+}
+
 class AboutUsCell: UICollectionViewCell {
     
     //MARK: Outlets
@@ -20,6 +24,8 @@ class AboutUsCell: UICollectionViewCell {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var topanchor: NSLayoutConstraint!
+    
+    var delegate: SocialDelegate?
     
     override func layoutIfNeeded() {
         profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
@@ -52,4 +58,9 @@ class AboutUsCell: UICollectionViewCell {
         image2.image = UIImage(named: data[1].rawValue)
         image3.image = UIImage(named: data[2].rawValue)
     }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        delegate?.didPressButton(sender.tag)
+}
+
 }

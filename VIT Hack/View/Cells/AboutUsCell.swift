@@ -25,6 +25,10 @@ class AboutUsCell: UICollectionViewCell {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var topanchor: NSLayoutConstraint!
     
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    
     var delegate: SocialDelegate?
     
     override func layoutIfNeeded() {

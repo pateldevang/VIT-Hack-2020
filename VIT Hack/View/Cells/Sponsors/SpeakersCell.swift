@@ -49,7 +49,6 @@ class SpeakersCell: UICollectionViewCell {
     func initialSetup(_ startTime : Double?, _ endTime : Double?){
         guard let sTime = startTime else { return }
         guard let eTime = endTime else { return }
-        print(Date(timeIntervalSince1970: eTime) , Date())
         if Date(timeIntervalSince1970: sTime) < Date() && Date(timeIntervalSince1970: eTime) > Date() {
             setLayer()
             join.setTitle("Join Now", for: .normal)

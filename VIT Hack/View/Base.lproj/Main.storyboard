@@ -1540,6 +1540,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="239"/>
                                         <connections>
+                                            <outlet property="button1" destination="0Ax-uA-vNN" id="476-9b-oYJ"/>
+                                            <outlet property="button2" destination="NFG-K4-MIH" id="WLb-aL-bAd"/>
+                                            <outlet property="button3" destination="Q6c-hc-H0Q" id="Zd8-jz-R43"/>
                                             <outlet property="card" destination="dnK-sS-Aoz" id="bUa-a6-Fyh"/>
                                             <outlet property="designation" destination="DMS-Sj-Vor" id="NrT-jY-CQ9"/>
                                             <outlet property="image1" destination="dJF-F1-9WJ" id="bJb-B5-TzG"/>

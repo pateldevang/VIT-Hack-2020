@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 import Firebase
 //import GoogleSignIn
 
@@ -29,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Messaging.messaging().delegate = self
         
         StoreReviewHelper.incrementAppOpenedCount()
+        
+        IQKeyboardManager.shared.enable = true
         
         UNUserNotificationCenter.current().delegate = self
         

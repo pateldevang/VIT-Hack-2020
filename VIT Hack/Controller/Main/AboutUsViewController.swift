@@ -39,18 +39,16 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         let data = aboutUs[indexPath.row]
         
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: aboutusIdentifier, for: indexPath) as! AboutUsCell
-        
+        cell.layoutIfNeeded()
         cell.name.text = data.name
         cell.profilePhoto.image = UIImage(named: data.image)
         cell.designation.text = data.role
-        cell.setupCell(data.socialHandles)
+        let width = calculateSize().width * 0.625
+        cell.setupCell(data.socialHandles, photoRadius: (width-12)/2, backRadius: width/2)
         cell.delegate = self
         cell.button1.tag = (10 * indexPath.item)
         cell.button2.tag = (10 * indexPath.item) + 1
         cell.button3.tag = (10 * indexPath.item) + 2
-        
-        cell.photoBack.layer.cornerRadius = cell.photoBack.frame.size.width/2
-        cell.profilePhoto.layer.cornerRadius = cell.profilePhoto.frame.width/2
         return cell
     }
     
@@ -93,6 +91,10 @@ extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
     /// Dynamic cell size `According to screen size!`
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return calculateSize()
+    }
+    
+    func calculateSize()->CGSize{
         let width = view.frame.width - 80
         if width > 250 {
             let cellWidth = width/2

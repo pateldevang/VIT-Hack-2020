@@ -30,26 +30,27 @@ class AboutUsCell: UICollectionViewCell {
     @IBOutlet weak var button3: UIButton!
     
     var delegate: SocialDelegate?
+    var halfValue : CGFloat = 0.0
     
-//    override func layoutIfNeeded() {
-//        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
-//        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
-//        photoBack.clipsToBounds = true
-//    }
+    override func layoutIfNeeded() {
+        let halfValue = photoBack.frame.height/2
+        self.halfValue = halfValue
+    }
     
-    func setupCell(_ data : [socialMedia]){
+    
+    func setupCell(_ data : [socialMedia], photoRadius: CGFloat = 0.0, backRadius : CGFloat = 0.0){
         
+       
         /// Corner radius
         card.layer.cornerRadius = 12
-
-       //profilePhoto.clipsToBounds = true
-        //photoBack.clipsToBounds = true
-        let halfValue = photoBack.frame.width/2
         
-        topanchor.constant = -halfValue
+        profilePhoto.clipsToBounds = true
+        profilePhoto.layer.cornerRadius = photoRadius
+            photoBack.layer.cornerRadius = backRadius
+        photoBack.clipsToBounds = true
+        topanchor.constant = -backRadius
         
-        layoutIfNeeded()
-        
+    
         /// Background Shadow
         layer.cornerRadius = 15.0
         layer.borderWidth = 0.0

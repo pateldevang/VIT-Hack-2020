@@ -18,6 +18,7 @@ class ForgotPasswordViewController: UIViewController {
         emailTextField.setUnderLine()
         sendButton.bottomShadow()
         hideKeyboardWhenTappedAround()
+        addDoneButtonToolbar(textField: emailTextField)
     }
     
     @IBAction func SendLink(_ sender: UIButton) {

@@ -521,7 +521,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btW-9x-Wu8">
                                                     <rect key="frame" x="0.0" y="0.0" width="204" height="343"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carbon_watson-machine-learning" translatesAutoresizingMaskIntoConstraints="NO" id="7Md-sx-0Bz">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Md-sx-0Bz">
                                                             <rect key="frame" x="26" y="16" width="92" height="92"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="7Md-sx-0Bz" secondAttribute="height" multiplier="1:1" id="e4L-Er-k0E"/>
@@ -2647,7 +2647,6 @@
         <image name="LinkedIn" width="48" height="48"/>
         <image name="Vector" width="20" height="20"/>
         <image name="appleIcon" width="22" height="25"/>
-        <image name="carbon_watson-machine-learning" width="109" height="109"/>
         <image name="emailIcon" width="28" height="23"/>
         <image name="github" width="48" height="46"/>
         <image name="googleIcon" width="25" height="25"/>

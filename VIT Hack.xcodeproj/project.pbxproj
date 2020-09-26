@@ -29,6 +29,8 @@
 		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
 		5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E68251D9E86005C2536 /* light.mp4 */; };
 		5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6A251DA527005C2536 /* dark.mp4 */; };
+		5B8B1E6D251E2FF4005C2536 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */; };
+		5B8B1E6F251E497B005C2536 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
 		5B9A16A624CF0E70009B5311 /* AppleSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A16A524CF0E70009B5311 /* AppleSignin.swift */; };
@@ -113,6 +115,8 @@
 		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5B8B1E68251D9E86005C2536 /* light.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = light.mp4; path = ../../light.mp4; sourceTree = "<group>"; };
 		5B8B1E6A251DA527005C2536 /* dark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dark.mp4; path = ../../dark.mp4; sourceTree = "<group>"; };
+		5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B9A16A524CF0E70009B5311 /* AppleSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignin.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */,
 				5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */,
 				5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */,
+				5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */,
 				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
 				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
 				5B9F673D24D00566005CBD22 /* Tabbar.swift */,
@@ -358,6 +363,7 @@
 				775B1FEB2436601500E6F221 /* Reachability.swift */,
 				775B1FED2436604300E6F221 /* statusBarView.swift */,
 				5B79D92524FE0337001E2F8C /* NetworkListener.swift */,
+				5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -626,9 +632,11 @@
 				5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */,
 				5BE25AED24D1385E00E33FAB /* ViewController.swift in Sources */,
 				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
+				5B8B1E6D251E2FF4005C2536 /* PreviewViewController.swift in Sources */,
 				5BBD887924BE3237009E8F8E /* SignupViewController.swift in Sources */,
 				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				5BBD888124BE3858009E8F8E /* ForgotPasswordViewController.swift in Sources */,
+				5B8B1E6F251E497B005C2536 /* StoreReviewHelper.swift in Sources */,
 				775B1FFF2436634900E6F221 /* keyboard+Hide.swift in Sources */,
 				77D6AA342449EE1500E405B1 /* TimelineData.swift in Sources */,
 				5BBD888324BE3F23009E8F8E /* TimelineViewController.swift in Sources */,
@@ -781,7 +789,7 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = I;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
 				MARKETING_VERSION = 1.0.9;
@@ -802,7 +810,7 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = I;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
 				MARKETING_VERSION = 1.0.9;

@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
+    @IBOutlet weak var card: UIView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileBack: UIView!
     
     //VARIABLES
     var profileTitles = ["Your Name","Email Address","Your Institute","Registration Number"]
@@ -34,6 +37,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         tableHeight = profileTabel.frame.height
+        profileImage.layer.cornerRadius = profileImage.frame.width/2
+        profileBack.layer.cornerRadius = profileBack.frame.width/2
         self.profileTabel.reloadData()
     }
     

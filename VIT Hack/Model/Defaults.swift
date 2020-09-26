@@ -49,6 +49,14 @@ class Defaults
     static func networkDisconnected() -> Bool {
         return (userDefaults.value(forKey: Keys.network) as? Bool) ?? false
     }
+    
+    static func appOpenCount() -> Int {
+        return (userDefaults.value(forKey: Keys.appOpenCount) as? Int) ?? 1
+    }
+    
+    static func hackStartReview() -> Bool {
+       return (UserDefaults.standard.value(forKey: Keys.hackStarted) as? Bool) ?? true
+    }
 }
 
 

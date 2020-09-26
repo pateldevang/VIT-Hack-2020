@@ -29,9 +29,9 @@ class TimelineCell: UITableViewCell {
             bottom.priority = UILayoutPriority(rawValue: 1000)
         } else {
             watchNowButton.isHidden = false
-            bottom.priority = UILayoutPriority(rawValue: 500)
+            bottom.priority = UILayoutPriority(rawValue: 1)
+            addShadow()
         }
-        addShadow()
         titleLabel.text = timeline.title
         bodyTextView.text = timeline.subtitle
         

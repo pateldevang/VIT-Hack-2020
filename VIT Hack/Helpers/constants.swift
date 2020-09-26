@@ -26,6 +26,10 @@ public func debugLog(message: String) {
     #endif
 }
 
+struct Social {
+    static let discord = "https://discord.gg/UX26KdG"
+}
+
 struct Keys {
     static let uid = "uid"
     static let name = "name"
@@ -35,6 +39,8 @@ struct Keys {
     static let fcmToken = "fcmToken"
     static let onboard = "onbaord"
     static let network = "network"
+    static let appOpenCount = "appOpenCount"
+    static let hackStarted = "hackStarted"
 }
 
 struct ControllerKeys {

@@ -25,6 +25,11 @@ class QuestionViewController: UIViewController {
         initialSetup()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        askTextView.text = ""
+    }
+    
     func initialSetup(){
         askButton.bottomShadow()
         cancelButton.outline()

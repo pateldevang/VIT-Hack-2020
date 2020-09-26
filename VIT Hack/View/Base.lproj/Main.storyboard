@@ -338,6 +338,7 @@
                         <outlet property="collectionView" destination="Sqv-wn-eMF" id="kmG-tt-K4n"/>
                         <outlet property="flowLayout" destination="i2D-Mv-Eyc" id="hzR-Vb-7tm"/>
                         <outlet property="pageControl" destination="4ze-Zm-yOg" id="KGu-pv-fz8"/>
+                        <outlet property="skipButton" destination="JMq-ec-mwl" id="qCw-YP-78o"/>
                         <segue destination="WwK-lo-Aqp" kind="show" identifier="home" id="abA-r4-eSr"/>
                     </connections>
                 </viewController>

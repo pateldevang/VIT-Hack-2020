@@ -31,21 +31,24 @@ class AboutUsCell: UICollectionViewCell {
     
     var delegate: SocialDelegate?
     
-    override func layoutIfNeeded() {
-        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
-        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
-        photoBack.clipsToBounds = true
-    }
+//    override func layoutIfNeeded() {
+//        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
+//        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
+//        photoBack.clipsToBounds = true
+//    }
     
     func setupCell(_ data : [socialMedia]){
         
         /// Corner radius
         card.layer.cornerRadius = 12
-        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
-        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
-        profilePhoto.clipsToBounds = true
-        photoBack.clipsToBounds = true
+
+       //profilePhoto.clipsToBounds = true
+        //photoBack.clipsToBounds = true
+        let halfValue = photoBack.frame.width/2
         
+        topanchor.constant = -halfValue
+        
+        layoutIfNeeded()
         
         /// Background Shadow
         layer.cornerRadius = 15.0
@@ -61,6 +64,9 @@ class AboutUsCell: UICollectionViewCell {
         image1.image = UIImage(named: data[0].rawValue)
         image2.image = UIImage(named: data[1].rawValue)
         image3.image = UIImage(named: data[2].rawValue)
+        
+//        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
+//        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {

@@ -18,7 +18,7 @@ class AboutUsViewController: UIViewController {
     /// `datasource` of collectionview
     var aboutUs = [
         AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "aaryan", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","aaryan.kothari@gmail.com"]),
-        AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
+        AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "devang", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
         AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "garima", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/garima94921","https://www.linkedin.com/in/garima-bothra/","gaarimabothra@gmail.com"]),
         AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "rohan", socialHandles: [.dribble,.LinkedIn,.mail], socailUrls: ["https://rohanxdesign.in","https://www.linkedin.com/in/rohanxdesign/","rohanxdesign@gmail.com"]),
         AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
@@ -48,6 +48,9 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         cell.button1.tag = (10 * indexPath.item)
         cell.button2.tag = (10 * indexPath.item) + 1
         cell.button3.tag = (10 * indexPath.item) + 2
+        
+        cell.photoBack.layer.cornerRadius = cell.photoBack.frame.size.width/2
+        cell.profilePhoto.layer.cornerRadius = cell.profilePhoto.frame.width/2
         return cell
     }
     
@@ -91,9 +94,14 @@ extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     /// Dynamic cell size `According to screen size!`
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width - 80
-        let cellWidth = width/2
-        let cellHeight = cellWidth * 4/3
-        return CGSize(width: cellWidth, height: cellHeight)
+        if width > 250 {
+            let cellWidth = width/2
+            let cellHeight = cellWidth * 4/3
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else {
+            let cellHeight = width * 4/3
+            return CGSize(width: width, height: cellHeight)
+        }
     }
 }
 

@@ -1792,7 +1792,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="Tcm-Vr-LWd" firstAttribute="top" secondItem="vUb-ge-epq" secondAttribute="top" id="EMs-hE-h2W"/>
                                                             <constraint firstItem="GHb-eM-1ll" firstAttribute="top" secondItem="vUb-ge-epq" secondAttribute="top" id="Q7U-d5-al9"/>
@@ -1817,7 +1817,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="fNW-r6-6De" firstAttribute="top" secondItem="W0d-y6-Vgm" secondAttribute="top" id="29x-lo-wCQ"/>
                                                             <constraint firstItem="fNW-r6-6De" firstAttribute="leading" secondItem="W0d-y6-Vgm" secondAttribute="leading" id="6rE-Z9-NUU"/>
@@ -1842,7 +1842,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="Epe-l1-u75" firstAttribute="top" secondItem="XXJ-am-sSm" secondAttribute="top" id="7Ha-hZ-OYG"/>
                                                             <constraint firstItem="U8o-ug-Prb" firstAttribute="leading" secondItem="XXJ-am-sSm" secondAttribute="leading" id="7T8-G9-fpq"/>
@@ -1867,7 +1867,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="LQS-Cn-6cc" secondAttribute="bottom" id="494-ZY-uu6"/>
                                                             <constraint firstItem="DMK-ST-9eF" firstAttribute="leading" secondItem="bRG-t3-nHD" secondAttribute="leading" id="9r3-cq-Ajd"/>
@@ -1880,7 +1880,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="XXJ-am-sSm" secondAttribute="bottom" id="3Dv-yw-Sv8"/>
                                                     <constraint firstItem="bRG-t3-nHD" firstAttribute="leading" secondItem="XXJ-am-sSm" secondAttribute="trailing" id="5OM-aQ-aKx"/>
@@ -1904,7 +1904,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="WnW-jg-CBZ" firstAttribute="centerX" secondItem="JQ2-tX-Fnj" secondAttribute="centerX" id="QZ8-je-mVY"/>
                                             <constraint firstItem="WnW-jg-CBZ" firstAttribute="height" secondItem="JQ2-tX-Fnj" secondAttribute="height" multiplier="0.5" id="jOk-sC-xdo"/>

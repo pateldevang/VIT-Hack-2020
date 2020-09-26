@@ -161,9 +161,9 @@ class firebaseNetworking {
                 FAQDataArray.append(FAQ)
             }
             // Completion handler
+            ControllerDefaults.saveFAQs(FAQDataArray)
             completion(true, FAQDataArray)
         }) { (error) in // Error Handling
-            ControllerDefaults.saveFAQs(FAQDataArray)
             completion(false, FAQDataArray)
             debugPrint(error.localizedDescription)
         }
@@ -219,9 +219,9 @@ class firebaseNetworking {
             if let t6 = enumerator[5] as? DataSnapshot { domain.problemStatements = t6.value as? [String] }
             
             domainDataArray.append(domain)  // Appending into domainDataArray
+            ControllerDefaults.saveTracks(domainDataArray)
             completion(true, domainDataArray)  // Completion handler
         }) { (error) in // Error Handling
-            ControllerDefaults.saveTracks(domainDataArray)
             completion(false, domainDataArray)
             debugPrint(error.localizedDescription)
         }

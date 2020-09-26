@@ -124,6 +124,8 @@ extension AboutUsViewController : MFMailComposeViewControllerDelegate{
             mail.setMessageBody("<p>VIT Hacks iOS app is amazing!</p>", isHTML: true)
             
             present(mail, animated: true)
+        } else {
+            authAlert(message: "Mail not setup!")
         }
     }
     

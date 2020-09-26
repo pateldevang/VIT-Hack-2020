@@ -12,6 +12,7 @@ class TracksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var subtitel: UILabel!
+    @IBOutlet weak var crossButton: UIButton!
     
     var domain = DomainData()
     var tracks = [String]()
@@ -20,8 +21,15 @@ class TracksViewController: UIViewController {
     
     override func viewDidLoad() {
         subtitel.text = domain.description ?? ""
+        if #available(iOS 13, *){
+            crossButton.isHidden = true
+        }
     }
-
+    
+    @IBAction func dismissView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension TracksViewController : UITableViewDelegate, UITableViewDataSource {

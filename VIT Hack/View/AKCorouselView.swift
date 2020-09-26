@@ -41,7 +41,7 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
         
         let fullSizeSideItemOverlap = 30 + scaledItemOffset
         let inset = xInset
-        self.minimumLineSpacing = inset - fullSizeSideItemOverlap
+        self.minimumLineSpacing = inset - fullSizeSideItemOverlap + calculateMisc()
     }
     
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
@@ -93,6 +93,14 @@ open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
         
         
         return offset
+    }
+    
+    func calculateMisc()->CGFloat{
+        if UIScreen.main.bounds.width < 330{
+            return 20
+        } else {
+            return 5
+        }
     }
     
 }

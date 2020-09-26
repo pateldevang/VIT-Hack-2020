@@ -20,7 +20,6 @@ class UserFormViewController: UIViewController {
     
     var newUser = User()
     var isEmail = false
-    var textfieldBottom : CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +32,12 @@ class UserFormViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showProgress()
-        nameTextField.setUnderLine()
-        instituteNameTextField.setUnderLine()
-        registrationNumberTextField.setUnderLine()
     }
     
     override func viewDidLayoutSubviews() {
-        let frame = registrationNumberTextField.convert(view.frame, from:view).maxY
-        textfieldBottom = (textfieldBottom == 0.0) ? frame : textfieldBottom
+        nameTextField.setUnderLine()
+        instituteNameTextField.setUnderLine()
+        registrationNumberTextField.setUnderLine()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

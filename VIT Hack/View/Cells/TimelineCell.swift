@@ -26,7 +26,7 @@ class TimelineCell: UITableViewCell {
     func setupCell(_ timeline : TimelineData) {
         if timeline.link == ""{
             watchNowButton.isHidden = true
-            bottom.priority = UILayoutPriority(rawValue: 1000)
+            bottom.priority = UILayoutPriority(rawValue: 999)
         } else {
             watchNowButton.isHidden = false
             bottom.priority = UILayoutPriority(rawValue: 1)

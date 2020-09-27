@@ -173,7 +173,7 @@ extension TimelineViewController {
 
 extension TimelineViewController {
     @objc func watchnow(sender : UIButton){
-        let link = timeline[sender.tag].link
+        let link = filteredTimeline[sender.tag].link
         openWebsite(link)
     }
 }

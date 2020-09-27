@@ -21,11 +21,15 @@ class PhoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneNumberTextField.setUnderLine()
         continueButton.bottomShadow()
         setupPhoneField()
         hideKeyboardWhenTappedAround()
         loadButton(false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        phoneNumberTextField.setUnderLine()
     }
     
     override func viewDidAppear(_ animated: Bool) {

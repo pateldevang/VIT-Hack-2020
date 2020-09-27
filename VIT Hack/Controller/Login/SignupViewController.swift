@@ -18,12 +18,16 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.setUnderLine()
-        passwordTextField.setUnderLine()
         continueButton.bottomShadow()
         hideKeyboardWhenTappedAround()
         addInputAccessoryForTextFields(textFields: [emailTextField,passwordTextField])
         loadButton(false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        emailTextField.setUnderLine()
+        passwordTextField.setUnderLine()
     }
     
     override func viewDidAppear(_ animated: Bool) {

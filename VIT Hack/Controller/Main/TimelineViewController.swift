@@ -33,17 +33,18 @@ class TimelineViewController: UIViewController {
         if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
         floatingButton()
-        for button in dayButtons{
-            button.layer.borderWidth = 1.0
-            button.layer.borderColor = UIColor(named: "blue")?.cgColor
-            button.layer.cornerRadius = 22.5
-        }
+ 
         dayTapped(dayButtons[lastDate])
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         floatingButton()
+        for button in dayButtons{
+             button.layer.borderWidth = 1.0
+             button.layer.borderColor = UIColor(named: "blue")?.cgColor
+             button.layer.cornerRadius = button.frame.height/2
+         }
     }
     
     @IBAction func dayTapped(_ sender: UIButton) {

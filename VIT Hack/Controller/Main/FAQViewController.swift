@@ -138,3 +138,31 @@ extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UI
         }
     }
 }
+
+@available(iOS 13.0, *)
+extension FAQViewController {
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: { suggestedActions in
+            return self.makeContextMenu(for: indexPath.row)
+        })
+    }
+
+    
+    func makeContextMenu(for index:Int) -> UIMenu {
+        let share = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up"), identifier: nil, discoverabilityTitle: nil) { (_) in
+            self.share(index)
+        }
+    
+        let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
+        return UIMenu(title: "", children: [share,cancel])
+    }
+    
+    func share(_ index : Int){
+        let faq = staticFAQ[index]
+        let text = (faq.question ?? "") + "\n\n" + (faq.answer ?? "")
+        let items = [text]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+    }
+    
+}

@@ -13,6 +13,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var skipButton: UIButton!
     
     let cellIdentifier = "OnboardingCell"
     let onboardingData : [Onboarding] = [.init(title1: "Welcome to", title2: "VIT HACK", image: #imageLiteral(resourceName: "1"), body: "VIT Hack is one of the best Pan-Indian hack-a-thons where participants creatively use cutting edge technology to solve societal problems, and compete for exciting prizes."),.init(title1: "Problem Statements", title2: "on their way", image: #imageLiteral(resourceName: "2"), body: "Get a chance to learn, ideate and grow. Pitch your wildest ideas to real-life investors and win the opportunity of getting invested, internships and many more!"),.init(title1: "Let’s hustle", title2: "to solve and win!", image: #imageLiteral(resourceName: "3"), body: "From Mentor talks, webinars, mentorships, project collabs, workshops, forums to discuss and many more...VIT Hack being a major hack-a-thon, compete at a high level and gain tremendous exposure.")]
@@ -57,13 +58,8 @@ extension OnboardingViewController : UICollectionViewDelegateFlowLayout {
 extension OnboardingViewController :UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        let title = (self.pageControl.currentPage == 2) ? "Next" : "Skip"
+        self.skipButton.setTitle(title, for: .normal)
     }
 }
 
-
-struct Onboarding {
-    let title1 : String
-    let title2 : String
-    let image : UIImage
-    let body : String
-}

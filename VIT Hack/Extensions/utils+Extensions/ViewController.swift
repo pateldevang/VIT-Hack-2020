@@ -62,4 +62,17 @@ extension UIViewController {
             textField.inputAccessoryView = toolbar
         }
     }
+    
+    func addDoneButtonToolbar(textField: UITextField) {
+        
+        let toolbar: UIToolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: view, action: #selector(UIView.endEditing))
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolbar.setItems([spacer ,doneButton], animated: false)
+        textField.inputAccessoryView = toolbar
+    }
 }

@@ -60,9 +60,9 @@ class QuestionViewController: UIViewController {
     }
     
     func askQuestion(){
-        if !askTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            let question = ["\(Int(Date().timeIntervalSince1970*1000))":askTextView.text!]
-            print(question)
+        let text = askTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !text.isEmpty {
+            let question = ["\(Int(Date().timeIntervalSince1970*1000))":text]
             firebaseNetworking.shared.postQuestion(param: question, completion: handleQuestion(success:))
         }
     }

@@ -22,6 +22,7 @@
 		5B49B9CF24D2070D00EEF2E8 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */; };
 		5B4AC2AA251709DC00534934 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2A9251709DC00534934 /* ProfileCell.swift */; };
 		5B4AC2AC2517258300534934 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AB2517258300534934 /* Safari.swift */; };
+		5B51DF48251F7C55002222F2 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B51DF47251F7C55002222F2 /* OnboardingData.swift */; };
 		5B6F635124D49F08005753AB /* firebaseCloudMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */; };
 		5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D92524FE0337001E2F8C /* NetworkListener.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
@@ -29,7 +30,6 @@
 		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
 		5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E68251D9E86005C2536 /* light.mp4 */; };
 		5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6A251DA527005C2536 /* dark.mp4 */; };
-		5B8B1E6D251E2FF4005C2536 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */; };
 		5B8B1E6F251E497B005C2536 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
@@ -108,6 +108,7 @@
 		5B49B9CE24D2070D00EEF2E8 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		5B4AC2A9251709DC00534934 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		5B4AC2AB2517258300534934 /* Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
+		5B51DF47251F7C55002222F2 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseCloudMessaging.swift; sourceTree = "<group>"; };
 		5B79D92524FE0337001E2F8C /* NetworkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5B8B1E68251D9E86005C2536 /* light.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = light.mp4; path = ../../light.mp4; sourceTree = "<group>"; };
 		5B8B1E6A251DA527005C2536 /* dark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dark.mp4; path = ../../dark.mp4; sourceTree = "<group>"; };
-		5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 				5BBD888224BE3F23009E8F8E /* TimelineViewController.swift */,
 				5BBD888424BE3F30009E8F8E /* ProfileViewController.swift */,
 				5BBD888624BE3F3C009E8F8E /* DomainsViewController.swift */,
-				5B8B1E6C251E2FF4005C2536 /* PreviewViewController.swift */,
 				5BBD888A24BE3F59009E8F8E /* SpeakersViewController.swift */,
 				5BBD888C24BE3F68009E8F8E /* AboutUsViewController.swift */,
 				5B9F673D24D00566005CBD22 /* Tabbar.swift */,
@@ -344,6 +343,7 @@
 				5B3E9E8B24C3246C0038CF05 /* SpeakersData.swift */,
 				5B44651F24C8B46C00E2D47F /* AboutUsData.swift */,
 				5BE25AEE24D154B700E33FAB /* DomainData.swift */,
+				5B51DF47251F7C55002222F2 /* OnboardingData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -625,6 +625,7 @@
 				5BBD888D24BE3F68009E8F8E /* AboutUsViewController.swift in Sources */,
 				5B9F673E24D00566005CBD22 /* Tabbar.swift in Sources */,
 				775B1FF02436607300E6F221 /* constants.swift in Sources */,
+				5B51DF48251F7C55002222F2 /* OnboardingData.swift in Sources */,
 				5B3E9E9024C329CD0038CF05 /* SponsorsCell.swift in Sources */,
 				5BBD889524BE41CE009E8F8E /* TimelineCell.swift in Sources */,
 				5B9A16A824CF125F009B5311 /* Button.swift in Sources */,
@@ -632,7 +633,6 @@
 				5B3E9E8E24C329C10038CF05 /* CollaboratorsCell.swift in Sources */,
 				5BE25AED24D1385E00E33FAB /* ViewController.swift in Sources */,
 				775B1FF92436622D00E6F221 /* haptic+Feedback.swift in Sources */,
-				5B8B1E6D251E2FF4005C2536 /* PreviewViewController.swift in Sources */,
 				5BBD887924BE3237009E8F8E /* SignupViewController.swift in Sources */,
 				776A7FBF24470A9D00D6349C /* googleSignIn.swift in Sources */,
 				5BBD888124BE3858009E8F8E /* ForgotPasswordViewController.swift in Sources */,
@@ -789,7 +789,7 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
 				MARKETING_VERSION = 1.0.9;
@@ -810,7 +810,7 @@
 				CODE_SIGN_ENTITLEMENTS = "VIT Hack/VIT Hack.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "VIT Hack/Info.plist";
 				MARKETING_VERSION = 1.0.9;

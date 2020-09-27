@@ -18,11 +18,11 @@ class AboutUsViewController: UIViewController {
     /// `datasource` of collectionview
     var aboutUs = [
         AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "aaryan", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","aaryan.kothari@gmail.com"]),
-        AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
+        AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "devang", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
         AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "garima", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/garima94921","https://www.linkedin.com/in/garima-bothra/","gaarimabothra@gmail.com"]),
         AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "rohan", socialHandles: [.dribble,.LinkedIn,.mail], socailUrls: ["https://rohanxdesign.in","https://www.linkedin.com/in/rohanxdesign/","rohanxdesign@gmail.com"]),
-        AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
-        AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "original", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/VibhorChinda","https://www.linkedin.com/in/vibhor-chinda-465927169/","vibhorchinda@gmail.com"])]
+        AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "hemanth", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
+        AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "vibhor", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/VibhorChinda","https://www.linkedin.com/in/vibhor-chinda-465927169/","vibhorchinda@gmail.com"])]
     
     ///Cell Identifier of AboutUs Cell
     let aboutusIdentifier = "aboutuscell"
@@ -39,11 +39,12 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         let data = aboutUs[indexPath.row]
         
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: aboutusIdentifier, for: indexPath) as! AboutUsCell
-        
+        cell.layoutIfNeeded()
         cell.name.text = data.name
         cell.profilePhoto.image = UIImage(named: data.image)
         cell.designation.text = data.role
-        cell.setupCell(data.socialHandles)
+        let width = calculateSize().width * 0.625
+        cell.setupCell(data.socialHandles, photoRadius: (width-12)/2, backRadius: width/2)
         cell.delegate = self
         cell.button1.tag = (10 * indexPath.item)
         cell.button2.tag = (10 * indexPath.item) + 1
@@ -90,10 +91,19 @@ extension AboutUsViewController : UICollectionViewDelegateFlowLayout{
     
     /// Dynamic cell size `According to screen size!`
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return calculateSize()
+    }
+    
+    func calculateSize()->CGSize{
         let width = view.frame.width - 80
-        let cellWidth = width/2
-        let cellHeight = cellWidth * 4/3
-        return CGSize(width: cellWidth, height: cellHeight)
+        if width > 250 {
+            let cellWidth = width/2
+            let cellHeight = cellWidth * 4/3
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else {
+            let cellHeight = width * 4/3
+            return CGSize(width: width, height: cellHeight)
+        }
     }
 }
 
@@ -114,6 +124,8 @@ extension AboutUsViewController : MFMailComposeViewControllerDelegate{
             mail.setMessageBody("<p>VIT Hacks iOS app is amazing!</p>", isHTML: true)
             
             present(mail, animated: true)
+        } else {
+            authAlert(message: "Mail not setup!")
         }
     }
     

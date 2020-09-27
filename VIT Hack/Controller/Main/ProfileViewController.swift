@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileTabel: UITableView!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
-    @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileBack: UIView!
@@ -28,11 +27,13 @@ class ProfileViewController: UIViewController {
     let profileIdentifier = "ProfileCell"
     let privacyPolicy = "https://gist.githubusercontent.com/aaryankotharii/02c59dee50c694a7c180a976f5543287/raw/8ea0f530f9e699b25aaaed4eb90d3e6b5f795bbd/gistfile1.txt"
     
+    let socials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
+    
     // APP-CYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        setupPrivacyLabel()
+        //setupPrivacyLabel()
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,6 +48,10 @@ class ProfileViewController: UIViewController {
         openWebsite(privacyPolicy)
     }
     
+    @IBAction func socialTappes(_ sender: UIButton) {
+        openWebsite(socials[sender.tag])
+    }
+    
     func setupPrivacyLabel(){
         let attributesForUnderLine: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 12),
@@ -58,7 +63,7 @@ class ProfileViewController: UIViewController {
         
         let attributedText = NSMutableAttributedString(string: textToSet)
         attributedText.addAttributes(attributesForUnderLine, range: rangeOfUnderLine)
-        privacyPolicyLabel.attributedText = attributedText
+        //privacyPolicyLabel.attributedText = attributedText
     }
     
     ///Fetch data  from `Userdefaults`

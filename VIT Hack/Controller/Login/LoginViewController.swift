@@ -18,12 +18,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.setUnderLine()
-        passwordTextField.setUnderLine()
         signinButton.bottomShadow()
         hideKeyboardWhenTappedAround()
         addInputAccessoryForTextFields(textFields: [emailTextField,passwordTextField])
         loadButton(false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        emailTextField.setUnderLine()
+        passwordTextField.setUnderLine()
     }
     
     @IBAction func signin(_ sender: Any) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 import GoogleSignIn
 
 class HomeViewController: UIViewController {
@@ -23,9 +24,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         googleSetup()
-        appleButton.bottomShadow()
-        googleButton.bottomShadow()
-        emailButton.bottomShadow()
         hideNavbar()
     }
     

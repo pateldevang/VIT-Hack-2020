@@ -246,6 +246,7 @@ class firebaseNetworking {
         guard let uid = Defaults.uid() else { return }
         self.checkUser(uid: uid) { (present) in
             if present{
+                print("UPDATING FCM")
                 self.database.child("users").child(uid).updateChildValues(["fcmToken":token])
             }
         }

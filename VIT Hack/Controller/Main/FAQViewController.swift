@@ -125,6 +125,7 @@ extension FAQViewController {
 
 //MARK:- SearchController Delegate Methods
 extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         updateSearchResults(for: searchController.searchBar)
     }

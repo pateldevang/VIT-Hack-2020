@@ -23,6 +23,8 @@ class TracksViewController: UIViewController {
         subtitel.text = domain.description ?? ""
         if #available(iOS 13, *){
             crossButton.isHidden = true
+        } else {
+            crossButton.outline()
         }
     }
     

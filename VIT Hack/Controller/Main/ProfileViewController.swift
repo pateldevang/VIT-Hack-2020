@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileBack: UIView!
-    
+    @IBOutlet weak var privacyButton: UIButton!
     //VARIABLES
     var profileTitles = ["Your Name","Email Address","Your Institute","Registration Number"]
     var profileValues = ["","","",""]
@@ -25,11 +25,7 @@ class ProfileViewController: UIViewController {
     
     // CONSTANTS
     let profileIdentifier = "ProfileCell"
-    let privacyPolicy = "https://firebasestorage.googleapis.com/v0/b/project-vithack.appspot.com/o/Docs%2FiOS_privacy_policy.pdf?alt=media&token=c2020ff4-37ec-40c5-a759-584439de2209"
-    
-    let socials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
-    
-    let socials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
+
     
     // APP-CYCLE METHODS
     override func viewDidLoad() {
@@ -43,29 +39,12 @@ class ProfileViewController: UIViewController {
         profileImage.layer.cornerRadius = profileImage.frame.width/2
         profileBack.layer.cornerRadius = profileBack.frame.width/2
         self.profileTabel.reloadData()
+        self.privacyButton.outline()
     }
     
     // PRIVACY POLICY TAPPED
-    @IBAction func privacyTapped(_ sender: Any) {
-        openWebsite(privacyPolicy)
-    }
-    
-    @IBAction func socialTappes(_ sender: UIButton) {
-        openWebsite(socials[sender.tag])
-    }
-    
-    func setupPrivacyLabel(){
-        let attributesForUnderLine: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 12),
-            .foregroundColor: UIColor.blue,
-            .underlineStyle: NSUnderlineStyle.single.rawValue]
-        
-        let textToSet = "Privacy Policy"
-        let rangeOfUnderLine = (textToSet as NSString).range(of: textToSet)
-        
-        let attributedText = NSMutableAttributedString(string: textToSet)
-        attributedText.addAttributes(attributesForUnderLine, range: rangeOfUnderLine)
-        //privacyPolicyLabel.attributedText = attributedText
+    @IBAction func privacyTapped(_ sender: UIButton) {
+        openWebsite(Social.privacyPolicy)
     }
     
     ///Fetch data  from `Userdefaults`

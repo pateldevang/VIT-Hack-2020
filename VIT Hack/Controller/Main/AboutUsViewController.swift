@@ -37,6 +37,10 @@ class AboutUsViewController: UIViewController {
         }
     }
     
+    @IBAction func socialTappes(_ sender: UIButton) {
+        openWebsite(Social.vitHackSocials[sender.tag])
+    }
+    
     @IBAction func dismissView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -64,6 +68,15 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         cell.button2.tag = (10 * indexPath.item) + 1
         cell.button3.tag = (10 * indexPath.item) + 2
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+        return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 75)
     }
     
     @available(iOS 13.0, *)

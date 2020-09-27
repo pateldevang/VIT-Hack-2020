@@ -28,6 +28,8 @@ public func debugLog(message: String) {
 
 struct Social {
     static let discord = "https://discord.gg/UX26KdG"
+    static let privacyPolicy = "https://firebasestorage.googleapis.com/v0/b/project-vithack.appspot.com/o/Docs%2FiOS_privacy_policy.pdf?alt=media&token=c2020ff4-37ec-40c5-a759-584439de2209"
+    static let vitHackSocials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
 }
 
 struct Keys {

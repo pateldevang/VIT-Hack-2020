@@ -805,9 +805,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-0m-GhW">
                                 <rect key="frame" x="246" y="30" width="54" height="30"/>
-                                <state key="normal" title="Dismiss">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <state key="normal" title="Dismiss"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
@@ -823,7 +821,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xbB-0m-GhW" firstAttribute="top" secondItem="IJ7-gP-TsM" secondAttribute="top" constant="30" id="25M-Cj-VJg"/>
                             <constraint firstItem="Lc4-OS-yEB" firstAttribute="top" secondItem="PwZ-Or-WjV" secondAttribute="bottom" constant="22" id="I2v-16-NQ6"/>
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="trailing" secondItem="xbB-0m-GhW" secondAttribute="trailing" constant="20" id="LcS-71-5qe"/>
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="trailing" secondItem="Lc4-OS-yEB" secondAttribute="trailing" constant="30" id="UFu-4c-igB"/>
@@ -835,6 +832,7 @@
                             <constraint firstItem="Kgb-eE-zdh" firstAttribute="bottom" secondItem="pME-oh-M6n" secondAttribute="bottom" id="gdR-2b-PUE"/>
                             <constraint firstItem="PwZ-Or-WjV" firstAttribute="top" secondItem="IJ7-gP-TsM" secondAttribute="top" constant="60" id="i1l-xe-crz"/>
                             <constraint firstItem="pME-oh-M6n" firstAttribute="top" secondItem="Lc4-OS-yEB" secondAttribute="bottom" constant="15" id="jYG-Nc-RhH"/>
+                            <constraint firstItem="PwZ-Or-WjV" firstAttribute="top" secondItem="xbB-0m-GhW" secondAttribute="bottom" id="zyT-j1-0Wg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-eE-zdh"/>
                     </view>
@@ -1114,22 +1112,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOF-cy-MCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5957.971014492754" y="-539.0625"/>
-        </scene>
-        <!--Preview View Controller-->
-        <scene sceneID="71b-bP-9ww">
-            <objects>
-                <viewController storyboardIdentifier="PreviewViewController" id="mht-Tz-Kqv" customClass="PreviewViewController" customModule="VIT_Hack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="faD-aH-h4K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="k3o-NF-ug7"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="y12-vz-mFH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9yp-Zu-zOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7318" y="-1059"/>
         </scene>
         <!--Collab-->
         <scene sceneID="IzM-Iu-eXr">
@@ -1430,7 +1412,6 @@
                         <outlet property="collaboratorCollectionView" destination="Cvy-cA-4tC" id="lZk-Dm-3cD"/>
                         <outlet property="speakerCollectionView" destination="KkR-UI-TIi" id="Hc3-iR-Ple"/>
                         <outlet property="sponsorsCollectionView" destination="mgm-Vf-loT" id="gsh-yl-M7p"/>
-                        <segue destination="mht-Tz-Kqv" kind="show" identifier="ok" id="9Cs-sK-pif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G37-83-Uew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1881,10 +1862,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-6U-5sV">
-                                        <rect key="frame" x="82.5" y="275" width="155" height="32.5"/>
+                                        <rect key="frame" x="82.5" y="268.5" width="155" height="39"/>
                                         <color key="backgroundColor" name="blue"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="GhC-6U-5sV" secondAttribute="height" multiplier="300:63" id="AxG-hy-fB6"/>
+                                            <constraint firstAttribute="width" secondItem="GhC-6U-5sV" secondAttribute="height" multiplier="250:63" id="AxG-hy-fB6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Log out">
@@ -1900,7 +1881,7 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-mj-GLR">
-                                        <rect key="frame" x="33" y="49" width="257" height="216"/>
+                                        <rect key="frame" x="33" y="49" width="257" height="209.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
@@ -1960,8 +1941,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ2-tX-Fnj">
                                         <rect key="frame" x="0.0" y="307.5" width="320" height="55"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FS5-wo-cdM">
-                                                <rect key="frame" x="100" y="13" width="120" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FS5-wo-cdM">
+                                                <rect key="frame" x="100" y="12.5" width="120" height="30"/>
                                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="Privacy Policy">
                                                     <color key="titleColor" name="blue"/>
@@ -1986,6 +1967,7 @@
                                     <constraint firstItem="KzM-pm-scn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="caq-34-H8n" secondAttribute="leading" priority="900" constant="175" id="GOM-CU-rp2"/>
                                     <constraint firstAttribute="bottom" secondItem="GhC-6U-5sV" secondAttribute="bottom" constant="55" id="IVa-EP-zI4"/>
                                     <constraint firstItem="GhC-6U-5sV" firstAttribute="width" secondItem="caq-34-H8n" secondAttribute="width" multiplier="0.483092" id="Ik7-rZ-Ula"/>
+                                    <constraint firstItem="FS5-wo-cdM" firstAttribute="width" secondItem="GhC-6U-5sV" secondAttribute="width" multiplier="0.774194" id="JOy-RU-vIs"/>
                                     <constraint firstAttribute="top" secondItem="KzM-pm-scn" secondAttribute="bottom" constant="-74" id="KyP-3Q-u6l"/>
                                     <constraint firstItem="KzM-pm-scn" firstAttribute="width" secondItem="caq-34-H8n" secondAttribute="width" multiplier="0.394667" id="Yds-3U-ulg"/>
                                     <constraint firstItem="JQ2-tX-Fnj" firstAttribute="leading" secondItem="caq-34-H8n" secondAttribute="leading" id="dd8-Rn-5SI"/>

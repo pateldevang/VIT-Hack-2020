@@ -15,6 +15,8 @@ class AboutUsViewController: UIViewController {
     /// Collectionview to present `AboutUs` data.
     @IBOutlet weak var collectionview: UICollectionView!
     
+    @IBOutlet weak var dismissButton: UIButton!
+    
     /// `datasource` of collectionview
     var aboutUs = [
         AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "aaryan", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","aaryan.kothari@gmail.com"]),
@@ -26,6 +28,18 @@ class AboutUsViewController: UIViewController {
     
     ///Cell Identifier of AboutUs Cell
     let aboutusIdentifier = "aboutuscell"
+    
+    override func viewDidLoad() {
+        if #available(iOS 13, * ){
+            dismissButton.isHidden = true
+        } else {
+            dismissButton.outline()
+        }
+    }
+    
+    @IBAction func dismissView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK:- CollectionView Datasource + Delegate Methods

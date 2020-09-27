@@ -25,7 +25,9 @@ class ProfileViewController: UIViewController {
     
     // CONSTANTS
     let profileIdentifier = "ProfileCell"
-    let privacyPolicy = "https://gist.githubusercontent.com/aaryankotharii/02c59dee50c694a7c180a976f5543287/raw/8ea0f530f9e699b25aaaed4eb90d3e6b5f795bbd/gistfile1.txt"
+    let privacyPolicy = "https://firebasestorage.googleapis.com/v0/b/project-vithack.appspot.com/o/Docs%2FiOS_privacy_policy.pdf?alt=media&token=c2020ff4-37ec-40c5-a759-584439de2209"
+    
+    let socials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
     
     let socials = ["https://www.linkedin.com/company/hackvit/","https://www.instagram.com/vithack2020/","https://twitter.com/VITHack2020/","https://www.facebook.com/vithack19/"]
     

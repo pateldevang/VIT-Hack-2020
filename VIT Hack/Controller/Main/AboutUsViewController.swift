@@ -15,17 +15,35 @@ class AboutUsViewController: UIViewController {
     /// Collectionview to present `AboutUs` data.
     @IBOutlet weak var collectionview: UICollectionView!
     
+    @IBOutlet weak var dismissButton: UIButton!
+    
     /// `datasource` of collectionview
     var aboutUs = [
         AboutUsData(name: "Aaryan Kothari", role: "iOS Developer", image: "aaryan", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/aaryankotharii","https://www.linkedin.com/in/aaryankotharii/","aaryan.kothari@gmail.com"]),
         AboutUsData(name: "Devang Patel", role: "iOS Developer", image: "devang", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/pateldevang","https://www.linkedin.com/in/devangpatel-in/","devangdayalal.patel2018@vitstudent.ac.in"]),
         AboutUsData(name: "Garima Bothra", role: "iOS Developer", image: "garima", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/garima94921","https://www.linkedin.com/in/garima-bothra/","gaarimabothra@gmail.com"]),
-        AboutUsData(name: "Rohan Arora", role: "UX/UI Designer", image: "rohan", socialHandles: [.dribble,.LinkedIn,.mail], socailUrls: ["https://rohanxdesign.in","https://www.linkedin.com/in/rohanxdesign/","rohanxdesign@gmail.com"]),
-        AboutUsData(name: "Hemanth Krishna", role: "Android Developer", image: "hemanth", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
-        AboutUsData(name: "Vibhor Chinda", role: "Android Developer", image: "vibhor", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/VibhorChinda","https://www.linkedin.com/in/vibhor-chinda-465927169/","vibhorchinda@gmail.com"])]
+        AboutUsData(name: "Rohan Arora", role: "UI/UX Designer", image: "rohan", socialHandles: [.dribble,.LinkedIn,.mail], socailUrls: ["https://rohanxdesign.in","https://www.linkedin.com/in/rohanxdesign/","rohanxdesign@gmail.com"]),
+        AboutUsData(name: "Hemanth Krishna", role: "App Developer", image: "hemanth", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/DarthBenro008","https://www.linkedin.com/in/darthbenro008","hemanth.krishna2019@vitstudent.ac.in"]),
+        AboutUsData(name: "Vibhor Chinda", role: "App Developer", image: "vibhor", socialHandles: [.github,.LinkedIn,.mail], socailUrls: ["https://github.com/VibhorChinda","https://www.linkedin.com/in/vibhor-chinda-465927169/","vibhorchinda@gmail.com"])]
     
     ///Cell Identifier of AboutUs Cell
     let aboutusIdentifier = "aboutuscell"
+    
+    override func viewDidLoad() {
+        if #available(iOS 13, * ){
+            dismissButton.isHidden = true
+        } else {
+            dismissButton.outline()
+        }
+    }
+    
+    @IBAction func socialTappes(_ sender: UIButton) {
+        openWebsite(Social.vitHackSocials[sender.tag])
+    }
+    
+    @IBAction func dismissView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK:- CollectionView Datasource + Delegate Methods
@@ -50,6 +68,15 @@ extension AboutUsViewController : UICollectionViewDelegate, UICollectionViewData
         cell.button2.tag = (10 * indexPath.item) + 1
         cell.button3.tag = (10 * indexPath.item) + 2
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
+        return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 75)
     }
     
     @available(iOS 13.0, *)

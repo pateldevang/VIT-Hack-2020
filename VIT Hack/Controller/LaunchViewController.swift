@@ -57,6 +57,7 @@ class LaunchViewController: UIViewController {
             let VC = mainStoryboard.instantiateViewController(withIdentifier: "onbaording") as! OnboardingViewController
             setViewController(VC)
         } else {
+            firebaseNetworking.shared.updateFCM(token: Defaults.fcmToken())
             if loginstatus{
                 let VC = mainStoryboard.instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
                 setViewController(VC)

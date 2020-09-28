@@ -33,7 +33,12 @@ class FAQViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationItem.searchController = searchController
+        if #available(iOS 13.0, *) {
+            self.navigationItem.searchController = self.searchController;
+        } else {
+            self.tableView.tableHeaderView = self.searchController.searchBar;
+            searchController.searchBar.barTintColor = .white
+        }
     }
     
     fileprivate func setupSearchController() {
@@ -70,7 +75,7 @@ class FAQViewController: UITableViewController {
     }
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         self.tableView.reloadData()
-     }
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -120,6 +125,7 @@ extension FAQViewController {
 
 //MARK:- SearchController Delegate Methods
 extension FAQViewController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         updateSearchResults(for: searchController.searchBar)
     }
@@ -146,13 +152,13 @@ extension FAQViewController {
             return self.makeContextMenu(for: indexPath.row)
         })
     }
-
+    
     
     func makeContextMenu(for index:Int) -> UIMenu {
         let share = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up"), identifier: nil, discoverabilityTitle: nil) { (_) in
             self.share(index)
         }
-    
+        
         let cancel = UIAction(title: "Cancel", attributes: .destructive) { _ in}
         return UIMenu(title: "", children: [share,cancel])
     }

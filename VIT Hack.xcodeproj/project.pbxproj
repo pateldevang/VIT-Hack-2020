@@ -10,6 +10,8 @@
 		5B086C3B24BF80FF00D5264C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C3A24BF80FF00D5264C /* Defaults.swift */; };
 		5B086C6224C0188A00D5264C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6124C0188A00D5264C /* OnboardingViewController.swift */; };
 		5B086C6624C01D6500D5264C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B086C6524C01D6500D5264C /* OnboardingCell.swift */; };
+		5B1B4B462521C25800398B0D /* dark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B1B4B442521C25700398B0D /* dark.mp4 */; };
+		5B1B4B472521C25800398B0D /* light.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B1B4B452521C25800398B0D /* light.mp4 */; };
 		5B3A06BF24DAF62F00687B1E /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */; };
 		5B3A06C124DAFF8F00687B1E /* FaqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06C024DAFF8F00687B1E /* FaqCell.swift */; };
 		5B3A06C324DB008400687B1E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A06C224DB008400687B1E /* QuestionViewController.swift */; };
@@ -28,8 +30,6 @@
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
 		5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E60251D22E1005C2536 /* Gif.swift */; };
 		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
-		5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E68251D9E86005C2536 /* light.mp4 */; };
-		5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6A251DA527005C2536 /* dark.mp4 */; };
 		5B8B1E6F251E497B005C2536 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
 		5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */; };
@@ -96,6 +96,8 @@
 		5B086C3A24BF80FF00D5264C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B086C6124C0188A00D5264C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		5B086C6524C01D6500D5264C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		5B1B4B442521C25700398B0D /* dark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dark.mp4; sourceTree = "<group>"; };
+		5B1B4B452521C25800398B0D /* light.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = light.mp4; sourceTree = "<group>"; };
 		5B3A06BE24DAF62F00687B1E /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		5B3A06C024DAFF8F00687B1E /* FaqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCell.swift; sourceTree = "<group>"; };
 		5B3A06C224DB008400687B1E /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
 		5B8B1E60251D22E1005C2536 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		5B8B1E68251D9E86005C2536 /* light.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = light.mp4; path = ../../light.mp4; sourceTree = "<group>"; };
-		5B8B1E6A251DA527005C2536 /* dark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dark.mp4; path = ../../dark.mp4; sourceTree = "<group>"; };
 		5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
 		5B99843225123BDA00EBBA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 		7742B9FE24365A3200030DF5 /* VIT Hack */ = {
 			isa = PBXGroup;
 			children = (
-				5B8B1E68251D9E86005C2536 /* light.mp4 */,
-				5B8B1E6A251DA527005C2536 /* dark.mp4 */,
+				5B1B4B442521C25700398B0D /* dark.mp4 */,
+				5B1B4B452521C25800398B0D /* light.mp4 */,
 				775B1FE924365FBD00E6F221 /* Extensions */,
 				775B1FF12436613C00E6F221 /* Firebase Auth */,
 				775B2000243663BC00E6F221 /* Firebase Data Manager */,
@@ -492,21 +492,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1B4B472521C25800398B0D /* light.mp4 in Resources */,
 				5BBD886E24BE2C53009E8F8E /* Lato-Black.ttf in Resources */,
 				5BBD887524BE2C53009E8F8E /* Lato-ThinItalic.ttf in Resources */,
 				5BBD886C24BE2C53009E8F8E /* Lato-Italic.ttf in Resources */,
 				5BBD886D24BE2C53009E8F8E /* Lato-Bold.ttf in Resources */,
-				5B8B1E69251D9E86005C2536 /* light.mp4 in Resources */,
 				5BBD887324BE2C53009E8F8E /* Lato-Light.ttf in Resources */,
 				5BBD886F24BE2C53009E8F8E /* Lato-BoldItalic.ttf in Resources */,
 				5BBD887224BE2C53009E8F8E /* Lato-Thin.ttf in Resources */,
 				7742BA0A24365A3300030DF5 /* LaunchScreen.storyboard in Resources */,
-				5B8B1E6B251DA527005C2536 /* dark.mp4 in Resources */,
 				5BBD887024BE2C53009E8F8E /* Lato-BlackItalic.ttf in Resources */,
 				5BBD887124BE2C53009E8F8E /* Lato-Regular.ttf in Resources */,
 				7742BA0724365A3300030DF5 /* Assets.xcassets in Resources */,
 				7742BA0524365A3200030DF5 /* Main.storyboard in Resources */,
 				5BBD887424BE2C53009E8F8E /* Lato-LightItalic.ttf in Resources */,
+				5B1B4B462521C25800398B0D /* dark.mp4 in Resources */,
 				5B99843325123BDA00EBBA9B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

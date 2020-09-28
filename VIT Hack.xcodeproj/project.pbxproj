@@ -28,7 +28,6 @@
 		5B6F635124D49F08005753AB /* firebaseCloudMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */; };
 		5B79D92624FE0337001E2F8C /* NetworkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79D92524FE0337001E2F8C /* NetworkListener.swift */; };
 		5B7DC75524C893C6007F1762 /* AboutUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DC75424C893C6007F1762 /* AboutUsCell.swift */; };
-		5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E60251D22E1005C2536 /* Gif.swift */; };
 		5B8B1E63251D23A4005C2536 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */; };
 		5B8B1E6F251E497B005C2536 /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */; };
 		5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */; };
@@ -114,7 +113,6 @@
 		5B6F635024D49F08005753AB /* firebaseCloudMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseCloudMessaging.swift; sourceTree = "<group>"; };
 		5B79D92524FE0337001E2F8C /* NetworkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListener.swift; sourceTree = "<group>"; };
 		5B7DC75424C893C6007F1762 /* AboutUsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCell.swift; sourceTree = "<group>"; };
-		5B8B1E60251D22E1005C2536 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		5B8B1E62251D23A4005C2536 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5B8B1E6E251E497B005C2536 /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5B8F6B3524D1DD6A003D10E2 /* AKCorouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCorouselView.swift; sourceTree = "<group>"; };
@@ -408,7 +406,6 @@
 				5B9A16A724CF125F009B5311 /* Button.swift */,
 				5BE25AEC24D1385E00E33FAB /* ViewController.swift */,
 				5B4AC2AB2517258300534934 /* Safari.swift */,
-				5B8B1E60251D22E1005C2536 /* Gif.swift */,
 			);
 			path = "utils+Extensions";
 			sourceTree = "<group>";
@@ -592,7 +589,6 @@
 				775B1FF52436618200E6F221 /* firebaseSignOut.swift in Sources */,
 				5BDBE2FC244C327F00636CF1 /* UI + Color.swift in Sources */,
 				775B2002243663DA00E6F221 /* firebaseNetworking.swift in Sources */,
-				5B8B1E61251D22E1005C2536 /* Gif.swift in Sources */,
 				5BBD889724BED509009E8F8E /* Time.swift in Sources */,
 				5B8F6B3624D1DD6A003D10E2 /* AKCorouselView.swift in Sources */,
 				5BBD887B24BE33B4009E8F8E /* UserFormViewController.swift in Sources */,

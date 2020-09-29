@@ -13,11 +13,9 @@ class TimelineViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet var dayButtons: [UIButton]!
-    
     var timeline = [TimelineData]()
     
-    var filteredTimeline = [TimelineData]()
+    var filteredTimeline : [[TimelineData]] = [[],[],[]]
     
     var lastContentOffset: CGFloat = 0
     
@@ -33,41 +31,20 @@ class TimelineViewController: UIViewController {
         if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
         floatingButton()
- 
-        dayTapped(dayButtons[lastDate])
-    }
+     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         floatingButton()
-        for button in dayButtons{
-             button.layer.borderWidth = 1.0
-             button.layer.borderColor = UIColor(named: "blue")?.cgColor
-             button.layer.cornerRadius = button.frame.height/2
-         }
     }
-    
-    @IBAction func dayTapped(_ sender: UIButton) {
-        let blue = UIColor(named: "blue")
-        dayButtons[lastDate].backgroundColor = .clear
-        dayButtons[lastDate].setTitleColor(blue, for: .normal)
-        lastDate = sender.tag
-        dayButtons[lastDate].backgroundColor = blue
-        dayButtons[lastDate].setTitleColor(.white, for: .normal)
-        
-        let day = sender.tag + 1
-        let total = self.timeline
-        filteredTimeline = total.filter { $0.day == day}
-        
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
+
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.timeline = timeline
-            self.dayTapped(dayButtons[self.lastDate])
+            self.filteredTimeline[0] = timeline.filter { $0.day == 1 }
+            self.filteredTimeline[1] = timeline.filter { $0.day == 2 }
+            self.filteredTimeline[2] = timeline.filter { $0.day == 3 }
         }
     }
     
@@ -99,26 +76,31 @@ class TimelineViewController: UIViewController {
 
 //MARK: Tableview delegate + datasource methods
 extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return filteredTimeline.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredTimeline[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TimelineCell
         
-        let timelineData = filteredTimeline[indexPath.row]
+        let timelineData = filteredTimeline[indexPath.section][indexPath.row]
         
         cell.setupCell(timelineData)
         
         cell.watchNowButton.addTarget(self, action: #selector(watchnow(sender:)), for: .touchUpInside)
         
-        cell.watchNowButton.tag = indexPath.row
+        cell.watchNowButton.tag = (indexPath.section * 10) + indexPath.row
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let data = filteredTimeline[indexPath.row]
+        let data = filteredTimeline[indexPath.section][indexPath.row]
         var height = extimateFrameForText(text: data.subtitle ?? "", title: data.title ?? "")
         if !(data.link == "") {
             height += 60
@@ -173,7 +155,9 @@ extension TimelineViewController {
 
 extension TimelineViewController {
     @objc func watchnow(sender : UIButton){
-        let link = filteredTimeline[sender.tag].link
+        let row = sender.tag % 10
+        let section = sender.tag / 10
+        let link = filteredTimeline[section][row].link
         openWebsite(link)
     }
 }

@@ -866,11 +866,11 @@
                                 <color key="backgroundColor" name="bg"/>
                                 <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="204" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="204"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="timelinecell" rowHeight="348" id="OTQ-20-9jh" customClass="TimelineCell" customModule="VIT_Hack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="348"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OTQ-20-9jh" id="uDH-pB-QOC">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDV-H1-gJh">
@@ -882,7 +882,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbj-2T-UCU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="204"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="348"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:00 a.m." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tx-OL-u0Z">
                                                             <rect key="frame" x="16.5" y="20" width="72.5" height="19"/>
@@ -897,20 +897,20 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCL-if-v3p">
-                                                    <rect key="frame" x="105.5" y="70" width="2" height="134"/>
+                                                    <rect key="frame" x="105.5" y="70" width="2" height="278"/>
                                                     <color key="backgroundColor" name="blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="2" id="6cP-Mm-qRZ"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inauguration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pM-S0-n9m">
-                                                    <rect key="frame" x="127.5" y="17.5" width="106" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InaugurationInaugurationInaugurationInaugurationInaugurationInaugurationInauguration" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pM-S0-n9m">
+                                                    <rect key="frame" x="127.5" y="20" width="162.5" height="120"/>
                                                     <fontDescription key="fontDescription" name="Lato-Italic" family="Lato" pointSize="20"/>
                                                     <color key="textColor" name="blue"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Here is the content for inauguration. Too much of placeholder text but that’s okay." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xie-Il-3Gz">
-                                                    <rect key="frame" x="127.5" y="53.5" width="162.5" height="68.5"/>
+                                                    <rect key="frame" x="127.5" y="152" width="162.5" height="114"/>
                                                     <color key="backgroundColor" name="bg"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
@@ -930,14 +930,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="rxj-M0-9E4">
-                                                    <rect key="frame" x="238.5" y="20.5" width="24" height="18"/>
+                                                    <rect key="frame" x="295" y="119" width="24" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="bF2-hx-kfs"/>
                                                         <constraint firstAttribute="width" constant="24" id="bes-gy-pnh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDu-6D-lm1">
-                                                    <rect key="frame" x="129.5" y="150" width="77.5" height="27"/>
+                                                    <rect key="frame" x="129.5" y="294" width="77.5" height="27"/>
                                                     <color key="backgroundColor" name="blue"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="vDu-6D-lm1" secondAttribute="height" multiplier="20:7" id="5so-LX-A1Y"/>
@@ -970,18 +970,19 @@
                                                 <constraint firstItem="xie-Il-3Gz" firstAttribute="leading" secondItem="4pM-S0-n9m" secondAttribute="leading" id="UN2-NA-5qF"/>
                                                 <constraint firstItem="jbj-2T-UCU" firstAttribute="leading" secondItem="uDH-pB-QOC" secondAttribute="leading" id="VC8-Ni-0vd"/>
                                                 <constraint firstItem="pg3-lC-lL8" firstAttribute="top" secondItem="KDV-H1-gJh" secondAttribute="bottom" constant="16" id="Vat-ja-Fok"/>
-                                                <constraint firstItem="4pM-S0-n9m" firstAttribute="centerY" secondItem="5tx-OL-u0Z" secondAttribute="centerY" id="W5y-me-s5E"/>
+                                                <constraint firstItem="4pM-S0-n9m" firstAttribute="top" secondItem="5tx-OL-u0Z" secondAttribute="top" id="W5y-me-s5E"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vDu-6D-lm1" secondAttribute="bottom" constant="16" id="Ydc-xX-Ykq"/>
                                                 <constraint firstItem="aCL-if-v3p" firstAttribute="centerX" secondItem="pg3-lC-lL8" secondAttribute="centerX" id="ZbD-jz-wzD"/>
                                                 <constraint firstItem="xie-Il-3Gz" firstAttribute="top" secondItem="4pM-S0-n9m" secondAttribute="bottom" constant="12" id="aQH-13-xTP"/>
                                                 <constraint firstAttribute="bottom" secondItem="jbj-2T-UCU" secondAttribute="bottom" id="bRo-N9-D0Y"/>
                                                 <constraint firstItem="jbj-2T-UCU" firstAttribute="top" secondItem="uDH-pB-QOC" secondAttribute="top" id="deJ-4m-0zV"/>
-                                                <constraint firstItem="rxj-M0-9E4" firstAttribute="centerY" secondItem="4pM-S0-n9m" secondAttribute="centerY" id="hyb-MG-KN9"/>
                                                 <constraint firstItem="vDu-6D-lm1" firstAttribute="width" secondItem="uDH-pB-QOC" secondAttribute="width" multiplier="0.241546" id="l7q-qk-Kwm"/>
                                                 <constraint firstItem="aCL-if-v3p" firstAttribute="top" secondItem="pg3-lC-lL8" secondAttribute="bottom" constant="16" id="lGZ-fL-Xbh"/>
                                                 <constraint firstItem="pg3-lC-lL8" firstAttribute="centerX" secondItem="KDV-H1-gJh" secondAttribute="centerX" id="nhy-oL-eqQ"/>
+                                                <constraint firstItem="rxj-M0-9E4" firstAttribute="bottom" secondItem="4pM-S0-n9m" secondAttribute="bottom" constant="-3" id="u1f-VC-Ute"/>
                                                 <constraint firstAttribute="bottom" secondItem="aCL-if-v3p" secondAttribute="bottom" id="un3-zQ-mcn"/>
                                                 <constraint firstItem="KDV-H1-gJh" firstAttribute="leading" secondItem="jbj-2T-UCU" secondAttribute="trailing" id="w5j-PQ-p8L"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4pM-S0-n9m" secondAttribute="trailing" constant="30" id="xj8-Ee-sD2"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1000,7 +1001,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="49" id="YZk-0G-eBr" customClass="TimelineHeader" customModule="VIT_Hack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="232" width="320" height="49"/>
+                                        <rect key="frame" x="0.0" y="376" width="320" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZk-0G-eBr" id="qpQ-ht-TcM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -1011,7 +1012,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj0-5Q-Loq">
                                                             <rect key="frame" x="0.0" y="0.0" width="211" height="49"/>
-                                                            <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                             <color key="textColor" name="blue"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

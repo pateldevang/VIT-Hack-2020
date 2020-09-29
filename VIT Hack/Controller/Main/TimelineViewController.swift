@@ -31,6 +31,7 @@ class TimelineViewController: UIViewController {
     
     let cellIdentifier = "timelinecell"
     
+    let sections = ["Start","10 October 2020","11 October 2020"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,7 +107,8 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "header")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header") as! TimelineHeader
+        cell.header.text = sections[section]
         return cell
     }
     

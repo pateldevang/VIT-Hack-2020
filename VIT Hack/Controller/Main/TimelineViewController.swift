@@ -15,7 +15,13 @@ class TimelineViewController: UIViewController {
     
     var timeline = [TimelineData]()
     
-    var filteredTimeline : [[TimelineData]] = [[],[],[]]
+    var filteredTimeline : [[TimelineData]] = [[],[],[]]{
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     var lastContentOffset: CGFloat = 0
     
@@ -96,6 +102,11 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
         
         cell.watchNowButton.tag = (indexPath.section * 10) + indexPath.row
         
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header")
         return cell
     }
     

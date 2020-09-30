@@ -13,7 +13,13 @@ class TimelineViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var timeline = [TimelineData]()
+    var timeline = [TimelineData](){
+        didSet{
+            self.filteredTimeline[0] = timeline.filter { $0.day == 1 }
+            self.filteredTimeline[1] = timeline.filter { $0.day == 2 }
+            self.filteredTimeline[2] = timeline.filter { $0.day == 3 }
+        }
+    }
     
     var filteredTimeline : [[TimelineData]] = [[],[],[]]{
         didSet {
@@ -38,17 +44,16 @@ class TimelineViewController: UIViewController {
         if let data = ControllerDefaults.timeline() { self.timeline = data }
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
         floatingButton()
-     }
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         floatingButton()
     }
-
+    
     
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
-            self.timeline = timeline
             self.filteredTimeline[0] = timeline.filter { $0.day == 1 }
             self.filteredTimeline[1] = timeline.filter { $0.day == 2 }
             self.filteredTimeline[2] = timeline.filter { $0.day == 3 }
@@ -144,7 +149,7 @@ extension TimelineViewController {
 }
 
 extension TimelineViewController {
-
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.lastContentOffset = scrollView.contentOffset.y
     }

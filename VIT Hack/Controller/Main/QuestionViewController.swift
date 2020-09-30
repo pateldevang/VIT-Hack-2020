@@ -46,11 +46,6 @@ class QuestionViewController: UIViewController {
         card.alpha = 1.0
     }
     
-    func addLayer(){
-        // let layer =
-    }
-    
-    
     @IBAction func askTapped(_ sender: Any) {
         askQuestion()
     }
@@ -72,15 +67,15 @@ class QuestionViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self.card.alpha = 0.0
                 self.view.endEditing(true)
-            }) { (_) in
-                self.showAlert()
+            }) { _ in
+                self.sucessAlert()
             }
         } else {
             authAlert(message: "Please try again!")
         }
     }
     
-    func showAlert(){
+    func sucessAlert(){
         let alert = UIAlertController(title: "Question Sent ↗️", message: "We will answer your question shortly!", preferredStyle: .alert)
         let action = UIAlertAction(title: "Okay", style: .default) { (_) in
             self.dismiss(animated: true, completion: nil)

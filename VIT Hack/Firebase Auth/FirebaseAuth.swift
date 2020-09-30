@@ -60,7 +60,9 @@ class FirebaseAuth: UIViewController {
                 case "The password must be 6 characters long or more.":
                     completion(error?.localizedDescription ?? "Error")
                 case "The email address is already in use by another account.":
-                    completion(error?.localizedDescription ?? "Error")
+                    FirebaseAuth.loginUserAfterSignup(email, password: pass, error: error?.localizedDescription ?? "Error") { (result) in
+                        completion(result)
+                    }
                 default:
                     completion("Contact Developer")
                 }
@@ -95,6 +97,18 @@ class FirebaseAuth: UIViewController {
                 // Vibrates on valid
                 UIDevice.validVibrate()
                 completion("Success")
+            }
+        }
+    }
+    
+    class func loginUserAfterSignup(_ email : String, password : String,error:String,completion : @escaping(String)->()){
+        FirebaseAuth.emailLoginIn(email: email, pass: password) { (success, uid) in
+            if (success == "Success") && (uid != ""){
+                firebaseNetworking.shared.checkUser(uid: uid) { (present) in
+                 present ? completion(error) : completion("Success")
+                }
+            }else{
+                completion(error)
             }
         }
     }

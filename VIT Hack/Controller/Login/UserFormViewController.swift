@@ -16,10 +16,11 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var registrationNumberTextField: UITextField!
     @IBOutlet weak var progressView: UIView!
     @IBOutlet weak var continueButton: UIButton!
-    
+    @IBOutlet weak var nameBlock: UIView!
     
     var newUser = User()
     var isEmail = false
+    var hideName = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class UserFormViewController: UIViewController {
         continueButton.bottomShadow()
         addInputAccessoryForTextFields(textFields: [nameTextField,instituteNameTextField,registrationNumberTextField])
         subscribeToKeyboardNotifications()
+        nameBlock.isHidden = hideName
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +62,8 @@ class UserFormViewController: UIViewController {
     }
     
     func proceedToPhone(){
-        newUser.name = nameTextField.text!
+        let name = hideName ? Defaults.name() : nameTextField.text!
+        newUser.name = name
         newUser.collegeName = instituteNameTextField.text!
         newUser.regno = registrationNumberTextField.text!
         newUser.mail = getEmail()
@@ -70,9 +73,11 @@ class UserFormViewController: UIViewController {
     }
     
     func validate()->Bool{
+        if !hideName {
         if nameTextField.text?.isEmpty ?? true {
             authAlert(message: "Please enter your name!")
             return false
+        }
         }
         
         if instituteNameTextField.text?.isEmpty ?? true {

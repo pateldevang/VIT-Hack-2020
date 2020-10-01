@@ -48,7 +48,17 @@ extension HomeViewController : GIDSignInDelegate{
             
             UserDefaults.standard.set(uid, forKey: Keys.uid)
             
-            firebaseNetworking.shared.checkUser(uid: uid, completion: self.handleUser(success:))
+            UserDefaults.standard.set(authResult?.user.displayName, forKey: Keys.name)
+            
+            firebaseNetworking.shared.checkUser(uid: uid, completion: self.handleGoogleUser(success:))
+        }
+    }
+    
+    func handleGoogleUser(success : Bool){
+        if success {
+            firebaseNetworking.shared.getUser(completion: saveUser(status:user:))
+        } else {
+            self.performSegue(withIdentifier: "apple", sender: false)
         }
     }
     
@@ -56,7 +66,7 @@ extension HomeViewController : GIDSignInDelegate{
         if success {
             firebaseNetworking.shared.getUser(completion: saveUser(status:user:))
         } else {
-            self.performSegue(withIdentifier: "apple", sender: nil)
+            self.performSegue(withIdentifier: "apple", sender: true)
         }
     }
     

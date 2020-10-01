@@ -114,6 +114,8 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
                 
                 print("Sucessfully logged into firebase with Apple!",uid)
                 
+                UserDefaults.standard.set(authResult?.user.displayName, forKey: Keys.name)
+                
                 firebaseNetworking.shared.checkUser(uid: uid,completion: self.handleUser(success:))
             }
         }

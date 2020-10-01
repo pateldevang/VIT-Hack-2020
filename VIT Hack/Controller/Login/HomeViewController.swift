@@ -73,5 +73,11 @@ class HomeViewController: UIViewController {
         activityView.stopAnimating()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let formVC = segue.destination as? UserFormViewController{
+            formVC.hideName = (sender as? Bool) ?? false
+        }
+    }
+    
 }
 

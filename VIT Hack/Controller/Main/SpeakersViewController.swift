@@ -139,7 +139,7 @@ extension SpeakersViewController : UICollectionViewDelegate {
         if collectionView.tag == 1{
             let collaborator = collaboratorData[indexPath.item]
             openWebsite(collaborator.pageUrl)
-        } else {
+        } else if collectionView.tag == 2 {
             let sponsor = sponsorData[indexPath.item]
             openWebsite(sponsor.pageUrl)
         }

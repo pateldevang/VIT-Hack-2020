@@ -15,5 +15,22 @@ struct DomainData: Codable {
     var icon : String?
     var colour : String?
     var problemStatements : [String]?
+    var finalStatements : [String]?
+    
+    var finalData : [psModel] {
+        if let psStatememnts = finalStatements{
+            let data = psStatememnts.map { problem -> psModel in
+                let ps = problem.split(separator: "~", maxSplits: 1, omittingEmptySubsequences: true)
+                return psModel(text: String(ps.first ?? ""), url: String(ps.last ?? ""))
+            }
+            return data
+        } else {
+            return []
+        }
+    }
 }
 
+struct psModel {
+    let text : String?
+    let url : String?
+}

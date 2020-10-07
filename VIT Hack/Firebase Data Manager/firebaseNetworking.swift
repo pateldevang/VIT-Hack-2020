@@ -217,7 +217,7 @@ class firebaseNetworking {
             if let t4 = enumerator[3] as? DataSnapshot { domain.domain = t4.value as? String }
             if let t5 = enumerator[4] as? DataSnapshot { domain.icon = t5.value as? String }
             if let t6 = enumerator[5] as? DataSnapshot { domain.problemStatements = t6.value as? [String] }
-            
+            if let t7 = enumerator[6] as? DataSnapshot { domain.finalStatements = t7.value as? [String] }
             domainDataArray.append(domain)  // Appending into domainDataArray
             ControllerDefaults.saveTracks(domainDataArray)
             completion(true, domainDataArray)  // Completion handler

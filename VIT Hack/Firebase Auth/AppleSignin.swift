@@ -101,7 +101,13 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
             let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                       idToken: idTokenString,
                                                       rawNonce: nonce)
-            // Sign in with Firebase.
+            
+            let fam = appleIDCredential.fullName
+            let first = (fam?.givenName ?? "")
+            let last = (fam?.familyName ?? "")
+            
+            let name = first + " " + last
+            UserDefaults.standard.set(name, forKey: Keys.name)            // Sign in with Firebase.
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 if let error = error {
                     print("AS error:",error.localizedDescription)
@@ -113,8 +119,6 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
                 UserDefaults.standard.set(uid, forKey: Keys.uid)
                 
                 print("Sucessfully logged into firebase with Apple!",uid)
-                
-                UserDefaults.standard.set(authResult?.user.displayName, forKey: Keys.name)
                 
                 firebaseNetworking.shared.checkUser(uid: uid,completion: self.handleUser(success:))
             }

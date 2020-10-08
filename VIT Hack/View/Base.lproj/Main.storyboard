@@ -805,6 +805,7 @@
                                             <outlet property="body" destination="fwb-Ye-Kfz" id="7Uz-JD-EIw"/>
                                             <outlet property="card" destination="b2h-AN-z5p" id="2wu-Rj-ZaE"/>
                                             <outlet property="header" destination="BCO-9L-5VM" id="CTv-FK-WLk"/>
+                                            <outlet property="indicator" destination="tH3-Xa-t6j" id="Q0a-uj-Gjm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

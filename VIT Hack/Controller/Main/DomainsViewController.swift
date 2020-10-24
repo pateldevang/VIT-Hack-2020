@@ -40,7 +40,7 @@ class DomainsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tracksVC = segue.destination as? TracksViewController {
-            if let ps = sender as? [String]{
+            if let ps = sender as? [psModel]{
                 tracksVC.tracks = ps
                 tracksVC.domain = self.domainData
             }
@@ -71,7 +71,7 @@ extension DomainsViewController : UICollectionViewDelegate, UICollectionViewData
     
     @objc
     func showMore(sender: UIButton){
-        let ps = self.domains[sender.tag].problemStatements
+        let ps = self.domains[sender.tag].finalData
         self.domainData = self.domains[sender.tag]
         performSegue(withIdentifier: "tracks", sender: ps)
     }

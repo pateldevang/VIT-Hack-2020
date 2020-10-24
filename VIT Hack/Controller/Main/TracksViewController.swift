@@ -15,17 +15,19 @@ class TracksViewController: UIViewController {
     @IBOutlet weak var crossButton: UIButton!
     
     var domain = DomainData()
-    var tracks = [String]()
+    var tracks = [psModel]()
     
     let tracksCellIdentifier = "trackscell"
     
     override func viewDidLoad() {
-        subtitel.text = domain.description ?? ""
+        tableView.delegate = self
+        subtitel.text = (domain.description ?? "") + ("\nTap on a problem statement to know more!")
         if #available(iOS 13, *){
             crossButton.isHidden = true
         } else {
             crossButton.outline()
         }
+        print(tracks)
     }
     
     @IBAction func dismissView(_ sender: Any) {
@@ -41,17 +43,37 @@ extension TracksViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tracksCellIdentifier) as! TracksCell
-        cell.body.text = tracks[indexPath.row]
+        let url = tracks[indexPath.row].url
+        cell.indicator.isHidden = !isUrl(url)
+        cell.body.text = tracks[indexPath.row].text
         cell.header.text = "PS-" + (domain.abbreviation ?? "") + "-0" + String(indexPath.row+1)
         return cell
     }
     
+    func isUrl(_ link: String?)->Bool {
+        if let link = link,let url = URL(string: link) {
+            if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                return true
+            } else {
+            return false
+            }
+        } else {
+            return false
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let text = tracks[indexPath.row]
+        let text = tracks[indexPath.row].text ?? ""
         let height = extimateFrameForText(text : text)
         return height + 100
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = tracks[indexPath.row].url
+        tableView.deselectRow(at: indexPath, animated: true)
+        openWebsite(url)
+    }
 }
 
 extension TracksViewController {

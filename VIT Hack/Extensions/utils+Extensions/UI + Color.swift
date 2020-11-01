@@ -14,6 +14,8 @@ extension UIColor {
         self.init(red : r/255, green : g/255, blue: b/255, alpha: 1)
     }
     
+    
+    //MARK: HEX COLOR
     convenience init(hexString:String) {
         let scanner = Scanner(string: hexString as String)
         

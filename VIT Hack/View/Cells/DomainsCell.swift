@@ -38,7 +38,7 @@ class DomainsCell: UICollectionViewCell {
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
                     .cacheOriginalImage
-            ])
+                ])
         }
     }
     

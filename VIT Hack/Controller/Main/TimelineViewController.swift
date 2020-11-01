@@ -7,20 +7,22 @@
 //
 
 import UIKit
-import SafariServices
 
 class TimelineViewController: UIViewController {
     
+    /// tableView to display `Timeline`
     @IBOutlet weak var tableView: UITableView!
     
+    /// `Total timeline` { To be divided into 3 }
     var timeline = [TimelineData](){
         didSet{
-            self.filteredTimeline[0] = timeline.filter { $0.day == 1 }
-            self.filteredTimeline[1] = timeline.filter { $0.day == 2 }
-            self.filteredTimeline[2] = timeline.filter { $0.day == 3 }
+            self.filteredTimeline[0] = timeline.filter { $0.day == 1 } /// Day 1 timeline
+            self.filteredTimeline[1] = timeline.filter { $0.day == 2 } /// Day 2 timeline
+            self.filteredTimeline[2] = timeline.filter { $0.day == 3 } /// Day 3 timeline
         }
     }
     
+    /// `datasource` for tableView
     var filteredTimeline : [[TimelineData]] = [[],[],[]]{
         didSet {
             DispatchQueue.main.async {
@@ -29,59 +31,39 @@ class TimelineViewController: UIViewController {
         }
     }
     
+    /// Offset to determine visibility of `Discord button`
     var lastContentOffset: CGFloat = 0
     
-    var lastDate : Int = 0
-    
+    /// `Discord` button added programatically
     var discordButton = UIButton(type: .custom)
     
+    /// `CellID`  for TimelineCell
     let cellIdentifier = "timelinecell"
     
+    /// Section `Headers` for tableView
     let sections = ["Start","10 October 2020","11 October 2020"]
+    
+    //MARK --- LIFECYCLE METHODS ---
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let data = ControllerDefaults.timeline() { self.timeline = data }
+        if let data = ControllerDefaults.timeline() { self.timeline = data }  /// fetch local timeline
         firebaseNetworking.shared.getTimeline(completion: self.timelinehandler(status:timeline:))
-        floatingButton()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        floatingButton()
+        floatingButton() /// ADD discord button
     }
     
     
+    /// Filter `Timeline` data fetched from firebase
     func timelinehandler(status:Bool,timeline : [TimelineData]){
         if status{
             self.filteredTimeline[0] = timeline.filter { $0.day == 1 }
             self.filteredTimeline[1] = timeline.filter { $0.day == 2 }
             self.filteredTimeline[2] = timeline.filter { $0.day == 3 }
         }
-    }
-    
-    func floatingButton(){
-        setDiscordFrame()
-        discordButton.setTitle("Join Discord", for: .normal)
-        discordButton.backgroundColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8039215686, alpha: 1)
-        discordButton.clipsToBounds = true
-        discordButton.addTarget(self,action: #selector(joinDiscord), for: .touchUpInside)
-        view.addSubview(discordButton)
-        discordButton.bottomShadow(radius: 0.0)
-    }
-    
-    func setDiscordFrame(){
-        let width = view.frame.width * 0.56
-        let height = width / 4
-        let tabHeight = tabBarController?.tabBar.frame.size.height ?? 0.0
-        let y = view.frame.height - height - 15 - tabHeight
-        discordButton.frame = CGRect(x: 285, y: y, width: width, height: height)
-        discordButton.center.x = view.center.x
-        discordButton.layer.cornerRadius = height/2
-    }
-    
-    @objc func joinDiscord(){
-        openWebsite(Social.discord)
     }
     
 }
@@ -117,6 +99,23 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    @objc func watchnow(sender : UIButton){
+        let row = sender.tag % 10
+        let section = sender.tag / 10
+        let link = filteredTimeline[section][row].link
+        openWebsite(link)
+    }
+}
+
+//MARK: - Extension to determine height of tableView Cell
+extension TimelineViewController {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let data = filteredTimeline[indexPath.section][indexPath.row]
         var height = extimateFrameForText(text: data.subtitle ?? "", title: data.title ?? "")
@@ -126,13 +125,6 @@ extension TimelineViewController : UITableViewDelegate, UITableViewDataSource {
         return height + 70
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-}
-
-extension TimelineViewController {
     private func extimateFrameForText(text: String, title : String) -> CGFloat {
         let width = (view.frame.width * 0.6) - 50
         
@@ -171,11 +163,32 @@ extension TimelineViewController {
     }
 }
 
+//MARK: - Extension to setup Discord Button
 extension TimelineViewController {
-    @objc func watchnow(sender : UIButton){
-        let row = sender.tag % 10
-        let section = sender.tag / 10
-        let link = filteredTimeline[section][row].link
-        openWebsite(link)
+    /// ADD BUTTON TO VIEW
+    func floatingButton(){
+        setDiscordFrame()
+        discordButton.setTitle("Join Discord", for: .normal)
+        discordButton.backgroundColor = #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8039215686, alpha: 1)
+        discordButton.clipsToBounds = true
+        discordButton.addTarget(self,action: #selector(joinDiscord), for: .touchUpInside)
+        view.addSubview(discordButton)
+        discordButton.bottomShadow(radius: 0.0)
+    }
+    
+    // DISCORD BUTTON LAYOUT SETUP
+    func setDiscordFrame(){
+        let width = view.frame.width * 0.56
+        let height = width / 4
+        let tabHeight = tabBarController?.tabBar.frame.size.height ?? 0.0
+        let y = view.frame.height - height - 15 - tabHeight
+        discordButton.frame = CGRect(x: 285, y: y, width: width, height: height)
+        discordButton.center.x = view.center.x
+        discordButton.layer.cornerRadius = height/2
+    }
+    
+    // DISCORD BUTTON IBACTION
+    @objc func joinDiscord(){
+        openWebsite(Social.discord)
     }
 }

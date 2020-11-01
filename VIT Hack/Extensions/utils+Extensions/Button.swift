@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIButton {
+    //MARK: Add bottom shadow to UIButton
     func bottomShadow(radius : CGFloat = 8.0){
         layer.cornerRadius = (radius == 0.0) ? layer.cornerRadius : 8.0
         layer.borderWidth = 0.0
@@ -19,6 +20,7 @@ extension UIButton {
         layer.masksToBounds = false
     }
     
+    //MARK: Add blue outline to button
     func outline(){
         layer.borderColor = UIColor(named: "blue")?.cgColor
         layer.borderWidth = 1

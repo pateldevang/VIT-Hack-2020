@@ -10,6 +10,7 @@ import UIKit
 
 
 extension UIViewController {
+    //MARK: Go to TabbarViewController
     func gototabbar(){
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         if #available(iOS 13.0, *) {
@@ -19,9 +20,9 @@ extension UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
             self.present(vc, animated: true)
         }
-        
     }
     
+    //MARK: download all data upon start for persistance
     func downloadData(){
         firebaseNetworking.shared.getTimeline { (_, _) in }
         firebaseNetworking.shared.getDomains { (_, _) in }
@@ -31,6 +32,7 @@ extension UIViewController {
         firebaseNetworking.shared.getSponsor(isCollaborator: true) { (_, _) in }
     }
     
+    //MARK:- Keyboard Toolbar Setup.
     func addInputAccessoryForTextFields(textFields: [UITextField]) {
         for (index, textField) in textFields.enumerated() {
             let toolbar: UIToolbar = UIToolbar()

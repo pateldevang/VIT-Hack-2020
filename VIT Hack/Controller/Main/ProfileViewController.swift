@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    //OUTLETS
+    //MARK:  OUTLETS
     @IBOutlet weak var profileTabel: UITableView!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var initials: UILabel!
@@ -18,20 +18,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileBack: UIView!
     @IBOutlet weak var privacyButton: UIButton!
-    //VARIABLES
+    
+    //MARK: VARIABLES
     var profileTitles = ["Your Name","Email Address","Your Institute","Registration Number"]
     var profileValues = ["","","",""]
     var tableHeight : CGFloat = 0.0
     
-    // CONSTANTS
+    //MARK: CONSTANTS
     let profileIdentifier = "ProfileCell"
 
     
-    // APP-CYCLE METHODS
+    //MARK: APP-CYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        //setupPrivacyLabel()
     }
     
     override func viewDidLayoutSubviews() {
@@ -63,7 +63,7 @@ class ProfileViewController: UIViewController {
         return name.first ?? ""
     }
     
-    /// GET `Initials` of user
+    // GET `Initials` of user
     func getInitials()->String{
         let name = Defaults.name().wordList
         let fName = name.first?.first ?? Character(" ")
@@ -71,13 +71,13 @@ class ProfileViewController: UIViewController {
         return (name.count == 1) ? String(fName) : String(fName) + " " + String(lname)
     }
     
-    // LOGOUT
+    //MARK: LOGOUT
     @IBAction func logoutClicked(_ sender: UIButton) {
         signOut()
     }
 }
 
-//MARK - PROFILE TABLEVIEW DELEGATE + DATASOURCE METHODS
+//MARK: - PROFILE TABLEVIEW DELEGATE + DATASOURCE METHODS
 extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profileValues.count

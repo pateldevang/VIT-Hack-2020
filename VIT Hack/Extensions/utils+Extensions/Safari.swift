@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 
+//MARK: open SFSafariController with urlString.
 extension UIViewController : SFSafariViewControllerDelegate{
     func openWebsite(_ link : String?){
         if let link = link,let url = URL(string: link) {

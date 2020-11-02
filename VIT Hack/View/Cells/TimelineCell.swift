@@ -9,7 +9,7 @@
 import UIKit
 
 class TimelineCell: UITableViewCell {
-
+    
     //Outlets
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -36,7 +36,7 @@ class TimelineCell: UITableViewCell {
         bodyTextView.text = timeline.subtitle
         
         if let sTime = timeline.startUnix {
-        timeLabel.text = sTime.timeStringConverter
+            timeLabel.text = sTime.timeStringConverter
         }
         
         if let eTime = timeline.endUnix, eTime < Date().timeIntervalSince1970 {

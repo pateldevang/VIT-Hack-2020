@@ -12,21 +12,25 @@ import SafariServices
 
 class SpeakersViewController: UIViewController {
     
-    
+    //MARK:- COLLECTIONVIEWS
     @IBOutlet weak var speakerCollectionView: UICollectionView!
     @IBOutlet weak var collaboratorCollectionView: UICollectionView!
     @IBOutlet weak var sponsorsCollectionView: UICollectionView!
+    
+    //MARK- ABOUT US BUTTON
     @IBOutlet weak var aboutUsButton: UIButton!
     
+    // COLLECTIONVIEW CELLS
     let speakerIdentifier = "speakercell"
     let collaboratorIdentifier = "Collaboratorcell"
     let sponsorIdentifier = "sponsorcell"
     
+    // COLLECTIONVIEW DATASOURCES
     var collaboratorData : [SponsorData] = []
     var sponsorData  : [SponsorData] = []
     var speakerData : [SpeakersData] = []
     
-    
+    // MARK -- APP LIFECYLE METHODS --
     override func viewDidLoad() {
         super.viewDidLoad()
         loadOffline()
@@ -41,12 +45,14 @@ class SpeakersViewController: UIViewController {
         aboutUsButton.bottomShadow()
     }
     
+    // LOAD LOCAL DATA
     func loadOffline(){
         if let speaker = ControllerDefaults.speakers() { self.speakerData = speaker }
         if let sponsor = ControllerDefaults.sponsors() { self.sponsorData = sponsor }
         if let collaborator = ControllerDefaults.collaborators() { self.collaboratorData = collaborator }
     }
     
+    // FETCH SPEAKERS
     func getSpeakers(){
         firebaseNetworking.shared.getSpeaker { (status, result) in
             if status {
@@ -58,6 +64,7 @@ class SpeakersViewController: UIViewController {
         }
     }
     
+    // FETCH SPONSORS
     func getSponsors(){
         firebaseNetworking.shared.getSponsor { (status, result) in
             if status {
@@ -69,6 +76,7 @@ class SpeakersViewController: UIViewController {
         }
     }
     
+    // FETCH COLLABORATORS
     func getCollaborators(){
         firebaseNetworking.shared.getSponsor(isCollaborator: true) { (status, result) in
             if status {
@@ -82,6 +90,7 @@ class SpeakersViewController: UIViewController {
     
 }
 
+//MARK:- COLLECTIONVIEW DATASOURCE METHODS
 extension SpeakersViewController : UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -134,6 +143,7 @@ extension SpeakersViewController : UICollectionViewDataSource {
     }
 }
 
+//MARK:- COLLECTIONVIEW DELEGATE METHODS
 extension SpeakersViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1{
@@ -146,6 +156,7 @@ extension SpeakersViewController : UICollectionViewDelegate {
     }
 }
 
+//MARK:- COLLECTIONVIEW DELEGATEFLOWLAYOUT METHODS
 extension SpeakersViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if !(collectionView.tag == 0){
@@ -170,6 +181,7 @@ enum collection : Int {
 }
 
 
+//MARK: - CONTEXT MENU PREVIEW PROVIDER SETUP
 @available(iOS 13.0, *)
 extension SpeakersViewController {
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: ------ CUSTOM COLLECTIONVIEW FLOWLAYOUT --------
 
 open class AKCarouselFlowLayout: UICollectionViewFlowLayout {
     

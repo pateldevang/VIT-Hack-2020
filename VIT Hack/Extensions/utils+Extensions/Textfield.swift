@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MARK: Add underline to TextField
 extension UITextField {
     func setUnderLine() {
         let underline = CALayer()
@@ -23,6 +24,8 @@ extension UITextField {
     }
 }
 
+
+//MARK: Add outline to TextView
 extension UITextView {
     func outline(){
         layer.borderWidth = 1

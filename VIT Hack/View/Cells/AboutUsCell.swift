@@ -24,7 +24,6 @@ class AboutUsCell: UICollectionViewCell {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var topanchor: NSLayoutConstraint!
-    
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -37,20 +36,18 @@ class AboutUsCell: UICollectionViewCell {
         self.halfValue = halfValue
     }
     
-    
     func setupCell(_ data : [socialMedia], photoRadius: CGFloat = 0.0, backRadius : CGFloat = 0.0){
         
-       
         /// Corner radius
         card.layer.cornerRadius = 12
         
         profilePhoto.clipsToBounds = true
         profilePhoto.layer.cornerRadius = photoRadius
-            photoBack.layer.cornerRadius = backRadius
+        photoBack.layer.cornerRadius = backRadius
         photoBack.clipsToBounds = true
         topanchor.constant = -backRadius
         
-    
+        
         /// Background Shadow
         layer.cornerRadius = 15.0
         layer.borderWidth = 0.0
@@ -66,12 +63,10 @@ class AboutUsCell: UICollectionViewCell {
         image2.image = UIImage(named: data[1].rawValue)
         image3.image = UIImage(named: data[2].rawValue)
         
-//        photoBack.layer.cornerRadius = photoBack.frame.size.width/2
-//        profilePhoto.layer.cornerRadius = profilePhoto.frame.width/2
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         delegate?.didPressButton(sender.tag)
-}
-
+    }
+    
 }

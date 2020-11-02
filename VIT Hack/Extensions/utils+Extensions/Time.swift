@@ -9,7 +9,7 @@
 import Foundation
 
 extension Double {
-    
+    //MARK: Converts Date to String
     var timeStringConverter : String {
         let date = Date(timeIntervalSince1970: self)
         let formatter = DateFormatter()

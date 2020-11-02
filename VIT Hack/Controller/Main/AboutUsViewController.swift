@@ -10,6 +10,11 @@ import UIKit
 import SafariServices
 import MessageUI
 
+//MARK: - ABOUTUS
+/// includes the list of all developers and designers.
+/// includes the teams social profiles
+/// includes `VIT HACK 2020`s social media handles.
+
 class AboutUsViewController: UIViewController {
     
     /// Collectionview to present `AboutUs` data.

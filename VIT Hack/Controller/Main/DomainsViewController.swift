@@ -10,20 +10,26 @@ import UIKit
 
 class DomainsViewController: UIViewController {
     
+    /// collectionView to display list of `Domains`
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    /// `Datasource` for collectionView
     var domains = [DomainData]()
     
+    /// Last selected Domain
     var domainData = DomainData()
     
+    /// `CellID` for collectionViewCell
     let domainCellIdentifier = "domaincell"
     
+    
+    //MARK -- APP LIFECYCLE METHODS --
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let data = ControllerDefaults.tracks() { self.domains = data }
-        firebaseNetworking.shared.getDomains(completion: getDomains(success:result:))
+        if let data = ControllerDefaults.tracks() { self.domains = data } /// load local data
+        firebaseNetworking.shared.getDomains(completion: getDomains(success:result:)) /// load data from firebase
     }
+    
     
     func getDomains(success:Bool,result:[DomainData]){
         if success{ self.domains = result }
@@ -38,6 +44,7 @@ class DomainsViewController: UIViewController {
         return pageSize
     }
     
+    // -- NAVIGATION PREP --
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tracksVC = segue.destination as? TracksViewController {
             if let ps = sender as? [psModel]{
@@ -46,8 +53,10 @@ class DomainsViewController: UIViewController {
             }
         }
     }
+    
 }
 
+//MARK:- COLLECTIONVIEW DELEGATE + DATASOURCE + DELEGATEFLOWLAYOUT METHODS
 extension DomainsViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

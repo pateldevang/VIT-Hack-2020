@@ -10,16 +10,17 @@ import UIKit
 
 class TracksCell: UITableViewCell {
     
-    
+    //MARK: OUTLETS
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var body: UITextView!
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var indicator: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         shadow(card)
     }
-
+    
     
     func shadow(_ view : UIView){
         view.layer.cornerRadius = 8

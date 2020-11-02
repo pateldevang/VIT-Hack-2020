@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 
+//MARK: ------ CUSTOM PROGRESS BAR --------
+
+
 final class Progressbar: CAShapeLayer, CAAnimationDelegate {
     
     var start : CGFloat = 0.33

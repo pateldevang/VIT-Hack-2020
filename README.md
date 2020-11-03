@@ -9,7 +9,7 @@
 
 ## App Features:
 
-<img align = "right" src  = "Assets/appstore.png" width = "50%" height = "50%">
+<a href="https://apps.apple.com/us/app/vit-hack/id1532041600"><img align = "right" src  = "Assets/appstore.png" width = "50%" height = "50%"></a>
 
 <details>
 <summary>Timeline</summary>

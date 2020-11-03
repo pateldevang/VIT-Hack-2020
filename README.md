@@ -54,7 +54,7 @@
 </details>
 
 
-
+<br>
 
 ## Authors:
 | Aaryan | Devang | Garima |
@@ -62,7 +62,8 @@
 | <a href="https://github.com/aaryankotharii"> <img src="https://avatars3.githubusercontent.com/u/53724307?s=400&u=7ccb308deabd44e6efb0be45b72bc01197cefbba&v=4" width = "100" />  </a>| <a href="https://github.com/pateldevang"> <img src="https://avatars0.githubusercontent.com/u/45505129?s=400&v=4" width = "100" />  </a>| <a href="https://github.com/garima94921"> <img src="https://avatars3.githubusercontent.com/u/48411560?s=400&u=7cf9110e74d31a0a3906c205303c97607d22b8f5&v=4" width = "100" />  </a> | 
 
 
-<br><br>
+<br>
+
 ## License: 
 
 Copyright (c) 2020 VIT Hack

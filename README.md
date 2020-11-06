@@ -64,6 +64,10 @@
 
 <br>
 
+## Want Know more about VIT HACK?
+
+Check out: https://vithack.in
+
 ## License: 
 
 Copyright (c) 2020 VIT Hack
